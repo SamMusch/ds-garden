@@ -13,7 +13,7 @@ if (!vaultDir || !targetDir) {
 const copyNote = async (src, dst) => {
   const raw = await fs.readFile(src, "utf8");
   const { data } = matter(raw);
-  if (data.publish === true) {
+  if (data.publish !== false) {
     await fs.ensureDir(path.dirname(dst));
     await fs.copy(src, dst);
     console.log("✓", path.relative(vaultDir, src));
