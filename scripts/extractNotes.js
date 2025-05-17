@@ -10,15 +10,24 @@ if (!vaultDir || !targetDir) {
   process.exit(1);
 }
 
-const copyNote = async (src, dst) => {
-  const raw = await fs.readFile(src, "utf8");
-  const { data } = matter(raw);
-  if (data.publish !== false) {
-    await fs.ensureDir(path.dirname(dst));
-    await fs.copy(src, dst);
-    console.log("✓", path.relative(vaultDir, src));
+const copyIfPublish = async (src, dst) => {
+  let raw = await fs.readFile(src, "utf8");
+  const parsed = matter(raw);
+
+  // Skip only if publish:false appears
+  if (parsed.data.publish === false) return;
+
+  // Inject a title if missing (use filename without extension)
+  if (!parsed.data.title) {
+    parsed.data.title = path.parse(src).name;
+    raw = matter.stringify(parsed.content, parsed.data);
   }
+
+  await fs.ensureDir(path.dirname(dst));
+  await fs.writeFile(dst, raw);
+  console.log("✓", path.relative(vaultDir, src));
 };
+
 
 const walk = async dir => {
   const entries = await fs.readdir(dir, { withFileTypes: true });
