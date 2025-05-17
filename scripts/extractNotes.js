@@ -37,7 +37,7 @@ const walk = async dir => {
       await walk(full);
     } else if (e.isFile() && e.name.endsWith(".md")) {
       const rel = path.relative(vaultDir, full);
-      await copyNote(full, path.join(targetDir, rel));
+      await copyIfPublish(full, path.join(targetDir, rel));
     }
   }
 };
