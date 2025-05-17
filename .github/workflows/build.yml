@@ -15,13 +15,18 @@ jobs:
         env:
           TOKEN: ${{ secrets.VAULT_PAT }}
 
+
       - name: Install deps
         run: |
-          npm ci                           # install site deps
-          npm install gray-matter fs-extra --save-dev   # script deps
+          npm ci
+          npm install gray-matter fs-extra fuse.js --save-dev
+
 
       - name: Extract publish:true notes
         run: node scripts/extractNotes.js vault src/content
+
+      - name: Build search index
+        run: node scripts/buildSearchIndex.js src/content public/searchIndex.json
 
       - name: Build
         run: npx astro build
