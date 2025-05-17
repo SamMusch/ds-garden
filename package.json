@@ -7,7 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "build-local": "node scripts/extractNotes.js ~/Desktop/Obsidian-DS src/content && node scripts/buildSearchIndex.js src/content public/searchIndex.json && astro build && open dist/index.html"
+    "build-local": "node scripts/extractNotes.js ~/Desktop/Obsidian-DS src/content/docs && node scripts/buildSearchIndex.js src/content/docs public/searchIndex.json && astro build && open dist/index.html"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.34.3",
