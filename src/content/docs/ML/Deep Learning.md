@@ -15,45 +15,6 @@ TimeSpent2: null
 title: Deep Learning
 ---
 
-## Oreilly Outline
-
-[Your First ANN](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/8c724645-08d4-4a08-af9e-45bf607f8a88.xhtml)
-1. [Technical requirements](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/aa5174d0-e5cf-4dbd-9b64-92b8754c34cb.xhtml)
-2. Network building blocks
-   1. [Network layers](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/562cb6bc-c88f-4613-8ff2-fa1e64cc915c.xhtml)
-   2. Naming and sizing neural networks
-   3. Activation functions
-   4. Weights and bias factors
-   5. Loss functions
-   6. Stochastic gradient descent
-   7. [Regularization](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/a1be58ad-36e0-42d0-a74f-f6444275fce3.xhtml)
-3. The training process
-   1. [Putting it all together](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/36c76076-c14e-45b2-ae65-850332e645c4.xhtml)
-   2. [Forward propagation](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/920d17e8-8c14-4524-9dfc-875fe5048ec1.xhtml)
-   3. [Backpropagation](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/9d59ff80-df00-4855-a2fe-7b8e9e4a6564.xhtml)
-   4. [Forwardprop and backprop with MNIST](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/2ba064ba-37d2-414e-b8f5-4acf065e7543.xhtml)
-   5. Managing a TensorFlow model
-
-
-[RNNs](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/15e91aca-5877-405a-99eb-1d105727be82.xhtml)
-1. [Technical requirements](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/bfa7eb5e-e1e0-4484-ad1d-cead24304749.xhtml)
-2. The building blocks of RNNs
-   1. [Basic structure](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/77fc0c65-fd61-4b85-93d3-19b0e0ad03bf.xhtml)
-   2. Vanilla recurrent neural networks
-   3. [Backpropagation through time](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/a7f10981-82e6-4194-bc45-35eb23b311a0.xhtml)
-3. Memory units; LSTMs and GRUs
-   1. [LSTM](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/30e008a1-d5ce-462c-ae50-265e8c85fa5a.xhtml)
-   2. [GRUs](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/4bf7738c-53a0-4493-a1dc-504b8691d27a.xhtml)
-4. Sequence processing with RNNs
-   1. Neural machine translation
-      1. [Attention mechanisms](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/8f836ba7-438b-4218-813d-437095b00374.xhtml)
-   2. [Generating image captions](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/beb80ae8-dd40-4d77-badb-046b71a748da.xhtml)
-5. Extensions of RNNs
-   1. [Bidirectional RNNs](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/ba9a32b4-a351-4308-baa4-33ab5c870b29.xhtml)
-   2. [Neural turing machines](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/0517c6a9-4b76-4083-b4f1-d2c198dbb5d7.xhtml)
-
-
-
 
 ## GENERAL NEURAL NETWORKS
 

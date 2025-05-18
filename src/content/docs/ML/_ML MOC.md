@@ -13,28 +13,18 @@ TimeSpent: null
 TimeSpent2: null
 title: _ML MOC
 ---
-```dataview
-TABLE without id
 
-file.link,
-covers,
 
-Quality,
+| Note              | Contains | Status                  | Hier or Net? |
+| ----------------- | -------- | ----------------------- | ------------ |
+| [[ML]]            |          | Cleaned notes from Yang | Network      |
+| [[Deep Learning]] |          | Cleaned notes from Yang | Network      |
 
-"<progress max=" + 
-(sum(HoursDone) + sum(HoursRemain)) + " value=" + number(
-sum(HoursDone)) + "> </progress> "  + number(
-sum(HoursDone)) + " of " + number(
-sum(HoursDone) + sum(HoursRemain)) + " " + "hours" + " (" +round(number(
-sum(HoursDone))/number(
-sum(HoursDone) + sum(HoursRemain))*100) + "%" + ")" as Progress,
 
-sum(HoursRemain) as Remain
-from outgoing([[]])
-```
 
-[[TOC]]
-[[ML]]
-[[Advanced]]
-[[DataScienceFolder/AI/ML Ops]]
-[[Deep Learning]]
+
+
+
+
+
+

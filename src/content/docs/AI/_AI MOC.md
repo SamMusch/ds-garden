@@ -41,38 +41,40 @@ Tie to real business use‑cases / continuous learning habits.
 ```
 
 
-| Part                          | Chapter                          | Section                                                  |
-| ----------------------------- | -------------------------------- | -------------------------------------------------------- |
-| I – Core Concepts             | 1 Deep‑Learning Basics           | [[1.1 Why NNs Work (Intuition)]]                         |
-|                               |                                  | [[1.2 Transformers in Plain English]]                    |
-|                               |                                  | 1.3 Self‑Supervision: “Learning Without Labels”          |
-|                               |                                  | 1.4 Modern Frameworks (PyTorch 2.x, JAX) at a Glance     |
-| II – Generative AI Essentials | 2 Large Language Models          | [[2.1 What Makes GPT‑4o & Llama 3 Tick (High Level)]]    |
-|                               |                                  | 2.2 ChatGPT vs Open‑Source LLMs: When to Use Which       |
-|                               |                                  | 2.3 Easy Fine‑Tuning with LoRA (Step‑by‑Step Guide)      |
-|                               | 3 Prompt Engineering             | 3.1 Crafting Prompts & System Messages                   |
-|                               |                                  | 3.2 Chain‑of‑Thought & “Show Your Work” Tricks           |
-|                               |                                  | 3.3 Function Calling & JSON Output (No Coding Headaches) |
-|                               | 4 Retrieval‑Augmented Generation | 4.1 RAG in One Picture                                   |
-|                               |                                  | 4.2 Vector Stores 101 (Pinecone, Qdrant)                 |
-|                               |                                  | 4.3 Building Your First RAG Chatbot                      |
-| III – Practical MLOps         | 5 Deploying LLMs                 | 5.1 Local vs Cloud Inference (Pros & Cons)               |
-|                               |                                  | 5.2 Quick Quantization to Fit on a Laptop GPU            |
-|                               | 6 Data Pipelines for Gen‑AI      | 6.1 Collecting & Cleaning Text Data Fast                 |
-|                               |                                  | 6.2 Simple CI/CD for Models (GitHub Actions Template)    |
-| IV – Responsible & Edge AI    | 7 On‑Device AI                   | 7.1 Running LLMs on Apple Silicon or a Phone             |
-|                               |                                  | 7.2 Privacy‑First Design Tips                            |
-|                               | 8 Ethics & Governance            | 8.1 Bias & Fairness Checklists (Non‑Math)                |
-|                               |                                  | 8.2 Key Regulations in Plain Language (EU AI Act, US EO) |
-| V – Applications & Career     | 9 AI Agents & Tools              | 9.1 ReAct, CrewAI & Other Agent Patterns                 |
-|                               |                                  | 9.2 Safeguarding Agents (Rate Limits, Guardrails)        |
-|                               | 10 Domain Playbooks              | 10.1 E‑Commerce: Smart Recommendations                   |
-|                               |                                  | 10.2 Finance: Fast Fraud Detection with Gen‑AI           |
-|                               |                                  | 10.3 Healthcare: HIPAA‑Friendly Chat Assistants          |
-|                               | 11 Portfolio Projects            | 11.1 Build a Personal RAG Bot over Your Notes            |
-|                               |                                  | 11.2 Publish a Blog Post from Your Evergreen Notes       |
-|                               | 12 Continuous Learning           | 12.1 Must‑Follow Newsletters & Paper Digests             |
-|                               |                                  | 12.2 Quarterly Skill‑Gap Self‑Check                      |
+| Part                            | Chapter                          | Section                                                  |
+| ------------------------------- | -------------------------------- | -------------------------------------------------------- |
+| I – Core Concepts               | 1 Deep‑Learning Basics           | [[1.1 Why NNs Work (Intuition)]]                         |
+|                                 |                                  | [[1.2 Transformers in Plain English]]                    |
+|                                 |                                  | 1.3 Self‑Supervision: “Learning Without Labels”          |
+|                                 |                                  | 1.4 Modern Frameworks (PyTorch 2.x, JAX) at a Glance     |
+| II – Generative AI Essentials   | 2 Large Language Models          | [[2.1 What Makes GPT‑4o & Llama 3 Tick (High Level)]]    |
+|                                 |                                  | 2.2 ChatGPT vs Open‑Source LLMs: When to Use Which       |
+|                                 |                                  | 2.3 Easy Fine‑Tuning with LoRA (Step‑by‑Step Guide)      |
+|                                 | 3 Prompt Engineering             | 3.1 Crafting Prompts & System Messages                   |
+|                                 |                                  | 3.2 Chain‑of‑Thought & “Show Your Work” Tricks           |
+|                                 |                                  | 3.3 Function Calling & JSON Output (No Coding Headaches) |
+|                                 | 4 Retrieval‑Augmented Generation | 4.1 RAG in One Picture                                   |
+|                                 |                                  | 4.2 Vector Stores 101 (Pinecone, Qdrant)                 |
+|                                 |                                  | 4.3 Building Your First RAG Chatbot                      |
+| III – Practical MLOps           | 5 Deploying LLMs                 | 5.1 Local vs Cloud Inference (Pros & Cons)               |
+| [[ML Ops]] - need to break down |                                  | 5.2 Quick Quantization to Fit on a Laptop GPU            |
+|                                 | 6 Data Pipelines for Gen‑AI      | 6.1 Collecting & Cleaning Text Data Fast                 |
+|                                 |                                  | 6.2 Simple CI/CD for Models (GitHub Actions Template)    |
+| IV – Responsible & Edge AI      | 7 On‑Device AI                   | 7.1 Running LLMs on Apple Silicon or a Phone             |
+|                                 |                                  | 7.2 Privacy‑First Design Tips                            |
+|                                 | 8 Ethics & Governance            | 8.1 Bias & Fairness Checklists (Non‑Math)                |
+|                                 |                                  | 8.2 Key Regulations in Plain Language (EU AI Act, US EO) |
+| V – Applications & Career       | 9 AI Agents & Tools              | 9.1 ReAct, CrewAI & Other Agent Patterns                 |
+|                                 |                                  | 9.2 Safeguarding Agents (Rate Limits, Guardrails)        |
+|                                 | 10 Domain Playbooks              | 10.1 E‑Commerce: Smart Recommendations                   |
+|                                 |                                  | 10.2 Finance: Fast Fraud Detection with Gen‑AI           |
+|                                 |                                  | 10.3 Healthcare: HIPAA‑Friendly Chat Assistants          |
+|                                 | 11 Portfolio Projects            | 11.1 Build a Personal RAG Bot over Your Notes            |
+|                                 |                                  | 11.2 Publish a Blog Post from Your Evergreen Notes       |
+|                                 | 12 Continuous Learning           | 12.1 Must‑Follow Newsletters & Paper Digests             |
+|                                 |                                  | 12.2 Quarterly Skill‑Gap Self‑Check                      |
+
+
 
 
 
