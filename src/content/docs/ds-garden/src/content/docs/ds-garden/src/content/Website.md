@@ -1,13 +1,10 @@
+---
+title: Website
+---
 # Website
 
-
-[Tokens](https://github.com/settings/tokens)
-[Actions](https://github.com/SamMusch/notes-vault/settings/secrets/actions)
-[Workflow Runs](https://github.com/SamMusch/notes-vault/actions)
-
-
 `src/content`: Source folders/content
-`dist/`: Output folder
+`dist/`: Output folder 
 
 |            **Element**             |                                      **Definition**                                       |                                      **Purpose**                                      |
 | :--------------------------------: | :---------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |

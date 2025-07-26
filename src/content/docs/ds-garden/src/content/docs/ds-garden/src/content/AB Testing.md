@@ -1,5 +1,8 @@
+---
+title: AB Testing
+---
 ## Terms
-Assume A is control, B is test. 
+Assume A is control, B is test.
 
 ```ad-sam
 Dependent Variable
