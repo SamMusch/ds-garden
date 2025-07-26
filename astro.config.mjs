@@ -10,17 +10,36 @@ export default defineConfig({
     starlight({
       title: '',
       social: [],
+
+      /* expose the component used by the plugin */
       components: {
         Admonition: './src/components/Admonition.astro'
+      },
+
+      /* markdown pipeline that Starlight actually executes */
+      markdown: {
+        remarkPlugins: [
+          [
+            wikiLink,
+            /** @type {import('remark-wiki-link').Options} */
+            {
+              hrefTemplate: p => `/${p}/`,
+              pageResolver: n => [
+                n.toLowerCase()
+                 .replace(/\.mdx?|(markdown)$/i, '')
+                 .replace(/[^a-z0-9]+/g, '-')
+                 .replace(/(^-|-$)/g, '')
+              ]
+            }
+          ],
+          remarkAdmonition            // ← our custom plugin
+        ]
       }
     })
   ],
 
+  /* this part is still honoured by Astro and Shiki */
   markdown: {
-    remarkPlugins: [
-      [wikiLink, { hrefTemplate: p => `/${p}/` }],
-      remarkAdmonition
-    ],
     shikiConfig: {
       langs: [{ id: 'ad-sam', scopeName: 'text.ad-sam', grammar: {} }]
     }
