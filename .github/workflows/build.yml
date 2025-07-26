@@ -11,7 +11,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Clone private vault
-      - name: Clone private vault
 
         run: git clone https://x-access-token:${{ secrets.VAULT_PAT }}@github.com/SamMusch/notes-vault.git vault
         env:
