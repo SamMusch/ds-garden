@@ -1,3 +1,66 @@
+---
+title: Website
+created: '2025-07-26'
+modified: '2025-07-26'
+source_file: Website.md
+word_count: 258
+reading_time: 1.3
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Website.md
+kMDItemContentCreationDate: 2025-07-26 00:36:51 +0000
+kMDItemContentCreationDate_Ranking: 2025-07-26 00:00:00 +0000
+kMDItemContentModificationDate: 2025-07-26 15:55:18 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-07-26 00:36:51 +0000
+kMDItemDocumentIdentifier: '169839'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-07-26 00:00:00 +0000
+kMDItemLastUsedDate: 2025-07-26 03:57:18 +0000
+kMDItemLastUsedDate_Ranking: 2025-07-26 00:00:00 +0000
+kMDItemUseCount: '57'
+kMDItemUsedDates: (
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
+
+Steps (just reminders)
+- [ ] Generating AI metadata fields (abstract, key terms)
+- [ ] Selectively displaying metadata
+- [ ] Hiding assets
+- [ ] Virtual environment
+
+
+
 # Website
 
 

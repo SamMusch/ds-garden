@@ -1,19 +1,50 @@
 ---
-Quality: ★
-QualityComment: Why isn't this a 10?
-Objective: Reference
+title: ' BigData MOC'
+created: '2025-07-18'
+modified: '2025-05-18'
+source_file: _BigData MOC.md
+word_count: 176
+reading_time: 0.9
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: _BigData MOC.md
+kMDItemContentCreationDate: 2024-12-30 02:26:18 +0000
+kMDItemContentCreationDate_Ranking: 2025-02-01 00:00:00 +0000
+kMDItemContentModificationDate: 2025-05-18 14:52:33 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97076'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-05-18 00:00:00 +0000
+Due: null
 Function: Hierarchy
+Objective: Reference
+Quality: "\u2605"
+QualityComment: Why isn't this a 10?
 ReviewFreq: Weekly, 1-Month, 2-Month, 3-Month
-Due: 
+CoverImage: https://i.imgur.com/7IsxieV.png
 HoursDone: 0
 HoursRemain: 0
-CoverImage: https://i.imgur.com/7IsxieV.png
-tags: 
-TimeSpent: 
-TimeSpent2:
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
 ---
-
-
 
 [ML Ops](DataScienceFolder/AI/ML%20Ops.md)
 **MLflow** - MLflow is an open-source platform for managing the machine learning (ML) lifecycle, including experimentation, reproducibility, deployment, and model tracking. It was developed by **Databricks** and is now widely used in the industry for MLOps (Machine Learning Operations).

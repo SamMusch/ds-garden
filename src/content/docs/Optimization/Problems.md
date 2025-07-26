@@ -1,3 +1,59 @@
+---
+title: Problems
+created: '2025-07-18'
+modified: '2024-12-27'
+source_file: Problems.md
+word_count: 3002
+reading_time: 15.0
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Problems.md
+kMDItemContentCreationDate: 2024-09-06 20:10:35 +0000
+kMDItemContentCreationDate_Ranking: 2024-09-06 00:00:00 +0000
+kMDItemContentModificationDate: 2024-12-27 23:43:24 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97055'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2024-09-06 00:00:00 +0000
+kMDItemLastUsedDate: 2024-09-06 20:16:18 +0000
+kMDItemLastUsedDate_Ranking: 2024-09-06 00:00:00 +0000
+kMDItemUseCount: '10'
+kMDItemUsedDates: (
+kMDItemUserCreatedDate: (
+kMDItemUserCreatedUserHandle: (
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 **Resources**
 - [Textbook](https://play.google.com/books/reader?id=nWaFCgAAQBAJ&pg=GBS.PA37&hl=en)

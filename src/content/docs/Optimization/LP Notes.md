@@ -1,3 +1,60 @@
+---
+title: LP Notes
+created: '2025-07-18'
+modified: '2024-12-27'
+source_file: LP Notes.md
+word_count: 1829
+reading_time: 9.1
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: LP Notes.md
+kMDItemAlternateNames: (
+kMDItemContentCreationDate: 2024-09-01 15:26:46 +0000
+kMDItemContentCreationDate_Ranking: 2024-09-01 00:00:00 +0000
+kMDItemContentModificationDate: 2024-12-27 23:43:24 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97058'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '16'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '1'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-07-05 00:00:00 +0000
+kMDItemLastUsedDate: 2025-07-05 21:50:56 +0000
+kMDItemLastUsedDate_Ranking: 2025-07-05 00:00:00 +0000
+kMDItemUseCount: '12'
+kMDItemUsedDates: (
+kMDItemUserCreatedDate: (
+kMDItemUserCreatedUserHandle: (
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 [Key Topics (Image)](https://i.imgur.com/fRgtITF.png)
 
 Textbooks

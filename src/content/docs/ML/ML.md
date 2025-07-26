@@ -1,18 +1,57 @@
 ---
-Quality: ★★★★
-QualityComment: Basics
-Objective: Reference
+title: ML
+created: '2025-07-18'
+modified: '2025-05-18'
+source_file: ML.md
+word_count: 1570
+reading_time: 7.8
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: ML.md
+kMDItemAlternateNames: (
+kMDItemContentCreationDate: 2024-09-06 16:49:35 +0000
+kMDItemContentCreationDate_Ranking: 2024-09-06 00:00:00 +0000
+kMDItemContentModificationDate: 2025-05-18 14:52:44 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97063'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '16'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '1'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2024-12-29 00:00:00 +0000
+kMDItemLastUsedDate: 2024-12-29 20:07:59 +0000
+kMDItemLastUsedDate_Ranking: 2024-12-29 00:00:00 +0000
+kMDItemUseCount: '12'
+kMDItemUsedDates: (
+kMDItemUserCreatedDate: (
+kMDItemUserCreatedUserHandle: (
+Due: null
 Function: Network
+Objective: Reference
+Quality: "\u2605\u2605\u2605\u2605"
+QualityComment: Basics
 ReviewFreq: 1-Month
-Due: 
+CoverImage: null
 HoursDone: 50
 HoursRemain: 0
-CoverImage: 
 tags:
-  - ml_
-TimeSpent: 
-TimeSpent2: 
+- ml_
+TimeSpent: null
+TimeSpent2: null
 Covers: ML Foundations
+cssclasses: null
+aliases: null
 ---
 
 > [!summary] Summary

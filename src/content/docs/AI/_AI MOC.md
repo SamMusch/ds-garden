@@ -1,19 +1,56 @@
 ---
-Quality: ★
-QualityComment: Why isn't this a 10?
-Objective: Reference
+title: ' AI MOC'
+created: '2025-07-18'
+modified: '2025-07-18'
+source_file: _AI MOC.md
+word_count: 410
+reading_time: 2.0
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: _AI MOC.md
+kMDItemContentCreationDate: 2024-12-30 02:25:41 +0000
+kMDItemContentCreationDate_Ranking: 2024-12-30 00:00:00 +0000
+kMDItemContentModificationDate: 2025-07-19 04:34:26 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97072'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-06-09 00:00:00 +0000
+kMDItemLastUsedDate: 2025-06-09 16:02:21 +0000
+kMDItemLastUsedDate_Ranking: 2025-06-09 00:00:00 +0000
+kMDItemUseCount: '28'
+kMDItemUsedDates: (
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+Due: null
 Function: Hierarchy
+Objective: Reference
+Quality: "\u2605"
+QualityComment: Why isn't this a 10?
 ReviewFreq: Weekly, 1-Month, 2-Month, 3-Month
-Due: 
-HoursDone: 
-HoursRemain: 0
 CoverImage: https://i.imgur.com/Oa8nBFE.png
-tags: 
-TimeSpent: 
-TimeSpent2:
+HoursDone: null
+HoursRemain: 0
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
 ---
-
-
 
 ```
 2025-05-20
