@@ -1,10 +1,9 @@
 ---
+// src/components/Admonition.astro
 import '../styles/custom_callouts.css';
-const { type = 'note', title, children } = Astro.props;
+const { type = 'note', title } = Astro.props;
 ---
 <aside class={`admonition ${type}`}>
   {title && <header>{title}</header>}
-  <div class="content">
-    {children}
-  </div>
+  <slot />                 {/* already‑parsed markdown */}
 </aside>
