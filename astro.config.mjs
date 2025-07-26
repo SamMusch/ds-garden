@@ -24,7 +24,7 @@ export default defineConfig({
         Admonition: './src/components/Admonition.astro'
       },
       // Ensure your CSS loads
-      customCss: ['./src/styles/admonitions.css']
+      customCss: ['./src/styles/Mado-Miniflow.css', './src/styles/admonitions.css']
     })
   ]
 });
