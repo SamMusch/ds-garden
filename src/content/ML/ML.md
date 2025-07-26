@@ -4,21 +4,32 @@ QualityComment: Basics
 Objective: Reference
 Function: Network
 ReviewFreq: 1-Month
-Due: 
+Due: null
 HoursDone: 50
 HoursRemain: 0
-CoverImage: 
+CoverImage: null
 tags:
   - ml_
-TimeSpent: 
-TimeSpent2: 
+TimeSpent: null
+TimeSpent2: null
 Covers: ML Foundations
+title: ML
 ---
 
 > [!summary] Summary
 > Consolidates ML foundations.
 > 
 > [Textbook online PDF](https://powerunit-ju.com/wp-content/uploads/2021/04/Aurelien-Geron-Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-Tensorflow_-Concepts-Tools-and-Techniques-to-Build-Intelligent-Systems-OReilly-Media-2019.pdf)
+
+
+## Deeper Links
+
+| Notes                            | Contains                          |
+| -------------------------------- | --------------------------------- |
+| [[Supervised-2-Classification]]  | Models, evaluation, and some code |
+| [[Supervised-4-Regression-Eval]] | Evaluation                        |
+| [[Supervised-6-Ensemble]]        | Models                            |
+
 
 
 ## Overview #cards

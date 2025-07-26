@@ -1,3 +1,6 @@
+---
+title: LP duality example beer ale
+---
 
 
 ## Beer vs Ale

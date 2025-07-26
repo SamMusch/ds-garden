@@ -1,6 +1,3 @@
----
-title: Case Studies
----
 
 [Hacking the Case Interview](https://s3.amazonaws.com/thinkific/file_uploads/163260/attachments/c28/5c8/468/Case_Interview_Cheat_Sheet_and_Study_Guide.pdf)
 

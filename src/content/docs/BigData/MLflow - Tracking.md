@@ -1,6 +1,3 @@
----
-title: MLflow - Tracking
----
 
 Main page: https://www.mlflow.org/docs/latest/tracking.html#tracking
 Quickstart: https://www.mlflow.org/docs/latest/getting-started/intro-quickstart/index.html

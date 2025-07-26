@@ -1,6 +1,3 @@
----
-title: Video Series
----
 
 - [Udacity: Time Series Forecasting w TensorFlow (Free)](https://learn.udacity.com/courses/ud187)
 

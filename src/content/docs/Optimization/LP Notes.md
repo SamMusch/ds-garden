@@ -1,6 +1,3 @@
----
-title: LP Notes
----
 [Key Topics (Image)](https://i.imgur.com/fRgtITF.png)
 
 Textbooks

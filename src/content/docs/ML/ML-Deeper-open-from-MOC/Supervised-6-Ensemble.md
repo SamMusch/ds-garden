@@ -1,6 +1,3 @@
----
-title: Supervised-6-Ensemble
----
 
 
 

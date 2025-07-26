@@ -4,16 +4,15 @@ QualityComment: Basics
 Objective: Reference
 Function: Network
 ReviewFreq: 1-Month
-Due: null
+Due: 
 HoursDone: 50
 HoursRemain: 0
-CoverImage: null
+CoverImage: 
 tags:
   - ml_
-TimeSpent: null
-TimeSpent2: null
+TimeSpent: 
+TimeSpent2: 
 Covers: ML Foundations
-title: ML
 ---
 
 > [!summary] Summary

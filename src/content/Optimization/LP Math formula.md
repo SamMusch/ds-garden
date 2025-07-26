@@ -1,3 +1,6 @@
+---
+title: LP Math formula
+---
 
 ## Math formula
 

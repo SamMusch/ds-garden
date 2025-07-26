@@ -1,3 +1,6 @@
+---
+title: Duality example
+---
 
 [Youtube]([https://www.youtube.com/watch?v=642lZIwdSxs&list=PL8uIP3DsMWIxgSIfkKXv0GxJFAazocko3&index=6](https://youtu.be/642lZIwdSxs?si=PzNKPdiHOubCkJCG&t=1657))
 

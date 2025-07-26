@@ -15,7 +15,7 @@ const copyIfPublish = async (src, dst) => {
   const parsed = matter(raw);
 
   // Skip only if publish:false appears
-  if (parsed.data.publish === false) return;
+  // if (parsed.data.publish === false) return;
 
   // Inject a title if missing (use filename without extension)
   if (!parsed.data.title) {

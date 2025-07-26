@@ -3,41 +3,22 @@ Quality: ★
 QualityComment: Why isn't this a 10?
 Objective: Reference
 Function: Hierarchy
-ReviewFreq: Weekly, 1-Month, 2-Month, 3-Month
-Due: 
+ReviewFreq: 'Weekly, 1-Month, 2-Month, 3-Month'
+Due: null
 HoursDone: 0
 HoursRemain: 0
-CoverImage: https://i.imgur.com/7IsxieV.png
-tags: 
-TimeSpent: 
-TimeSpent2:
+CoverImage: 'https://i.imgur.com/7IsxieV.png'
+tags: null
+TimeSpent: null
+TimeSpent2: null
+title: _BigData MOC
 ---
-```dataview
-TABLE without id
-
-file.link,
-covers,
-
-Quality,
-
-"<progress max=" + 
-(sum(HoursDone) + sum(HoursRemain)) + " value=" + number(
-sum(HoursDone)) + "> </progress> "  + number(
-sum(HoursDone)) + " of " + number(
-sum(HoursDone) + sum(HoursRemain)) + " " + "hours" + " (" +round(number(
-sum(HoursDone))/number(
-sum(HoursDone) + sum(HoursRemain))*100) + "%" + ")" as Progress,
-
-sum(HoursRemain) as Remain
-from outgoing([[]])
-```
-
 
 
 
 [ML Ops](DataScienceFolder/AI/ML%20Ops.md)
-[MLflow](MLflow.md)
-
+**MLflow** - MLflow is an open-source platform for managing the machine learning (ML) lifecycle, including experimentation, reproducibility, deployment, and model tracking. It was developed by **Databricks** and is now widely used in the industry for MLOps (Machine Learning Operations).
+- [Tutorials](https://www.mlflow.org/docs/latest/tutorials-and-examples/index.html)
 
 
 [Platforms and Other Essentials](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/69346214-320e-487f-b4cf-bd5c469dc75e.xhtml)

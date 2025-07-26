@@ -1,6 +1,3 @@
----
-title: QuantEcon Example
----
 ## QuantEcon Example
 
 [QuantEcon](https://python.quantecon.org/lp_intro.html), [Google Colab](https://colab.research.google.com/drive/10Hjet_MImjqmyLn3C08aw6mNoG2tsb72#scrollTo=89bd93d8)

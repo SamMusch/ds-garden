@@ -1,6 +1,3 @@
----
-title: Problems
----
 
 **Resources**
 - [Textbook](https://play.google.com/books/reader?id=nWaFCgAAQBAJ&pg=GBS.PA37&hl=en)

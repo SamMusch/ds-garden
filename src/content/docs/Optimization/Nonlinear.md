@@ -1,6 +1,3 @@
----
-title: Nonlinear
----
 [Week 5 Playlist - Non-Linear](https://www.youtube.com/watch?list=PL8uIP3DsMWIyps1hmNmfI2Y5c0gdavMmd&v=_VzJ7QxZK3g&feature=emb_title)
 
 *Convex* = when line segments are above the graph

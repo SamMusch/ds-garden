@@ -3,15 +3,14 @@ Quality: ★
 QualityComment: Why isn't this a 10?
 Objective: Reference
 Function: Hierarchy
-ReviewFreq: 'Weekly, 1-Month, 2-Month, 3-Month'
-Due: null
+ReviewFreq: Weekly, 1-Month, 2-Month, 3-Month
+Due: 
 HoursDone: 0
 HoursRemain: 0
-CoverImage: 'https://i.imgur.com/7IsxieV.png'
-tags: null
-TimeSpent: null
-TimeSpent2: null
-title: _BigData MOC
+CoverImage: https://i.imgur.com/7IsxieV.png
+tags: 
+TimeSpent: 
+TimeSpent2:
 ---
 
 

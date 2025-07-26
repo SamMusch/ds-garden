@@ -3,12 +3,14 @@ Quality: ★
 QualityComment: Why isn't this a 10?
 Objective: Reference
 Function: Hierarchy
-ReviewFreq: Weekly, 1-Month, 2-Month, 3-Month
-Due: 
+ReviewFreq: 'Weekly, 1-Month, 2-Month, 3-Month'
+Due: null
 HoursDone: 0
 HoursRemain: 0
-CoverImage: 
-tags: 
-TimeSpent: 
-TimeSpent2:
+CoverImage: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+title: Template
 ---
+

@@ -1,0 +1,33 @@
+name: Build-and-Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone private vault
+        run: git clone https://TOKEN@github.com/SamMusch/notes-vault.git vault
+        env:
+          TOKEN: ${{ secrets.VAULT_PAT }}
+
+      - name: Install deps
+        run: |
+          npm ci
+          npm install gray-matter fs-extra --save-dev
+
+      - name: Extract publish:true notes
+        run: node scripts/extractNotes.js vault src/content
+
+      - name: Build
+        run: npx astro build
+
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_dir: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}

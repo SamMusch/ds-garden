@@ -1,6 +1,3 @@
----
-title: Optimization Overview
----
 
 
 # Branches of Optimization

@@ -1,3 +1,6 @@
+---
+title: Undergrad Capstone
+---
 
 
 ### 1. Intro

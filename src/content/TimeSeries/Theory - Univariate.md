@@ -1,3 +1,6 @@
+---
+title: Theory - Univariate
+---
 
 - [Springer Textbook](https://mybiostats.wordpress.com/wp-content/uploads/2015/03/time-series-analysis-with-applications-in-r-cryer-and-chan.pdf)
 - [University of South Carolina Lecture Notes (Heavy)](https://people.stat.sc.edu/Tebbs/stat520/f13notes.pdf)

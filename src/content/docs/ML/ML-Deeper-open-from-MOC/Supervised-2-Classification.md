@@ -1,6 +1,3 @@
----
-title: Supervised-2-Classification
----
 
 
 ```
@@ -20,16 +17,13 @@ Resources
 
 
 ## Table Summary
-
-https://chatgpt.com/share/679fc159-020c-8000-b16e-e3fd1b93bfc7
+[ChatGPT](https://chatgpt.com/share/679fc159-020c-8000-b16e-e3fd1b93bfc7)
 
 - **k-NN** is intuitive and simple but can be slow for large datasets.
 - **Naive Bayes** is fast and works well with high-dimensional data but assumes independent features.
 - **Logistic Regression** is a well-understood parametric approach, ideal for linearly separable data, and can handle regularization elegantly.
 - **Decision Trees** are highly interpretable but can overfit if not carefully regularized (via max depth, minimum samples per leaf, etc.).
 
-
-```ad-sam
 
 | **CATEGORY**            | **CORE IDEA**                                                                                                                                                          | **MODEL TYPE**     | **KEY HYPERPARAMETERS**                                                                                                                                           | **STRENGTHS**                                                                                                                            | **WEAKNESSES**                                                                                                                                                                                     | **REGULARIZATION**                                                                              |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -38,7 +32,11 @@ https://chatgpt.com/share/679fc159-020c-8000-b16e-e3fd1b93bfc7
 | **Logistic Regression** | Estimates the probability of each class via a **linear combination** of features passed through a **sigmoid** (or softmax) function, making it a **parametric** model. | **Parametric**     | **C**: Inverse regularization strength. <br><br>**multi_class**: One-vs-Rest or multinomial. <br><br>**Regularization** type                                      | Interpretable coefficients. <br><br>Can incorporate **regularization** <br><br>Good when data is linearly (or log-linearly) separable.   | May struggle with highly non-linear relationships. <br><br>Sensitive to outliers if **regularization** is not used properly. Assumes linear (or log-linear) deci-bound.                            | **L1 (Lasso)** <br><br>**L2 (Ridge)** <br><br>**Elastic Net**: Combo of L1 and L2.              |
 | **Decision Trees**      | Splits data into **hierarchical** branches based on feature values, aiming to maximize “purity” at each split.                                                         | **Non-parametric** | **max_depth**: Maximum tree depth.<br><br>**min_samples_leaf**: Minimum samples required in a leaf node. <br><br>Splitting **criterion** (e.g., Gini or Entropy). | Highly interpretable <br><br>Handles numeric & categorical <br><br>Don't need scaling or dummies. <br><br>Handles multi-output problems. | **Overfitting** if grown without constraints. <br><br>Greedy splitting may not yield a global optimum. <br><br>Sensitive to data imbalance. <br><br>Can struggle with certain complex interactions | Indirectly via **max_depth**, **min_samples_leaf**, etc. <br><br>Pruning can reduce overfitting |
 
-```
+
+
+
+
+
 
 
 ## Extra Details

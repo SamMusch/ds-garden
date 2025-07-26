@@ -1,3 +1,6 @@
+---
+title: More optim examples
+---
 ## Examples
 
 ### Min cost
