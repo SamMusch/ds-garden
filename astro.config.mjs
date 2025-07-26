@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import starlight from '@withastro/starlight';
+import starlight from '@astrojs/starlight';
 import wikiLink from 'remark-wiki-link';
 import remarkAdmonition from './src/remark/admonition.js';
 
@@ -17,6 +17,8 @@ export default defineConfig({
   },
   integrations: [
     starlight({
+      // Required site title
+      title: 'DS Garden',
       // Register the Admonition component for MDX output
       components: {
         Admonition: './src/components/Admonition.astro'
