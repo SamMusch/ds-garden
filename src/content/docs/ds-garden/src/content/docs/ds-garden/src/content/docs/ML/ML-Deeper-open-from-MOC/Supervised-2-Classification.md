@@ -1,3 +1,51 @@
+---
+title: Supervised 2 Classification
+created: '2025-07-18'
+modified: '2025-07-18'
+source_file: Supervised-2-Classification.md
+word_count: 2107
+reading_time: 10.5
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Supervised-2-Classification.md
+kMDItemContentCreationDate: 2025-02-02 17:03:21 +0000
+kMDItemContentCreationDate_Ranking: 2025-05-18 00:00:00 +0000
+kMDItemContentModificationDate: 2025-07-19 04:04:39 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-05-18 14:44:10 +0000
+kMDItemDocumentIdentifier: '97643'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-07-19 00:00:00 +0000
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 
 ```

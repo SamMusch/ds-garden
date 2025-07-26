@@ -89,7 +89,8 @@ Paradigm
 |Architecture / Topology|Structural design of a model|Transformer, ResNet‑50, LSTM layers arrangement|
 |Model|Trained instance of an architecture|A particular ResNet‑50 trained on ImageNet, BERT fine‑tuned for Q&A|
 |Checkpoint|Saved snapshot of model weights at a training step|Epoch 5 checkpoint of a GPT model, Best‐validation‐loss checkpoint|
-
+ 
 
 ```
 
+ 

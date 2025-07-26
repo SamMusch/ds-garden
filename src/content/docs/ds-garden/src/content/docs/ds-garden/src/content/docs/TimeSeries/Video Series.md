@@ -1,3 +1,51 @@
+---
+title: Video Series
+created: '2025-07-18'
+modified: '2025-03-09'
+source_file: Video Series.md
+word_count: 1041
+reading_time: 5.2
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Video Series.md
+kMDItemContentCreationDate: 2024-09-08 15:58:47 +0000
+kMDItemContentCreationDate_Ranking: 2025-02-01 00:00:00 +0000
+kMDItemContentModificationDate: 2025-03-09 16:03:32 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97046'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-03-09 00:00:00 +0000
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 - [Udacity: Time Series Forecasting w TensorFlow (Free)](https://learn.udacity.com/courses/ud187)
 

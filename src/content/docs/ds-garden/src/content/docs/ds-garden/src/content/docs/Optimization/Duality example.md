@@ -1,3 +1,51 @@
+---
+title: Duality example
+created: '2025-07-18'
+modified: '2024-12-27'
+source_file: Duality example.md
+word_count: 296
+reading_time: 1.5
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Duality example.md
+kMDItemContentCreationDate: 2024-09-06 21:55:29 +0000
+kMDItemContentCreationDate_Ranking: 2025-02-01 00:00:00 +0000
+kMDItemContentModificationDate: 2024-12-27 23:43:24 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97056'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2024-12-27 00:00:00 +0000
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 [Youtube]([https://www.youtube.com/watch?v=642lZIwdSxs&list=PL8uIP3DsMWIxgSIfkKXv0GxJFAazocko3&index=6](https://youtu.be/642lZIwdSxs?si=PzNKPdiHOubCkJCG&t=1657))
 
