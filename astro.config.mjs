@@ -3,37 +3,27 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import wikiLink from 'remark-wiki-link';
-import remarkAdmonitions from 'remark-admonitions';
+import remarkAdmonition from './src/remark/admonition.js';
 
 export default defineConfig({
   integrations: [
     starlight({
       title: '',
-      social: [],
+      components: {
+        Admonition: './src/components/Admonition.astro'   // you already have this
+      },
 
       markdown: {
         remarkPlugins: [
-          [
-            wikiLink,
-            /** @type {import('remark-wiki-link').Options} */
-            { hrefTemplate: p => `/${p}/` }
-          ],
-          [
-            remarkAdmonitions,
-            /** @type {import('remark-admonitions').Options} */
-            {
-              // recognises ```ad-sam``` … fences automatically
-              tag: 'ad',        // default
-              // feel free to tweak styling later (Infima, icons, etc.)
-            }
-          ]
+          [wikiLink, { hrefTemplate: p => `/${p}/` }],
+          remarkAdmonition                               // ← now it actually runs
         ]
       }
     })
   ],
 
   markdown: {
-    // silence “ad-sam” Shiki warning
+    // keep the Shiki tweak here
     shikiConfig: {
       langs: [{ id: 'ad-sam', scopeName: 'text.ad-sam', grammar: {} }]
     }

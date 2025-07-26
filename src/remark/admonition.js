@@ -4,7 +4,11 @@ import { gfm } from 'micromark-extension-gfm';
 import { gfmFromMarkdown } from 'mdast-util-gfm';
 
 export default function remarkAdmonition () {
+  console.log('[admonition] plugin loaded');
+  
+  let changed = false;
   return tree => {
+
     visit(tree, 'code', (node, idx, parent) => {
       if (!parent || !node.lang) return;
 
