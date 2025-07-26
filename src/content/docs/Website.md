@@ -1,3 +1,12 @@
+
+Steps (just reminders)
+- [ ] Generating AI metadata fields (abstract, key terms)
+- [ ] Selectively displaying metadata
+- [ ] Hiding assets
+- [ ] Virtual environment
+
+
+
 # Website
 
 
