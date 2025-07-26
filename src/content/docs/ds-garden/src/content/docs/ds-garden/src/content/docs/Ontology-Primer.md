@@ -1,3 +1,51 @@
+---
+title: Ontology Primer
+created: '2025-07-20'
+modified: '2025-07-20'
+source_file: Ontology-Primer.md
+word_count: 380
+reading_time: 1.9
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Ontology-Primer.md
+kMDItemContentCreationDate: 2025-07-20 15:33:48 +0000
+kMDItemContentCreationDate_Ranking: 2025-07-20 00:00:00 +0000
+kMDItemContentModificationDate: 2025-07-20 18:12:20 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-07-20 15:33:48 +0000
+kMDItemDocumentIdentifier: '169805'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-07-20 00:00:00 +0000
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 In short, ontologies and taxonomies both organize information, but ==ontologies are more expressive and detailed than taxonomies==, capturing relationships between concepts beyond simple hierarchical structures. Taxonomies focus on classification, while ontologies enable richer semantic understanding.
 

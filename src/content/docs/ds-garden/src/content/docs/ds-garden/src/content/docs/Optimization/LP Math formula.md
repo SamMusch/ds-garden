@@ -1,3 +1,57 @@
+---
+title: LP Math formula
+created: '2025-07-25'
+modified: '2024-12-27'
+source_file: LP Math formula.md
+word_count: 154
+reading_time: 0.8
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: LP Math formula.md
+kMDItemContentCreationDate: 2022-08-10 14:57:32 +0000
+kMDItemContentCreationDate_Ranking: 2022-08-10 00:00:00 +0000
+kMDItemContentModificationDate: 2024-12-27 23:43:24 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97059'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2024-09-06 00:00:00 +0000
+kMDItemLastUsedDate: 2024-09-06 22:23:13 +0000
+kMDItemLastUsedDate_Ranking: 2024-09-06 00:00:00 +0000
+kMDItemUseCount: '4'
+kMDItemUsedDates: (
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 ## Math formula
 

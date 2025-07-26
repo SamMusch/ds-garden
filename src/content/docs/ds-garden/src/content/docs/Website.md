@@ -58,6 +58,7 @@ Steps (just reminders)
 - [ ] Selectively displaying metadata
 - [ ] Hiding assets
 - [ ] Virtual environment
+- [ ] [Faceted classification](https://www.wikiwand.com/en/articles/Library_classification) - for **finding** files
 
 
 

@@ -1,3 +1,51 @@
+---
+title: Glossary
+created: '2025-07-25'
+modified: '2025-07-25'
+source_file: Glossary.md
+word_count: 1286
+reading_time: 6.4
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Glossary.md
+kMDItemContentCreationDate: 2025-07-19 17:04:54 +0000
+kMDItemContentCreationDate_Ranking: 2025-07-19 00:00:00 +0000
+kMDItemContentModificationDate: 2025-07-26 00:22:33 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-07-19 17:04:54 +0000
+kMDItemDocumentIdentifier: '169753'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-07-26 00:00:00 +0000
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 
 “Greatest-hits” schema patterns
@@ -20,7 +68,7 @@ Ask for clusters instead of items.
 
 
 You have:
-- **High-level**: Summaries, purposes
+- **High-level**: Summaries, purposes 
 - **Low-level**: Building blocks, atoms, pieces
 - Need to *map* low-level --> high-level
 
