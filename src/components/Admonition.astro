@@ -1,7 +1,10 @@
 ---
-const { type, children } = Astro.props;
 import '../styles/custom_callouts.css';
+const { type = 'note', title, children } = Astro.props;
 ---
 <aside class={`admonition ${type}`}>
-  {children}
+  {title && <header>{title}</header>}
+  <div class="content">
+    {children}
+  </div>
 </aside>

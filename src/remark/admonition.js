@@ -1,22 +1,29 @@
-// src/remark/admonition.js
 import { visit } from 'unist-util-visit';
 
-export default function remarkAdmonition () {
+export default function remarkAdmonition() {
   return (tree) => {
-    visit(tree, 'code', (node, idx, parent) => {
-      const m = /^ad-([\w-]+)/.exec(node.lang || '');
-      if (!m) return;
+    visit(tree, 'code', (node, index, parent) => {
+      if (!parent || !node.lang) return;
 
-      const type  = m[1];
-      const value = node.value;
+      const match = /^ad-([\w-]+)/i.exec(node.lang);
+      if (!match) return;
 
-      parent.children[idx] = {
+      // first line like `title: My Title` (optional)
+      const lines = node.value.split('\n');
+      let title = '';
+      if (/^\s*title:/i.test(lines[0])) {
+        title = lines.shift().replace(/^\s*title:\s*/i, '');
+      }
+      const body = lines.join('\n');
+
+      parent.children[index] = {
         type: 'mdxJsxFlowElement',
         name: 'Admonition',
         attributes: [
-          { type: 'mdxJsxAttribute', name: 'type', value: type }
+          { type: 'mdxJsxAttribute', name: 'type',  value: match[1] },
+          ...(title ? [{ type: 'mdxJsxAttribute', name: 'title', value: title }] : [])
         ],
-        children: [{ type: 'jsxText', value }]
+        children: [{ type: 'text', value: body }]
       };
     });
   };
