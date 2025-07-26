@@ -1,7 +1,10 @@
+---
+title: Hierarchies
+---
 
 ## Next
 ```
-This document structures common AI/DS terms into a clear **hierarchy** and **network**, with concrete examples. 
+This document structures common AI/DS terms into a clear **hierarchy** and **network**, with concrete examples.
 ```
 
 ### Hierarchy
