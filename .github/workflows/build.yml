@@ -1,4 +1,9 @@
 name: Build-and-Deploy
+
+permissions:
+  contents: write        # allow the workflow to push commits
+  pages: write           # needed by the gh‑pages action
+  
 on:
   push:
     branches: [main]
