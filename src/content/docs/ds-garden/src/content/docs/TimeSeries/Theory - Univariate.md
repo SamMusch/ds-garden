@@ -1,3 +1,55 @@
+---
+title: Theory   Univariate
+created: '2025-07-18'
+modified: '2025-03-09'
+source_file: Theory - Univariate.md
+word_count: 980
+reading_time: 4.9
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Theory - Univariate.md
+kMDItemContentCreationDate: 2024-09-08 15:59:27 +0000
+kMDItemContentCreationDate_Ranking: 2025-02-01 00:00:00 +0000
+kMDItemContentModificationDate: 2025-03-09 17:20:38 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97047'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-03-09 00:00:00 +0000
+kMDItemLastUsedDate: 2025-03-09 17:08:00 +0000
+kMDItemLastUsedDate_Ranking: 2025-03-09 00:00:00 +0000
+kMDItemUseCount: '11'
+kMDItemUsedDates: (
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 - [Springer Textbook](https://mybiostats.wordpress.com/wp-content/uploads/2015/03/time-series-analysis-with-applications-in-r-cryer-and-chan.pdf)
 - [University of South Carolina Lecture Notes (Heavy)](https://people.stat.sc.edu/Tebbs/stat520/f13notes.pdf)

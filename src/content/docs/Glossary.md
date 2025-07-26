@@ -68,7 +68,7 @@ Ask for clusters instead of items.
 
 
 You have:
-- **High-level**: Summaries, purposes
+- **High-level**: Summaries, purposes 
 - **Low-level**: Building blocks, atoms, pieces
 - Need to *map* low-level --> high-level
 

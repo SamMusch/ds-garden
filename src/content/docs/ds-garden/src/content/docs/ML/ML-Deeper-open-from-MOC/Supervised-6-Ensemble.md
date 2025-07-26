@@ -1,3 +1,51 @@
+---
+title: Supervised 6 Ensemble
+created: '2025-07-18'
+modified: '2025-02-02'
+source_file: Supervised-6-Ensemble.md
+word_count: 542
+reading_time: 2.7
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Supervised-6-Ensemble.md
+kMDItemContentCreationDate: 2025-02-02 17:09:33 +0000
+kMDItemContentCreationDate_Ranking: 2025-05-18 00:00:00 +0000
+kMDItemContentModificationDate: 2025-02-02 17:10:27 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-05-18 14:44:14 +0000
+kMDItemDocumentIdentifier: '97649'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-02-02 00:00:00 +0000
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 
 

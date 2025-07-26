@@ -1,3 +1,57 @@
+---
+title: Hierarchies
+created: '2025-07-25'
+modified: '2025-07-25'
+source_file: Hierarchies.md
+word_count: 186
+reading_time: 0.9
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Hierarchies.md
+kMDItemContentCreationDate: 2025-05-24 16:46:16 +0000
+kMDItemContentCreationDate_Ranking: 2025-05-24 00:00:00 +0000
+kMDItemContentModificationDate: 2025-07-26 03:36:10 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-05-24 16:46:34 +0000
+kMDItemDocumentIdentifier: '167282'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-07-26 00:00:00 +0000
+kMDItemLastUsedDate: 2025-07-26 03:36:10 +0000
+kMDItemLastUsedDate_Ranking: 2025-07-26 00:00:00 +0000
+kMDItemUseCount: '6'
+kMDItemUsedDates: (
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 ## Next
 ```

@@ -1,3 +1,58 @@
+---
+title: Undergrad Capstone
+created: '2025-07-18'
+modified: '2024-12-27'
+source_file: Undergrad Capstone.md
+word_count: 981
+reading_time: 4.9
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: Undergrad Capstone.md
+kMDItemAlternateNames: (
+kMDItemContentCreationDate: 2024-09-06 16:27:07 +0000
+kMDItemContentCreationDate_Ranking: 2024-09-06 00:00:00 +0000
+kMDItemContentModificationDate: 2024-12-27 23:43:24 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-02-01 17:16:38 +0000
+kMDItemDocumentIdentifier: '97080'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '16'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '1'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2024-09-06 00:00:00 +0000
+kMDItemLastUsedDate: 2024-09-06 16:27:07 +0000
+kMDItemLastUsedDate_Ranking: 2024-09-06 00:00:00 +0000
+kMDItemUseCount: '10'
+kMDItemUsedDates: (
+kMDItemUserCreatedDate: (
+kMDItemUserCreatedUserHandle: (
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---
+
 
 
 ### 1. Intro
