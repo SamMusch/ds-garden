@@ -7,10 +7,13 @@ import remarkAdmonition from './src/remark/admonition.js';
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'My Docs',
+      title: ' ',
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }
       ],
+
+      style: ['src/styles/custom_callouts.css'],
+
       markdown: {
         // register a dummy lexer so Shiki stops warning about “ad‑sam”
         shikiConfig: {
