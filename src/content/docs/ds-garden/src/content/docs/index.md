@@ -1,56 +1,23 @@
 ---
-title: DataScience HOME
-created: '2025-07-18'
-modified: '2025-07-18'
-source_file: DataScience-HOME.md
-word_count: 368
-reading_time: 1.8
-children: 0
-grandchildren: 0
-ai_abstract: null
-ai_key_terms: []
-_kMDItemDisplayNameWithExtensions: DataScience-HOME.md
-kMDItemContentCreationDate: 2024-12-27 00:02:15 +0000
-kMDItemContentCreationDate_Ranking: 2025-02-01 00:00:00 +0000
-kMDItemContentModificationDate: 2025-07-19 04:40:28 +0000
-kMDItemContentType: net.daringfireball.markdown
-kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-02-01 17:16:37 +0000
-kMDItemDocumentIdentifier: '96657'
-kMDItemFSCreatorCode: ''
-kMDItemFSFinderFlags: '0'
-kMDItemFSHasCustomIcon: (null)
-kMDItemFSInvisible: '0'
-kMDItemFSIsExtensionHidden: '0'
-kMDItemFSIsStationery: (null)
-kMDItemFSLabel: '0'
-kMDItemFSNodeCount: (null)
-kMDItemFSOwnerGroupID: '20'
-kMDItemFSOwnerUserID: '502'
-kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2024-12-31 00:00:00 +0000
-kMDItemLastUsedDate: 2024-12-31 22:44:10 +0000
-kMDItemLastUsedDate_Ranking: 2024-12-31 00:00:00 +0000
-kMDItemUseCount: '24'
-kMDItemUsedDates: (
-Due: null
-Function: Hierarchy
-Objective: Reference
-Quality: "\u2605"
+Quality: ★
 QualityComment: Why isn't this a 10?
-ReviewFreq: Weekly, 1-Month, 2-Month, 3-Month
-CoverImage: null
+Objective: Reference
+Function: Hierarchy
+ReviewFreq: 'Weekly, 1-Month, 2-Month, 3-Month'
+Due: null
 HoursDone: 0
 HoursRemain: 0
+CoverImage: null
 tags: null
 TimeSpent: null
 TimeSpent2: null
-Covers: null
 cssclasses:
-- cards
-- cards-readline-off
-aliases: null
+  - cards
+  - cards-readline-off
+title: DataScience-HOME
 ---
+
+
 
 ```dataview
 TABLE without id
@@ -82,7 +49,7 @@ Corresponds to "Cheatsheets" folder above
 - [Github](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-supervised-learning.pdf)
 
 #### Cheatsheets
-[[DS-Cheatsheet.pdf]]
+[[DS Cheatsheet.pdf]]
 
 | <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-supervised-learning.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-001.png?" alt="Illustration" width="220px"/></a> | <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-unsupervised-learning.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-002.png" alt="Illustration" width="220px"/></a> | <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-deep-learning.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-003.png" alt="Illustration" width="220px"/></a> | <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-machine-learning-tips-and-tricks.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-004.png" alt="Illustration" width="220px"/></a> |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -138,15 +105,15 @@ Corresponds to "Cheatsheets" folder above
 
 ## MOCs
 
-[[_AI-MOC]]
-[[_BigData-MOC]]
-[[_ML-MOC]]
+[[_AI MOC]]
+[[_BigData MOC]]
+[[_ML MOC]]
 
 
 **Specialty**
-[[_Optimization-MOC]]
-[[_Strategy-MOC]]
-[[_TS-MOC]]
+[[_Optimization MOC]]
+[[_Strategy MOC]]
+[[_TS MOC]]
 
 
 
