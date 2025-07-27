@@ -4,6 +4,7 @@ import wikiLink from 'remark-wiki-link';
 import remarkAdmonition from './src/remark/admonition.js';
 
 export default defineConfig({
+  base: '/ds-garden/',
   markdown: {
     // 1. Shiki configuration for ad-sam syntax
     shikiConfig: {
