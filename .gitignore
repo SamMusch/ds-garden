@@ -27,3 +27,8 @@ smart-env
 # Astro & Vite cache
 .cache/
 .vite/
+
+# IDE settings
+.vscode/
+# R history
+.Rhistory
