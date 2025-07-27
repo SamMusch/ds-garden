@@ -46,6 +46,41 @@ cssclasses: null
 aliases: null
 ---
 
+
+```summary
+This is a summary.
+- test
+- test
+```
+
+
+> [!summary]
+> 
+This is an open summary. (Call out)
+
+
+> [!summary]-
+> 
+This is a closed summary. (Call out)
+
+
+```ad-summary
+This is a summary. (Admonition)
+
+```
+
+
+```ad-summary
+collapse: closed
+This is a closed summary. (Admonition)
+
+```
+
+
+
+
+
+
 In short, ontologies and taxonomies both organize information, but ==ontologies are more expressive and detailed than taxonomies==, capturing relationships between concepts beyond simple hierarchical structures. Taxonomies focus on classification, while ontologies enable richer semantic understanding.
 
 ## Workflow
