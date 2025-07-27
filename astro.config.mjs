@@ -2,28 +2,11 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import wikiLink from 'remark-wiki-link';
 import remarkAdmonition from './src/remark/admonition.js';
-import fs from 'fs';
-import path from 'path';
-import slugify from 'slugify';
-
-// Recursively search for a file within your vault root
-function findFile(dir, filename) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = path.resolve(dir, entry.name);
-    if (entry.isDirectory()) {
-      const found = findFile(fullPath, filename);
-      if (found) return found;
-    } else if (entry.name === filename) {
-      return fullPath;
-    }
-  }
-  return null;
-}
 
 export default defineConfig({
   base: '/ds-garden/',
   markdown: {
+    // Syntax highlighting for ad-sam
     shikiConfig: {
       langs: [{ id: 'ad-sam', scopeName: 'text.ad-sam', grammar: {} }]
     },
@@ -31,28 +14,20 @@ export default defineConfig({
       [
         wikiLink,
         {
-          hrefTemplate: (permalink, page) => {
-            const vaultRoot = '/Users/Sam/Desktop/notes-vault';
-            const linkFile = permalink.endsWith('.md') ? permalink : `${permalink}.md`;
-            const currentFile = page.filePath;
-            // Try resolving relative to the current file
-            let absolutePath = path.resolve(path.dirname(currentFile), linkFile);
-            // If not found, search entire vault
-            if (!fs.existsSync(absolutePath)) {
-              absolutePath = findFile(vaultRoot, linkFile);
-            }
-            // If still not found, fallback to simple slug
-            if (!absolutePath) {
-              const fallback = slugify(permalink, { lower: true });
-              return `/${fallback}/`;
-            }
-            // Compute the URL path from vault root
-            const relativePath = path.relative(vaultRoot, absolutePath);
-            const parts = relativePath
-              .replace(/\.md$/, '')
-              .split(path.sep)
-              .map(segment => slugify(segment, { lower: true }));
-            return '/' + parts.join('/') + '/';
+          // Resolve a [[link]] to the matching Astro page
+          pageResolver: (permalink, pages) => {
+            const clean = permalink.replace(/\.md$/, '');
+            return pages.find(p => {
+              const stem = p.filePathStem;
+              return (
+                stem.toLowerCase() === clean.toLowerCase() ||
+                p.filePath.toLowerCase().endsWith(`/${clean.toLowerCase()}.md`)
+              );
+            });
+          },
+          // Use the Astro-generated URL for that page
+          hrefTemplate: (permalink, foundPage) => {
+            return foundPage ? foundPage.url : `/${permalink.replace(/\.md$/, '')}/`;
           }
         }
       ],
