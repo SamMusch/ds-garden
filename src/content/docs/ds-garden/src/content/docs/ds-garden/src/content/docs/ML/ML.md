@@ -60,7 +60,7 @@ aliases: null
 > [Textbook online PDF](https://powerunit-ju.com/wp-content/uploads/2021/04/Aurelien-Geron-Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-Tensorflow_-Concepts-Tools-and-Techniques-to-Build-Intelligent-Systems-OReilly-Media-2019.pdf)
 
 
-
+[[History-of-DS]] - temp
 
 ## Deeper Links
 
