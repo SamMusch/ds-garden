@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import wikiLink from 'remark-wiki-link';
-import remarkAdmonition from './src/remark/admonition.js';
+// import remarkAdmonition from './src/remark/admonition.js';
 import path from 'path';
 import slugify from 'slugify';
 
@@ -44,9 +44,9 @@ export default defineConfig({
     starlight({
       title: 'DS Garden',
       components: {
-        Admonition: './src/components/Admonition.astro'
+        // Admonition: './src/components/Admonition.astro'
       },
-      customCss: ['./src/styles/Mado-Miniflow.css', './src/styles/admonitions.css']
+      customCss: ['./src/styles/Mado-Miniflow.css'] // './src/styles/admonitions.css'
     })
   ]
 });
