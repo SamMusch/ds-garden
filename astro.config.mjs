@@ -2,32 +2,38 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import wikiLink from 'remark-wiki-link';
 import remarkAdmonition from './src/remark/admonition.js';
+import path from 'path';
+import slugify from 'slugify';
 
 export default defineConfig({
   base: '/ds-garden/',
   markdown: {
-    // Syntax highlighting for ad-sam
+    // 1. Shiki configuration for ad-sam syntax
     shikiConfig: {
       langs: [{ id: 'ad-sam', scopeName: 'text.ad-sam', grammar: {} }]
     },
+    // 2. Remark plugins run on all Markdown files
     remarkPlugins: [
       [
         wikiLink,
         {
-          // Resolve a [[link]] to the matching Astro page
-          pageResolver: (permalink, pages) => {
-            const clean = permalink.replace(/\.md$/, '');
-            return pages.find(p => {
-              const stem = p.filePathStem;
-              return (
-                stem.toLowerCase() === clean.toLowerCase() ||
-                p.filePath.toLowerCase().endsWith(`/${clean.toLowerCase()}.md`)
-              );
-            });
-          },
-          // Use the Astro-generated URL for that page
-          hrefTemplate: (permalink, foundPage) => {
-            return foundPage ? foundPage.url : `/${permalink.replace(/\.md$/, '')}/`;
+          hrefTemplate: (permalink, page) => {
+            // Local vault root path
+            const vaultRoot = '/Users/Sam/Desktop/notes-vault';
+            // Ensure the link includes .md
+            const linkFile = permalink.endsWith('.md') ? permalink : `${permalink}.md`;
+            // Resolve absolute path based on the current file
+            const currentFile = page.filePath;
+            const absolutePath = path.resolve(path.dirname(currentFile), linkFile);
+            // Compute relative path from vault root
+            const relativePath = path.relative(vaultRoot, absolutePath);
+            // Split into segments, strip .md, slugify each segment
+            const parts = relativePath
+              .replace(/\.md$/, '')
+              .split(path.sep)
+              .map(segment => slugify(segment, { lower: true }));
+            // Construct URL
+            return '/' + parts.join('/') + '/';
           }
         }
       ],
