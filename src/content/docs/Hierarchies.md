@@ -73,7 +73,6 @@ Paradigm
                            └─ Checkpoint
 ```
 
-
 ```ad-sam
 
 |Term|Definition|Examples|

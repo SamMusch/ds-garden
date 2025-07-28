@@ -56,14 +56,12 @@ word_count: 764
 
 ## Beer vs Ale
 
-1. [From Week 1 Playlist | Problem Formulation](https://youtu.be/nMC8Lm4q6PM?si=tWgUZeQQjgBCSlGJ&t=959) 
+1. [From Week 1 Playlist | Problem Formulation](https://youtu.be/nMC8Lm4q6PM?si=tWgUZeQQjgBCSlGJ&t=959)
 2. [From Week 2 Monday Playlist | Solving Graphically](https://youtu.be/dZdQOfsZJdA?si=ayUbx0hQ1qLi8B7M)
 3. [From Week 2 Monday Playlist | Solving with R](https://www.youtube.com/watch?v=xfkdt0geeHY&list=PL8uIP3DsMWIyAXuHDB2Y2ZpV-xcAFw4au&index=9)
 4. [From Week 2 Wednesday Playlist | Dual Problem](https://www.youtube.com/watch?v=HMrq1HPAkzc&list=PL8uIP3DsMWIxgSIfkKXv0GxJFAazocko3&index=2) --> [Economic Interpretation](https://www.youtube.com/watch?v=hDw970ogeOY&list=PL8uIP3DsMWIxgSIfkKXv0GxJFAazocko3&index=3) --> [R Code](https://www.youtube.com/watch?v=F3PsccapBrA&list=PL8uIP3DsMWIxgSIfkKXv0GxJFAazocko3&index=4)
 
-
-
-**Optimization**: Modeling where we need to max/min value that is subject to some parameters with constraints 
+**Optimization**: Modeling where we need to max/min value that is subject to some parameters with constraints
 
 **Objective function**: what needs to be maximized, subject to constraints
 
@@ -116,7 +114,7 @@ Special Cases of Feasible Region
    1. Maybe we forgot a constraint
    2. Maybe we defined constraints incorrectly
    3. Maybe we are trying to min - the "inner" line is all that matters
-   4. Maybe we have a sign incorrect 
+   4. Maybe we have a sign incorrect
 
 <img src="https://i.imgur.com/7zICd6P.png" style="zoom:50%;" />
 
@@ -146,8 +144,6 @@ res_ex1
 # The optimal plan says to produce 12 ale and 28 beer; that generates a maximizing value of revenue of $800.
 ```
 
-
-
 ### General Solution
 
 **C**:   Profit from ale and beer
@@ -160,16 +156,14 @@ res_ex1
 
 **Theorem (Strong Duality):** Objective Function Equal at Optimal Values
 
-$c^T * x' = b^T * u'$ 
+$c^T * x' = b^T * u'$
 
 - $c^T$ = Primal objective function  
 - $x'$ = Primal optimal solution  
 - $b^T$ = Dual objective function
 - $u'$ = Dual optimal solution  
 
-
-
-### Part 1: Primal 
+### Part 1: Primal
 
 Solving for profit max
 
@@ -180,14 +174,12 @@ Step 1: Define decision variables and quantity to be optimized as a mathematical
 Step 2: Define constraints mathematically
 
 - (Corn)   |  $5x + 15y \leq 480$
-- (Hops)  |   $4x + 4y \leq 160$     
+- (Hops)  |   $4x + 4y \leq 160$
 - (Malt)   |    $35x + 20y \leq 1190$
 
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 
 - $x >= 0, y >= 0$
-
-
 
 ### Part 2: Dual
 
@@ -199,8 +191,8 @@ Step 1: Define decision variables and quantity to be optimized as a mathematical
 
 Step 2: Define constraints mathematically
 
-- $st: 5a + 4b + 35c \geq 13$ 
-- $st: 15a + 4b + 20c \geq 23$ 
+- $st: 5a + 4b + 35c \geq 13$
+- $st: 15a + 4b + 20c \geq 23$
 
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 

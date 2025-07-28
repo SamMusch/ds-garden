@@ -59,9 +59,7 @@ word_count: 3002
 - [Textbook](https://play.google.com/books/reader?id=nWaFCgAAQBAJ&pg=GBS.PA37&hl=en)
 - [Textbook Code](https://github.com/jmsallan/linearprogramming/tree/master/LP)
 - more-optim-examples.md | Messier, probably won't need.
-- quantecon-example.md | Python. Probably won't need either. 
-
-
+- quantecon-example.md | Python. Probably won't need either.
 
 # HW1
 
@@ -85,7 +83,6 @@ Govt regulation:
 - Product IV: Can only produce 25 units
 
 Need to meet all obligations.
-
 
 ### Solutions
 
@@ -125,16 +122,14 @@ solution$solution  # 50  0  145  10
 ```
 ---
 
-
 ## Q2 | Grocery Store
 
 ### Problem
-On Saturday, the manager of a supermarket is making hamburger meat, picnic patties, and meat loaf. The demand for each always exceeds the supermarket’s supply. 
+On Saturday, the manager of a supermarket is making hamburger meat, picnic patties, and meat loaf. The demand for each always exceeds the supermarket’s supply.
 
-"Filler": The remainder of each product is an inexpensive non-meat filler which the store has in unlimited supply. 
+"Filler": The remainder of each product is an inexpensive non-meat filler which the store has in unlimited supply.
 
 ![](https://i.imgur.com/G6oZiGH.png)
-
 
 ### Solution
 How many pounds of each product should be made? How much meat needs to be stored for Sunday?
@@ -166,12 +161,10 @@ solution$solution  # 937.5  562.5  125.0
 
 ---
 
-
 ## Q3 | Oil
 
 ### Problem
 Produces two types of unleaded gasoline:
-
 
 - Regular: \$12 per barrel revenue
 - Premium: \$14 per barrel revenue
@@ -181,8 +174,6 @@ Both types are blended from Aztec’s inventory of refined domestic oil and refi
 The characteristics of the refined oils in inventory are as follows:
 
 ![](https://i.imgur.com/T4bojeV.png)
-
-
 
 ### Solution
 The company wants to decide what quantities (i.e., blended barrels) of the oils should it blend into the two gasolines in order to maximize weekly profit? What is the maximum weekly profit? (Note: Solve it as a LP, no need to mandate integer values for barrels)
@@ -216,9 +207,6 @@ solution$objval      # 125000
 solution$solution    # 40000   10000   0    5000
 ```
 
-
-
-
 # HW2
 
 ## Q1 | Investment Bonds
@@ -236,7 +224,6 @@ Taxes
 - **Others**: 50%
 
 ![](https://i.imgur.com/00sLtF7.png)
-
 
 ### Solutions
 
@@ -262,14 +249,9 @@ q2 + q3 + q4 >= 4;
 q1 + q2 + q3 + q4 + q5 <= 10;
 ```
 
-
 ### Dual
 
->The dual problem would involve finding the values of these dual variables that minimize the cost function while satisfying the corresponding dual constraints. Specifically, the dual variables can be interpreted as the marginal value of relaxing each constraint. 
-
-
-
-
+>The dual problem would involve finding the values of these dual variables that minimize the cost function while satisfying the corresponding dual constraints. Specifically, the dual variables can be interpreted as the marginal value of relaxing each constraint.
 
 # Textbook examples
 
@@ -282,15 +264,14 @@ q1 + q2 + q3 + q4 + q5 <= 10;
 6. Ex: Production plan with fixed costs (solve part 1).
 7. Ex: Production plan with fixed costs (solve part 2).
 
-
 ### Problem
 
-**Objective**: Min total cost (raw materials, labor and storage costs). 
+**Objective**: Min total cost (raw materials, labor and storage costs).
 
 **Constraints**:
-- **Labor**: \$12 per hour. Only worked hours are paid. 
-- **Each unit**: 30 minutes of labor. 
-- **Storage**: \$2 per unit at the end of each month. 
+- **Labor**: \$12 per hour. Only worked hours are paid.
+- **Each unit**: 30 minutes of labor.
+- **Storage**: \$2 per unit at the end of each month.
 - **Fixed cost**: \$1,000 for each month with production
 
 **Other**:
@@ -303,7 +284,6 @@ q1 + q2 + q3 + q4 + q5 <= 10;
 | Unit Cost (\$)           | 6       | 8       | 10      | 12      |
 | Demand (units)           | 100     | 200     | 150     | 400     |
 | **Available work hours** | 200     | 200     | 150     | 150     |
-
 
 ### Solution
 Define decision variables, objective function, and constraints.
@@ -336,7 +316,6 @@ End
 
 ---
 
-
 ## P2 | A purchase plan with decreasing unit costs
 
 ### Resources
@@ -347,7 +326,7 @@ End
 
 ### Problem
 
-**Objective**: Min cost (raw materials & storage costs). 
+**Objective**: Min cost (raw materials & storage costs).
 
 **Constraints**:
 - **Storage**: $2 per stored unit at the EoM.
@@ -363,7 +342,6 @@ End
 | -------------- | ------- | ------- | ------- | ------- |
 | Unit Cost (\$) | 12      | 14      | 16      | 18      |
 | Demand (units) | 150     | 200     | 250     | 150     |
-
 
 ### Solution
 
@@ -409,7 +387,6 @@ End
 
 ---
 
-
 ## P3 | A Production Plan with Extra Capacity
 
 ### Resources
@@ -421,25 +398,23 @@ End
 3. Ex: A Production Plan with Extra Capacity (read part 3)
 4. Ex: A Production Plan with Extra Capacity (solve part 3)
 
-
 ### Problem
 
 **Objective**: Min costs (production + storage)
 
 **Constraints**:
-- **Plant capacity**: 1,300 tonnes (t.) per month. 
-- **Storage costs** = \$2k per tonne stocked at EoM. 
+- **Plant capacity**: 1,300 tonnes (t.) per month.
+- **Storage costs** = \$2k per tonne stocked at EoM.
 - **End stock month 4**: 200 tonnes
 
 Others:
-- Production can carryover months. 
+- Production can carryover months.
 - Initial stock = 200 tonnes of finished, 0 of raw materials
 
 |                | Month 1 | Month 2 | Month 3 | Month 4 |
 | -------------- | ------- | ------- | ------- | ------- |
 | Unit Cost (\$) | 3       | 8       | 6       | 7       |
 | Demand (units) | 800     | 900     | 1200    | 1800    |
-
 
 ### Solution
 1. Formulate and solve.
@@ -464,12 +439,10 @@ End
 
 2. What is the meaning of the dual variables of the constraints defined in the model?
 
-
-
-3. Demand is irregular. Mgmt is considering adding extra capacity to the plant (ie, introducing a new shift). 
+3. Demand is irregular. Mgmt is considering adding extra capacity to the plant (ie, introducing a new shift).
 	- **New plant capacity**: Extra 400 T (from 1300 to 1700.)
 	- **New fixed cost**: \$500
-	- It is not possible to add extra capacity in a month if it has been added in the previous month. 
+	- It is not possible to add extra capacity in a month if it has been added in the previous month.
 	- Modify the model obtained previously to include the possibility of including extra shifts, and assess the practicality of adding extra shifts.
 
 ```r
@@ -494,10 +467,7 @@ Binary
 End
 ```
 
-
-
-
-## P4 | Transportation by Trucks 
+## P4 | Transportation by Trucks
 
 ### Resources
 
@@ -509,20 +479,16 @@ End
 
 ### Problem
 - Obj: Min total costs (acquisition, storage & transport, obtaining raw materials, and trucks to be contracted)
-- Table shows quarterly demand (in tonnes) & acquisition costs of raw materials (\$k per tonne) 
+- Table shows quarterly demand (in tonnes) & acquisition costs of raw materials (\$k per tonne)
 - Can carryover.
-- Stocking = \$8k per tonne stored at the end of each quarter. 
+- Stocking = \$8k per tonne stored at the end of each quarter.
 - Begin stock = 100 tonnes
 - Needed end stock = 100 tonnes
 
-
-Transportation costs (for the raw materials): 
+Transportation costs (for the raw materials):
 
 - Small trucks: cost of \$700k, and capacity of 500 tonnes.
 - Large trucks: cost of \$1400k, and capacity of 1,200 tonnes.
-  
-
-
 
 ### Solution
 Define the problem.
@@ -556,11 +522,7 @@ Integer
 End
 ```
 
-
-
-
 ## P5 | Production of two models of chairs
-
 
 ### Resources
 
@@ -571,16 +533,13 @@ End
 9. Solve part 2
 10. Solve part 3
 
-
 ### Problem
-A company produces two models of chairs: 4P and 3P. The model 4P needs 4 legs, 1 seat and 1 back. On the other hand, the model 3P needs 3 legs and 1 seat. The company has a initial stock of 200 legs, 500 seats and 100 backs. If the company needs more legs, seats and backs, it can buy standard wood blocks, whose cost is \$80 per block. The company can produce 10 seats, 20 legs and 2 backs from a standard wood block. 
-
+A company produces two models of chairs: 4P and 3P. The model 4P needs 4 legs, 1 seat and 1 back. On the other hand, the model 3P needs 3 legs and 1 seat. The company has a initial stock of 200 legs, 500 seats and 100 backs. If the company needs more legs, seats and backs, it can buy standard wood blocks, whose cost is \$80 per block. The company can produce 10 seats, 20 legs and 2 backs from a standard wood block.
 
 The cost of producing the model 4P is \$30/chair, meanwhile the cost of the model 3P is \$40/chair. Finally, the company informs that the minimum number of chairs to produce is 1,000 units per month.
 
-
 ### Solution
-1. Define a linear programming model, which minimizes the total cost (the production costs of the two chairs, plus the buying of new wood blocks). Answer: z = \$48,680 
+1. Define a linear programming model, which minimizes the total cost (the production costs of the two chairs, plus the buying of new wood blocks). Answer: z = \$48,680
 
 ```r
 Minimize
@@ -636,9 +595,6 @@ Integer
 End
 ```
 
-
-
-
 ## P6 | Hiring and Firing
 ### Resources
 [Week 4 | Monday YT Playlist](https://www.youtube.com/watch?v=4RwptG8BKkI&list=PL8uIP3DsMWIx33yWHEYjXW2CCJoRkDGOF)
@@ -680,7 +636,6 @@ Bounds
   50 <= s6
 End
 ```
-
 
 2. Modify the linear model to include the constraint that the airline cannot fire pilots if it has hired pilots the previous month. Answer: Total cost = \$2695k
 
@@ -736,10 +691,9 @@ End
 
 A hospital has an emergency center that remains open 24 hours a day. Table 6 details the minimal needs of employees for each of the six shifts of four hours in which the day is divided.
 
-Each of the employees of the emergency center works eight hours a day, covering two consecutive shifts of four hours. For instance, a given employee may start working at 20:00, and end working at 04:00. 
+Each of the employees of the emergency center works eight hours a day, covering two consecutive shifts of four hours. For instance, a given employee may start working at 20:00, and end working at 04:00.
 
 ![](https://i.imgur.com/BIVaXFh.png)
-
 
 ### Solution
 1. You are asked to define a linear programming model that can define a planning of shifts to cover the minimal needs for each shift with a minimum number of employees.

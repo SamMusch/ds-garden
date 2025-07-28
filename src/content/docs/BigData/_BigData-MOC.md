@@ -51,7 +51,6 @@ word_count: 176
 **MLflow** - MLflow is an open-source platform for managing the machine learning (ML) lifecycle, including experimentation, reproducibility, deployment, and model tracking. It was developed by **Databricks** and is now widely used in the industry for MLOps (Machine Learning Operations).
 - [Tutorials](https://www.mlflow.org/docs/latest/tutorials-and-examples/index.html)
 
-
 [Platforms and Other Essentials](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/69346214-320e-487f-b4cf-bd5c469dc75e.xhtml)
 1. [Technical requirements](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/2040ff62-0a01-4742-84f5-617648afb54f.xhtml)
 2. TensorFlow, PyTorch, and Keras

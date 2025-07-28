@@ -59,7 +59,6 @@ Both are **branches** of optimization, but they emphasize different types of pro
 - **LP** focuses on finding the optimal solution at the vertices (corners) of the feasible region.
 - **Nonlinear programming** (where Lagrangians and Hessians are used) finds critical points within a broader, often continuous, space. The constraints or the objective function are not necessarily linear.
 
-
 > Provide an outline of the branch of optimization.
 ## Unconstrained Optimization
 
@@ -70,15 +69,12 @@ Both are **branches** of optimization, but they emphasize different types of pro
     - Example: Using Gradient Descent for machine learning without constraints.
 - **Quadratic Programming (QP)**: If no constraints are present in a quadratic objective function (though typically it involves linear constraints).
 
-
-
 ## Constrained Optimization
 
 **Objective**: Minimize or maximize a function subject to constraints.
 **Subtypes**:
 - **Equality-constrained**: Constraints are equations.
 - **Inequality-constrained**: Constraints are inequalities.
-
 
 **Problem Classes**:
 - **Linear Programming (LP)**: Optimizing a linear objective function subject to linear constraints (both equality and inequality constraints).
@@ -93,7 +89,6 @@ Both are **branches** of optimization, but they emphasize different types of pro
     - Example: Machine learning algorithms like Support Vector Machines (SVM).
 - **Non-Convex Optimization**: Can involve either unconstrained or constrained optimization where the objective or constraints are non-convex.
     - Example: Deep learning model training.
-
 
 ## Both
 

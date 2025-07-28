@@ -67,7 +67,7 @@ Links
 The activation function is a hyperparameter, the weights and biases are parameters.
 
 ### Ch 10
-> In the first part of this chapter, we will introduce artificial neural networks, starting with a quick tour of the very first ANN architectures, leading up to Multi-Layer Per‐ ceptrons (MLPs) which are heavily used today (other architectures will be explored in the next chapters). 
+> In the first part of this chapter, we will introduce artificial neural networks, starting with a quick tour of the very first ANN architectures, leading up to Multi-Layer Per‐ ceptrons (MLPs) which are heavily used today (other architectures will be explored in the next chapters).
 > In the second part, we will look at how to implement neural networks using the popular Keras API.
 
 ### ANNs
@@ -130,7 +130,6 @@ $h_{W,b} (X) = \Theta(XW + b)$
 
 $\Theta$ = activation function
 
-
 #### MLP Backpropagation
 
 > An MLP is composed of one (passthrough) input layer, one or more layers of TLUs, called hidden layers, and one final layer of TLUs called the output layer.
@@ -153,7 +152,6 @@ Backpropagation computes the gradients of cost function for every model paramete
 3. Finds total network error
 4. (Backwards) Uses chain rule to find how much each **connection** contributed to total error working from final layer to initial layer
 5. (Gradient descent) Adjust the connection weights  
-
 
 ### Code explanation
 Pg 299-316

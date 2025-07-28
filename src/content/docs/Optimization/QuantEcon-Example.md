@@ -60,8 +60,6 @@ word_count: 166
 
 ![](https://i.imgur.com/Ba5hB8A.png)
 
-
-
 ```python
 # Max function
 c = np.array([3, 4])        # Revenue: P1, P2

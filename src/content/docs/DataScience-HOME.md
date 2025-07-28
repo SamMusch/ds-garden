@@ -63,23 +63,13 @@ from outgoing([[]])
 
 ```
 
-
-
-
-
-
-
-
-
-
-
 ## Review Resources
 
 ```
 Corresponds to "Cheatsheets" folder above
 ```
 
-- [Stanford](https://stanford.edu/~shervine/teaching/cs-229) 
+- [Stanford](https://stanford.edu/~shervine/teaching/cs-229)
 - [Github](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-supervised-learning.pdf)
 
 #### Cheatsheets
@@ -94,55 +84,22 @@ ds-cheatsheet.pdf.md
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                 Probabilities and Statistics                                                                                                                 |                                                                                                                  Algebra and Calculus                                                                                                                  |
 
-
 #### Super Cheatsheet
 |<a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/super-cheatsheet-machine-learning.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-007.png" alt="Illustration" width="400px"/></a>|
 |:--:|
 |All the above gathered in one place|
 
-
 ## Algorithm Types
 
 algos.jpeg.md
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Ignore, just for metadata
-
 
 ## MOCs
 
 _ai-moc.md
 _bigdata-moc.md
 _ml-moc.md
-
 
 **Specialty**
 _optimization-moc.md

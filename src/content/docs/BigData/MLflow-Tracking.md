@@ -53,7 +53,6 @@ Quickstart: https://www.mlflow.org/docs/latest/getting-started/intro-quickstart/
 
 > Tracks parameters, code versions, metrics, and artifacts.
 
-
 Concepts:
 - **Runs**: Runs are executions of some piece of code (eg, a single `python train.py` execution). Records metadata and artifacts.
 - **Experiments**: An experiment groups together runs for a specific task.

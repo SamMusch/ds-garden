@@ -65,7 +65,6 @@ $\small\text{c = coefs of decision variables (vector)}$
 $\small\text{x = decisions variables (vector)}$
 $c^Tx \small\text{ = dot product}$
 
-
 $s.t. \:\: Ax \leq b$
 $\small\text{where..}$
 $\small\text{A = matrix of coefficients for the constraints}$

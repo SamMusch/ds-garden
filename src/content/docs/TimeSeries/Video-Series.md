@@ -49,7 +49,6 @@ word_count: 1041
 
 - [Udacity: Time Series Forecasting w TensorFlow (Free)](https://learn.udacity.com/courses/ud187)
 
-
 #### RNN
 
 [TensorFlow Guide](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
@@ -66,8 +65,6 @@ RNN's are networks of **repeating modules**, each passing a message to a success
 
 <img src="https://i.imgur.com/dscDU4d.png" style="zoom:80%;" />
 
-
-
 [14. Video](https://classroom.udacity.com/courses/ud187/lessons/6d543d5c-6b18-4ecf-9f0f-3fd034acd2cc/concepts/cb52c9ee-1abd-48d0-818a-3f7342a7b079)
 
 Process of RNN (RNN: Contains recurrent layers) ([Image](https://i.imgur.com/CVLyo94.png))
@@ -82,8 +79,6 @@ Process of RNN (RNN: Contains recurrent layers) ([Image](https://i.imgur.com/CVL
    3. Repeat
 3. Repeat \#2
 4. Output forecast (ie Sequence to Vector)
-
-
 
 #### Lectures
 
@@ -111,7 +106,6 @@ Use **roll-forward** partitioning instead of **fixed** partitioning  ([Video](ht
 - Fixed: Normal
 - Roll forward: Start with a short training period and then predict out. (Essentially mimicking real-life).
   Note: Takes much longer
-
 
 **Metrics video**
 - **Differencing**: This helps get rid of the trend & seasonality
@@ -193,12 +187,10 @@ Early Stopping Callback:
    2. Low: Training will be slow
 4. Do I have early stopping set right? Loss can jump up/down unpredictably during training.
 
-
 [Video](https://classroom.udacity.com/courses/ud187/lessons/6d543d5c-6b18-4ecf-9f0f-3fd034acd2cc/concepts/0132f4de-dbaf-4d30-b562-f6469c7da3a8)
 1. Vanishing gradient: This often occurs when back propagating through many layers / time steps, especially when detecting long term patterns.
 2. 1. 1 Approach: Make a prediction at each step time (ie Sequence to Sequence). Function: `seq2seq_window_dataset`
 3. RNNs are useful when we have lots of high-frequency data and the signal:noise ratio is high
-
 
 Gradient update: $$\text{New weight} = Weight - LR \: * \: Gradient$$
 

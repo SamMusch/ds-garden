@@ -57,11 +57,8 @@ word_count: 1570
 
 > [!summary] Summary
 > Consolidates ML foundations.
-> 
+>
 > [Textbook online PDF](https://powerunit-ju.com/wp-content/uploads/2021/04/Aurelien-Geron-Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-Tensorflow_-Concepts-Tools-and-Techniques-to-Build-Intelligent-Systems-OReilly-Media-2019.pdf)
-
-
-
 
 ## Deeper Links
 
@@ -70,8 +67,6 @@ word_count: 1570
 | supervised-2-classification.md  | Models, evaluation, and some code |
 | supervised-4-regression-eval.md | Evaluation                        |
 | supervised-6-ensemble.md        | Models                            |
-
-
 
 ## Overview #cards
 
@@ -92,19 +87,19 @@ word_count: 1570
 ---
 
 ## Introduction
-### Data Mining Tasks 
+### Data Mining Tasks
 1) **Classification**: which set of class does this person belong to?
 2) **Regression**: How many hours will this person use our service?
-3) **Similarity matching**: These firms bought from us. Who else is likely to? 
-4) **Clustering**: Which segments do our customers fall into? 
-5) **Co-occurence** (market basket analysis): For each segment, what are commonly purchased together? 
-6) **Profiling**: What is the typical behavior of this segment? 
+3) **Similarity matching**: These firms bought from us. Who else is likely to?
+4) **Clustering**: Which segments do our customers fall into?
+5) **Co-occurence** (market basket analysis): For each segment, what are commonly purchased together?
+6) **Profiling**: What is the typical behavior of this segment?
 7) **Link prediction**: You and x share 10 friends. She likes this person, so you prob will too.
-8) **Data reduction**: Dropping unnecessary info thats clouding our insights 
-9) **Causal modeling**: What influences our DV? 
+8) **Data reduction**: Dropping unnecessary info thats clouding our insights
+9) **Causal modeling**: What influences our DV?
 
-### Data Mining Process 
-The ML lifecycle includes several steps for transforming data into actionable insights. 
+### Data Mining Process
+The ML lifecycle includes several steps for transforming data into actionable insights.
 1. **Business Understanding**: Define the problem & success criteria.
 2. **Data Understanding**: How was it collected? Any implicit biases?
 3. **Data Preparation**
@@ -137,11 +132,11 @@ There are so many different types of ML systems that it is useful to classify th
 ```
 
 ### Human Supervision
-#### Supervised Learning 
+#### Supervised Learning
 Dataset contains both inputs & corresponding labels. Tasks include:
 - **Classification**: Discrete categories.
 - **Regression**: Continuous values.
-#### Unsupervised Learning 
+#### Unsupervised Learning
 Identifies patterns without labeled data. Key methods are:
 - clustering.md: Group similar data points (k-means, Hierarchical Cluster Analysis (HCA), Expectation Maximization).
 - dimensionality-reduction.md: Simplify datasets without losing too much info.
@@ -151,15 +146,15 @@ Identifies patterns without labeled data. Key methods are:
     - t-SNE | t-distributed Stochastic Neighbor Embedding
 - anomaly-detection.md: Identify deviations from normal behavior.
 - association-rules.md (Apriori, Eclat)
-#### Semi-Supervised 
-Some data is labeled, some isn't. (Typically lots of unlabeled data + some labeled data) 
+#### Semi-Supervised
+Some data is labeled, some isn't. (Typically lots of unlabeled data + some labeled data)
 - Most of these algorithms are combinations of unsupervised & supervised algorithms.
 - Deep belief networks (DBNs), restricted Boltzmann machines (RBMs)
-#### Reinforcement Learning 
-**Process**: The learning system (aka agent) 
+#### Reinforcement Learning
+**Process**: The learning system (aka agent)
 1. Observes environment
 2. Performs actions
-3. Gets rewarded 
+3. Gets rewarded
 With trial-and-error, it teaches itself the best strategy (ie policy) to max reward.
 
 ### Learning Type | Batch & Online
@@ -174,7 +169,7 @@ With trial-and-error, it teaches itself the best strategy (ie policy) to max rew
 
 - **Model-Based Learning**: Use training data to build a model, then extrapolate.
 - **Instance-Based Learning**: Use known problems as initial points. Predict new problems based on similarity to old ones.
-    - **Examples**: Case-Based Reasoning, Radial Basis Function Networks, Locally Weighted Regression, Memory-Based Collaborative Filtering, Prototype-Based Learning 
+    - **Examples**: Case-Based Reasoning, Radial Basis Function Networks, Locally Weighted Regression, Memory-Based Collaborative Filtering, Prototype-Based Learning
         All these methods depend heavily on **stored data** or a **local region** of the feature space. Predictions or decisions are derived **directly or indirectly from comparisons** to similar instances.
 
 | FEATURE    | Explanation                             | **Prediction**                                                              | Adaptability                       | When                                                                               |
@@ -192,11 +187,11 @@ Steps for **instance-based** regression using k-NN:
 2. **Predict**: Using these neighbors, compute the average of their target value. Use this as your prediction. (Could use more advanced technique than just average.)
 
 ---
-## Challenges of ML 
+## Challenges of ML
 > In short, since your main task is to select a learning algorithm and train it on some data, the two things that can go wrong are “bad algorithm” and “bad data.”  Pg 50
 
 ### Data Issues
-1. **Quantity**: Typically need thousands of examples 
+1. **Quantity**: Typically need thousands of examples
 2. **Quality**: Might have too much info missing, could be poorly collected
 3. **Non-representative**: When old cases no longer reflect new cases. Sources:
     Sampling *noise*: Data is too small
@@ -214,21 +209,21 @@ Steps for **instance-based** regression using k-NN:
     - Gather more data
     - Reduce noise in training data
 2. **Underfitting**: Model is too simplistic to capture underlying patterns.
-    - Select a more powerful model, with more parameters 
+    - Select a more powerful model, with more parameters
     - Feeding better features to the learning algorithm (feature engineering)
     - Reducing the constraints on the model (e.g., reducing the regularization hyper‐parameter)
 ---
 ## Tuning & Evaluation
 
 ### Process | Testing & Validating
-1) **Split**: Split data into train & test. (Usually 80% for training.) 
+1) **Split**: Split data into train & test. (Usually 80% for training.)
 2) **Validation set**: Use nested k-fold CV to split up training set.
 3) **Train set**: Run multiple models x hyperparameters
-4) **Train set**: Select models x hyperparameter combo with best performance on validation set. 
+4) **Train set**: Select models x hyperparameter combo with best performance on validation set.
 5) **Test set**: Find **generalization error** for an estimate of performance on unseen data.
     1) Training good + validation bad = overfitting ([Image](https://i.imgur.com/EkW054R.png))
     2) Validation good + test bad = overfitting
-    3) Validation bad + test bad = learning rate too high. 
+    3) Validation bad + test bad = learning rate too high.
   
 ### Hyperparameter Optimization
 > [!quote] Hyperparameters are configuration variables that tell the model what methods to use, as opposed to **model parameters** which are learned during training.
@@ -258,7 +253,6 @@ search.best_params_
 best = search.best_estimator_  
 accuracy = evaluate(best, x_test, y_test)
 ```
-
 
 ---
 ### Cross-Validation

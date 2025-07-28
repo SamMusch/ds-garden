@@ -95,7 +95,6 @@ $z = \$1333$  |  *Profit*
 - $y_1 = \$133.33$   |  *Machine 1 price to charge*
 - $y_2 = \$33.33$
 
-
 ---
 
 ##### LPsolve

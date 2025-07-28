@@ -62,7 +62,6 @@ Resources
 - **Information Gain**: Measures the effectiveness of a new split (or segment) compared to the original.
 - **Statistical Significance**: Each additional “child” branch in a tree should be validated, often with a chi-squared test, to confirm that the improvement in segmentation is statistically significant.
 
-
 ## Table Summary
 [ChatGPT](https://chatgpt.com/share/679fc159-020c-8000-b16e-e3fd1b93bfc7)
 
@@ -71,20 +70,12 @@ Resources
 - **Logistic Regression** is a well-understood parametric approach, ideal for linearly separable data, and can handle regularization elegantly.
 - **Decision Trees** are highly interpretable but can overfit if not carefully regularized (via max depth, minimum samples per leaf, etc.).
 
-
 | **CATEGORY**            | **CORE IDEA**                                                                                                                                                          | **MODEL TYPE**     | **KEY HYPERPARAMETERS**                                                                                                                                           | **STRENGTHS**                                                                                                                            | **WEAKNESSES**                                                                                                                                                                                     | **REGULARIZATION**                                                                              |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | **k-NN**                | 1. Find _k_ closest neighbors <br><br>2. Majority vote or average.                                                                                                     | **Non-parametric** | **k**: Number of neighbors.<br><br>**Distance metric**                                                                                                            | Simple to implement. <br><br>Minimal statistical assumptions. <br><br>Models complex decision boundaries.                                | Slow for large data. <br><br>Bad in high-d space. <br><br>Domain knowledge for good distance metric.                                                                                               | Not typically applied, could use dimensionality reduction                                       |
 | **Naive Bayes**         | Applies Bayes’ Theorem with a **naive** assumption of conditional independence among features                                                                          | **Probabilistic**  | **Distribution** choice (e.g. Multinomial)                                                                                                                        | Fast <br><br>Robust with many features. <br><br>Works well with small datasets.                                                          | Bad if features are highly correlated.                                                                                                                                                             | Smoothing techniques to avoid zero probabilities. (e.g., Laplace smoothing)                     |
 | **Logistic Regression** | Estimates the probability of each class via a **linear combination** of features passed through a **sigmoid** (or softmax) function, making it a **parametric** model. | **Parametric**     | **C**: Inverse regularization strength. <br><br>**multi_class**: One-vs-Rest or multinomial. <br><br>**Regularization** type                                      | Interpretable coefficients. <br><br>Can incorporate **regularization** <br><br>Good when data is linearly (or log-linearly) separable.   | May struggle with highly non-linear relationships. <br><br>Sensitive to outliers if **regularization** is not used properly. Assumes linear (or log-linear) deci-bound.                            | **L1 (Lasso)** <br><br>**L2 (Ridge)** <br><br>**Elastic Net**: Combo of L1 and L2.              |
 | **Decision Trees**      | Splits data into **hierarchical** branches based on feature values, aiming to maximize “purity” at each split.                                                         | **Non-parametric** | **max_depth**: Maximum tree depth.<br><br>**min_samples_leaf**: Minimum samples required in a leaf node. <br><br>Splitting **criterion** (e.g., Gini or Entropy). | Highly interpretable <br><br>Handles numeric & categorical <br><br>Don't need scaling or dummies. <br><br>Handles multi-output problems. | **Overfitting** if grown without constraints. <br><br>Greedy splitting may not yield a global optimum. <br><br>Sensitive to data imbalance. <br><br>Can struggle with certain complex interactions | Indirectly via **max_depth**, **min_samples_leaf**, etc. <br><br>Pruning can reduce overfitting |
-
-
-
-
-
-
-
 
 ## Extra Details
 ### Naive Bayes
@@ -103,7 +94,6 @@ Intuition
 
 
 ```
-
 
 ### Logistic
 
@@ -129,7 +119,6 @@ Steps
 
 ```
 
-
 #### Regularization
 
 ```ad-sam
@@ -145,7 +134,6 @@ Regularization helps prevent **overfitting** by penalizing large coefficients.
 
 ```
 
-
 ### Decision Trees
 
 #### Purity
@@ -160,15 +148,11 @@ When deciding how to split a node, decision tree algorithms use measures like **
 
 ```
 
-
-
-
 ## Week 3: Class Eval
 
 - [How to train a model](https://sebastianraschka.com/faq/docs/evaluate-a-model.html)
 - [Classification eval for unbalanced data](https://classeval.wordpress.com/introduction/introduction-to-the-precision-recall-plot/)
 - [Sci-kit plot](https://github.com/reiinakano/scikit-plot)
-
 
 **Accuracy** can be misleading. 2 primary reasons:
 1. **Imbalanced Class Distributions**: When one class dominates, accuracy may inflate how well the model performs.
@@ -192,7 +176,6 @@ Cost-Benefit Approach
 | **Recall (Same as TPR)**              | $\frac{TP}{TP + FN}$ |
 
 ```
-
 
 ### Model Evaluation Techniques
 
@@ -218,8 +201,6 @@ Cost-Benefit Approach
 
 ```
 
-
-
 ### Single-Value Measures
 
 ```ad-sam
@@ -233,11 +214,6 @@ Cost-Benefit Approach
 ```
 
 [ChatGPT - Types of Means](https://chatgpt.com/share/679fa4e5-5a1c-8000-a4c1-0c6d86650e7e) - Arithmetic, harmonic, geometric
-
-
-
-
-
 
 ## Classification Code
 
@@ -270,7 +246,6 @@ poly_kernel_svm_clf = Pipeline([
  ])
 poly_kernel_svm_clf.fit(X, y)
 ```
-
 
 ```python
 # In text

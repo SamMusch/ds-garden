@@ -47,24 +47,6 @@ title: Glossary
 word_count: 1286
 ---
 
-> [!sam] Title
-> Contents
-> - hello
-> - **world**
-> next
-
-
-
-> [!info] Title
-> Contents
-> - hello
-> - **world**
-> next
-
-
-
-
-
 “Greatest-hits” schema patterns
 
 | Category                          | Most-used pattern                         | Why it dominates (one-liner)                                                                          |
@@ -74,21 +56,15 @@ word_count: 1286
 | **NoSQL**                         | **Document (JSON) model**                 | Fits modern micro-services and mobile apps: schema-on-read, easy to evolve, one doc ≈ one object.     |
 | **Lakehouse / Modern data stack** | **Medallion (Bronze-Silver-Gold) layers** | Clear “raw → cleaned → curated” zones standardised by Databricks/Iceberg; meshes well with ELT & dbt. |
 
-
-
 Ask for clusters instead of items.
 "Provide me with a mental framework for learning and organizing *xyz*."
 
-
-
 ---
 
-
 You have:
-- **High-level**: Summaries, purposes 
+- **High-level**: Summaries, purposes
 - **Low-level**: Building blocks, atoms, pieces
 - Need to *map* low-level --> high-level
-
 
 **The SPI Lens**: a metric‑lineage framework
 1. **Structure**: _What is it composed of?_
@@ -96,8 +72,6 @@ You have:
 3. **Impact**: _Why does it do it?_
     - Map the output to the business question it answers or the decision it informs.
     - Flag downstream uses—bidding automation, budget re‑allocation, exec dashboard.
-
-
 
 ### Python
 
@@ -109,8 +83,6 @@ You have:
 | **Property**          | Computed column  | An attribute whose value is computed by getter / setter logic | `my_car.is_red`              |
 | **Method**            | Stored procedure | A **function** defined _inside_ a class                       | `my_car.drive()`             |
 
-
-
 ## Philosophy
 
 - Axioms
@@ -118,11 +90,10 @@ You have:
 - **Pedagogical**: related to teaching
 - **Aphorisms**: pithy observation that contains a general truth, such as, “if it ain't broke, don't fix it.”
 
-
 #### Explaining Nature & Change
 
 Aristotle's four ~~causes~~ (explanations) explain why something either *exists* or *changes* in nature.
-1. **Matter**: The physical "stuff" its made from (capital, people, technology). 
+1. **Matter**: The physical "stuff" its made from (capital, people, technology).
 2. **Form**: The organizing "structure" or patterns (org chart, workflows).
 3. **Efficient**: The "agent" or process that brings it into existence (management, employees).
 4. **Final**: The end "goal" it serves (profit, mission statement) - ***TELEOLOGY***
@@ -153,12 +124,11 @@ Aristotle's four ~~causes~~ (explanations) explain why something either *exists*
 - Realism and Anti-Realism
 - Time
 
-
 ### TL;DR
 
 All four clusters are **descriptive metaphysics**—they aim to map what exists and how it fits together, not to give moral prescriptions. “Persons” appears because many philosophers treat personhood as a distinctive kind of entity; “Realism & Anti‑Realism” here targets truth‑conditions for metaphysical claims, not ethics.
 
-Four clusters: 
+Four clusters:
 - **Meta‑level questions** (Metaontology, Realism & Anti‑Realism)
 - **Big‑picture commitments** (Ontology, Global Metaphysical Theories)
 - **Fundamental kinds** (Objects, Properties, Persons)
@@ -185,13 +155,11 @@ Relations & Dimensions of Reality
 - **Time**: Ordering of events and the ontology of past, present, and future.
 - **Interlevel Metaphysics**: How higher‑level phenomena relate to their lower‑level bases (e.g., mind–brain, social–individual).
 
-
 ### TL;DR
 
 Treat the metaphysics clusters as a checklist: (1) nail down **what is even in play**, (2) pick an overall modeling picture, (3) catalogue the concrete elements you can measure, and (4) use causation + modality + time to estimate the campaign’s true lift.
 
 ---
-
 
 ***Meta‑Level Questions*** → Frame the inquiry
 - **Metaontology**: Determine the in-scope "universe". (e.g., customers, sessions, impressions, revenue)
@@ -214,9 +182,6 @@ Treat the metaphysics clusters as a checklist: (1) nail down **what is even in p
 - **Time**: Control for time trends, seasonality, lagged effects; decide pre‑ and post‑period windows.
 - **Interlevel Metaphysics**: Map how micro‑level actions (impression → click) roll up to macro KPIs (weekly revenue). This guards against Simpson’s Paradox when aggregating.
 
-
-
-
 ## Probability and Statistics
 
 Etymology
@@ -233,9 +198,6 @@ Toolkits
 
 "Methodological categories"
 
-
-
-
 Python | objects, methods, functions:
 - **Functions**: independent code blocks not tied to any specific object.
 - 
@@ -243,11 +205,9 @@ Python | objects, methods, functions:
 methods are functions that belong to a class and operate on its instances, while functions are independent code blocks that are not tied to any specific object.
 - Methods are functions that are associated with a particular object or class.
 
-
 Ontology vs Process
 - **Ontology** | STATIC: Focus is on being, existence, categorization.
 - **Process** | DYNAMIC: Change, dynamic interaction
-
 
 | Feature         | Ontology                              | Process Philosophy                                   |
 | --------------- | ------------------------------------- | ---------------------------------------------------- |
@@ -256,7 +216,6 @@ Ontology vs Process
 | Key Questions   | What is? What exists?                 | How does it become? How do things change?            |
 | Concepts        | Object, property, event, substance    | Flux, becoming, creativity, relation                 |
 | Example         | Classifying a chair as an object      | Describing the process of a seed growing into a tree |
-
 
 ---
 
@@ -272,7 +231,6 @@ Ontology vs Process
 | **Extension**       | How does it behave over time?            | Handles **temporal structure**, uncertainty over time, dynamic processes  | Stochastic processes, Sequential methods                      | Markov processes, Kalman filters                    |
 | **Framework**       | What philosophical stance are we taking? | The **statistical paradigm** or modeling philosophy being used            | Statistical paradigms, Nonparametric statistics               | Bayesian, Frequentist, Nonparametric                |
 | **Functional Form** | What math mappings are being used?       | The **mathematical shape** of the relationship between inputs and outputs | Regression analysis, Cluster analysis, Survival analysis, EDA | GLMs, Time series, Clustering, Dimension reduction  |
-
 
 **Functions** in the statistical modeling workflow
 

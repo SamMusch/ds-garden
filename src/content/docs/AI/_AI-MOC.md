@@ -59,12 +59,10 @@ Shows how I consolidated existing notes into these sections
 https://chatgpt.com/share/682cb713-d830-8000-8157-64a1af0e1cb7
 ```
 
-
 ```
 Could add
 - Companies and their model names
 ```
-
 
 [ChatGPT: Paradigms of GenAI](https://chatgpt.com/share/6856dd7e-0258-8000-9d5b-caeccbb2b895)
 
@@ -101,9 +99,6 @@ Could add
 |                               |                                  | 9.2 Safeguarding Agents (Rate Limits, Guardrails)        |                                     |
 |                               | 11 Portfolio Projects            | 11.1 Build a Personal RAG Bot over Your Notes            |                                     |
 
-
-
-
 #### Explained
 
 ```ad-sam
@@ -126,8 +121,6 @@ Privacy/security for devices and constrained environments.
 Tie to real business use‑cases / continuous learning habits.
 
 ```
-
-
 
 #### Resources / Cheats
 

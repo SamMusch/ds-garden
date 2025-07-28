@@ -55,7 +55,6 @@ DL Resources
 - [Book: Deep Learning for Time Series Forecasting](file:///Users/Sam/Desktop/2%20DS/01%20Predictive/Book-Deep-TS/deep_learning_time_series_forecasting.pdf) by Jason Brownlee
 - [Ch 6: Deep learning for text and sequences](file:///Users/Sam/Library/Mobile%20Documents/iCloud~com~apple~iBooks/Documents/Deep%20Learning%20TS/Ch%206%20Deep%20Learning%20with%20Python.pdf)
 
-
 ### TS | Ebook
 
 #### 02. Taxonomy
@@ -92,7 +91,6 @@ DL Resources
 
 ```
 
-
 #### 04. Windows
 
 Sliding window: Take all columns in the dataset (including target variable) and take the **lag**.
@@ -103,8 +101,6 @@ Parameters for the **lag**:
 - **Offset**: "1" if just using the values from previous time step
 - Total width: Input Width + Offset
 - **Label width**: How many timesteps in the future
-
-
 
 #### 06. Data Transform
 
@@ -119,13 +115,11 @@ Put Simply:
 - Normal Shape: Rows, Columns
 - TS Shape: Rows, **TimeSteps**, Columns
 
-
-
 ## Ch 20:  LSTMs
 
-Unlike other algorithms, LSTM RNNs are 
-- capable of automatically learning features from sequence data, 
-- support multiple-variate data, and 
+Unlike other algorithms, LSTM RNNs are
+- capable of automatically learning features from sequence data,
+- support multiple-variate data, and
 - can output a variable length sequences that can be used for multi-step forecasting.
 
 References
@@ -133,14 +127,12 @@ References
 - Framework for evaluating models - ch 17
     - Details of walk-forward validation - ch 19
 
-
 In this tutorial, we will explore a suite of LSTM architectures for multi-step time series forecasting. Specifically, we will look at how to develop the following models:
 - Vanilla LSTM model with vector output for multi-step forecasting with univariate input data.
 - Encoder-Decoder LSTM model for multi-step forecasting with univariate input data.
 - **Encoder-Decoder LSTM** model for multi-step forecasting with **multivariate** input data.
 - CNN-LSTM Encoder-Decoder model for multi-step forecasting with univariate input data.
 - ConvLSTM Encoder-Decoder model for multi-step forecasting with univariate input data.
-
 
 ### Prep / vanilla
 
@@ -236,8 +228,6 @@ def build_model(train, n_input):
 
 ```
 
-
-
 ### Encoder-Decoder LSTM With Univariate Input
 
 ```ad-sam
@@ -265,7 +255,5 @@ def build_model(train, n_input):
 
 
 ```
-
-
 
 ### Encoder-Decoder LSTM With Multivariate Input

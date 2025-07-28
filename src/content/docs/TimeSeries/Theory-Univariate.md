@@ -80,7 +80,6 @@ word_count: 980
 
 ```
 
-
 ### 2. Cheatsheet
 
 ```ad-sam
@@ -131,7 +130,6 @@ word_count: 980
 
 
 ```
-
 
 ## 3. **Stationary vs. Nonstationary**
 
@@ -194,7 +192,6 @@ With only one observed path, stationarity lets us make reliable inferences about
 
 ```
 
-
 ### 4.3 Autoregressive (AR)
 
 ```ad-sam
@@ -223,7 +220,6 @@ With only one observed path, stationarity lets us make reliable inferences about
 
 ```
 
-
 ### 4.4 ARMA
 
 ```ad-sam
@@ -240,7 +236,6 @@ With only one observed path, stationarity lets us make reliable inferences about
   $(1 - B)^d X_t \quad \text{follows an ARMA}(p,q)$
 ```
 
-
 ### 4.6 SARIMA
 
 ```ad-sam
@@ -249,7 +244,6 @@ With only one observed path, stationarity lets us make reliable inferences about
 ```
 
 ---
-
 
 ## 6. **Forecasting Methods**
 

@@ -69,18 +69,14 @@ Step 1: Define decision variables and quantity to be optimized as a mathematical
 
 Step 2: Define constraints mathematically
 
-- $Fat: .2x + .32y \leq .25$ 
+- $Fat: .2x + .32y \leq .25$
 
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 
 - $x >= 0, y >= 0$
 - $x + y = 1$
 
-
-
 <img src="https://i.imgur.com/HnyXvoV.jpg" style="zoom:50%;" />
-
-
 
 ```cplex
 /* Objective function */
@@ -115,8 +111,6 @@ X1 + 2 X2 <= 8;
 | Available Hours    | 200     | 200     | 150     | 150     |
 
 - $2 for each unit not sold by end of month
-
-
 
 Step 1: Define decision variables and quantity to be optimized as a mathematical function. We are looking to min cost of production and min cost of storage.
 
@@ -205,13 +199,11 @@ bin b4;
 
 - All units purchased above 200 in any given month will have a discounts of $2
 
-
-
-Step 1: Define decision variables and quantity to be optimized as a mathematical function. 
+Step 1: Define decision variables and quantity to be optimized as a mathematical function.
 
 $Obj: Z \\ = Min(12q_1 + 14q_2 + 16q_3 + 18q_4 \\ + 2s_1 + 2s_2 + 2s_3 + 2s_4 \\ + 10r_1 + 12r_2 + 14r_3 + 16r_4)$
 
-Step 2: Define constraints mathematically. 
+Step 2: Define constraints mathematically.
 
 - (Month 1)   |  $q_1 + r_1 - s_1 = 150$
 - (Month 2)   |  $s_1 + q_2 + r_2 - s_2 = 200$
@@ -273,8 +265,6 @@ Step 1: Define decision variables and quantity to be optimized as a mathematical
 
 - $Obj: Z \\ = Min(3q_1 + 8q_2 + 6q_3 + 7q_4 \\ + 2s_1 + 2s_2 + 2s_3 + 2s_4)$
 
-
-
 Step 2: Define constraints mathematically. In this case, the constraints are our demand.
 
 - For the following 4 months: $Starting \: stock + q_i = demand + s_i$
@@ -284,8 +274,6 @@ Step 2: Define constraints mathematically. In this case, the constraints are our
 - (Month 4)   |  $s_3 + q_4 = 1800 + s_4$
 - (Starting)   |   $s_0 = 200$
 - (Ending)     |   $s_4 = 200$
-
-
 
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 
@@ -323,18 +311,14 @@ The dual variables here are what we looked at in Step 2 and Step 3. Generally, t
 
 #### b. Add new shift
 
-- Should we add a new shift? 
+- Should we add a new shift?
   - Would increase plant capacity in 400 tonnes per month
-  - Would include an extra fixed cost of $500k 
+  - Would include an extra fixed cost of $500k
   - For legal reasons, it is not possible to add extra capacity in a month if it has been added in the previous month.
-
-
 
 Step 1: Define decision variables and quantity to be optimized as a mathematical function.
 
 $Obj: Z \\ = Min(3q_1 + 8q_2 + 6q_3 + 7q_4 \\ + 2s_1 + 2s_2 + 2s_3 + 2s_4\\ + 500(b_1 + b_2 + b_3 + b_4)$
-
-
 
 Step 2: Define constraints mathematically. In this case, the constraints are our demand.
 
@@ -346,11 +330,9 @@ Step 2: Define constraints mathematically. In this case, the constraints are our
 - (Starting)   |   $s_0 = 200$
 - (Ending)     |   $s_4 = 200$
 
-
-
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 
-- (Total capacity constraints) 
+- (Total capacity constraints)
   - $q_1 \leq 1300 + 400b_1$
   - $q_2 \leq 1300 + 400b_2$
   - $q_3 \leq 1300 + 400b_3$
@@ -404,8 +386,6 @@ bin b4;
   - Cost = $1,400k
   - Capacity = 1,200 tonnes
 
-
-
 ![](https://i.imgur.com/QN2EBSO.png)
 
 - $q$ = tonnes to produce
@@ -413,13 +393,9 @@ bin b4;
 - $t$ = number of small trucks
 - $u$ = number of large trucks
 
-
-
 Step 1: Define decision variables and quantity to be optimized as a mathematical function.
 
 $Obj: Min \: Z = \sum c_i * q_i + 8s_i + 700k_i + 1400u_i$
-
-
 
 Step 2: Define constraints mathematically. In this case, the constraints are our demand.
 
@@ -433,8 +409,6 @@ Step 2: Define constraints mathematically. In this case, the constraints are our
 
 - (Ending)     |   $s_4 = 100$
 
-  
-
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 
 - (Trucks)      |   $q_i \leq 500t_i + 1200u_i$
@@ -442,8 +416,6 @@ Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 - (Min production))  |  $q_1, q_2, q_3, q_4 \geq 0$
 
 - (Storage non-negative)  |  $s_i \geq 0$
-
-  
 
 ```
 /* Objective function */
@@ -472,8 +444,6 @@ int u4;
 
 ```
 
-
-
 ---
 
 ### 5: Building Products
@@ -488,8 +458,6 @@ Step 1: Define decision variables and quantity to be optimized as a mathematical
 
 $Obj: Z = Min(30q_1 + 40q_2 + 80q_3)$
 
-
-
 Step 2: Define constraints mathematically.
 
 - (Legs)   |  $4q_1 + 3q_2 \leq 200 + 10q_3$
@@ -499,8 +467,6 @@ Step 2: Define constraints mathematically.
 - (Backs)   |  $q_1 \leq 100 + 2q_3$
 
 - (Demand)   |  $q_1 + q_2 \geq 1000$
-
-  
 
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 
@@ -523,10 +489,6 @@ int q1;
 int q3;
 ```
 
-
-
-
-
 ---
 
 #### b. Only Make 1 Product
@@ -534,8 +496,6 @@ int q3;
 In order to get the program to choose between $q_1$ and $q_2$, we are going to use "M" as a large number to make the cost of producing both look huge. This is translated in "Additional constaints" below.
 
 - $q_1 \leq = M * b$      and also that     $q_2 \leq M(1 - b)$
-
-  
 
 Additional constraints
 
@@ -592,8 +552,6 @@ int q3;
 
 ```
 
-
-
 ---
 
 ### 6: Hiring and Firing
@@ -610,20 +568,13 @@ int q3;
 - $f$ = number of pilots we fired last month
 - $s$ = number of pilots during the month
 
-
-
 Step 1: Define decision variables and quantity to be optimized as a mathematical function.
 
 $Obj: Z = Min \:\: \sum5h_i + \sum10f_i + \sum8s_i$
 
-
-
 Step 2: Define constraints mathematically.
 
 - (Per month)   |  $s_i = h_i - f_i + s_{i-1}$
-
-
-
 
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 
@@ -650,8 +601,6 @@ sm6: s5 + h6 - f6 - s6 = 0;
  s5 - 45 >= 0;
  s6 - 50 >= 0;
 ```
-
-
 
 #### b. New constraint
 
@@ -698,8 +647,6 @@ int h1,h2,h3,h4,h5,h6,f1,f2,f3,f4,f5,f6;
 bin b1,b2,b3,b4,b5,b6;
 ```
 
-
-
 ---
 
 ### 7: Shift Planning
@@ -711,25 +658,19 @@ bin b1,b2,b3,b4,b5,b6;
 
 $s_i$ = employees per shift
 
-
-
 Step 1: Define decision variables and quantity to be optimized as a mathematical function.
 
 $Obj: Z = Min \:\: \sum s_i $
 
-
-
 Step 2: Define constraints mathematically.
 
-- (Per shift) 
-  - $s_6 + s_1 \geq 5$ 
+- (Per shift)
+  - $s_6 + s_1 \geq 5$
   - $s_1 + s_2 \geq 7$
   - $ s_2 + s_3 \geq 18$
-  - $s_3 + s_4 \geq 12$ 
-  - $s_4 + s_5 \geq 15$ 
+  - $s_3 + s_4 \geq 12$
+  - $s_4 + s_5 \geq 15$
   - $s_5 + s_6 \geq 10$
-
-
 
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 
@@ -766,20 +707,14 @@ int s6;
 
 $s_i$ = number of employees that start working per day, Monday is $s_1$
 
-
-
 Step 1: Define decision variables and quantity to be optimized as a mathematical function.
 
 $Obj: Z = Min \:\: \sum s_i $
 
-
-
 Step 2: Define constraints mathematically.
 
-- (Monday)   |    $s_1 + s_4 + s_5 + s_6 + s_7 \geq 17$ 
+- (Monday)   |    $s_1 + s_4 + s_5 + s_6 + s_7 \geq 17$
   - This is everyone except for people who started working on Tuesday and Wednesday
-
-
 
 Step 3: Express hidden conditions (eg can't be negative, has to be integer, etc)
 
@@ -800,8 +735,6 @@ x3+x4+x5+x6+x7 >=11;
 
 int x1,x2,x3,x4,x5,x6;
 ```
-
-
 
 ---
 
@@ -832,8 +765,6 @@ max: 34 b11 + 87 b12 + 26 b13 + 47 b14 + 76 b15
  b15 + b25 + b35 + b45 + b55 = 1;
 ```
 
-
-
 ---
 
 ### 10: Investment
@@ -847,11 +778,9 @@ max: 34 b11 + 87 b12 + 26 b13 + 47 b14 + 76 b15
 
 <img src="https://i.imgur.com/6nDgDHj.png" style="zoom:50%;" />
 
-
-
 Step 1: Define decision variables and quantity to be optimized as a mathematical function.
 
-$Obj: Z = Max \:\: 1B + 1.9D + 1.5E + 1.08S_2$ 
+$Obj: Z = Max \:\: 1B + 1.9D + 1.5E + 1.08S_2$
 
 - We are looking to maximize the values of cash inflow at time period 3 - Note that we are moving from time period 2 to time period 3 in this setup
 
@@ -877,7 +806,7 @@ E<=75000;
 
 ### 11: Short term production
 
-We are trying to determine how much to produce in December. 
+We are trying to determine how much to produce in December.
 
 - Dec 1, 2002 - Raw materials able to produce
   - 100 tape recorders
@@ -893,8 +822,6 @@ We are trying to determine how much to produce in December.
 
 <img src="https://i.imgur.com/swDl9im.png" style="zoom:50%;" />
 
-
-
 $x_1$ = tape recorders to produce
 
 $x_2$ = radios to produce
@@ -903,7 +830,7 @@ Profit from tape recorder = $100 - 50 - 30 = 20$
 
 Profit from radio = $90 - 35 - 40 = 15$
 
-Jan 1 cash = 10k 
+Jan 1 cash = 10k
 
 - $Dec \: 1 \: cash + Dec \: AR \: collect  - loan \: pay - Dec \: rent \: - Dec \: labor$
 
@@ -942,15 +869,11 @@ x2 <= 100;             /* Capacity */
 int x1, x2;
 ```
 
-
-
 ---
 
 ### 12: Loans
 
 <img src="https://i.imgur.com/cVlOHvC.png" style="zoom:50%;" />
-
-
 
 ```
 /* Objective function */
@@ -962,8 +885,6 @@ x1 + x2 + x3 + x4 + x5 <= 10;
 0.4x1 + 0.4x2 - 0.6x3 <= 0;
 0.06x1 + 0.03x2 - 0.01x3 + 0.01x4 - 0.02x5 <= 0;
 ```
-
-
 
 ---
 
@@ -984,8 +905,6 @@ x14 +x15 +x16 = 275000;
 x24 +x25 +x26 = 400000;
 x34 +x35 +x36 = 300000;
 ```
-
-
 
 # R
 
@@ -1017,8 +936,6 @@ solution$objval    # profit
 solution$solution  # quant of each
 ```
 
-
-
 **Dual**
 
 ```R
@@ -1047,19 +964,13 @@ solution$objval    # profit
 solution$solution  # quant of each
 ```
 
-
-
 ### R Example: Furniture (Problem 3)
 
 <img src="https://i.imgur.com/KHTXnW9.jpg" style="zoom:25%;" />
 
 <img src="https://i.imgur.com/5lirwXD.png" style="zoom:25%;" />
 
-
-
 ### R Example: Production (Problem 2)
-
-
 
 <img src="https://i.imgur.com/pn38dnZ.jpg" style="zoom:15%;" />
 

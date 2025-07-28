@@ -66,11 +66,11 @@ Able to find solutions when (or vice versa)
 
 [Video 2](https://www.youtube.com/watch?v=friizMs4SM4&list=PL8uIP3DsMWIyps1hmNmfI2Y5c0gdavMmd&index=2)
 
-If constraints are non-linear: 
+If constraints are non-linear:
 
 - The maximum/minimum of an obj function s.t. constraints occurs when the **slope of the constraints** = **slope of the contour lines** (the tangent point)
 
-If constraints & obj function are non-linear: 
+If constraints & obj function are non-linear:
 
 - The maximum/minimum of an obj function s.t. constraints occurs when the **slope of the constraints (convex hull)** = **slope of the obj function** (contour lines). This is the tangent point.
 
@@ -79,8 +79,6 @@ If constraints & obj function are non-linear:
 The gradient of the obj function gives a vector perpendicular to the contour line.
 
 <img src="https://i.imgur.com/lQ9QsqK.png" style="zoom:25%;" />
-
-
 
 **Gradient of a circle**
 
@@ -94,21 +92,19 @@ The image shows the gradient when we are looking at point (1, 0). The slope of t
 
 <img src="https://i.imgur.com/ZEXwLub.png" style="zoom:25%;" />
 
-
-
 ---
 
 [Video 3](https://www.youtube.com/watch?v=NxMs9vtfFZk&list=PL8uIP3DsMWIyps1hmNmfI2Y5c0gdavMmd&index=3)
 
-When the contour lines are tangent, the gradient vectors are parallel. 
+When the contour lines are tangent, the gradient vectors are parallel.
 
 <img src="https://i.imgur.com/yEY0MYo.png" style="zoom:25%;" />
 
 Even though the gradients could be parallel, it doesn't necessarily mean the vectors have the same magnitude. We can always multiply one of the vectors by a constant though to get them as the same magnitude & in the same direction.
 
-Tangency condition: 
+Tangency condition:
 
-Gradient vector of $f$ as some (x,y) 
+Gradient vector of $f$ as some (x,y)
 
 = Gradient vector of $g$ at the (x,y) * some scalar
 
@@ -128,8 +124,6 @@ $\frac{\partial g}{\partial x} = 2x$      |       (Constraint) Partial derivativ
 
 $\frac{\partial g}{\partial y} = 2y$       |       (Constraint) Partial derivative with respect to y
 
-
-
 This is the tangency condition.
 
 $\begin{bmatrix}
@@ -139,8 +133,6 @@ $\begin{bmatrix}
 2x_0\\
 1y_0
 \end{bmatrix}$
-
-
 
 These leaves us with our 3 variables and 3 equations we need to solve. (The bottom one is our constraint equation)
 
@@ -158,15 +150,13 @@ $x^2 + y^2 = 1$
 
 Conditions: $x_0, y_0, \lambda_0$ must satisfy
 
-1. (Constraint)      $g(x_0, y_0) = c$     
+1. (Constraint)      $g(x_0, y_0) = c$
 
 2. (Tangency condition)
 
    Gradient vector of $f$ as some (x,y) = Gradient vector of $g$ at the (x,y) * some scalar
 
    $\nabla f(x_0, y_0) = \lambda_0 * \nabla f(x_0, y_0)$
-
-
 
 $L(x, y, \lambda)$ = $f(x,y) - \lambda(g(x,y) - c)$
 
@@ -188,21 +178,15 @@ Revenue Max
 - Rev(hour, steel) = $200 * hours^.66 * steel^.33$
 - R(h, s) = $200 * h^.66 * s^.33$
 
-
-
 (Total cost)     20h + 170s = 20,000
 
 (Revenue)       $\$200 * h^.66 * s^.33$
-
-
 
 $L(x, y, \lambda)$ = $f(x,y) - \lambda(g(x,y) - c)$
 
 $L(x, y, \lambda)$ = $200 * h^.66 * s^.33 \: - \: \lambda(20h + 170s - 20,000)$
 
 <img src="https://i.imgur.com/agWe33r.png" style="zoom:25%;" />
-
-
 
 1. Derivative with respect to h
    - $0 = 200 * \frac{2}{3}h^\frac{-1}{3} * s^\frac{1}{3} - 20\lambda$
@@ -212,8 +196,6 @@ $L(x, y, \lambda)$ = $200 * h^.66 * s^.33 \: - \: \lambda(20h + 170s - 20,000)$
 
 3. Derivative with respect to $\lambda$
    - $0 = 20h + 170s - 20,000$
-
-
 
 $h^* = 667 \: hours$
 
@@ -229,7 +211,7 @@ $Revenue = \$51777 = 200*667^\frac{2}{3} *29^\frac{1}{3}$
 
 Above, $\lambda^*$ was 2.59.
 
-In our Lagrangian equation, we have two parts: objective function and constraint. We are going to use $M$ to represent the objective function part. 
+In our Lagrangian equation, we have two parts: objective function and constraint. We are going to use $M$ to represent the objective function part.
 
 $L(x^*, y^*, \lambda^*)$ = $f(x^*,y^*) - \lambda(g(x^*,y^*) - c)$
 
@@ -241,7 +223,7 @@ $L(x, y, \lambda)$ = $M^*$
 
 We want to know what the impact of relaxing our budget constraint will be on the optimal value of the objective function. This first part is showing how we represent the original function
 
-$M^*(c)$ 
+$M^*(c)$
 
 = $f(x^*,y^*) - \lambda(g(x^*,y^*) - c)$
 
@@ -265,26 +247,16 @@ Original revenue: \$51,777         |          New revenue: \$51779.59
 
 <img src="https://i.imgur.com/HOuyXEo.png" style="zoom:25%;" />
 
-
-
 2. Re-writing as functions
 
 <img src="https://i.imgur.com/T3trjWw.png" style="zoom:25%;" />
-
-
 
 3. Solving partial derivatives
 
 <img src="https://i.imgur.com/Crzqqv7.png" style="zoom:25%;" />
 
-
-
 4. Plotting
 
 <img src="https://i.imgur.com/W3Q4SfJ.png" style="zoom:25%;" />
-
-
-
-
 
 <img src="https://i.imgur.com/sntaWaQ.png" style="zoom:25%;" />
