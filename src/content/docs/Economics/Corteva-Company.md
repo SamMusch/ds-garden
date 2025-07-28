@@ -11,7 +11,7 @@ CTVA (34B) 1-year is down 28%
 2023 Q1-Q2
 
 - NetSales | 0.7%
-  - Corn + Soy | 89% of seeds sales, 57% of all sales
+  - Corn + Soy | 89% of seeds sales, 57% of all sales 
   - NLST Herb | 56% of protect sales, 20% of all sales
 - NetIncome | -14%
 - Corn | 12%
