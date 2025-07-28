@@ -56,7 +56,7 @@ word_count: 368
 ```dataview
 TABLE without id
 
-choice(contains(CoverImage, "http"), ("![coverimg|100](" + CoverImage + ")"), embed(link(CoverImage, "150")) ) as "Cover",
+
 file.link
 
 from outgoing([[]])
