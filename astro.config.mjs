@@ -45,6 +45,7 @@ export default defineConfig({
     starlight({
       title: 'DS Garden',
       components: {
+        PageShell: './src/components/PageShell.astro'
         // Admonition: './src/components/Admonition.astro'
       },
       customCss: ['./src/styles/Mado-Miniflow.css'] // './src/styles/admonitions.css'
