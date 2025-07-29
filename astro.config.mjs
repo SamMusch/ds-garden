@@ -5,6 +5,9 @@ import wikiLink from 'remark-wiki-link';
 import path from 'path';
 import slugify from 'slugify';
 
+import PageShell from './src/components/PageShell.astro';
+
+
 export default defineConfig({
   base: '/ds-garden/',
   markdown: {
@@ -44,10 +47,7 @@ export default defineConfig({
     starlight({
       title: 'DS Garden',
       sidebar: [], // Optional: disables sidebar,
-      components: {
-        PageShell: './src/components/PageShell.astro'
-        // Admonition: './src/components/Admonition.astro'
-      },
+      components: { PageShell },
       customCss: ['./src/styles/Mado-Miniflow.css'] // './src/styles/admonitions.css'
     })
   ]
