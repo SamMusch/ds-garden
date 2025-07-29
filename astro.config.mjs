@@ -47,16 +47,7 @@ export default defineConfig({
       components: {
         // Admonition: './src/components/Admonition.astro'
       },
-      customCss: ['./src/styles/Mado-Miniflow.css'],
-      injectHead: `
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSVEGFP4P3"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-VSVEGFP4P3');
-        </script>
-    `
+      customCss: ['./src/styles/Mado-Miniflow.css'] // './src/styles/admonitions.css'
     })
   ]
 });
