@@ -44,7 +44,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'DS Garden',
-      sidebar,
+      sidebar: [], // Optional: disables sidebar,
       components: {
         PageShell: './src/components/PageShell.astro'
         // Admonition: './src/components/Admonition.astro'
@@ -53,3 +53,4 @@ export default defineConfig({
     })
   ]
 });
+
