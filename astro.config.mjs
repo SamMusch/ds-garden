@@ -4,7 +4,6 @@ import wikiLink from 'remark-wiki-link';
 // import remarkAdmonition from './src/remark/admonition.js';
 import path from 'path';
 import slugify from 'slugify';
-import sidebar from './src/config/generate-sidebar.js';
 
 export default defineConfig({
   base: '/ds-garden/',
