@@ -48,6 +48,9 @@ export default defineConfig({
         PageShell: './src/components/PageShell.astro'
         // Admonition: './src/components/Admonition.astro'
       },
+      navigation: {
+        exclude: ['_Assets/**/*'],
+      },
       customCss: ['./src/styles/Mado-Miniflow.css'] // './src/styles/admonitions.css'
     })
   ]
