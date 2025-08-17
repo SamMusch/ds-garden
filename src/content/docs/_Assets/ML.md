@@ -13,10 +13,10 @@ TimeSpent: null
 TimeSpent2: null
 _kMDItemDisplayNameWithExtensions: ML.md
 ai_abstract: null
-ai_key_terms: []
+ai_key_terms: null
 aliases: null
 children: 0
-created: '2025-07-18'
+created: 2025-07-18
 cssclasses: null
 grandchildren: 0
 kMDItemAlternateNames: (
@@ -45,12 +45,13 @@ kMDItemUseCount: '12'
 kMDItemUsedDates: (
 kMDItemUserCreatedDate: (
 kMDItemUserCreatedUserHandle: (
-modified: '2025-05-18'
+modified: 2025-05-18
 published: true
 reading_time: 7.8
 source_file: ML.md
 tags:
 - ml_
+- supervised
 title: ML
 word_count: 1570
 ---
@@ -67,6 +68,7 @@ word_count: 1570
 | supervised-2-classification.md  | Models, evaluation, and some code |
 | supervised-4-regression-eval.md | Evaluation                        |
 | supervised-6-ensemble.md        | Models                            |
+| deep-learning.md                |                                   |
 
 ## Overview #cards
 

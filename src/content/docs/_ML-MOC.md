@@ -47,7 +47,25 @@ title: ' ML MOC'
 word_count: 19
 ---
 
-| Note              | Contains | Status                  | Hier or Net? |
-| ----------------- | -------- | ----------------------- | ------------ |
-| ml.md            |          | Cleaned notes from Song | Network      |
-| deep-learning.md |          | Cleaned notes from Song | Network      |
+```dataview
+TABLE without id
+
+file.link,
+
+Quality,
+
+
+sum(HoursRemain) as Remain
+from outgoing([[]])
+```
+
+## Hide
+
+| Note                             | Contains | Status  |
+| -------------------------------- | -------- | ------- |
+| ml.md                           |          | Cleaned |
+| deep-learning.md                |          | Cleaned |
+|                                  |          |         |
+| supervised-2-classification.md  |          |         |
+| supervised-4-regression-eval.md |          |         |
+| supervised-6-ensemble.md        |          |         |

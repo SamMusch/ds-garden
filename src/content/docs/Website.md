@@ -53,6 +53,21 @@ title: Website
 word_count: 258
 ---
 
+Input brief
+- The ask/opportunity
+- Business challenge
+- Background
+- Role of comms
+- Objectives
+- Audience, desired outcomes
+- Success factors
+- Approach and known deliverables
+- Timing
+- Budget
+- Existing assets
+- Next steps
+
+
 ### Todo
 
 Steps (just reminders)
