@@ -72,16 +72,16 @@ Could add
 | Part                          | Chapter                          | Section                                                  | Covers                              |
 | ----------------------------- | -------------------------------- | -------------------------------------------------------- | ----------------------------------- |
 |                               |                                  | 0.0-neural-network-taxonomy.md                          | 10 classes of NNs                   |
-| I – Core Concepts             | 1 Deep‑Learning Basics           | 1.1-why-nns-work.md                         | What they are, layers, optimization |
-|                               |                                  | 1.2-transformers-simple.md                    | From seq to attention               |
-|                               |                                  | 1.3-self‑supervision-“learning-without-labels”.md     | Mask and predict                    |
-|                               |                                  | 1.4-frameworks-pytorch-jax.md                 | -                                   |
+| I – Core Concepts             | 1 Deep‑Learning Basics           | 1.1-why-nns-work.md                                     | What they are, layers, optimization |
+|                               |                                  | 1.2-transformers-simple.md                              | From seq to attention               |
+|                               |                                  | 1.3-self‑supervision-“learning-without-labels”.md       | Mask and predict                    |
+|                               |                                  | 1.4-frameworks-pytorch-jax.md                           | -                                   |
 |                               |                                  | 1.5-nlp-fundamentals.md                                 | HuggingFace                         |
 |                               |                                  | 1.6-hugging-face-workflows.md                           | HuggingFace                         |
-| II – Generative AI Essentials | 2 Large Language Models          | 2.1-gpt‑4o-llama-3.md    |                                     |
+| II – Generative AI Essentials | 2 Large Language Models          | 2.1-gpt‑4o-llama-3.md                                   |                                     |
 |                               |                                  | 2.3 Easy Fine‑Tuning with LoRA (Step‑by‑Step Guide)      |                                     |
-|                               |                                  | 2.4-gen-models-overview.md                       |                                     |
-|                               |                                  | 2.5-autoencoders-gans-diffusionmodels.md |                                     |
+|                               |                                  | 2.4-gen-models-overview.md                              |                                     |
+|                               |                                  | 2.5-autoencoders-gans-diffusionmodels.md                |                                     |
 |                               |                                  | 2.6-3blue1brown-explainer.md                            |                                     |
 |                               | 3 Prompt Engineering             | 3.1 Crafting Prompts & System Messages                   |                                     |
 |                               |                                  | 3.2 Chain‑of‑Thought & “Show Your Work” Tricks           |                                     |
@@ -89,9 +89,9 @@ Could add
 |                               | 4 Retrieval‑Augmented Generation | 4.1 RAG in One Picture                                   |                                     |
 |                               |                                  | 4.2 Vector Stores 101 (Pinecone, Qdrant)                 |                                     |
 |                               |                                  | 4.3 Building Your First RAG Chatbot                      |                                     |
-| III – Practical MLOps         | 5 Deploying LLMs                 | 5.1-local-vs-cloud-inference.md           |                                     |
-|                               |                                  | 5.2-quick-quantization-laptop-gpu.md        |                                     |
-|                               | 6 Data Pipelines for Gen‑AI      | 6.1-collect-clean-text-data.md                      |                                     |
+| III – Practical MLOps         | 5 Deploying LLMs                 | 5.1-local-vs-cloud-inference.md                         |                                     |
+|                               |                                  | 5.2-quick-quantization-laptop-gpu.md                    |                                     |
+|                               | 6 Data Pipelines for Gen‑AI      | 6.1-collect-clean-text-data.md                          |                                     |
 |                               |                                  | 6.2-ci-cd-for-models.md                                 |                                     |
 | IV – Responsible & Edge AI    | 7 On‑Device AI                   | 7.1 Running LLMs on Apple Silicon or a Phone             |                                     |
 |                               |                                  | 7.2 Privacy‑First Design Tips                            |                                     |
