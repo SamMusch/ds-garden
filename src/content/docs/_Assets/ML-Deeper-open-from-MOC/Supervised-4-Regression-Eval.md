@@ -38,6 +38,10 @@ kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-02-02 00:00:00 +0000
+kMDItemLastUsedDate: 2025-08-02 16:52:50 +0000
+kMDItemLastUsedDate_Ranking: 2025-08-02 00:00:00 +0000
+kMDItemUseCount: '4'
+kMDItemUsedDates: (
 modified: '2025-02-02'
 published: true
 reading_time: 0.4
