@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import wikiLink from 'remark-wiki-link';
-import path from 'path';
+import path from 'path'; 
 import slugify from 'slugify';
 
 // ✅ NEW: scan docs & resolve [[wikilinks]] to real routes by file **basename** (ignore folders)
