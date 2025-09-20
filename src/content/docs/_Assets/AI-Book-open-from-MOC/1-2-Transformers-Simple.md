@@ -52,7 +52,7 @@ word_count: 329
 ---
 
 Resources
-- 1.5-nlp-fundamentals.md: Talks about transformers
+- 1-5-nlp-fundamentals.md: Talks about transformers
 - [ChatGPT](https://chatgpt.com/share/681792c6-48c0-8000-b324-765516a6ce87): This markdown
 
 ### Everyday Analogy

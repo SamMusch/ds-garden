@@ -52,7 +52,7 @@ word_count: 469
 ## Overview
 
 !pasted-image-20241231152903.png.md
-Image comes from textbook in 2.5-autoencoders-gans-diffusionmodels.md
+Image comes from textbook in 2-5-autoencoders-gans-diffusionmodels.md
 
 **Generative models** are enabling computers to have an understanding of the world. They are:
 - Unsupervised

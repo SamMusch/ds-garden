@@ -55,8 +55,8 @@ Note to self - created March 22, 2025.
 
 ## Autoencoders
 
-Also see 2.4-gen-models-overview.md - different textbook
-Moved to 2.4-gen-models-overview#overview---separate-resource.md
+Also see 2-4-gen-models-overview.md - different textbook
+Moved to 2-4-gen-models-overview#overview---separate-resource.md
 
 ---
 
@@ -104,7 +104,7 @@ Classes of neural networks (goals):
 
 ### Autoencoders (For Inspiration)
 
-Summarized in 2.5-autoencoders-gans-diffusionmodels#autoencoders.md
+Summarized in 2-5-autoencoders-gans-diffusionmodels#autoencoders.md
 
 ### Building an Autoencoder
 
