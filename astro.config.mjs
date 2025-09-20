@@ -16,7 +16,7 @@ const normalizeBase = (s) => s
   .toLowerCase()
   .replace(/\.md$/,'')
   .replace(/\s+|_/g,'-')
-  .replace(/\./g,'')           // "0.0-foo" → "00-foo"
+  // .replace(/\./g,'')           // "0.0-foo" → "00-foo"
   .replace(/[^a-z0-9-]/g,'')
   .replace(/-+/g,'-')
   .replace(/^-|-$/g,'');
