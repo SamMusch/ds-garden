@@ -6,15 +6,21 @@ import path from 'path';
 import slugify from 'slugify';
 
 export default defineConfig({
-  base: '/ds-garden/',
+  // Required for GitHub Pages (project site)
+  site: 'https://sammusch.github.io', // owner site root
+  base: '/ds-garden',                  // repo subpath (no trailing slash)
+  output: 'static',                    // Pages is static hosting
+
   markdown: {
     shikiConfig: {
-      langs: [{ id: 'ad-sam', scopeName: 'text.ad-sam', grammar: {} }]
+      // keep your custom ad-sam block for syntax highlighting
+      langs: [{ id: 'ad-sam', scopeName: 'text.ad-sam', grammar: {} }],
     },
     remarkPlugins: [
       [
         wikiLink,
         {
+          // Preserve your Obsidian-style wiki-link behavior
           hrefTemplate: (permalink, page) => {
             const vaultRoot = '/Users/Sam/Desktop/notes-vault';
             const linkFile = permalink.endsWith('.md') ? permalink : `${permalink}.md`;
@@ -24,13 +30,14 @@ export default defineConfig({
             const parts = relativePath
               .replace(/\.md$/, '')
               .split(path.sep)
-              .map(s => slugify(s, { lower: true }));
+              .map((s) => slugify(s, { lower: true }));
             return '/' + parts.join('/') + '/';
-          }
-        }
-      ]
-    ]
+          },
+        },
+      ],
+    ],
   },
+
   integrations: [
     starlight({
       title: 'DS Garden',
@@ -41,6 +48,6 @@ export default defineConfig({
         PageShell: './src/components/PageShell.astro',
       },
       customCss: ['./src/styles/Mado-Miniflow.css'],
-    })
-  ]
+    }),
+  ],
 });
