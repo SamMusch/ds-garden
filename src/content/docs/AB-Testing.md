@@ -79,6 +79,3 @@ Does B need to out-perform control?
 - Yes --> **One-Sided**
 - No --> **Two-Sided**
 ```
-
-
-

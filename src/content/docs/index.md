@@ -56,12 +56,7 @@ word_count: 368
 ## MOCs
 
 _ai-moc.md
-_bigdata-moc.md
 _ml-moc.md
-
-**Specialty**
-_optimization-moc.md
-_strategy-moc.md
 _ts-moc.md
 
 
