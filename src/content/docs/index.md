@@ -53,8 +53,6 @@ title: DataScience HOME
 word_count: 368
 ---
 
-250920
-
 ## MOCs
 
 _ai-moc.md
