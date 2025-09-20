@@ -69,6 +69,3 @@ from outgoing([[]])
 | supervised-2-classification.md  |          |         |
 | supervised-4-regression-eval.md |          |         |
 | supervised-6-ensemble.md        |          |         |
-
-
-test-25-09-20
