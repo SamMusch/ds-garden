@@ -7,6 +7,8 @@ import slugify from 'slugify';
 
 // ✅ NEW: scan docs & resolve [[wikilinks]] to real routes by file **basename** (ignore folders)
 import fs from 'node:fs';
+// ✅ NEW: visit utility for a tiny remark plugin that linkifies bare *.md filenames
+import { visit } from 'unist-util-visit';
 
 const SITE_BASE = '/ds-garden/';
 
@@ -41,6 +43,51 @@ function scanDocsForRoutes() {
 
 const { routesByKey, routes } = scanDocsForRoutes();
 
+// === NEW: remark plugin to linkify bare "something.md" mentions by basename ===
+function remarkLinkifyMdFilenames(opts) {
+  const MD_RE = /\b([A-Za-z0-9._-]+)\.md\b/g; // captures "name.md"
+  const map = opts?.routesByKey || {};
+
+  return (tree) => {
+    visit(tree, 'text', (node, index, parent) => {
+      // don't touch code blocks or existing links
+      if (!parent || ['link', 'linkReference', 'inlineCode', 'code'].includes(parent.type)) return;
+
+      const value = node.value;
+      let m, last = 0;
+      const out = [];
+      MD_RE.lastIndex = 0;
+
+      while ((m = MD_RE.exec(value))) {
+        const [full, nameOnly] = m;
+        const before = value.slice(last, m.index);
+        if (before) out.push({ type: 'text', value: before });
+
+        const key = normalizeBase(nameOnly);
+        const route = map[key];
+        if (route) {
+          out.push({
+            type: 'link',
+            url: route,
+            title: null,
+            children: [{ type: 'text', value: full }], // keep original "something.md" text
+          });
+        } else {
+          out.push({ type: 'text', value: full });
+        }
+        last = m.index + full.length;
+      }
+      if (out.length) {
+        const after = value.slice(last);
+        if (after) out.push({ type: 'text', value: after });
+        parent.children.splice(index, 1, ...out);
+        return index + out.length;
+      }
+    });
+  };
+}
+// === END NEW ===
+
 export default defineConfig({
   base: '/ds-garden/',
   markdown: {
@@ -48,20 +95,24 @@ export default defineConfig({
       langs: [{ id: 'ad-sam', scopeName: 'text.ad-sam', grammar: {} }]
     },
     remarkPlugins: [
+      // NEW: linkify bare *.md mentions (e.g., "0.0-neural-network-taxonomy.md")
+      [remarkLinkifyMdFilenames, { routesByKey }],
+
+      // Existing wikilink handling (kept) — now resolves [[label]] by basename
       [
         wikiLink,
         {
-          // ✅ NEW: let the plugin resolve [[label]] → real route using only the file's basename
-          permalinks: routes, // we treat actual routes as "permalinks"
+          // we treat actual routes as "permalinks"
+          permalinks: routes,
           pageResolver: (name) => {
             const key = normalizeBase(name);
             const route = routesByKey[key];
             return route ? [route] : [];
           },
 
-          // Existing hrefTemplate retained; short-circuit if we already resolved to a route
+          // Existing hrefTemplate retained; short-circuit if already resolved
           hrefTemplate: (permalink, page) => {
-            // ✅ If pageResolver found a route, use it as-is
+            // ✅ If pageResolver found a route (starts with "/"), use it as-is
             if (typeof permalink === 'string' && permalink.startsWith('/')) {
               return permalink;
             }
