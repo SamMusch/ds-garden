@@ -84,7 +84,6 @@ Refreshers
 - [algebra-calculus](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-algebra-calculus.pdf)
 - [probabilities-statistics](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-probabilities-statistics.pdf)
 
-
 ## Algorithm Types
 
 Regression
@@ -150,9 +149,7 @@ Ensemble Methods
 - Gradient Boosting Machines (GBM)
 - Random Forest
 
-
-
-dataview 
+dataview
 
 ```
 TABLE without id
