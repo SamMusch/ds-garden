@@ -7,6 +7,9 @@ import slugify from 'slugify';
 
 export default defineConfig({
   base: '/ds-garden/',
+  redirects: {
+    '/': '/datascience-home/',   // <-- root -> datascience-home
+  },
   markdown: {
     shikiConfig: {
       langs: [{ id: 'ad-sam', scopeName: 'text.ad-sam', grammar: {} }]
