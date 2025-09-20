@@ -53,21 +53,6 @@ title: Website
 word_count: 258
 ---
 
-Input brief
-- The ask/opportunity
-- Business challenge
-- Background
-- Role of comms
-- Objectives
-- Audience, desired outcomes
-- Success factors
-- Approach and known deliverables
-- Timing
-- Budget
-- Existing assets
-- Next steps
-
-
 ### Todo
 
 Steps (just reminders)
@@ -79,6 +64,48 @@ Steps (just reminders)
 - [ ] Data - via [Content Layer: A Deep Dive \| Astro](https://astro.build/blog/content-layer-deep-dive/)
 - [ ] Figure out why output files are going to the wrong place
 - [ ] Redo admonition stuff - maybe within obsidian instead
+
+
+
+
+
+### Github
+
+[Tokens](https://github.com/settings/tokens)
+[Actions](https://github.com/SamMusch/notes-vault/settings/secrets/actions)
+[Workflow Runs](https://github.com/SamMusch/notes-vault/actions)
+
+Create two repos
+
+- **`notes-vault` (private)** — My notes
+  - **Action secret**: DS_GARDEN_PAT
+- **`ds-garden` (public)** — Astro site
+  - **Action secret**: VAULT_PAT
+
+[Tokens](https://github.com/settings/tokens): (PAT classic)
+
+- vault-25-09-20
+  [Secrets](https://github.com/SamMusch/ds-garden/settings/secrets/actions)
+
+---
+
+
+
+### Roles & names (no ambiguity)
+
+- **Repo (source):** `notes-vault` — your private Obsidian vault.
+- **Repo (dest):** `ds-garden` — your public Astro site.
+- **Direction:** `notes-vault` **pushes** prepared Markdown into `ds-garden`.
+- **PAT display name (in GitHub > Developer settings):** `pat-ds-garden-publish-2025-09`.
+- **Secret (in `notes-vault` only):** `DS_GARDEN_PUBLISH_PAT`.
+- **No secrets needed in `ds-garden`** (delete `VAULT_PAT` there to avoid confusion).
+- **Workflow file (in `notes-vault`):** `.github/workflows/publish-to-ds-garden.yml`.
+
+
+
+
+
+
 
 ### Astro
 
@@ -180,24 +207,11 @@ Extra:
 - [Markdown](https://docs.astro.build/en/guides/markdown-content/)
 - [Images](https://docs.astro.build/en/guides/images/)
 
----
 
-### Github
 
-[Tokens](https://github.com/settings/tokens)
-[Actions](https://github.com/SamMusch/notes-vault/settings/secrets/actions)
-[Workflow Runs](https://github.com/SamMusch/notes-vault/actions)
 
-Create two repos
-- **`notes-vault` (private)** — My notes
-    - **Action secret**: DS_GARDEN_PAT
-- **`ds-garden` (public)** — Astro site
-    - **Action secret**: VAULT_PAT
 
-[Tokens](https://github.com/settings/tokens): (PAT)
 
-- vault-25-07-25     (Exp 25-08-24)
-[Secrets](https://github.com/SamMusch/ds-garden/settings/secrets/actions)
 
 ### Metadata
 

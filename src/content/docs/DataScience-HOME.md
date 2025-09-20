@@ -53,48 +53,6 @@ title: DataScience HOME
 word_count: 368
 ---
 
-```dataview
-TABLE without id
-
-
-file.link
-
-from outgoing([[]])
-
-```
-
-## Review Resources
-
-```
-Corresponds to "Cheatsheets" folder above
-```
-
-- [Stanford](https://stanford.edu/~shervine/teaching/cs-229)
-- [Github](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-supervised-learning.pdf)
-
-#### Cheatsheets
-ds-cheatsheet.pdf.md
-
-| <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-supervised-learning.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-001.png?" alt="Illustration" width="220px"/></a> | <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-unsupervised-learning.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-002.png" alt="Illustration" width="220px"/></a> | <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-deep-learning.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-003.png" alt="Illustration" width="220px"/></a> | <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/cheatsheet-machine-learning-tips-and-tricks.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-004.png" alt="Illustration" width="220px"/></a> |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                                    Supervised Learning                                                                                                                    |                                                                                                                   Unsupervised Learning                                                                                                                    |                                                                                                                   Deep Learning                                                                                                                    |                                                                                                                            Tips and tricks                                                                                                                            |
-
-#### Refreshers
-| <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-probabilities-statistics.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-005.png" alt="Illustration" width="220px"/></a> | <a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-algebra-calculus.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-006.png#1" alt="Illustration" width="220px"/></a> |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                                 Probabilities and Statistics                                                                                                                 |                                                                                                                  Algebra and Calculus                                                                                                                  |
-
-#### Super Cheatsheet
-|<a href="https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/super-cheatsheet-machine-learning.pdf"><img src="https://stanford.edu/~shervine/teaching/cs-229/illustrations/cover/en-007.png" alt="Illustration" width="400px"/></a>|
-|:--:|
-|All the above gathered in one place|
-
-## Algorithm Types
-
-algos.jpeg.md
-
-# Ignore, just for metadata
-
 ## MOCs
 
 _ai-moc.md
@@ -105,3 +63,97 @@ _ml-moc.md
 _optimization-moc.md
 _strategy-moc.md
 _ts-moc.md
+
+## Review Resources
+
+```
+Corresponds to "Cheatsheets" folder above
+```
+
+ [Stanford](https://stanford.edu/~shervine/teaching/cs-229): 3 separate courses.
+- **Artificial Intelligence**
+    - **Reflex** | **States** | **Variables** | **Logic**
+- **Machine Learning**
+    - **Supervised** | **Unsupervised** | **Deep** | **Tips**
+- **Deep Learning**
+    - **CNN** | **RNN** | **Tips**
+
+Refreshers
+- [algebra-calculus](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-algebra-calculus.pdf)
+- [probabilities-statistics](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-probabilities-statistics.pdf)
+
+
+## Algorithm Types
+
+Regression
+- OLS
+- Logistic Regression
+- Multivariate Adaptive Regression Splines (MARS)
+- Locally Estimated Scatterplot Smoothing (LOESS)
+
+Instance-based Methods
+- k-Nearest Neighbour (KNN)
+- Learning Vector Quantization (LVQ)
+- Self-Organizing Map (SOM)
+
+Regularization Methods
+- Ridge Regression
+- LASSO
+- Elastic Net
+
+Decision Tree
+- Classification and Regression Tree (CART)
+- Iterative Dichotomiser 3 (ID3)
+- C4.5
+- Random Forest
+- Gradient Boosting Machines (GBM)
+
+Bayesian
+- Naive Bayes
+- Averaged One-Dependence Estimators (AODE)
+- Bayesian Belief Network (BBN)
+
+Kernel Methods
+- Support Vector Machines (SVM)
+- Radial Basis Function (RBF)
+- Linear Discriminant Analysis (LDA)
+
+Association Rule Learning
+- Apriori algorithm
+- Eclat algorithm
+
+Artificial Neural Networks
+- Perceptron
+- Back-Propagation
+- Hopfield Network
+
+Deep Learning
+- Restricted Boltzmann Machine (RBM)
+- Deep Belief Networks (DBN)
+- Convolutional Network
+- Stacked Auto-encoders
+
+Dimensionality Reduction
+- Principal Component Analysis (PCA)
+- Partial Least Squares Regression (PLS)
+- Sammon Mapping
+- Multidimensional Scaling (MDS)
+- Projection Pursuit
+
+Ensemble Methods
+- Boosting
+- Bootstrapped Aggregation (Bagging)
+- AdaBoost
+- Stacked Generalization (blending)
+- Gradient Boosting Machines (GBM)
+- Random Forest
+
+
+
+dataview
+
+```
+TABLE without id
+file.link
+from outgoing([[]])
+```

@@ -105,13 +105,11 @@ Parameters for the **lag**:
 #### 06. Data Transform
 
 Input shape:
-
 - **Samples:** One sequence is one sample. A batch is comprised of one or more samples.  
 - **Time Steps:** One time step is one point of observation in the sample. One sample is comprised of multiple time steps.  
 - **Features:** One feature is one observation at a time step. One time step is comprised of one or more features.
 
 Put Simply:
-
 - Normal Shape: Rows, Columns
 - TS Shape: Rows, **TimeSteps**, Columns
 
