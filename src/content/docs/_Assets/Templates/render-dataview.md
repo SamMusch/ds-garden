@@ -38,6 +38,10 @@ kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-09-21 00:00:00 +0000
+kMDItemLastUsedDate: 2025-09-21 17:52:31 +0000
+kMDItemLastUsedDate_Ranking: 2025-09-21 00:00:00 +0000
+kMDItemUseCount: '7'
+kMDItemUsedDates: (
 modified: '2025-09-21'
 published: true
 reading_time: 2.8
@@ -48,23 +52,6 @@ word_count: 556
 ---
 
 <%*
-/**
-   * Render Dataview-like blocks to static Markdown (append-only, safe).
-   * - Leaves original ```dataview blocks intact
-   * - Appends a rendered snapshot between <!-- RENDERED-DV START/END -->
-   * Supported query shapes (case-insensitive):
-
-   *   1) LIST FROM "folder" WHERE publish
-   *   2) TABLE WITHOUT ID file.link AS Note, dateformat(file.mtime, "ff") AS Modified
-   *      FROM "<folder or empty>" WHERE publish SORT file.mtime desc [LIMIT N]
- *
-   * Notes:
-
-   * - "publish" is read from frontmatter (true/false)
-   * - mtime shown in ISO by default (tweak formatMtime)
-   * - Links are Obsidian wikilinks note-name.md for now (safe for your current pipeline)
- */
-
 const tfile = tp.file.find_tfile(tp.file.path(true));
 if (!tfile) {
   new Notice("Templater: active file not found");
@@ -74,7 +61,6 @@ if (!tfile) {
 const vault = app.vault;
 const mdCache = app.metadataCache;
 
-// ---------- helpers ----------
 function getFrontmatter(tf) {
   const fm = mdCache.getFileCache(tf)?.frontmatter ?? {};
   return fm || {};
@@ -88,12 +74,10 @@ function isPublish(tf) {
 }
 
 function formatMtime(ms) {
-  // Tweak this if you want a different format later
   return new Date(ms).toISOString();
 }
 
 function fileWikilink(tf) {
-  // basename.md (no extension)
   const base = tf.basename;
   return `${base}.md`;
 }
@@ -103,14 +87,12 @@ function listMarkdown(files) {
 }
 
 function tableMarkdown(rows) {
-  // rows: [{note, modified}]
   let out = `| Note | Modified |\n| --- | --- |\n`;
   for (const r of rows) out += `| ${r.note} | ${r.modified} |\n`;
   return out + '\n';
 }
 
 function gatherMarkdownFilesUnder(folderPath) {
-  // Accepts "" or relative folder path from vault root
   const root = folderPath ? folderPath : "";
   const abs = root ? root : "";
   const start = abs ? vault.getAbstractFileByPath(abs) : vault.getRoot();
@@ -128,10 +110,8 @@ function gatherMarkdownFilesUnder(folderPath) {
   return results;
 }
 
-// Parse & render a single dataview query string
 function renderQuery(q) {
   const qq = q.trim().replace(/\s+/g, ' ');
-  // Pattern 1: LIST FROM "folder" WHERE publish
   let m = qq.match(/^LIST FROM "([^"]+)" WHERE publish$/i);
   if (m) {
     const from = m[1];
@@ -141,7 +121,6 @@ function renderQuery(q) {
     return '\n' + listMarkdown(files);
   }
 
-  // Pattern 2: TABLE ... FROM "<folder or empty>" WHERE publish SORT ... [LIMIT N]
   m = qq.match(/^TABLE WITHOUT ID file\.link AS Note,\s*dateformat\(file\.mtime,\s*".*?"\)\s*AS\s*Modified\s*FROM\s*"([^"]*)"\s*WHERE\s*publish(?:\s*SORT\s*file\.mtime\s*desc)?(?:\s*LIMIT\s*(\d+))?$/i);
   if (m) {
     const from = m[1] || "";
@@ -160,18 +139,14 @@ function renderQuery(q) {
     return '\n' + tableMarkdown(rows);
   }
 
-  // Fallback: leave the original block as a plain code block snapshot
   return `\n\`\`\`\n${q.trim()}\n\`\`\`\n`;
 }
 
-// ---------- main transform ----------
 let src = await vault.read(tfile);
 
-// Find ```dataview ... ```
 const re = /```dataview\s+([\s\S]*?)```/gi;
 let changed = false;
 let out = src.replace(re, (full, inner) => {
-  // If we already appended a rendered section just below, skip duplicating.
   const marker = '<!-- RENDERED-DV START -->';
   if (full.includes(marker)) return full;
 
