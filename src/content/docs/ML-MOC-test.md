@@ -47,17 +47,7 @@ title: ' ML MOC'
 word_count: 19
 ---
 
-```dataview
-TABLE without id
-
-file.link,
-
-Quality,
-
-
-sum(HoursRemain) as Remain
-from outgoing([[]])
-```
+[object Promise]
 
 
 
@@ -71,3 +61,56 @@ from outgoing([[]])
 | supervised-2-classification.md  |          |         |
 | supervised-4-regression-eval.md |          |         |
 | supervised-6-ensemble.md        |          |         |
+
+
+---
+title: render dataview
+created: '2025-09-21'
+modified: '2025-09-21'
+source_file: render-dataview.md
+word_count: 556
+reading_time: 2.8
+children: 0
+grandchildren: 0
+ai_abstract: null
+ai_key_terms: []
+_kMDItemDisplayNameWithExtensions: render-dataview.md
+kMDItemContentCreationDate: 2025-09-21 17:00:57 +0000
+kMDItemContentCreationDate_Ranking: 2025-09-21 00:00:00 +0000
+kMDItemContentModificationDate: 2025-09-21 17:15:43 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-09-21 17:16:54 +0000
+kMDItemDocumentIdentifier: '177215'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-09-21 00:00:00 +0000
+kMDItemLastUsedDate: 2025-09-21 17:52:31 +0000
+kMDItemLastUsedDate_Ranking: 2025-09-21 00:00:00 +0000
+kMDItemUseCount: '7'
+kMDItemUsedDates: (
+Due: null
+Function: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+CoverImage: null
+HoursDone: null
+HoursRemain: null
+tags: null
+TimeSpent: null
+TimeSpent2: null
+Covers: null
+cssclasses: null
+aliases: null
+---

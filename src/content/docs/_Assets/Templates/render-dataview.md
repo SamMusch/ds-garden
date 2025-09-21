@@ -53,112 +53,28 @@ word_count: 556
 
 <%*
 const tfile = tp.file.find_tfile(tp.file.path(true));
-if (!tfile) {
-  new Notice("Templater: active file not found");
-  return;
-}
+if (!tfile) return;
 
-const vault = app.vault;
-const mdCache = app.metadataCache;
-
-function getFrontmatter(tf) {
-  const fm = mdCache.getFileCache(tf)?.frontmatter ?? {};
-  return fm || {};
-}
-
-function isPublish(tf) {
-  const fm = getFrontmatter(tf);
-  const v = (fm.publish ?? fm.PUBLISH ?? fm.Published ?? false);
-  if (typeof v === 'boolean') return v;
-  return String(v).toLowerCase() === 'true';
-}
-
-function formatMtime(ms) {
-  return new Date(ms).toISOString();
-}
-
-function fileWikilink(tf) {
-  const base = tf.basename;
-  return `${base}.md`;
-}
-
-function listMarkdown(files) {
-  return files.map(f => `- ${fileWikilink(f)}`).join('\n') + '\n';
-}
-
-function tableMarkdown(rows) {
-  let out = `| Note | Modified |\n| --- | --- |\n`;
-  for (const r of rows) out += `| ${r.note} | ${r.modified} |\n`;
-  return out + '\n';
-}
-
-function gatherMarkdownFilesUnder(folderPath) {
-  const root = folderPath ? folderPath : "";
-  const abs = root ? root : "";
-  const start = abs ? vault.getAbstractFileByPath(abs) : vault.getRoot();
-  const results = [];
-
-  function walk(entry) {
-    if (!entry) return;
-    if (entry.children && entry.children.length) {
-      for (const ch of entry.children) walk(ch);
-    } else if (entry.extension === 'md') {
-      results.push(entry);
-    }
-  }
-  walk(start);
-  return results;
-}
-
-function renderQuery(q) {
-  const qq = q.trim().replace(/\s+/g, ' ');
-  let m = qq.match(/^LIST FROM "([^"]+)" WHERE publish$/i);
-  if (m) {
-    const from = m[1];
-    const files = gatherMarkdownFilesUnder(from)
-      .filter(isPublish)
-      .sort((a,b) => a.basename.localeCompare(b.basename));
-    return '\n' + listMarkdown(files);
-  }
-
-  m = qq.match(/^TABLE WITHOUT ID file\.link AS Note,\s*dateformat\(file\.mtime,\s*".*?"\)\s*AS\s*Modified\s*FROM\s*"([^"]*)"\s*WHERE\s*publish(?:\s*SORT\s*file\.mtime\s*desc)?(?:\s*LIMIT\s*(\d+))?$/i);
-  if (m) {
-    const from = m[1] || "";
-    const limit = m[2] ? parseInt(m[2], 10) : Infinity;
-
-    const files = gatherMarkdownFilesUnder(from)
-      .filter(isPublish)
-      .map(tf => ({ tf, mtime: tf.stat.mtime }))
-      .sort((a,b) => b.mtime - a.mtime)
-      .slice(0, limit);
-
-    const rows = files.map(x => ({
-      note: fileWikilink(x.tf),
-      modified: formatMtime(x.mtime)
-    }));
-    return '\n' + tableMarkdown(rows);
-  }
-
-  return `\n\`\`\`\n${q.trim()}\n\`\`\`\n`;
-}
-
-let src = await vault.read(tfile);
-
+const fileContent = await app.vault.read(tfile);
 const re = /```dataview\s+([\s\S]*?)```/gi;
-let changed = false;
-let out = src.replace(re, (full, inner) => {
-  const marker = '<!-- RENDERED-DV START -->';
-  if (full.includes(marker)) return full;
 
-  const rendered = renderQuery(inner);
+let changed = false;
+let out = fileContent.replace(re, async (match, query) => {
+  const pages = app.plugins.plugins.dataview.api.pages();
+  const selected = pages.where(p => p.publish);
+
+  let md = `\n| Note | Quality | Remain |\n| --- | --- | --- |\n`;
+  for (const p of selected) {
+    md += `| ${p.file.name}.md | ${p.Quality ?? ""} | ${p.HoursRemain ?? ""} |\n`;
+  }
   changed = true;
-  return `${full}\n\n<!-- RENDERED-DV START -->\n${rendered}<!-- RENDERED-DV END -->`;
+  return `${match}\n\n<!-- RENDERED-DV START -->\n${md}<!-- RENDERED-DV END -->`;
 });
 
 if (changed) {
-  await vault.modify(tfile, out);
-  new Notice("Rendered Dataview (append-safe) completed.");
+  await app.vault.modify(tfile, out);
+  new Notice("Rendered Dataview → Markdown appended.");
 } else {
-  new Notice("No ```dataview blocks found (or nothing to change).");
+  new Notice("No dataview block found.");
 }
 %>
