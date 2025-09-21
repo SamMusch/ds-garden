@@ -23,24 +23,34 @@ const normalizeBase = (s) => s
 function scanDocsForRoutes() {
   const ROOT = new URL('./src/content/docs', import.meta.url).pathname;
   const routesByKey = Object.create(null);
+  const mocSidebarItems = [];
 
   (function walk(dir) {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       const p = path.join(dir, entry.name);
       if (entry.isDirectory()) walk(p);
       else if (entry.isFile() && entry.name.toLowerCase().endsWith('.md')) {
-        const rel = path.relative(ROOT, p).replace(/\\/g,'/').replace(/\.md$/i,''); // e.g. "_Assets/ML"
-        const route = SITE_BASE + rel.toLowerCase() + '/';                           // "/ds-garden/_assets/ml/"
-        const baseKey = normalizeBase(path.basename(rel));                           // "ml"
-        routesByKey[baseKey] = route; // last wins if duplicates by name
+        const rel = path.relative(ROOT, p).replace(/\\/g,'/').replace(/\.md$/i,'');
+        const route = SITE_BASE + rel.toLowerCase() + '/';
+        const baseKey = normalizeBase(path.basename(rel));
+        routesByKey[baseKey] = route;
+
+        // ✅ NEW: collect "MOC" files for sidebar
+        if (entry.name.toLowerCase().includes('moc')) {
+          mocSidebarItems.push({
+            label: entry.name.replace(/\.md$/i, ''), // display without .md
+            link: route
+          });
+        }
       }
     }
   })(ROOT);
 
-  return { routesByKey, routes: Object.values(routesByKey) };
+  return { routesByKey, routes: Object.values(routesByKey), mocSidebarItems };
 }
 
-const { routesByKey, routes } = scanDocsForRoutes();
+const { routesByKey, routes, mocSidebarItems } = scanDocsForRoutes();
+
 
 // === NEW: remark plugin to linkify bare "something.md" mentions by basename ===
 function remarkLinkifyMdFilenames(opts) {
@@ -133,15 +143,18 @@ export default defineConfig({
     ]
   },
   integrations: [
-    starlight({
-      title: 'DS Garden',
-      // kill the default sidebar
-      sidebar: [],
-      // point to your Astro component by path string
-      components: {
-        PageShell: './src/components/PageShell.astro',
-      },
-      customCss: ['./src/styles/Mado-Miniflow.css', './src/styles/list-tighten.css'],
-    })
-  ]
+  starlight({
+    title: 'DS Garden',
+    sidebar: [
+      {
+        label: 'MOCs',
+        items: mocSidebarItems
+      }
+    ],
+    components: {
+      PageShell: './src/components/PageShell.astro',
+    },
+    customCss: ['./src/styles/Mado-Miniflow.css', './src/styles/list-tighten.css'],
+  })
+]
 });
