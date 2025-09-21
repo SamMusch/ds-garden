@@ -83,9 +83,10 @@ Self‑supervision is a way for models to generate their own “quiz” signals 
 - **Proxy Tasks**: Create artificial tasks using the data itself (e.g., mask part of an input and predict it).
 - **Representation Learning**: Learn embeddings by contrasting different views of the same data point or reconstructing missing pieces.
 - **Common Approaches**:  
-  - Masked token prediction in text (e.g., hide 15% of words).  
-  - Masked patch reconstruction in images (e.g., hide random image patches).  
-  - Contrastive objectives that pull related samples together in embedding space and push others apart.
+
+   - Masked token prediction in text (e.g., hide 15% of words).  
+   - Masked patch reconstruction in images (e.g., hide random image patches).  
+   - Contrastive objectives that pull related samples together in embedding space and push others apart.
 
 ### Connections to Other Topics
 - **Transfer Learning**: Use self‑supervised pretraining to initialize models before fine‑tuning on a specific task.
@@ -94,14 +95,14 @@ Self‑supervision is a way for models to generate their own “quiz” signals 
 
 ### Key Techniques
 - **Contrastive Learning**  
-  - InfoNCE loss, SimCLR, MoCo  
-  - Encourages similar views to have closer embeddings than dissimilar ones
+   - InfoNCE loss, SimCLR, MoCo  
+   - Encourages similar views to have closer embeddings than dissimilar ones
 - **Masked Language Modeling (MLM)**  
-  - BERT-style masking of input tokens  
-  - Predicts masked tokens from context
+   - BERT-style masking of input tokens  
+   - Predicts masked tokens from context
 - **Masked Image Modeling (MIM)**  
-  - MAE-style masking of image patches  
-  - Reconstructs missing patches
+   - MAE-style masking of image patches  
+   - Reconstructs missing patches
 
 ### Popular Methods
 - **SimCLR** (Chen et al., 2020)  

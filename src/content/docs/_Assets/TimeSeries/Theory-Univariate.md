@@ -138,10 +138,11 @@ word_count: 980
 
 - **Sample Path**: One particular realization of that stochastic process.
 - **Stationarity**:
-  - Constant mean over time.
-  - Constant variance.
-  - Constant autocovariance (depends only on the lag).
-  - No inherent seasonality.
+
+   - Constant mean over time.
+   - Constant variance.
+   - Constant autocovariance (depends only on the lag).
+   - No inherent seasonality.
 
 **Why Stationarity?**  
 With only one observed path, stationarity lets us make reliable inferences about the underlying process from that single path.
@@ -158,6 +159,7 @@ With only one observed path, stationarity lets us make reliable inferences about
 ### Converting to Stationary
 ```ad-sam
 1. **1st differencing**:  
+
    - A random walk $Y_t$ becomes stationary if you take $Y_t - Y_{t-1}$.  
    - Use the **ADF test** to decide if differencing is needed.
 1. **2nd differencing** if one differencing step is not enough.  
@@ -186,9 +188,9 @@ With only one observed path, stationarity lets us make reliable inferences about
 
   $X_{t} = \varepsilon_{t} + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2}$
 
-  - **Expected value** of $X_t$ is 0 (if no constant term).
-  - **Variance** of $X_t$ is $1 + \theta_{1}^2 + \theta_{2}^2$ (assuming $\varepsilon_t \sim \text{iid}(0,1)$).
-  - **Covariance** terms depend on $\theta_{i}$ values and the lag.
+   - **Expected value** of $X_t$ is 0 (if no constant term).
+   - **Variance** of $X_t$ is $1 + \theta_{1}^2 + \theta_{2}^2$ (assuming $\varepsilon_t \sim \text{iid}(0,1)$).
+   - **Covariance** terms depend on $\theta_{i}$ values and the lag.
 
 ```
 
@@ -201,10 +203,10 @@ With only one observed path, stationarity lets us make reliable inferences about
 
   $X_{t} = \phi X_{t-1} + \varepsilon_{t}$
 
-  - Stationary if $|\phi| < 1$.
-  - **Variance** of $X_t$ for AR(1):  
+   - Stationary if $|\phi| < 1$.
+   - **Variance** of $X_t$ for AR(1):  
     $\text{Var}(X_t) = \frac{1}{1 - \phi^2}$
-  - **Covariance** at lag 1:  
+   - **Covariance** at lag 1:  
     $\text{Cov}(X_t, X_{t-1}) = \frac{\phi}{1 - \phi^2}$
 
 
@@ -273,16 +275,19 @@ With only one observed path, stationarity lets us make reliable inferences about
 
 ```ad-sam
 - **Deterministic Trend**:  
-  - A function of time (linear, polynomial).  
-  - $Y_t = f(t) + \text{stationary noise}$.
-  - If trend is linear ($f(t) = \beta_0 + \beta_1 t$), differencing can remove the linear component.
+
+   - A function of time (linear, polynomial).  
+   - $Y_t = f(t) + \text{stationary noise}$.
+   - If trend is linear ($f(t) = \beta_0 + \beta_1 t$), differencing can remove the linear component.
 
 - **Seasonality**:  
-  - Patterns repeat at fixed intervals.  
-  - Handle with seasonal differencing or adding seasonal AR/MA terms (SARIMA).
+
+   - Patterns repeat at fixed intervals.  
+   - Handle with seasonal differencing or adding seasonal AR/MA terms (SARIMA).
 
 - **Tests for Trend**:  
-  - **ADF**: If p-value is high, the series might need differencing or might have a deterministic trend.  
-  - **Residual Analysis**: Check whether residuals are white noise. If not, the trend model might be inadequate.
+
+   - **ADF**: If p-value is high, the series might need differencing or might have a deterministic trend.  
+   - **Residual Analysis**: Check whether residuals are white noise. If not, the trend model might be inadequate.
 
 ```

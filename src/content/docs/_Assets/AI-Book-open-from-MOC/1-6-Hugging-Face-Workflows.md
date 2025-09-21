@@ -54,12 +54,15 @@ word_count: 203
 [Behind the pipeline](https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt) - steps - [YouTube](https://www.youtube.com/watch?v=1pedAIvTWXk&t=52s)
 
 1. **Preprocessing with a tokenizer**:
+
    2. Load the tokenizer.
    3. Tokenize input text into tokens and convert to tensors.
 4. **Model**:
+
    5. Load the pretrained model.
    6. Pass the tokenized inputs through the model to get output logits.
 7. **Postprocessing the output**:
+
    8. Convert logits to probabilities using softmax.
    9. Map the probabilities to labels.
 

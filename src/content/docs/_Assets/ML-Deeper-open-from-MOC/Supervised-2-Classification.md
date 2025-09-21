@@ -164,6 +164,7 @@ When deciding how to split a node, decision tree algorithms use measures like **
 
 Cost-Benefit Approach
 1. Construct a “cost/benefit” matrix, detailing the financial impact of each type of prediction:
+
    - **TP** & **TN**: Represent revenue or benefits.
    - **FP** & **FN**: Represent costs or losses.
 2. Multiply your confusion matrix by the cost/benefit matrix to calculate expected profit (or cost), and use this to guide decisions.

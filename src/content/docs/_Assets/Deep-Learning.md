@@ -179,19 +179,19 @@ Pg 323 | [Paper by Leslie Smith](https://arxiv.org/abs/1803.09820)
 
 **If good on train but bad on test (overfitting)**:
 - Regularization - apply penalty in the loss function if weight and bias is too high from layer to layer
-  - L1 subtracts which is why we are able to get rid of irrelevant features
-  - L2 discounts, which is why the features don't reach 0
+   - L1 subtracts which is why we are able to get rid of irrelevant features
+   - L2 discounts, which is why the features don't reach 0
 - Early stop - makes regularization not that important - limits epoch - need to be run on validation set
-  - When we increase epoch, we will repeat GD many times. This will decrease error for training data, but we are looking for the min testing error.
+   - When we increase epoch, we will repeat GD many times. This will decrease error for training data, but we are looking for the min testing error.
 - Drop out
-  - Use separate mini batches - remove a certain percent from each training batch for each layer (Need to multiply all weights by `1 - drop %`)
-  - Training we drop out some neurons, in testing we bring them back and discount their weights
+   - Use separate mini batches - remove a certain percent from each training batch for each layer (Need to multiply all weights by `1 - drop %`)
+   - Training we drop out some neurons, in testing we bring them back and discount their weights
 
 ### Why not just add more layers?
 - Vanishing gradient - First layers not nearly as impacted as later stages because much large variance in later stages
- - ReLU - A change in the slope from one neuron to the next will have the same impact on each resulting layer
+   - ReLU - A change in the slope from one neuron to the next will have the same impact on each resulting layer
    - Problem of Relu - Change of zero will lead to the resulting neuron dying out though
    - Alternative - Leaky ReLU - very small instead of 0
    - Alternative - Parametric ReLU - can adjust slope for the "below 0" section
- - Batch normalization - Makes sure that the changing distribution of prev layer's inputs aren't impacting us
- - Gradient clipping (for grad explosion) - set a threshold that gradients can't go above/below
+   - Batch normalization - Makes sure that the changing distribution of prev layer's inputs aren't impacting us
+   - Gradient clipping (for grad explosion) - set a threshold that gradients can't go above/below

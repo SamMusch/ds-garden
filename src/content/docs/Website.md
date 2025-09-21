@@ -79,9 +79,9 @@ Steps (just reminders)
 Create two repos
 
 - **`notes-vault` (private)** — My notes
-  - **Action secret**: DS_GARDEN_PAT
+   - **Action secret**: DS_GARDEN_PAT
 - **`ds-garden` (public)** — Astro site
-  - **Action secret**: VAULT_PAT
+   - **Action secret**: VAULT_PAT
 
 [Tokens](https://github.com/settings/tokens): (PAT classic)
 
@@ -113,6 +113,7 @@ Create two repos
 **Astro**: a web framework. Best known for a new frontend architecture that reduces JS overhead & complexity.
 - **How**: Builds pages as static HTML by default. Only adds JS code when requested, only loads when needed.
 - **[Islands architecture](https://docs.astro.build/en/concepts/islands/)**:
+
     - **Islands**: Interactive components (eg buttons)
     - **Hydration**: Turning Islands into functional JS in the browser
 
@@ -138,8 +139,8 @@ Resources:
 **2. Architecture**
 * **Rendering Model:** Islands Architecture
 * **Primary Rendering Modes Supported:**
-  * **SSG** (default)
-  * **SSR** (optional with adapter)
+   * **SSG** (default)
+   * **SSR** (optional with adapter)
 * **Client Interaction:** Partial hydration only where needed
 
 **3. Rendering Strategy**

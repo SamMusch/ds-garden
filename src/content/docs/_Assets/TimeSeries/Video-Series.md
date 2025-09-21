@@ -100,7 +100,7 @@ We want to make the time series as simple as possible before sending it to the m
 Need to get rid of the following:
 - Trend
 - Seasonality (months, weekdays, etc)
-  - Make sure train-val-test captures this seasonality
+   - Make sure train-val-test captures this seasonality
 
 Use **roll-forward** partitioning instead of **fixed** partitioning  ([Video](https://learn.udacity.com/courses/ud187/lessons/6d543d5c-6b18-4ecf-9f0f-3fd034acd2cc/concepts/23defc4f-9b23-4335-84e4-6779d3cdd0b0))
 - Fixed: Normal
@@ -151,7 +151,7 @@ Example: Take 24 hours and give a prediction 24 hours in the future.
 
 [Intro to Tensors](https://www.tensorflow.org/guide/tensor)  
 - Tensor: Think of them as np.array that can be 1D, 2D, 3D, etc.
-  - Can be 1 column or more, need to be the same dtype. Basically an np.array.
+   - Can be 1 column or more, need to be the same dtype. Basically an np.array.
 - Element: Each value in a tensor. Could be nested which would then contain multiple components
 
 ---

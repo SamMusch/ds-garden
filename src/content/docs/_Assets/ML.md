@@ -118,18 +118,19 @@ The ML lifecycle includes several steps for transforming data into actionable in
 There are so many different types of ML systems that it is useful to classify them in broad categories based on:
 
 - Are they trained with human supervision? 
-  - **Supervised**: Where data includes labels for learning.
-  - **Unsupervised**: Where data lacks explicit labels.
-  - **Semisupervised**: 
-  - **Reinforcement**: Where an agent learns by interacting with an environment.
+   - **Supervised**: Where data includes labels for learning.
+   - **Unsupervised**: Where data lacks explicit labels.
+   - **Semisupervised**: 
+
+   - **Reinforcement**: Where an agent learns by interacting with an environment.
 
 - Can they learn incrementally on the fly?
-  - **Online**: Yes
-  - **Batch**: No
+   - **Online**: Yes
+   - **Batch**: No
 
 - How do they generalize?
-  - **Instance-based**: Can simply comparing new data points to known data points
-  - **Model-based learning**: Require training data to detect patterns
+   - **Instance-based**: Can simply comparing new data points to known data points
+   - **Model-based learning**: Require training data to detect patterns
 
 ```
 
@@ -184,6 +185,7 @@ With trial-and-error, it teaches itself the best strategy (ie policy) to max rew
 
 Steps for **instance-based** regression using k-NN:
 1. **Find the k-NN**:
+
     - For a given query instance, calculate distance from all the training instances.
     - Select $k$. (The number of instances to use.) These are the "neighbors" of the query point.
 2. **Predict**: Using these neighbors, compute the average of their target value. Use this as your prediction. (Could use more advanced technique than just average.)
@@ -205,6 +207,7 @@ Steps for **instance-based** regression using k-NN:
 
 ### Algorithm Issues
 1. **Overfitting** solutions:
+
     - Select a model with fewer parameters
     - Feature reduction
     - Constrain the model (*regularization*)

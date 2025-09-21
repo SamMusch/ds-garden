@@ -91,7 +91,7 @@ Ensemble models: when we have high accuracy & high variance, can average them ou
 Bag vs Paste:
 
 - Bagging: With replacement
-  - Bagging is higher bias, lower variance. Usually performs better, but should use cv to check
+   - Bagging is higher bias, lower variance. Usually performs better, but should use cv to check
 - Pasting: Without replacement
 
 ---
