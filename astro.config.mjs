@@ -141,7 +141,7 @@ export default defineConfig({
       components: {
         PageShell: './src/components/PageShell.astro',
       },
-      customCss: ['./src/styles/Mado-Miniflow.css'],
+      customCss: ['./src/styles/Mado-Miniflow.css', './src/styles/list-tighten.css'],
     })
   ]
 });

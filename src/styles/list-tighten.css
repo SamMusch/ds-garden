@@ -1,0 +1,22 @@
+/* Tighten spacing between a list item and its nested sub-list */
+.sl-markdown li > :is(ul, ol) {
+  margin-block-start: 0;      /* kill the big gap above nested list */
+}
+
+/* Keep nested lists compact overall */
+.sl-markdown :is(ul ul, ul ol, ol ul, ol ol) {
+  margin-block-start: 0;      /* no extra top margin within nested lists */
+  margin-block-end: 0;        /* no extra bottom margin either */
+}
+
+/* Optional: slightly tighten vertical rhythm of list items */
+.sl-markdown li {
+  margin-block-start: 0.125rem;
+  margin-block-end: 0.125rem;
+}
+
+/* Optional: avoid extra paragraph spacing inside list items */
+.sl-markdown li > p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
