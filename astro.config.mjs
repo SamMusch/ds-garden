@@ -31,7 +31,8 @@ function scanDocsForRoutes() {
       if (entry.isDirectory()) walk(p);
       else if (entry.isFile() && entry.name.toLowerCase().endsWith('.md')) {
         const rel = path.relative(ROOT, p).replace(/\\/g,'/').replace(/\.md$/i,'');
-        const route = SITE_BASE + rel.toLowerCase() + '/';
+        // const route = SITE_BASE + rel.toLowerCase() + '/';
+        const route = '/' + rel.toLowerCase() + '/';
         const baseKey = normalizeBase(path.basename(rel));
         routesByKey[baseKey] = route;
 
