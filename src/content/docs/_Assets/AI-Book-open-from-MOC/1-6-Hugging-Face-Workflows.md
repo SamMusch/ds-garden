@@ -73,6 +73,7 @@ Breaking out steps in detail: **Model** ([Image](https://huggingface.co/datasets
 2. Transformer network
    3. **Embeddings** | convert each unique ID into vector
    4. **Layers** | manipulate vectors using attention mechanism
-5. **Hidden states (features)** |
-6. **Head** | take high-dimensional vector of hidden states as input, then convert predictions to task-specific output
-7. Output for post-processing
+3. **Hidden states (features)** |
+4. **Head** | take high-dimensional vector of hidden states as input, then convert predictions to task-specific output
+5. Output for post-processing
+
