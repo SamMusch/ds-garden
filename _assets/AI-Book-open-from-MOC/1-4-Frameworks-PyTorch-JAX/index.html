@@ -8,19 +8,25 @@
       
       
       
+        <link rel="canonical" href="https://sammusch.github.io/ds-garden/_assets/AI-Book-open-from-MOC/1-4-Frameworks-PyTorch-JAX/">
       
       
+        <link rel="prev" href="../1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/">
       
-      <link rel="icon" href="/ds-garden/assets/images/favicon.png">
+      
+        <link rel="next" href="../1-5-NLP-Fundamentals/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>ds-garden</title>
+        <title>1.4 Modern Frameworks (PyTorch, JAX) - ds-garden</title>
       
     
     
-      <link rel="stylesheet" href="/ds-garden/assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
       
 
@@ -39,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("/ds-garden/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#high-level" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/ds-garden/." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -89,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              1.4 Modern Frameworks (PyTorch, JAX)
             
           </span>
         </div>
@@ -181,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/ds-garden/." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -211,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -233,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AB-Testing/" class="md-nav__link">
+      <a href="../../../AB-Testing/" class="md-nav__link">
         
   
   
@@ -255,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AI-MOC/" class="md-nav__link">
+      <a href="../../../AI-MOC/" class="md-nav__link">
         
   
   
@@ -277,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/ML-MOC/" class="md-nav__link">
+      <a href="../../../ML-MOC/" class="md-nav__link">
         
   
   
@@ -299,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/TS-MOC/" class="md-nav__link">
+      <a href="../../../TS-MOC/" class="md-nav__link">
         
   
   
@@ -318,8 +329,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -330,11 +343,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -350,7 +363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
              assets
@@ -364,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Deep-Learning/" class="md-nav__link">
+      <a href="../../Deep-Learning/" class="md-nav__link">
         
   
   
@@ -387,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML/" class="md-nav__link">
+      <a href="../../ML/" class="md-nav__link">
         
   
   
@@ -407,6 +420,8 @@
                 
   
   
+    
+  
   
   
     
@@ -416,11 +431,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
         
           
           <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
@@ -436,7 +451,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             AI Book open from MOC
@@ -450,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/0-0-Neural-Network-Taxonomy/" class="md-nav__link">
+      <a href="../0-0-Neural-Network-Taxonomy/" class="md-nav__link">
         
   
   
@@ -473,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-1-Why-NNs-Work/" class="md-nav__link">
+      <a href="../1-1-Why-NNs-Work/" class="md-nav__link">
         
   
   
@@ -496,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-2-Transformers-Simple/" class="md-nav__link">
+      <a href="../1-2-Transformers-Simple/" class="md-nav__link">
         
   
   
@@ -519,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/" class="md-nav__link">
+      <a href="../1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/" class="md-nav__link">
         
   
   
@@ -539,10 +554,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-4-Frameworks-PyTorch-JAX/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1.4 Modern Frameworks (PyTorch, JAX)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -553,6 +588,117 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="High-Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#business-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Analogy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-level-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Level Concept
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connections-to-other-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connections to Other Topics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyTorch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jax" class="md-nav__link">
+    <span class="md-ellipsis">
+      JAX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-start-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -565,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-5-NLP-Fundamentals/" class="md-nav__link">
+      <a href="../1-5-NLP-Fundamentals/" class="md-nav__link">
         
   
   
@@ -588,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-6-Hugging-Face-Workflows/" class="md-nav__link">
+      <a href="../1-6-Hugging-Face-Workflows/" class="md-nav__link">
         
   
   
@@ -611,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-1-GPT%E2%80%914o-Llama-3/" class="md-nav__link">
+      <a href="../2-1-GPT%E2%80%914o-Llama-3/" class="md-nav__link">
         
   
   
@@ -634,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-4-Gen-Models-Overview/" class="md-nav__link">
+      <a href="../2-4-Gen-Models-Overview/" class="md-nav__link">
         
   
   
@@ -657,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
+      <a href="../2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
         
   
   
@@ -680,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-6-3Blue1Brown-Explainer/" class="md-nav__link">
+      <a href="../2-6-3Blue1Brown-Explainer/" class="md-nav__link">
         
   
   
@@ -703,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
+      <a href="../5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
         
   
   
@@ -726,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
+      <a href="../5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
         
   
   
@@ -749,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-1-Collect-Clean-Text-Data/" class="md-nav__link">
+      <a href="../6-1-Collect-Clean-Text-Data/" class="md-nav__link">
         
   
   
@@ -772,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-2-CI-CD-for-Models/" class="md-nav__link">
+      <a href="../6-2-CI-CD-for-Models/" class="md-nav__link">
         
   
   
@@ -843,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
         
   
   
@@ -866,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
         
   
   
@@ -889,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
         
   
   
@@ -960,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Templates/Template/" class="md-nav__link">
+      <a href="../../Templates/Template/" class="md-nav__link">
         
   
   
@@ -1031,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Theory-Univariate/" class="md-nav__link">
+      <a href="../../TimeSeries/Theory-Univariate/" class="md-nav__link">
         
   
   
@@ -1054,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Video-Series/" class="md-nav__link">
+      <a href="../../TimeSeries/Video-Series/" class="md-nav__link">
         
   
   
@@ -1097,8 +1243,113 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+  <h1>1.4 Modern Frameworks (PyTorch, JAX)</h1>
+
+<h2 id="high-level">High-Level</h2>
+<h3 id="business-analogy">Business Analogy</h3>
+<div class="highlight"><pre><span></span><code>- **PyTorch**: kitchen that lets chefs experiment with recipes, then creates ready-to-serve meals. 
+- **JAX**: a factory line that automates recipe execution at scale
+</code></pre></div>
+<h3 id="high-level-concept">High-Level Concept</h3>
+<p>Modern ML frameworks combine ease of use with performance optimizations.
+- PyTorch 2.x emphasizes flexible, Python‑style development with optional compilation for speed.
+- JAX offers a functional approach, automatically parallelizing and optimizing computations.</p>
+<h3 id="connections-to-other-topics">Connections to Other Topics</h3>
+<ul>
+<li><strong>Quantization and Deployment</strong>: Framework compilation features simplify converting models to lighter formats for edge devices.  </li>
+<li><strong>MLOps Pipelines</strong>: Integrates seamlessly with CI/CD workflows by scripting model definitions as pure functions.  </li>
+<li><strong>Hardware Awareness</strong>: Both frameworks adapt to different accelerators—GPUs, TPUs, and even mobile chips—enabling on‑device AI.</li>
+</ul>
+<h2 id="details">Details</h2>
+<h3 id="pytorch">PyTorch</h3>
+<ul>
+<li><strong>torch.compile</strong><br />
+  Compiles eager models into optimized kernels via TorchInductor and AOTAutograd.</li>
+<li><strong>Dynamic Eager Execution</strong><br />
+  Allows Python-native debugging and control flow, with optional compilation.</li>
+<li><strong>TorchScript Hybridization</strong><br />
+  Export parts of the model to an intermediate representation for deployment.</li>
+</ul>
+<h3 id="jax">JAX</h3>
+<ul>
+<li><strong>Functional NumPy API</strong><br />
+  Drop-in replacement for NumPy with <code>jit</code>, <code>grad</code>, <code>vmap</code>, <code>pmap</code>.</li>
+<li><strong>XLA Compilation</strong><br />
+  Just-In-Time-compiles code for CPU, GPU, and TPU targets.</li>
+<li><strong>Purely Functional Paradigm</strong><br />
+  Emphasizes immutability and function transformations.</li>
+</ul>
+<h3 id="feature-comparison">Feature Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>PyTorch 2.x</th>
+<th>JAX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compilation</td>
+<td><code>torch.compile</code></td>
+<td><code>jax.jit</code> &amp; XLA</td>
+</tr>
+<tr>
+<td>Autograd</td>
+<td>Eager Autograd Engine</td>
+<td>Functional <code>grad</code> API</td>
+</tr>
+<tr>
+<td>Vectorization</td>
+<td>Manual/<code>torch.vmap</code></td>
+<td>Automatic <code>vmap</code></td>
+</tr>
+<tr>
+<td>Parallelism</td>
+<td><code>DistributedDataParallel</code></td>
+<td><code>pmap</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="quick-start-examples">Quick Start Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># PyTorch 2.x compilation</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">compiled_model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># JAX jit and grad</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">jax</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">jax.numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">jnp</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">loss_fn</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">jit_loss</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">loss_fn</span><span class="p">)</span>
+<span class="n">grad_loss</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">grad</span><span class="p">(</span><span class="n">loss_fn</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1140,10 +1391,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/ds-garden/", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "/ds-garden/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/ds-garden/assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

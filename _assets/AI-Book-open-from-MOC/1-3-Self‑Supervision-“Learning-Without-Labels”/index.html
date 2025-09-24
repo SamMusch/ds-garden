@@ -8,19 +8,25 @@
       
       
       
+        <link rel="canonical" href="https://sammusch.github.io/ds-garden/_assets/AI-Book-open-from-MOC/1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/">
       
       
+        <link rel="prev" href="../1-2-Transformers-Simple/">
       
-      <link rel="icon" href="/ds-garden/assets/images/favicon.png">
+      
+        <link rel="next" href="../1-4-Frameworks-PyTorch-JAX/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>ds-garden</title>
+        <title>1.3 Self‑Supervision   “Learning Without Labels” - ds-garden</title>
       
     
     
-      <link rel="stylesheet" href="/ds-garden/assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
       
 
@@ -39,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("/ds-garden/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#context" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/ds-garden/." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -89,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              1.3 Self‑Supervision   “Learning Without Labels”
             
           </span>
         </div>
@@ -181,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/ds-garden/." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -211,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -233,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AB-Testing/" class="md-nav__link">
+      <a href="../../../AB-Testing/" class="md-nav__link">
         
   
   
@@ -255,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AI-MOC/" class="md-nav__link">
+      <a href="../../../AI-MOC/" class="md-nav__link">
         
   
   
@@ -277,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/ML-MOC/" class="md-nav__link">
+      <a href="../../../ML-MOC/" class="md-nav__link">
         
   
   
@@ -299,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/TS-MOC/" class="md-nav__link">
+      <a href="../../../TS-MOC/" class="md-nav__link">
         
   
   
@@ -318,8 +329,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -330,11 +343,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -350,7 +363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
              assets
@@ -364,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Deep-Learning/" class="md-nav__link">
+      <a href="../../Deep-Learning/" class="md-nav__link">
         
   
   
@@ -387,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML/" class="md-nav__link">
+      <a href="../../ML/" class="md-nav__link">
         
   
   
@@ -407,6 +420,8 @@
                 
   
   
+    
+  
   
   
     
@@ -416,11 +431,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
         
           
           <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
@@ -436,7 +451,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             AI Book open from MOC
@@ -450,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/0-0-Neural-Network-Taxonomy/" class="md-nav__link">
+      <a href="../0-0-Neural-Network-Taxonomy/" class="md-nav__link">
         
   
   
@@ -473,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-1-Why-NNs-Work/" class="md-nav__link">
+      <a href="../1-1-Why-NNs-Work/" class="md-nav__link">
         
   
   
@@ -496,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-2-Transformers-Simple/" class="md-nav__link">
+      <a href="../1-2-Transformers-Simple/" class="md-nav__link">
         
   
   
@@ -516,10 +531,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1.3 Self‑Supervision   “Learning Without Labels”
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -530,6 +565,87 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Analogy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Level Concept
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details-for-data-scientists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Details for Data Scientists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connections-to-other-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connections to Other Topics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Techniques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#popular-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Popular Methods
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -542,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-4-Frameworks-PyTorch-JAX/" class="md-nav__link">
+      <a href="../1-4-Frameworks-PyTorch-JAX/" class="md-nav__link">
         
   
   
@@ -565,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-5-NLP-Fundamentals/" class="md-nav__link">
+      <a href="../1-5-NLP-Fundamentals/" class="md-nav__link">
         
   
   
@@ -588,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-6-Hugging-Face-Workflows/" class="md-nav__link">
+      <a href="../1-6-Hugging-Face-Workflows/" class="md-nav__link">
         
   
   
@@ -611,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-1-GPT%E2%80%914o-Llama-3/" class="md-nav__link">
+      <a href="../2-1-GPT%E2%80%914o-Llama-3/" class="md-nav__link">
         
   
   
@@ -634,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-4-Gen-Models-Overview/" class="md-nav__link">
+      <a href="../2-4-Gen-Models-Overview/" class="md-nav__link">
         
   
   
@@ -657,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
+      <a href="../2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
         
   
   
@@ -680,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-6-3Blue1Brown-Explainer/" class="md-nav__link">
+      <a href="../2-6-3Blue1Brown-Explainer/" class="md-nav__link">
         
   
   
@@ -703,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
+      <a href="../5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
         
   
   
@@ -726,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
+      <a href="../5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
         
   
   
@@ -749,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-1-Collect-Clean-Text-Data/" class="md-nav__link">
+      <a href="../6-1-Collect-Clean-Text-Data/" class="md-nav__link">
         
   
   
@@ -772,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-2-CI-CD-for-Models/" class="md-nav__link">
+      <a href="../6-2-CI-CD-for-Models/" class="md-nav__link">
         
   
   
@@ -843,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
         
   
   
@@ -866,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
         
   
   
@@ -889,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
         
   
   
@@ -960,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Templates/Template/" class="md-nav__link">
+      <a href="../../Templates/Template/" class="md-nav__link">
         
   
   
@@ -1031,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Theory-Univariate/" class="md-nav__link">
+      <a href="../../TimeSeries/Theory-Univariate/" class="md-nav__link">
         
   
   
@@ -1054,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Video-Series/" class="md-nav__link">
+      <a href="../../TimeSeries/Video-Series/" class="md-nav__link">
         
   
   
@@ -1097,8 +1213,91 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+  <h1>1.3 Self‑Supervision   “Learning Without Labels”</h1>
+
+<h3 id="context">Context</h3>
+<div class="highlight"><pre><span></span><code>- **Supervised**: learns a direct mapping from inputs to human-provided labels.
+- **Unsupervised**: discovers structure or representation in unlabeled data.
+- **Semi-supervised**: uses a small set of labels plus a large pool of unlabeled examples to improve performance.
+- **Self-supervised (this doc)**: automatically creates its own labels from the data (e.g. masking, rotation prediction) to learn representations without manual annotation.
+</code></pre></div>
+<h3 id="business-analogy">Business Analogy</h3>
+<div class="highlight"><pre><span></span><code>**Puzzle-Building Analogy**  
+
+1. Someone put together a 1k piece puzzle.
+2. They hide a patch of 10 pieces.
+3. You need to predict what those 10 pieces look like.
+4. Repeat 2 &amp; 3
+5. Over time, you get better at **understanding** the overall image, all without **seeing** the full completed picture.
+
+
+- Hiding puzzle pieces = Masking inputs
+- Predicting them yourself = Creating your own training labels
+- Getting better at the full image = Learning rich representations
+</code></pre></div>
+<h3 id="high-level-concept">High-Level Concept</h3>
+<p>Self‑supervision is a way for models to generate their own “quiz” signals from raw data, eliminating the need for manually annotated examples. It powers breakthroughs in how systems understand patterns and adapt to new tasks.</p>
+<h3 id="technical-details-for-data-scientists">Technical Details for Data Scientists</h3>
+<ul>
+<li><strong>Proxy Tasks</strong>: Create artificial tasks using the data itself (e.g., mask part of an input and predict it).</li>
+<li><strong>Representation Learning</strong>: Learn embeddings by contrasting different views of the same data point or reconstructing missing pieces.</li>
+<li>
+<p><strong>Common Approaches</strong>:  </p>
+</li>
+<li>
+<p>Masked token prediction in text (e.g., hide 15% of words).  </p>
+</li>
+<li>Masked patch reconstruction in images (e.g., hide random image patches).  </li>
+<li>Contrastive objectives that pull related samples together in embedding space and push others apart.</li>
+</ul>
+<h3 id="connections-to-other-topics">Connections to Other Topics</h3>
+<ul>
+<li><strong>Transfer Learning</strong>: Use self‑supervised pretraining to initialize models before fine‑tuning on a specific task.</li>
+<li><strong>Contrastive Learning</strong>: A popular self‑supervised method that underlies many representation‑learning models.</li>
+<li><strong>RAG and Downstream Tasks</strong>: Better embeddings from self‑supervision improve retrieval and generation in RAG pipelines.</li>
+</ul>
+<h3 id="key-techniques">Key Techniques</h3>
+<ul>
+<li><strong>Contrastive Learning</strong>  </li>
+<li>InfoNCE loss, SimCLR, MoCo  </li>
+<li>Encourages similar views to have closer embeddings than dissimilar ones</li>
+<li><strong>Masked Language Modeling (MLM)</strong>  </li>
+<li>BERT-style masking of input tokens  </li>
+<li>Predicts masked tokens from context</li>
+<li><strong>Masked Image Modeling (MIM)</strong>  </li>
+<li>MAE-style masking of image patches  </li>
+<li>Reconstructs missing patches</li>
+</ul>
+<h3 id="popular-methods">Popular Methods</h3>
+<ul>
+<li><strong>SimCLR</strong> (Chen et al., 2020)  </li>
+<li><strong>MoCo</strong> (He et al., 2020)  </li>
+<li><strong>BERT</strong> (Devlin et al., 2019)  </li>
+<li><strong>MAE</strong> (He et al., 2021)</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1140,10 +1339,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/ds-garden/", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "/ds-garden/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/ds-garden/assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

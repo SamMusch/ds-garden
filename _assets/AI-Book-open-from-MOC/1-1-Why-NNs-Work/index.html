@@ -8,19 +8,25 @@
       
       
       
+        <link rel="canonical" href="https://sammusch.github.io/ds-garden/_assets/AI-Book-open-from-MOC/1-1-Why-NNs-Work/">
       
       
+        <link rel="prev" href="../0-0-Neural-Network-Taxonomy/">
       
-      <link rel="icon" href="/ds-garden/assets/images/favicon.png">
+      
+        <link rel="next" href="../1-2-Transformers-Simple/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>ds-garden</title>
+        <title>1.1 Why NNs Work (Intuition) - ds-garden</title>
       
     
     
-      <link rel="stylesheet" href="/ds-garden/assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
       
 
@@ -39,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("/ds-garden/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#why-nns-work" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/ds-garden/." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -89,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              1.1 Why NNs Work (Intuition)
             
           </span>
         </div>
@@ -181,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/ds-garden/." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -211,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -233,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AB-Testing/" class="md-nav__link">
+      <a href="../../../AB-Testing/" class="md-nav__link">
         
   
   
@@ -255,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AI-MOC/" class="md-nav__link">
+      <a href="../../../AI-MOC/" class="md-nav__link">
         
   
   
@@ -277,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/ML-MOC/" class="md-nav__link">
+      <a href="../../../ML-MOC/" class="md-nav__link">
         
   
   
@@ -299,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/TS-MOC/" class="md-nav__link">
+      <a href="../../../TS-MOC/" class="md-nav__link">
         
   
   
@@ -318,8 +329,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -330,11 +343,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -350,7 +363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
              assets
@@ -364,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Deep-Learning/" class="md-nav__link">
+      <a href="../../Deep-Learning/" class="md-nav__link">
         
   
   
@@ -387,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML/" class="md-nav__link">
+      <a href="../../ML/" class="md-nav__link">
         
   
   
@@ -407,6 +420,8 @@
                 
   
   
+    
+  
   
   
     
@@ -416,11 +431,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
         
           
           <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
@@ -436,7 +451,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             AI Book open from MOC
@@ -450,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/0-0-Neural-Network-Taxonomy/" class="md-nav__link">
+      <a href="../0-0-Neural-Network-Taxonomy/" class="md-nav__link">
         
   
   
@@ -470,10 +485,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-1-Why-NNs-Work/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1.1 Why NNs Work (Intuition)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -484,6 +519,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-nns-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why NNs Work
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-nns" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are NNs?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layered-representations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layered Representations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-through-feedback-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Through Feedback (Training)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -496,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-2-Transformers-Simple/" class="md-nav__link">
+      <a href="../1-2-Transformers-Simple/" class="md-nav__link">
         
   
   
@@ -519,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/" class="md-nav__link">
+      <a href="../1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/" class="md-nav__link">
         
   
   
@@ -542,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-4-Frameworks-PyTorch-JAX/" class="md-nav__link">
+      <a href="../1-4-Frameworks-PyTorch-JAX/" class="md-nav__link">
         
   
   
@@ -565,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-5-NLP-Fundamentals/" class="md-nav__link">
+      <a href="../1-5-NLP-Fundamentals/" class="md-nav__link">
         
   
   
@@ -588,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-6-Hugging-Face-Workflows/" class="md-nav__link">
+      <a href="../1-6-Hugging-Face-Workflows/" class="md-nav__link">
         
   
   
@@ -611,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-1-GPT%E2%80%914o-Llama-3/" class="md-nav__link">
+      <a href="../2-1-GPT%E2%80%914o-Llama-3/" class="md-nav__link">
         
   
   
@@ -634,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-4-Gen-Models-Overview/" class="md-nav__link">
+      <a href="../2-4-Gen-Models-Overview/" class="md-nav__link">
         
   
   
@@ -657,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
+      <a href="../2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
         
   
   
@@ -680,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-6-3Blue1Brown-Explainer/" class="md-nav__link">
+      <a href="../2-6-3Blue1Brown-Explainer/" class="md-nav__link">
         
   
   
@@ -703,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
+      <a href="../5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
         
   
   
@@ -726,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
+      <a href="../5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
         
   
   
@@ -749,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-1-Collect-Clean-Text-Data/" class="md-nav__link">
+      <a href="../6-1-Collect-Clean-Text-Data/" class="md-nav__link">
         
   
   
@@ -772,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-2-CI-CD-for-Models/" class="md-nav__link">
+      <a href="../6-2-CI-CD-for-Models/" class="md-nav__link">
         
   
   
@@ -843,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
         
   
   
@@ -866,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
         
   
   
@@ -889,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
         
   
   
@@ -960,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Templates/Template/" class="md-nav__link">
+      <a href="../../Templates/Template/" class="md-nav__link">
         
   
   
@@ -1031,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Theory-Univariate/" class="md-nav__link">
+      <a href="../../TimeSeries/Theory-Univariate/" class="md-nav__link">
         
   
   
@@ -1054,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Video-Series/" class="md-nav__link">
+      <a href="../../TimeSeries/Video-Series/" class="md-nav__link">
         
   
   
@@ -1097,8 +1186,77 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+  <h1>1.1 Why NNs Work (Intuition)</h1>
+
+<p>Resources
+- deep-learning.md: Class notes, more detailed than below.
+- <a href="https://chatgpt.com/share/681789dd-021c-8000-a07b-964d90d8e09d">ChatGPT</a>: for this markdown</p>
+<hr />
+<div class="highlight"><pre><span></span><code>**Summary**
+NNs work because they are **flexible function approximators** that learn useful **internal representations** of data by stacking layers of transformations. 
+Instead of manually designing features or rules, neural nets **learn patterns directly from data** through a process of trial-and-error optimization.
+
+| Strength                        | What It Means                                     |
+| ------------------------------- | ------------------------------------------------- |
+| Hierarchical representation     | Learns from simple to complex features            |
+| Flexible function approximation | Can learn a wide variety of patterns and tasks    |
+</code></pre></div>
+<h3 id="why-nns-work">Why NNs Work</h3>
+<div class="highlight"><pre><span></span><code>- Neural nets can **approximate almost any function**, given enough layers and data (Universal Approximation Theorem).
+- They are **data-driven**: no need to hand-engineer features or rules.
+- They are **modular** (think sub-task) and **scalable**: you can adjust size, depth, and architecture based on the problem.
+</code></pre></div>
+<h3 id="what-are-nns">What Are NNs?</h3>
+<div class="highlight"><pre><span></span><code>At their core, NNs are inspired by the brain. They consist of layers of artificial “neurons” that **process input data** and pass signals forward. Each neuron learns to activate in response to specific patterns.
+
+- **Input layer**: Receives raw data (e.g., pixels, words, numbers).
+- **Hidden layers**: Transform and abstract the input features into higher-level representations.
+- **Output layer**: Produces a prediction or decision.
+
+Each connection has a **weight** that determines how much influence one neuron has on the next.
+</code></pre></div>
+<h3 id="layered-representations">Layered Representations</h3>
+<div class="highlight"><pre><span></span><code>The true magic of NNs lies in **stacking multiple layers**:
+
+- **First layers** learn low-level features (e.g., edges in images).
+- **Deeper layers** build on those to detect more abstract patterns (e.g., faces, objects).
+- **Final layers** make task-specific predictions (e.g., cat vs. dog).
+
+This **hierarchical learning** allows neural nets to go from raw data to meaning, automatically.
+</code></pre></div>
+<h3 id="learning-through-feedback-training">Learning Through Feedback (Training)</h3>
+<div class="highlight"><pre><span></span><code>NNs improve by **learning from mistakes**. Here&#39;s how:
+
+1. Make a guess (prediction).
+2. Compare it to the correct answer (loss).
+3. Adjust internal weights to reduce future error.
+
+This process is called **gradient-based optimization**.
+- (Note: Backpropagation is part of gradient-based optimization. Specifically, it’s the algorithm used to compute how to adjust the weights by calculating the gradients (step 3). Gradient-based optimization is the overall process; backpropagation is the mechanism used during that process.)
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1140,10 +1298,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/ds-garden/", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "/ds-garden/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/ds-garden/assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

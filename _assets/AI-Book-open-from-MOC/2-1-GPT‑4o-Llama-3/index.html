@@ -8,19 +8,25 @@
       
       
       
+        <link rel="canonical" href="https://sammusch.github.io/ds-garden/_assets/AI-Book-open-from-MOC/2-1-GPT%E2%80%914o-Llama-3/">
       
       
+        <link rel="prev" href="../1-6-Hugging-Face-Workflows/">
       
-      <link rel="icon" href="/ds-garden/assets/images/favicon.png">
+      
+        <link rel="next" href="../2-4-Gen-Models-Overview/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>ds-garden</title>
+        <title>2.1 What Makes GPT‑4o & Llama 3 Tick (High Level) - ds-garden</title>
       
     
     
-      <link rel="stylesheet" href="/ds-garden/assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
       
 
@@ -39,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("/ds-garden/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/ds-garden/." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -89,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              2.1 What Makes GPT‑4o & Llama 3 Tick (High Level)
             
           </span>
         </div>
@@ -181,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/ds-garden/." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -211,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -233,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AB-Testing/" class="md-nav__link">
+      <a href="../../../AB-Testing/" class="md-nav__link">
         
   
   
@@ -255,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AI-MOC/" class="md-nav__link">
+      <a href="../../../AI-MOC/" class="md-nav__link">
         
   
   
@@ -277,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/ML-MOC/" class="md-nav__link">
+      <a href="../../../ML-MOC/" class="md-nav__link">
         
   
   
@@ -299,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/TS-MOC/" class="md-nav__link">
+      <a href="../../../TS-MOC/" class="md-nav__link">
         
   
   
@@ -318,8 +329,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -330,11 +343,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -350,7 +363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
              assets
@@ -364,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Deep-Learning/" class="md-nav__link">
+      <a href="../../Deep-Learning/" class="md-nav__link">
         
   
   
@@ -387,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML/" class="md-nav__link">
+      <a href="../../ML/" class="md-nav__link">
         
   
   
@@ -407,6 +420,8 @@
                 
   
   
+    
+  
   
   
     
@@ -416,11 +431,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
         
           
           <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
@@ -436,7 +451,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             AI Book open from MOC
@@ -450,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/0-0-Neural-Network-Taxonomy/" class="md-nav__link">
+      <a href="../0-0-Neural-Network-Taxonomy/" class="md-nav__link">
         
   
   
@@ -473,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-1-Why-NNs-Work/" class="md-nav__link">
+      <a href="../1-1-Why-NNs-Work/" class="md-nav__link">
         
   
   
@@ -496,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-2-Transformers-Simple/" class="md-nav__link">
+      <a href="../1-2-Transformers-Simple/" class="md-nav__link">
         
   
   
@@ -519,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/" class="md-nav__link">
+      <a href="../1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/" class="md-nav__link">
         
   
   
@@ -542,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-4-Frameworks-PyTorch-JAX/" class="md-nav__link">
+      <a href="../1-4-Frameworks-PyTorch-JAX/" class="md-nav__link">
         
   
   
@@ -565,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-5-NLP-Fundamentals/" class="md-nav__link">
+      <a href="../1-5-NLP-Fundamentals/" class="md-nav__link">
         
   
   
@@ -588,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-6-Hugging-Face-Workflows/" class="md-nav__link">
+      <a href="../1-6-Hugging-Face-Workflows/" class="md-nav__link">
         
   
   
@@ -608,10 +623,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-1-GPT%E2%80%914o-Llama-3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    2.1 What Makes GPT‑4o & Llama 3 Tick (High Level)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -622,6 +657,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#same" class="md-nav__link">
+    <span class="md-ellipsis">
+      Same
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Differences">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gpt4o" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPT‑4o
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llama-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLaMA 3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -634,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-4-Gen-Models-Overview/" class="md-nav__link">
+      <a href="../2-4-Gen-Models-Overview/" class="md-nav__link">
         
   
   
@@ -657,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
+      <a href="../2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
         
   
   
@@ -680,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-6-3Blue1Brown-Explainer/" class="md-nav__link">
+      <a href="../2-6-3Blue1Brown-Explainer/" class="md-nav__link">
         
   
   
@@ -703,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
+      <a href="../5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
         
   
   
@@ -726,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
+      <a href="../5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
         
   
   
@@ -749,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-1-Collect-Clean-Text-Data/" class="md-nav__link">
+      <a href="../6-1-Collect-Clean-Text-Data/" class="md-nav__link">
         
   
   
@@ -772,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-2-CI-CD-for-Models/" class="md-nav__link">
+      <a href="../6-2-CI-CD-for-Models/" class="md-nav__link">
         
   
   
@@ -843,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
         
   
   
@@ -866,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
         
   
   
@@ -889,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
         
   
   
@@ -960,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Templates/Template/" class="md-nav__link">
+      <a href="../../Templates/Template/" class="md-nav__link">
         
   
   
@@ -1031,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Theory-Univariate/" class="md-nav__link">
+      <a href="../../TimeSeries/Theory-Univariate/" class="md-nav__link">
         
   
   
@@ -1054,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Video-Series/" class="md-nav__link">
+      <a href="../../TimeSeries/Video-Series/" class="md-nav__link">
         
   
   
@@ -1097,8 +1201,70 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+  <h1>2.1 What Makes GPT‑4o & Llama 3 Tick (High Level)</h1>
+
+<p>Resources
+- <a href="https://chatgpt.com/share/68179857-6608-8000-b571-8416b4c244a4">ChatGPT</a>: For this document.</p>
+<h3 id="overview">Overview</h3>
+<div class="highlight"><pre><span></span><code>GPT‑4o (OpenAI) and LLaMA 3 (Meta) represent two of the most advanced LLMs currently available. 
+Both models follow the **transformer** architecture but differ in design philosophy, training data, and usage priorities.
+
+- **GPT‑4o** is optimized for commercial-scale AI applications with cutting-edge multimodal reasoning
+- **LLaMA 3** is designed for flexible research &amp; local deployment. 
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Distinct approaches in openness, specialization, and end-use design.
+
+| FEATURE | Developer | Multimodal | Open Source          | Max Model Size | Inference           | Fine-tuning         | Use Cases                |
+| ------- | --------- | ---------- | -------------------- | -------------- | ------------------- | ------------------- | ------------------------ |
+| GPT‑4o  | OpenAI    | Yes        | No                   | Not disclosed  | Cloud-first         | Proprietary methods | ChatGPT, Copilot         |
+| LLAMA 3 | Meta      | No         | Yes (non-commercial) | 70B            | Local &amp; Cloud-ready | LoRA / QLoRA (open) | Research, OSS assistants |
+
+
+- **Multimodal** means the model can understand and generate _multiple types of input and output_, such as **text/image/audio**
+</code></pre></div>
+<hr />
+<h3 id="same">Same</h3>
+<div class="highlight"><pre><span></span><code>- **Transformer**: Both use the transformer decoder stack with self-attention and feedforward layers.
+- **Pretraining Objective**: Trained using next-token prediction on massive datasets.
+- **Tokenization**: Use byte pair encoding (BPE) or variants.
+- **Inference Mode**: Both support autoregressive text generation, often used in chat-based applications.
+</code></pre></div>
+<h3 id="differences">Differences</h3>
+<h4 id="gpt4o">GPT‑4o</h4>
+<div class="highlight"><pre><span></span><code>- **Multimodal**: GPT‑4o is natively multimodal—trained to process text, audio, image, and video in a unified model.
+- **Training Emphasis**: Heavy focus on aligning model outputs with human preferences via reinforcement learning from human feedback (RLHF).
+- **Usage Context**: Best in class for general-purpose, multilingual, and reasoning-heavy tasks.
+- **Deployment**: Used in OpenAI’s commercial products (ChatGPT, Copilot).
+</code></pre></div>
+<h4 id="llama-3">LLaMA 3</h4>
+<div class="highlight"><pre><span></span><code>- **Open-Weight**: LLaMA 3 is released under a non-commercial license, enabling researchers to experiment and deploy with fewer constraints.
+- **Variants**: Released in sizes like 8B and 70B, with a focus on efficiency and open availability.
+- **Training Data**: Trained on 15T+ tokens, including public web data (filtered), books, code, and academic sources.
+- **Specialization**: Emphasizes interpretability and community fine-tuning via LoRA and QLoRA.
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1140,10 +1306,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/ds-garden/", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "/ds-garden/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/ds-garden/assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

@@ -8,19 +8,25 @@
       
       
       
+        <link rel="canonical" href="https://sammusch.github.io/ds-garden/_assets/TimeSeries/Theory-Univariate/">
       
       
+        <link rel="prev" href="../../Templates/Template/">
       
-      <link rel="icon" href="/ds-garden/assets/images/favicon.png">
+      
+        <link rel="next" href="../Video-Series/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>ds-garden</title>
+        <title>Theory   Univariate - ds-garden</title>
       
     
     
-      <link rel="stylesheet" href="/ds-garden/assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
       
 
@@ -39,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("/ds-garden/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-intro" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/ds-garden/." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-header__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -89,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Theory   Univariate
             
           </span>
         </div>
@@ -181,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/ds-garden/." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
+    <a href="../../.." title="ds-garden" class="md-nav__button md-logo" aria-label="ds-garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -211,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -233,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AB-Testing/" class="md-nav__link">
+      <a href="../../../AB-Testing/" class="md-nav__link">
         
   
   
@@ -255,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/AI-MOC/" class="md-nav__link">
+      <a href="../../../AI-MOC/" class="md-nav__link">
         
   
   
@@ -277,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/ML-MOC/" class="md-nav__link">
+      <a href="../../../ML-MOC/" class="md-nav__link">
         
   
   
@@ -299,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/TS-MOC/" class="md-nav__link">
+      <a href="../../../TS-MOC/" class="md-nav__link">
         
   
   
@@ -318,8 +329,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -330,11 +343,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -350,7 +363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
              assets
@@ -364,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Deep-Learning/" class="md-nav__link">
+      <a href="../../Deep-Learning/" class="md-nav__link">
         
   
   
@@ -387,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML/" class="md-nav__link">
+      <a href="../../ML/" class="md-nav__link">
         
   
   
@@ -450,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/0-0-Neural-Network-Taxonomy/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/0-0-Neural-Network-Taxonomy/" class="md-nav__link">
         
   
   
@@ -473,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-1-Why-NNs-Work/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/1-1-Why-NNs-Work/" class="md-nav__link">
         
   
   
@@ -496,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-2-Transformers-Simple/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/1-2-Transformers-Simple/" class="md-nav__link">
         
   
   
@@ -519,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/1-3-Self%E2%80%91Supervision-%E2%80%9CLearning-Without-Labels%E2%80%9D/" class="md-nav__link">
         
   
   
@@ -542,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-4-Frameworks-PyTorch-JAX/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/1-4-Frameworks-PyTorch-JAX/" class="md-nav__link">
         
   
   
@@ -565,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-5-NLP-Fundamentals/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/1-5-NLP-Fundamentals/" class="md-nav__link">
         
   
   
@@ -588,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/1-6-Hugging-Face-Workflows/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/1-6-Hugging-Face-Workflows/" class="md-nav__link">
         
   
   
@@ -611,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-1-GPT%E2%80%914o-Llama-3/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/2-1-GPT%E2%80%914o-Llama-3/" class="md-nav__link">
         
   
   
@@ -634,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-4-Gen-Models-Overview/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/2-4-Gen-Models-Overview/" class="md-nav__link">
         
   
   
@@ -657,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/2-5-Autoencoders-GANs-DiffusionModels/" class="md-nav__link">
         
   
   
@@ -680,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/2-6-3Blue1Brown-Explainer/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/2-6-3Blue1Brown-Explainer/" class="md-nav__link">
         
   
   
@@ -703,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/5-1-Local-vs-Cloud-Inference/" class="md-nav__link">
         
   
   
@@ -726,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/5-2-Quick-Quantization-Laptop-GPU/" class="md-nav__link">
         
   
   
@@ -749,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-1-Collect-Clean-Text-Data/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/6-1-Collect-Clean-Text-Data/" class="md-nav__link">
         
   
   
@@ -772,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/AI-Book-open-from-MOC/6-2-CI-CD-for-Models/" class="md-nav__link">
+      <a href="../../AI-Book-open-from-MOC/6-2-CI-CD-for-Models/" class="md-nav__link">
         
   
   
@@ -843,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-2-Classification/" class="md-nav__link">
         
   
   
@@ -866,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-4-Regression-Eval/" class="md-nav__link">
         
   
   
@@ -889,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
+      <a href="../../ML-Deeper-open-from-MOC/Supervised-6-Ensemble/" class="md-nav__link">
         
   
   
@@ -960,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/Templates/Template/" class="md-nav__link">
+      <a href="../../Templates/Template/" class="md-nav__link">
         
   
   
@@ -988,6 +1001,8 @@
                 
   
   
+    
+  
   
   
     
@@ -997,11 +1012,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
@@ -1017,7 +1032,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
             <span class="md-nav__icon md-icon"></span>
             TimeSeries
@@ -1028,10 +1043,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Theory-Univariate/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Theory   Univariate
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1042,6 +1077,177 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Intro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cheatsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cheatsheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-stationary-vs-nonstationary" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Stationary vs. Nonstationary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Stationary vs. Nonstationary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-walk-nonstationary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Walk (Nonstationary)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-to-stationary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting to Stationary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-model-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Model Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Model Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-white-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 White Noise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-moving-average-ma" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Moving Average (MA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-autoregressive-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Autoregressive (AR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Autoregressive (AR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backshift-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backshift Notation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-arma" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 ARMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-arima" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 ARIMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-sarima" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 SARIMA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-forecasting-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Forecasting Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-trends-seasonality" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Trends &amp; Seasonality
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1054,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ds-garden/_assets/TimeSeries/Video-Series/" class="md-nav__link">
+      <a href="../Video-Series/" class="md-nav__link">
         
   
   
@@ -1097,8 +1303,251 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+  <h1>Theory   Univariate</h1>
+
+<ul>
+<li><a href="https://mybiostats.wordpress.com/wp-content/uploads/2015/03/time-series-analysis-with-applications-in-r-cryer-and-chan.pdf">Springer Textbook</a></li>
+<li><a href="https://people.stat.sc.edu/Tebbs/stat520/f13notes.pdf">University of South Carolina Lecture Notes (Heavy)</a></li>
+<li><a href="https://chatgpt.com/share/67cdcb8b-2818-8000-978e-1ad36398337a">ChatGPT for cleaning this note doc</a></li>
+</ul>
+<h3 id="1-intro">1. Intro</h3>
+<table>
+<thead>
+<tr>
+<th>Ch</th>
+<th>Topic</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Basics</td>
+<td>Mean, covariance, correlation, stationarity</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Trend</td>
+<td>How to estimate &amp; check common deterministic trend models</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ARMA</td>
+<td>Stationary, aka Box-Jenkins models</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ARIMA</td>
+<td>Nonstationary</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Heart</td>
+<td>Techniques for tentatively specifying models</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Heart</td>
+<td>Efficiently estimating the model parameters using least squares and maximum likelihood</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Heart</td>
+<td>Determining how well the models fit the data</td>
+</tr>
+<tr>
+<td>9</td>
+<td>MSE</td>
+<td>Theory &amp; methods of MSE for ARIMA</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>The remaining chapters cover selected topics and are of a somewhat more advanced nature.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>**Process**:
+1. **Check stationarity**.
+2. **If nonstationary**, use differencing or other transformations.
+3. Identify the number of days to use for ARMA using ACF, PACF, EACF.
+4. **Estimate model parameters**.
+5. **Validate model** (fit, residual checks, etc.).
+</code></pre></div>
+<h3 id="2-cheatsheet">2. Cheatsheet</h3>
+<div class="highlight"><pre><span></span><code>**Basics**
+- **Mean**: Average value over time.
+- **Covariance &amp; Correlation**: Measure how two time points move together.
+- **Stationarity**: Means, variances, and autocovariances do not change over time.
+
+
+**Forecasting**: when consecutive observations are **not** independent. 
+- *autocorrelation*: correlation between time points
+- *white noise*: no correlation
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>1. **Stationarity**
+   - **Definition**: Constant mean, constant variance, and autocovariance depends only on lag.  
+   - **Check**: Plot data, use ADF test, consider differencing if nonstationary.
+&lt;br&gt;
+1. **Autocorrelation Functions**  
+   - **ACF**: Helps identify MA processes (autocorrelations that cut off abruptly often indicate MA).  
+   - **PACF**: Helps identify AR processes (partial autocorrelations that cut off abruptly often indicate AR).
+&lt;br&gt;
+1. **Model Families**  
+   - **AR(p)**: Depends on its own past **values**.  
+   - **MA(q)**: Depends on past forecast **errors**.  
+   - **ARMA(p, q)**: Combination of AR and MA (stationary).  
+   - **ARIMA(p, d, q)**: Adds differencing for nonstationary data.  
+   - **SARIMA**: Adds seasonal components.
+&lt;br&gt;
+1. **Model Selection**  
+   - **ACF/PACF/EACF** to guess initial p, q.  
+   - **AIC/BIC**: Compare candidate models; lower is better.  
+   - Residual checks to ensure white-noise residuals.
+&lt;br&gt;
+1. **Forecasting**  
+   - **Naive**: Use the last observed value.  
+   - **Averaging**: Use the mean of recent observations.  
+   - **Exponential Smoothing**: Heavier weight on recent observations.  
+   - **ARIMA-based**: Incorporates AR/MA terms and differencing.
+&lt;br&gt;
+1. **Trends &amp; Seasonality**  
+   - **Deterministic Trend**: Model explicitly if present (linear, polynomial, etc.).  
+   - **Seasonality**: SARIMA or explicit seasonal terms.
+</code></pre></div>
+<h2 id="3-stationary-vs-nonstationary">3. <strong>Stationary vs. Nonstationary</strong></h2>
+<div class="highlight"><pre><span></span><code>**Stochastic Process**: A sequence of RVs indexed by time.
+
+- **Sample Path**: One particular realization of that stochastic process.
+- **Stationarity**:
+
+   - Constant mean over time.
+   - Constant variance.
+   - Constant autocovariance (depends only on the lag).
+   - No inherent seasonality.
+
+**Why Stationarity?**  
+With only one observed path, stationarity lets us make reliable inferences about the underlying process from that single path.
+</code></pre></div>
+<h3 id="random-walk-nonstationary">Random Walk (Nonstationary)</h3>
+<div class="highlight"><pre><span></span><code>- Values evolve via accumulating errors over time.
+- Variance grows with time.
+- Apparent “trend” might be random fluctuation.
+</code></pre></div>
+<h3 id="converting-to-stationary">Converting to Stationary</h3>
+<div class="highlight"><pre><span></span><code>1. **1st differencing**:  
+
+   - A random walk $Y_t$ becomes stationary if you take $Y_t - Y_{t-1}$.  
+   - Use the **ADF test** to decide if differencing is needed.
+1. **2nd differencing** if one differencing step is not enough.  
+2. **Log transform** if variance grows with the level of the series (common for financial data).
+</code></pre></div>
+<hr />
+<h2 id="4-model-classes">4. <strong>Model Classes</strong></h2>
+<h3 id="41-white-noise">4.1 White Noise</h3>
+<div class="highlight"><pre><span></span><code>- **Definition**: Sequence of i.i.d. RVs with mean 0 and constant variance.
+- **Autocorrelation**: Zero at all lags.
+</code></pre></div>
+<h3 id="42-moving-average-ma">4.2 Moving Average (MA)</h3>
+<div class="highlight"><pre><span></span><code>- **MA(q)**: Current value depends on past $q$ errors (white-noise terms).
+- Example: **MA(2)**
+
+  $X_{t} = \varepsilon_{t} + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2}$
+
+   - **Expected value** of $X_t$ is 0 (if no constant term).
+   - **Variance** of $X_t$ is $1 + \theta_{1}^2 + \theta_{2}^2$ (assuming $\varepsilon_t \sim \text{iid}(0,1)$).
+   - **Covariance** terms depend on $\theta_{i}$ values and the lag.
+</code></pre></div>
+<h3 id="43-autoregressive-ar">4.3 Autoregressive (AR)</h3>
+<div class="highlight"><pre><span></span><code>- **AR(p)**: Current value depends on its own past $p$ values.
+- Example: **AR(1)**
+
+  $X_{t} = \phi X_{t-1} + \varepsilon_{t}$
+
+   - Stationary if $|\phi| &lt; 1$.
+   - **Variance** of $X_t$ for AR(1):  
+    $\text{Var}(X_t) = \frac{1}{1 - \phi^2}$
+   - **Covariance** at lag 1:  
+    $\text{Cov}(X_t, X_{t-1}) = \frac{\phi}{1 - \phi^2}$
+</code></pre></div>
+<h4 id="backshift-notation">Backshift Notation</h4>
+<div class="highlight"><pre><span></span><code>- **Backshift operator** $B$: $B(X_{t}) = X_{t-1}$.
+- **AR(1) in backshift form**:
+
+  $(1 - \phi B)X_t = \varepsilon_t$
+</code></pre></div>
+<h3 id="44-arma">4.4 ARMA</h3>
+<div class="highlight"><pre><span></span><code>- **ARMA(p, q)** = Autoregressive part (p) + Moving Average part (q).
+- **Stationarity**: Required for ARMA to work properly.
+</code></pre></div>
+<h3 id="45-arima">4.5 ARIMA</h3>
+<div class="highlight"><pre><span></span><code>- **ARIMA(p, d, q)**: Same as ARMA but the series is differenced $d$ times to achieve stationarity.
+- In backshift form:
+
+  $(1 - B)^d X_t \quad \text{follows an ARMA}(p,q)$
+</code></pre></div>
+<h3 id="46-sarima">4.6 SARIMA</h3>
+<div class="highlight"><pre><span></span><code>- Adds **seasonal** terms for both autoregressive and moving-average, as well as seasonal differencing.
+- Notation: **SARIMA$(p,d,q)(P,D,Q)_m$** where $m$ is the seasonal period (e.g., 12 for monthly data with yearly seasonality).
+</code></pre></div>
+<hr />
+<h2 id="6-forecasting-methods">6. <strong>Forecasting Methods</strong></h2>
+<div class="highlight"><pre><span></span><code>1. **Naive**  
+   - Forecast is simply the last observed value.
+
+2. **Average**  
+   - Forecast is the mean of recent or all observed values.
+
+3. **Exponential Smoothing**  
+   - Weighted average of past observations where weights decay exponentially.
+
+4. **ARIMA-based Forecasts**  
+   - Use the fitted ARIMA model to predict future values, taking into account AR/MA terms and differencing.
+
+**Example**:  
+- **Simple Exponential Smoothing** $\approx$ ARIMA$(0,1,1)$ under some parameter relationships.  
+</code></pre></div>
+<hr />
+<h2 id="7-trends-seasonality">7. <strong>Trends &amp; Seasonality</strong></h2>
+<div class="highlight"><pre><span></span><code>- **Deterministic Trend**:  
+
+   - A function of time (linear, polynomial).  
+   - $Y_t = f(t) + \text{stationary noise}$.
+   - If trend is linear ($f(t) = \beta_0 + \beta_1 t$), differencing can remove the linear component.
+
+- **Seasonality**:  
+
+   - Patterns repeat at fixed intervals.  
+   - Handle with seasonal differencing or adding seasonal AR/MA terms (SARIMA).
+
+- **Tests for Trend**:  
+
+   - **ADF**: If p-value is high, the series might need differencing or might have a deterministic trend.  
+   - **Residual Analysis**: Check whether residuals are white noise. If not, the trend model might be inadequate.
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1140,10 +1589,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/ds-garden/", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "/ds-garden/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.top", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/ds-garden/assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
