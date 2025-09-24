@@ -1,6 +1,6 @@
 /* Custom “sam” admonition */
 :root {
-  --sam-accent: #f59e0b; /* amber */
+  --sam-accent: #ECEFF2; /* amber */
   --sam-bg: #f8fafc;     /* subtle */
   --sam-border: #e2e8f0;
 }
