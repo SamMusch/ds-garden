@@ -56,25 +56,25 @@ word_count: 63
 ## Terms
 Assume A is control, B is test.
 
-!!! sam "sam"
+!!! sam
     Dependent Variable
     - Continuous
     - Proportions
 
 
-!!! sam "sam"
+!!! sam
     Are A & B 2 separate, independent groups?
     - Yes --> **Unpaired**
     - No --> **Paired** (same group, multiple periods)
 
 
-!!! sam "sam"
+!!! sam
     Are we simply comparing B to a known benchmark?
     - Yes --> **One-Sample**
     - No --> **Two-Sample**
 
 
-!!! sam "sam"
+!!! sam
     Does B need to out-perform control?
     - Yes --> **One-Sided**
     - No --> **Two-Sided**

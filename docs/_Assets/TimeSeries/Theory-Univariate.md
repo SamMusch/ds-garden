@@ -69,7 +69,7 @@ word_count: 980
 | 9   | MSE    | Theory & methods of MSE for ARIMA                                                        |
 | -   | -      | The remaining chapters cover selected topics and are of a somewhat more advanced nature. |
 
-!!! sam "sam"
+!!! sam
     **Process**:
     1. **Check stationarity**.
     2. **If nonstationary**, use differencing or other transformations.
@@ -80,7 +80,7 @@ word_count: 980
 
 ### 2. Cheatsheet
 
-!!! sam "sam"
+!!! sam
     **Basics**
     - **Mean**: Average value over time.
     - **Covariance & Correlation**: Measure how two time points move together.
@@ -92,7 +92,7 @@ word_count: 980
     - *white noise*: no correlation
 
 
-!!! sam "sam"
+!!! sam
     1. **Stationarity**
        - **Definition**: Constant mean, constant variance, and autocovariance depends only on lag.  
        - **Check**: Plot data, use ADF test, consider differencing if nonstationary.
@@ -126,7 +126,7 @@ word_count: 980
 
 ## 3. **Stationary vs. Nonstationary**
 
-!!! sam "sam"
+!!! sam
     **Stochastic Process**: A sequence of RVs indexed by time.
 
     - **Sample Path**: One particular realization of that stochastic process.
@@ -142,14 +142,14 @@ word_count: 980
 
 
 ### Random Walk (Nonstationary)
-!!! sam "sam"
+!!! sam
     - Values evolve via accumulating errors over time.
     - Variance grows with time.
     - Apparent “trend” might be random fluctuation.
 
 
 ### Converting to Stationary
-!!! sam "sam"
+!!! sam
     1. **1st differencing**:  
 
        - A random walk $Y_t$ becomes stationary if you take $Y_t - Y_{t-1}$.  
@@ -164,14 +164,14 @@ word_count: 980
 
 ### 4.1 White Noise
 
-!!! sam "sam"
+!!! sam
     - **Definition**: Sequence of i.i.d. RVs with mean 0 and constant variance.
     - **Autocorrelation**: Zero at all lags.
 
 
 ### 4.2 Moving Average (MA)
 
-!!! sam "sam"
+!!! sam
     - **MA(q)**: Current value depends on past $q$ errors (white-noise terms).
     - Example: **MA(2)**
 
@@ -184,7 +184,7 @@ word_count: 980
 
 ### 4.3 Autoregressive (AR)
 
-!!! sam "sam"
+!!! sam
     - **AR(p)**: Current value depends on its own past $p$ values.
     - Example: **AR(1)**
 
@@ -199,7 +199,7 @@ word_count: 980
 
 #### Backshift Notation
 
-!!! sam "sam"
+!!! sam
     - **Backshift operator** $B$: $B(X_{t}) = X_{t-1}$.
     - **AR(1) in backshift form**:
 
@@ -208,14 +208,14 @@ word_count: 980
 
 ### 4.4 ARMA
 
-!!! sam "sam"
+!!! sam
     - **ARMA(p, q)** = Autoregressive part (p) + Moving Average part (q).
     - **Stationarity**: Required for ARMA to work properly.
 
 
 ### 4.5 ARIMA
 
-!!! sam "sam"
+!!! sam
     - **ARIMA(p, d, q)**: Same as ARMA but the series is differenced $d$ times to achieve stationarity.
     - In backshift form:
 
@@ -224,7 +224,7 @@ word_count: 980
 
 ### 4.6 SARIMA
 
-!!! sam "sam"
+!!! sam
     - Adds **seasonal** terms for both autoregressive and moving-average, as well as seasonal differencing.
     - Notation: **SARIMA$(p,d,q)(P,D,Q)_m$** where $m$ is the seasonal period (e.g., 12 for monthly data with yearly seasonality).
 
@@ -233,7 +233,7 @@ word_count: 980
 
 ## 6. **Forecasting Methods**
 
-!!! sam "sam"
+!!! sam
     1. **Naive**  
        - Forecast is simply the last observed value.
 
@@ -254,7 +254,7 @@ word_count: 980
 
 ## 7. **Trends & Seasonality**
 
-!!! sam "sam"
+!!! sam
     - **Deterministic Trend**:  
 
        - A function of time (linear, polynomial).  

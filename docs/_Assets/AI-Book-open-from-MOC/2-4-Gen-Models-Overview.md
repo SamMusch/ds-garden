@@ -80,7 +80,7 @@ When writing advanced models in TensorFlow, remember:
 Autoencoders learn succinct representations. They serve as a foundation for many generative and dimensionality-reduction techniques.
 Structurally, autoencoders consist of an **input layer**, a **hidden layer**, and an **output** **layer**: pasted-image-20241231143947.png.md
 
-!!! sam "sam"
+!!! sam
     **Intuition**
 
     **Autoencoders**: example of encoder --> decoder.

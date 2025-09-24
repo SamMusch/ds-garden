@@ -84,7 +84,7 @@ Resources
 ## Extra Details
 ### Naive Bayes
 
-!!! sam "sam"
+!!! sam
     Intuition
     - For each observation, given its characteristics (features), the model computes the probability that it belongs to a particular class. (Often relies on different distributions for numeric columns.)
 
@@ -99,7 +99,7 @@ Resources
 
 ### Logistic
 
-!!! sam "sam"
+!!! sam
     Target
     - **Binary (Logit)**: Two classes (0 or 1).
     - **Softmax Regression**: Multiple classes (unordered); picks the class with the highest probability.
@@ -122,7 +122,7 @@ Resources
 
 #### Regularization
 
-!!! sam "sam"
+!!! sam
     Regularization helps prevent **overfitting** by penalizing large coefficients.
 
     | **Type**                | **Penalty**                                 | **Key Characteristics**                                                                                          |
@@ -138,7 +138,7 @@ Resources
 
 #### Purity
 
-!!! sam "sam"
+!!! sam
     When deciding how to split a node, decision tree algorithms use measures like **Gini Impurity** or **Entropy** to assess how "pure" the resulting child nodes are. Below is a quick comparison:
 
     | **Measure**      | **Range (Binary Setting)** | **Calculation**                  | **Characteristics**                                                                                  |
@@ -166,7 +166,7 @@ Cost-Benefit Approach
 
 ### Formulas (TP, FP, TN, FN)
 
-!!! sam "sam"
+!!! sam
     | **Metric**                            | **Formula**          |
     | ------------------------------------- | -------------------- |
     | **True Positive Rate (TPR) / Recall** | $\frac{TP}{TP + FN}$ |
@@ -184,7 +184,7 @@ Cost-Benefit Approach
 - **Across**: These methods compare multiple models or evaluate the model’s added value over a random baseline.
 - **Either**: Some techniques can be used **either within a model** (e.g., tuning a threshold) or **across models** (e.g., selecting the best-performing one).
 
-!!! sam "sam"
+!!! sam
     | `Scope` | **Evaluation Technique**                                | **What**                                                                                                              | **Why**                                                                                                                    | **Imbalanced Data Suitability**                                                                                       |                                                                                                     |
     | ------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
     | Within  | **Confusion Matrix**                                    | Shows the counts of (TP, TN, FP, FN)                                                                                  | From here, can derive performance metrics.                                                                                 | -                                                                                                                     | [Imgur](https://i.imgur.com/GqFRVwK.png)                                                            |
@@ -199,7 +199,7 @@ Cost-Benefit Approach
 
 ### Single-Value Measures
 
-!!! sam "sam"
+!!! sam
     | **Metric**                                 | **What**                                                                                                                                                                          | **Why**                                                                                                                               | **Imbalanced Data Suitability**                                                                              |                                          |
     | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
     | **F-Measure (F1 Score)**                   | The harmonic mean of precision and recall: <br> $F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$                                    | Combines precision and recall into a single metric, weighting them equally.                                                           | **Good**. Highlights performance on the minority class, where both precision and recall can be low.          | [Imgur](https://i.imgur.com/yV39H3u.png) |
