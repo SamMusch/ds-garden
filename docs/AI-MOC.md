@@ -63,7 +63,7 @@ https://chatgpt.com/share/682cb713-d830-8000-8157-64a1af0e1cb7
 [ChatGPT: Paradigms of GenAI](https://chatgpt.com/share/6856dd7e-0258-8000-9d5b-caeccbb2b895)
 
 
-### TOC
+### TOC  
 [ChatGPT](https://chatgpt.com/share/687282c3-e5f4-8000-992e-1998a0cceccd) - Courses to take
 
 | Part                          | Chapter                          | Section                                                  | Covers                              |
