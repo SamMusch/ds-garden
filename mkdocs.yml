@@ -13,6 +13,9 @@ theme:
   name: material
   palette:
     primary: custom
+  font:
+    text: Inter
+    code: "Nunito Sans"
   features:
     - navigation.tracking        # highlight active heading in TOC
     - content.code.copy          # copy button on code blocks

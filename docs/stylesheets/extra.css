@@ -3,3 +3,39 @@
   --md-primary-fg-color--light: #3A3D40;
   --md-primary-fg-color--dark:  #3A3D40;
 }
+
+
+/* Right sidebar full background */
+.md-sidebar--secondary,
+.md-sidebar--secondary .md-sidebar__scrollwrap,
+.md-sidebar--secondary nav {
+  background-color: #FAFAFA;
+}
+
+/* Apply to page body (Material content area) */
+.md-typeset {
+  line-height: 1.4 !important;   /* ~50% of default (~1.6) */
+}
+
+
+/* Reduce font size to ~80% of default */
+.md-typeset {
+  font-size: 0.7rem !important;  /* Default ≈ 1rem */
+}
+
+
+/* External links (with target=_blank) → blue */
+.md-typeset a[href^="http"] {
+  color: #92b6f0; /* professional blue */
+}
+
+/* Wiki links (internal) → your custom color */
+.md-typeset a:not([href^="http"]) {
+  color: #b388ff; /* your purple from screenshot */
+}
+
+
+.md-typeset a:not([href^="http"]):hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
