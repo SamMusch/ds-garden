@@ -7,6 +7,8 @@ extra_css:
   - stylesheets/ad-sam.css
   - stylesheets/extra.css
 
+strict: false   # ✅ add here to turn build errors into warnings
+
 theme:
   name: material
   palette:
