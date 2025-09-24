@@ -52,7 +52,7 @@ Resources
 
 ### Overview
 
-!!! sam "sam"
+!!! sam
     GPT‑4o (OpenAI) and LLaMA 3 (Meta) represent two of the most advanced LLMs currently available. 
     Both models follow the **transformer** architecture but differ in design philosophy, training data, and usage priorities.
 
@@ -60,7 +60,7 @@ Resources
     - **LLaMA 3** is designed for flexible research & local deployment. 
 
 
-!!! sam "sam"
+!!! sam
     Distinct approaches in openness, specialization, and end-use design.
 
     | FEATURE | Developer | Multimodal | Open Source          | Max Model Size | Inference           | Fine-tuning         | Use Cases                |
@@ -74,7 +74,7 @@ Resources
 
 ---
 ### Same
-!!! sam "sam"
+!!! sam
     - **Transformer**: Both use the transformer decoder stack with self-attention and feedforward layers.
     - **Pretraining Objective**: Trained using next-token prediction on massive datasets.
     - **Tokenization**: Use byte pair encoding (BPE) or variants.
@@ -83,7 +83,7 @@ Resources
 
 ### Differences
 #### GPT‑4o
-!!! sam "sam"
+!!! sam
     - **Multimodal**: GPT‑4o is natively multimodal—trained to process text, audio, image, and video in a unified model.
     - **Training Emphasis**: Heavy focus on aligning model outputs with human preferences via reinforcement learning from human feedback (RLHF).
     - **Usage Context**: Best in class for general-purpose, multilingual, and reasoning-heavy tasks.
@@ -91,7 +91,7 @@ Resources
 
 
 #### LLaMA 3
-!!! sam "sam"
+!!! sam
     - **Open-Weight**: LLaMA 3 is released under a non-commercial license, enabling researchers to experiment and deploy with fewer constraints.
     - **Variants**: Released in sizes like 8B and 70B, with a focus on efficiency and open availability.
     - **Training Data**: Trained on 15T+ tokens, including public web data (filtered), books, code, and academic sources.

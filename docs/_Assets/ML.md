@@ -115,7 +115,7 @@ The ML lifecycle includes several steps for transforming data into actionable in
 
 ---
 ## Types of Systems
-!!! sam "sam"
+!!! sam
     There are so many different types of ML systems that it is useful to classify them in broad categories based on:
 
     - Are they trained with human supervision? 

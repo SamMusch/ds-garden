@@ -47,7 +47,7 @@ title: 2.6 3Blue1Brown Explainer
 word_count: 95
 ---
 
-!!! sam "sam"
+!!! sam
     GPT = Generative Pre-trained Transformer
     - **Generative**: Create new text
     - **Pre-trained**: How the model learned
@@ -58,7 +58,7 @@ word_count: 95
 - Specific use-case was to translate text.
 - Our use-case is to predict the next word.
 
-!!! sam "sam"
+!!! sam
     How data flows through a transformer
     1. **Embedding**
     2. **Attention**

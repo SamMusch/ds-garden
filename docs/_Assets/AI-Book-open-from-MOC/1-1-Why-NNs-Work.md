@@ -53,7 +53,7 @@ Resources
 
 ---
 
-!!! sam "sam"
+!!! sam
     **Summary**
     NNs work because they are **flexible function approximators** that learn useful **internal representations** of data by stacking layers of transformations. 
     Instead of manually designing features or rules, neural nets **learn patterns directly from data** through a process of trial-and-error optimization.
@@ -65,14 +65,14 @@ Resources
 
 
 ### Why NNs Work
-!!! sam "sam"
+!!! sam
     - Neural nets can **approximate almost any function**, given enough layers and data (Universal Approximation Theorem).
     - They are **data-driven**: no need to hand-engineer features or rules.
     - They are **modular** (think sub-task) and **scalable**: you can adjust size, depth, and architecture based on the problem.
 
 
 ### What Are NNs?
-!!! sam "sam"
+!!! sam
     At their core, NNs are inspired by the brain. They consist of layers of artificial “neurons” that **process input data** and pass signals forward. Each neuron learns to activate in response to specific patterns.
 
     - **Input layer**: Receives raw data (e.g., pixels, words, numbers).
@@ -83,7 +83,7 @@ Resources
 
 
 ### Layered Representations
-!!! sam "sam"
+!!! sam
     The true magic of NNs lies in **stacking multiple layers**:
 
     - **First layers** learn low-level features (e.g., edges in images).
@@ -94,7 +94,7 @@ Resources
 
 
 ### Learning Through Feedback (Training)
-!!! sam "sam"
+!!! sam
     NNs improve by **learning from mistakes**. Here's how:
 
     1. Make a guess (prediction).
