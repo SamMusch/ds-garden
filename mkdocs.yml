@@ -26,3 +26,4 @@ markdown_extensions:
   - tables
   - footnotes
   - def_list
+
