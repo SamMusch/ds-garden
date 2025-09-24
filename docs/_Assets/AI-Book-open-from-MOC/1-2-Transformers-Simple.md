@@ -56,7 +56,7 @@ Resources
 - [ChatGPT](https://chatgpt.com/share/681792c6-48c0-8000-b324-765516a6ce87): This markdown
 
 ### Everyday Analogy
-!!! note
+!!! sam "sam"
     Imagine reading a paragraph and instantly knowing which earlier sentences are important. 
     That’s what transformers do — they:
     1. read left-to-right AND
@@ -64,7 +64,7 @@ Resources
 
 
 ### What is a Transformer?
-!!! note
+!!! sam "sam"
     Transformers are 
     - a type of DL model
     - the **architecture** behind nearly every language model today.
@@ -72,7 +72,7 @@ Resources
     They look at entire sentences (or documents) all at once.
 
 
-!!! note
+!!! sam "sam"
     Transformers marked a shift 
     from **sequence**-based models 
     to **attention**-based models.
@@ -86,7 +86,7 @@ Resources
 > We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
 
 ### Why They Matter
-!!! note
+!!! sam "sam"
     Traditional models like RNNs had trouble (1) remembering long-term dependencies or (2) were slow to train. 
     Transformers solved both problems:
     - **Parallel Processing**: They process words simultaneously, not sequentially.
@@ -94,7 +94,7 @@ Resources
 
 
 ### Key Ingredients (Without Equations)
-!!! note
+!!! sam "sam"
     **Self-attention is like scanning a room and deciding who’s worth listening to** — for every word in the sentence.
 
 

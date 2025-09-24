@@ -59,7 +59,7 @@ DL Resources
 
 #### 02. Taxonomy
 
-!!! note
+!!! sam "sam"
     1. **Inputs vs. Outputs** (X vs Y)
        - **Inputs**: Historical data provided to the model in order to make a single forecast.
        - **Outputs**: Forecast for a future time step beyond the data provided as input.
@@ -132,7 +132,7 @@ In this tutorial, we will explore a suite of LSTM architectures for multi-step t
 
 ### Prep / vanilla
 
-!!! note
+!!! sam "sam"
     LSTM shape: [**samples**, **timesteps**, **features**]. 
 
 
@@ -146,7 +146,7 @@ In this tutorial, we will explore a suite of LSTM architectures for multi-step t
 
 ---
 
-!!! note
+!!! sam "sam"
     **Create more training data** 
 
     - Test problem: Predict daily consumption for the **next standard week** given the **prior standard week**
@@ -164,7 +164,7 @@ data = data.reshape((data.shape[0]*data.shape[1], data.shape[2]))
 
 ---
 
-!!! note
+!!! sam "sam"
     **Windowing**
     - For each feature, divide data into overlapping windows.
     - This means that instead of segmenting data into distinct weeks, each training instance slides by one day. (day 1 predicts day 8, day 2 predicts day 9, etc)
@@ -185,7 +185,7 @@ def to_supervised(train, n_input, n_out=7):
 
 ---
 
-!!! note
+!!! sam "sam"
     Small data, so small model
 
     - single **hidden** LSTM layer with 200 units.
@@ -209,7 +209,7 @@ def to_supervised(train, n_input, n_out=7):
 def build_model(train, n_input):
 ```
 
-!!! note
+!!! sam "sam"
     **walk-forward validation**
 
     **What is it?**
@@ -223,7 +223,7 @@ def build_model(train, n_input):
 
 ### Encoder-Decoder LSTM With Univariate Input
 
-!!! note
+!!! sam "sam"
     | Feature    | **Vanilla LSTM**                                              | **Encoder-Decoder LSTM**                                             |
     | ---------- | ------------------------------------------------------------- | -------------------------------------------------------------------- |
     | Output     | A full sequence is predicted **in one step**                  | The sequence is predicted **one step at a time**                     |
@@ -231,7 +231,7 @@ def build_model(train, n_input):
     | State      | No feedback from previous outputs                             | **Decoder uses prior predictions** to influence the next step        |
 
 
-!!! note
+!!! sam "sam"
     **Key Idea of Encoder-Decoder**
     - The **encoder** reads the input sequence and compresses it into a **fixed-length vector representation**.
     - The **decoder** takes this representation and generates **one time step at a time**, using its internal state to remember prior predictions.

@@ -98,7 +98,7 @@ https://chatgpt.com/share/682cb713-d830-8000-8157-64a1af0e1cb7
 
 #### Explained
 
-!!! note
+!!! sam "sam"
     [ChatGPT](https://chatgpt.com/share/6817848d-fc2c-8000-acc3-e7610850caeb)
 
     (1) **Core Concepts**

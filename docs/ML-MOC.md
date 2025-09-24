@@ -47,16 +47,6 @@ title: ' ML MOC'
 word_count: 19
 ---
 
-1:49pm
-
-!!! warning "Heads up"
-    Content here.
-
-
-
-
-
-
 ```dataview
 TABLE without id
 

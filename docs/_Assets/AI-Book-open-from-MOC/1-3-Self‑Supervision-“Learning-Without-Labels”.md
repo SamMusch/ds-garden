@@ -52,7 +52,7 @@ word_count: 376
 ---
 
 ### Context
-!!! note
+!!! sam "sam"
     - **Supervised**: learns a direct mapping from inputs to human-provided labels.
     - **Unsupervised**: discovers structure or representation in unlabeled data.
     - **Semi-supervised**: uses a small set of labels plus a large pool of unlabeled examples to improve performance.
@@ -60,7 +60,7 @@ word_count: 376
 
 
 ### Business Analogy
-!!! note
+!!! sam "sam"
     **Puzzle-Building Analogy**  
 
     1. Someone put together a 1k piece puzzle.

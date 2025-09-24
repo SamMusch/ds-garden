@@ -49,7 +49,7 @@ word_count: 270
 
 ## High-Level
 ### Business Analogy
-!!! note
+!!! sam "sam"
     - **PyTorch**: kitchen that lets chefs experiment with recipes, then creates ready-to-serve meals. 
     - **JAX**: a factory line that automates recipe execution at scale
 
