@@ -54,8 +54,11 @@ word_count: 76
 ## Week 4: Regression Eval
 
 ### Evaluation
+
 - **MAE** = Mean absolute error
+
 - **MAPE** = Mean absolute pct error
+
 - **RMSE** = Root mean squared error
   when want to penalize large errors
 

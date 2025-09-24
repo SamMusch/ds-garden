@@ -51,27 +51,32 @@ title: Supervised 2 Classification
 word_count: 2107
 ---
 
-```
-**2025-02-02**: DONE, quality could be improved though.
-```
-
 Resources
+
 - [Stanford Cheatsheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-machine-learning-tips-and-tricks)
+
 - [k-nn - 100 days guide](https://github.com/Avik-Jain/100-Days-Of-ML-Code/blob/master/Code/Day%2011%20K-NN.md)
 
 [Image: Decision Boundaries](https://i.imgur.com/rljQgL9.jpeg)
 
+
 ## Overview
+
 - **Purity Measures**: Gauge how homogeneous or “pure” each segment is after splitting.
+
 - **Information Gain**: Measures the effectiveness of a new split (or segment) compared to the original.
+
 - **Statistical Significance**: Each additional “child” branch in a tree should be validated, often with a chi-squared test, to confirm that the improvement in segmentation is statistically significant.
 
 ## Table Summary
 [ChatGPT](https://chatgpt.com/share/679fc159-020c-8000-b16e-e3fd1b93bfc7)
 
 - **k-NN** is intuitive and simple but can be slow for large datasets.
+
 - **Naive Bayes** is fast and works well with high-dimensional data but assumes independent features.
+
 - **Logistic Regression** is a well-understood parametric approach, ideal for linearly separable data, and can handle regularization elegantly.
+
 - **Decision Trees** are highly interpretable but can overfit if not carefully regularized (via max depth, minimum samples per leaf, etc.).
 
 | **CATEGORY**            | **CORE IDEA**                                                                                                                                                          | **MODEL TYPE**     | **KEY HYPERPARAMETERS**                                                                                                                                           | **STRENGTHS**                                                                                                                            | **WEAKNESSES**                                                                                                                                                                                     | **REGULARIZATION**                                                                              |
@@ -86,6 +91,7 @@ Resources
 
 !!! sam
     Intuition
+
     - For each observation, given its characteristics (features), the model computes the probability that it belongs to a particular class. (Often relies on different distributions for numeric columns.)
 
 
@@ -101,8 +107,11 @@ Resources
 
 !!! sam
     Target
+
     - **Binary (Logit)**: Two classes (0 or 1).
+
     - **Softmax Regression**: Multiple classes (unordered); picks the class with the highest probability.
+
     - **Ordered Logit**: Multiple _ordered_ classes.
 
 
@@ -111,12 +120,18 @@ Resources
     [Image | Logistic Regression Sigmoid Curve](https://i.imgur.com/nq0l2cu.png)
 
     Steps
+
     1. For each observation in the raw data, we calculate the sum of the coefficients for all variables. This is f(x).
+
     2. The x-axis location on the logit plot is the f(x) we calculated above for each observation.
+
     3. For each observation, we then assign the probability of fitting into the top or bottom group according to the logit curve.
+
     4. We use the probabilities that we found in the logit model as a way to best fit the line that separates our groups apart to minimize the error in our sample. This is how we determine our original slope and intercept.
+
     5. We assign L1 as the maximum f(x) that we are willing to allow. (This is lambda)
        More complex = higher f(x) = larger diamond
+
     6. We 'underfit' the model until it connects with the blue diamond (ie max complexity we allow). This new model will provide us with a new slope and intercept that will generalize better.
 
 
@@ -150,18 +165,25 @@ Resources
 ## Week 3: Class Eval
 
 - [How to train a model](https://sebastianraschka.com/faq/docs/evaluate-a-model.html)
+
 - [Classification eval for unbalanced data](https://classeval.wordpress.com/introduction/introduction-to-the-precision-recall-plot/)
+
 - [Sci-kit plot](https://github.com/reiinakano/scikit-plot)
 
 **Accuracy** can be misleading. 2 primary reasons:
+
 1. **Imbalanced Class Distributions**: When one class dominates, accuracy may inflate how well the model performs.
+
 2. **Ignoring Economic Costs/Benefits**: Different types of errors can have varying costs. It’s often more insightful to build a cost/benefit matrix and maximize profit, rather than maximizing accuracy.
 
 Cost-Benefit Approach
+
 1. Construct a “cost/benefit” matrix, detailing the financial impact of each type of prediction:
 
    - **TP** & **TN**: Represent revenue or benefits.
+
    - **FP** & **FN**: Represent costs or losses.
+
 2. Multiply your confusion matrix by the cost/benefit matrix to calculate expected profit (or cost), and use this to guide decisions.
 
 ### Formulas (TP, FP, TN, FN)
@@ -180,8 +202,11 @@ Cost-Benefit Approach
 [ChatGPT](https://chatgpt.com/share/435a9d82-0d85-4b76-bbec-5b73391dc0f6): Key "curves" and model evaluation techniques commonly used in classification:
 
 `Scope`
+
 - **Within**: These methods evaluate how well a single model is performing, often helping diagnose issues like overfitting, threshold tuning, and class imbalance.
+
 - **Across**: These methods compare multiple models or evaluate the model’s added value over a random baseline.
+
 - **Either**: Some techniques can be used **either within a model** (e.g., tuning a threshold) or **across models** (e.g., selecting the best-performing one).
 
 !!! sam
