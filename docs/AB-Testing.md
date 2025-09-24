@@ -54,7 +54,7 @@ word_count: 63
 ---
 
 ## Terms
-Assume A is control, B is test.   
+Assume A is control, B is test.
 
 !!! sam
     Dependent Variable
