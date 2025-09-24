@@ -12,14 +12,14 @@ theme:
     - toc.follow                 # right “On this page” follows scroll
   palette:
     - scheme: default
-      primary: amber
-      accent: amber
+      primary: white
+      accent: indigo
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: amber
-      accent: amber
+      primary: black
+      accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
