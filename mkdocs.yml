@@ -1,0 +1,21 @@
+site_name: ds-garden
+site_url: https://sammusch.github.io/ds-garden/
+repo_url: https://github.com/SamMusch/ds-garden
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+
+plugins:
+  - search
+  - roamlinks
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
