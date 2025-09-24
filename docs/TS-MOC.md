@@ -47,7 +47,7 @@ title: ' TS MOC'
 word_count: 1167
 ---
 
-Deeper - 1pm
+Deeper
 - theory-univariate.md - Univariate
 - video-series.md - Multivariate
 
