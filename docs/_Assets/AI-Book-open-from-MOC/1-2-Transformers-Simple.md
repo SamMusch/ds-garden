@@ -1,0 +1,111 @@
+---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: 1.2 Transformers in Plain English.md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
+children: 0
+created: '2025-07-18'
+cssclasses: null
+grandchildren: 0
+kMDItemContentCreationDate: 2025-05-04 15:38:57 +0000
+kMDItemContentCreationDate_Ranking: 2025-05-04 00:00:00 +0000
+kMDItemContentModificationDate: 2025-05-24 16:29:36 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-05-04 15:39:04 +0000
+kMDItemDocumentIdentifier: '101122'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-05-20 00:00:00 +0000
+kMDItemLastUsedDate: 2025-05-20 17:00:19 +0000
+kMDItemLastUsedDate_Ranking: 2025-05-20 00:00:00 +0000
+kMDItemUseCount: '8'
+kMDItemUsedDates: (
+modified: '2025-05-24'
+published: true
+reading_time: 1.6
+source_file: 1.2 Transformers in Plain English.md
+tags: null
+title: 1.2 Transformers in Plain English
+word_count: 329
+---
+
+Resources
+- 1-5-nlp-fundamentals.md: Talks about transformers
+- [ChatGPT](https://chatgpt.com/share/681792c6-48c0-8000-b324-765516a6ce87): This markdown
+
+### Everyday Analogy
+```ad-sam
+Imagine reading a paragraph and instantly knowing which earlier sentences are important. 
+That’s what transformers do — they:
+1. read left-to-right AND
+2. weigh relevance across the whole passage in real time
+```
+
+### What is a Transformer?
+```ad-sam
+Transformers are 
+- a type of DL model
+- the **architecture** behind nearly every language model today.
+
+They look at entire sentences (or documents) all at once.
+```
+
+```ad-sam
+Transformers marked a shift 
+from **sequence**-based models 
+to **attention**-based models.
+- **Attention** allows models to see everything at once — a breakthrough for understanding **context**.
+```
+
+> Intro to [Attention is all you Need](https://arxiv.org/abs/1706.03762)
+>
+> The dominant sequence transduction models are based on complex RNNs or CNNs that include an **encoder** & a **decoder**. The best performing models also connect the encoder & decoder through an attention mechanism.
+>
+> We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
+
+### Why They Matter
+```ad-sam
+Traditional models like RNNs had trouble (1) remembering long-term dependencies or (2) were slow to train. 
+Transformers solved both problems:
+- **Parallel Processing**: They process words simultaneously, not sequentially.
+- **Long-Range Context**: They can "attend" to any word, no matter how far apart.
+```
+
+### Key Ingredients (Without Equations)
+```ad-sam
+**Self-attention is like scanning a room and deciding who’s worth listening to** — for every word in the sentence.
+
+
+- **Tokens**: Break input into chunks (usually words or subwords).
+- **Embeddings**: Convert those chunks into numbers.
+- **Self-Attention**: Each token "looks" at others to decide what matters.
+- **Layers**: These operations repeat multiple times to refine understanding.
+
+```
+
+### Remaining Questions #research
+1. Is it only transformers that have tokens/embeddings/self-attention/layers?
+2. Meaning of "language" models - 1:1 correspondence with LLMs?
+3. Note the "encoder/decoder" mentioned for sequence-based models. Could be key break out.
