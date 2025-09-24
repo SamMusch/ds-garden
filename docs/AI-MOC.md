@@ -63,33 +63,33 @@ https://chatgpt.com/share/682cb713-d830-8000-8157-64a1af0e1cb7
 [ChatGPT: Paradigms of GenAI](https://chatgpt.com/share/6856dd7e-0258-8000-9d5b-caeccbb2b895)
 
 
-### TOC  
+### TOC
 [ChatGPT](https://chatgpt.com/share/687282c3-e5f4-8000-992e-1998a0cceccd) - Courses to take
 
 | Part                          | Chapter                          | Section                                                  | Covers                              |
 | ----------------------------- | -------------------------------- | -------------------------------------------------------- | ----------------------------------- |
-|                               |                                  | 0-0-neural-network-taxonomy.md                          | 10 classes of NNs                   |
-| I – Core Concepts             | 1 Deep‑Learning Basics           | 1-1-why-nns-work.md                                     | What they are, layers, optimization |
-|                               |                                  | 1-2-transformers-simple.md                              | From seq to attention               |
-|                               |                                  | 1-3-self‑supervision-“learning-without-labels”.md       | Mask and predict                    |
-|                               |                                  | 1-4-frameworks-pytorch-jax.md                           | -                                   |
-|                               |                                  | 1-5-nlp-fundamentals.md                                 | HuggingFace                         |
-|                               |                                  | 1-6-hugging-face-workflows.md                           | HuggingFace                         |
-| II – Generative AI Essentials | 2 Large Language Models          | 2-1-gpt‑4o-llama-3.md                                   |                                     |
+|                               |                                  | [[0-0-Neural-Network-Taxonomy]]                          | 10 classes of NNs                   |
+| I – Core Concepts             | 1 Deep‑Learning Basics           | [[1-1-Why-NNs-Work]]                                     | What they are, layers, optimization |
+|                               |                                  | [[1-2-Transformers-Simple]]                              | From seq to attention               |
+|                               |                                  | [[1-3-Self‑Supervision-“Learning-Without-Labels”]]       | Mask and predict                    |
+|                               |                                  | [[1-4-Frameworks-PyTorch-JAX]]                           | -                                   |
+|                               |                                  | [[1-5-NLP-Fundamentals]]                                 | HuggingFace                         |
+|                               |                                  | [[1-6-Hugging-Face-Workflows]]                           | HuggingFace                         |
+| II – Generative AI Essentials | 2 Large Language Models          | [[2-1-GPT‑4o-Llama-3]]                                   |                                     |
 |                               |                                  | 2.3-LoRA-Fine‑Tuning                                     |                                     |
-|                               |                                  | 2-4-gen-models-overview.md                              |                                     |
-|                               |                                  | 2-5-autoencoders-gans-diffusionmodels.md                |                                     |
-|                               |                                  | 2-6-3blue1brown-explainer.md                            |                                     |
+|                               |                                  | [[2-4-Gen-Models-Overview]]                              |                                     |
+|                               |                                  | [[2-5-Autoencoders-GANs-DiffusionModels]]                |                                     |
+|                               |                                  | [[2-6-3Blue1Brown-Explainer]]                            |                                     |
 |                               | 3 Prompt Engineering             | 3.1 Crafting Prompts & System Messages                   |                                     |
 |                               |                                  | 3.2 Chain‑of‑Thought & “Show Your Work” Tricks           |                                     |
 |                               |                                  | 3.3 Function Calling & JSON Output (No Coding Headaches) |                                     |
 |                               | 4 Retrieval‑Augmented Generation | 4.1 RAG in One Picture                                   |                                     |
 |                               |                                  | 4.2 Vector Stores 101 (Pinecone, Qdrant)                 |                                     |
 |                               |                                  | 4.3 Building Your First RAG Chatbot                      |                                     |
-| III – Practical MLOps         | 5 Deploying LLMs                 | 5-1-local-vs-cloud-inference.md                         |                                     |
-|                               |                                  | 5-2-quick-quantization-laptop-gpu.md                    |                                     |
-|                               | 6 Data Pipelines for Gen‑AI      | 6-1-collect-clean-text-data.md                          |                                     |
-|                               |                                  | 6-2-ci-cd-for-models.md                                 |                                     |
+| III – Practical MLOps         | 5 Deploying LLMs                 | [[5-1-Local-vs-Cloud-Inference]]                         |                                     |
+|                               |                                  | [[5-2-Quick-Quantization-Laptop-GPU]]                    |                                     |
+|                               | 6 Data Pipelines for Gen‑AI      | [[6-1-Collect-Clean-Text-Data]]                          |                                     |
+|                               |                                  | [[6-2-CI-CD-for-Models]]                                 |                                     |
 | IV – Responsible & Edge AI    | 7 On‑Device AI                   | 7.1 Running LLMs on Apple Silicon or a Phone             |                                     |
 |                               |                                  | 7.2 Privacy‑First Design Tips                            |                                     |
 | V – Applications & Career     | 9 AI Agents & Tools              | 9.1 ReAct, CrewAI & Other Agent Patterns                 |                                     |

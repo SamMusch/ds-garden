@@ -67,9 +67,9 @@ from outgoing([[]])
 
 | Note                             | Contains | Status  |
 | -------------------------------- | -------- | ------- |
-| ml.md                           |          | Cleaned |
-| deep-learning.md                |          | Cleaned |
+| [[ML]]                           |          | Cleaned |
+| [[Deep-Learning]]                |          | Cleaned |
 |                                  |          |         |
-| supervised-2-classification.md  |          |         |
-| supervised-4-regression-eval.md |          |         |
-| supervised-6-ensemble.md        |          |         |
+| [[Supervised-2-Classification]]  |          |         |
+| [[Supervised-4-Regression-Eval]] |          |         |
+| [[Supervised-6-Ensemble]]        |          |         |

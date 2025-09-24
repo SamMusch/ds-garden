@@ -51,8 +51,8 @@ word_count: 469
 
 ## Overview
 
-!pasted-image-20241231152903.png.md
-Image comes from textbook in 2-5-autoencoders-gans-diffusionmodels.md
+![[Pasted image 20241231152903.png]]
+Image comes from textbook in [[2-5-Autoencoders-GANs-DiffusionModels]]
 
 **Generative models** are enabling computers to have an understanding of the world. They are:
 - Unsupervised
@@ -78,7 +78,7 @@ When writing advanced models in TensorFlow, remember:
 [ChatGPT](https://chatgpt.com/share/67dee1a1-8600-8000-88c7-ffce728e06cf) - `Quick summary. Meant to be intuitive, not exhaustive.`
 
 Autoencoders learn succinct representations. They serve as a foundation for many generative and dimensionality-reduction techniques.
-Structurally, autoencoders consist of an **input layer**, a **hidden layer**, and an **output** **layer**: pasted-image-20241231143947.png.md
+Structurally, autoencoders consist of an **input layer**, a **hidden layer**, and an **output** **layer**: [[Pasted-image-20241231143947.png]]
 
 !!! sam
     **Intuition**

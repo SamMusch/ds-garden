@@ -55,8 +55,8 @@ word_count: 5455
 
 ## Autoencoders
 
-Also see 2-4-gen-models-overview.md - different textbook
-Moved to 2-4-gen-models-overview#overview---separate-resource.md
+Also see [[2-4-Gen-Models-Overview]] - different textbook
+Moved to [[2-4-Gen-Models-Overview#Overview - Separate Resource]]
 
 ---
 
@@ -104,7 +104,7 @@ Classes of neural networks (goals):
 
 ### Autoencoders (For Inspiration)
 
-Summarized in 2-5-autoencoders-gans-diffusionmodels#autoencoders.md
+Summarized in [[2-5-Autoencoders-GANs-DiffusionModels#Autoencoders]]
 
 ### Building an Autoencoder
 
@@ -126,7 +126,7 @@ mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
 For ease, we can build the auto-encoder with the `tf.layers` library. We'll want our Autoencoder architecture to follow the convolutional/de-convolutional pattern, where the input layer of the decoder matches the size of the input and the subsequent layer squash the data into a smaller and smaller representation. The decoder will be the same architecture reversed, starting with the small representation and working larger.
 
 All together, we want it to look something like the following:
-!pasted-image-20241231144552.png.md
+![[Pasted image 20241231144552.png]]
 
 Let's start with the encoder; we'll define an initializer for the the weight and bias factors first, and then define the encoder as a function that takes and input, x. we'll then use the `tf.layers.dense` function to create standard, fully connected neural network layers. The encoder will have three layers, with the first layer size matching the input dimensions of the input data (`784`), with the subsequent layers getting continually smaller:
 ```python
@@ -243,14 +243,14 @@ plt.show()
 ```
 
 After training, you should end up with a result along the lines of the following, with the actual digits on the left, and the reconstructed digits on the right:
-!pasted-image-20241231145350.png.md
+![[Pasted image 20241231145350.png]]
 
 So what have we done here? By training the autoencoder on unlabeled digits, we've done the following: 
 - Learned the latent features of the dataset without having explicit labels
 - Successfully learned the distribution of the data and reconstructed the image from scratch, from that distribution
 
 Now, let's say that we wanted to take this further and generate or classify new digits that we haven't seen yet. To do this, we could remove the decoder and attach a classifier or generator network:
-!pasted-image-20241231145424.png.md
+![[Pasted image 20241231145424.png]]
 
 The encoder therefore becomes a means of initializing a supervised training model. Standard autoencoders have been used in a variety of tasks. In the supplementary code for this chapter, we'll walk through an example where we utilize autoencoders for visual anomaly detection.
 
@@ -267,7 +267,7 @@ The probabilistic structure of VAEs comes into play with their encoders. Instea
 
 ### Structure
 Like standard autoencoders, VAEs utilize the same encoder/decoder framework, but, that aside, they are mathematically different from their namesake. VAEs take a probabilistic perspective in terms of guiding the network:
-!pasted-image-20241231145555.png.md
+![[Pasted image 20241231145555.png]]
 
 Both our **encoder** and **decoder** networks are generating distributions from their input data. The encoder generates a distribution from its training data, **Z**, which then becomes the input distribution for the decoder. The decoder takes this distribution, **Z**, and tries to replicate the original distribution, **X**, from it.
 
@@ -422,7 +422,7 @@ Generative adversarial networks (**GANs**) are a class of networks that were in
 - The discriminator guides the generator to create ever more realistic samples
 
 All in all, this process is represented as follows:
-!pasted-image-20241231150923.png.md
+![[Pasted image 20241231150923.png]]
 
 GANs can be used for a variety of tasks, and, in recent years, many GAN varieties have been created. As they were originally built for image-related tasks, we will focus our architecture discussions on image-based GANs. A larger list of GANs is available at the end of the section. Throughout, we'll follow along in TensorFlow to illuminate the topics. As before, we'll be utilizing the same MNIST data in order to compare the frameworks with our previous ones:
 ```python
@@ -487,10 +487,10 @@ Now that we have our model set up, let's get into the training process!
 ### Training GANs
 GANs are easy to train, but difficult to optimize due to a number of unstable dynamics in their training processes. To train a GAN, we train the generator on sub samples of a high-dimensional training distribution; since this does not innately exist, we initially sample from a standard normal (Gaussian) distribution.
 
-!pasted-image-20241231152334.png.md
+![[Pasted image 20241231152334.png]]
 
 When training GANs, we train to minimize the objective function so that the generator can win. We want the generator to be able to create examples that are realistic enough to fool the discriminator. To do this, we train and optimize the discriminator and the generator in parallel using gradient ascent. For each iteration of training, we are going to train the discriminator network in small batches, and then train the generator network in small batches, alternating between the two paradigms. Gradient ascent for the discriminator computes the following:
-!pasted-image-20241231152415.png.md
+![[Pasted image 20241231152415.png]]
 
 By taking the maximum of the generator's objective, we're maximizing the likelihood of being wrong. This parallelized training process can still be unstable, however, and stabilizing GANs is a very active area of research at the moment.
 
@@ -571,7 +571,7 @@ As you can see, all of the models that we've run thus far have built upon each o
 
 ### Overview
 While we've only covered two types of generative model, there are many different types that you may encounter in the literature. The following chart is not exhaustive, but does provide a general overview of the types of generative models out there:
-!pasted-image-20241231152903.png.md
+![[Pasted image 20241231152903.png]]
 
 Let's break this down: 
 - **Explicit density models**: Model our data directly from a probability distribution. We explicitly define the probability and solve for it
@@ -584,10 +584,10 @@ We'll briefly touch upon three notable classes: fully visible belief nets, Hidde
 ### Fully visible belief nets
 
 Fully visible belief networks are a class of explicit density models and a form of deep belief network. They use the chain rule to decompose a probability distribution $p(x)$ over a vector, into a product over each of the members of the vector, represented between by $p(x_i | x_1, \dots)$. All together, it's formula is:
-!pasted-image-20241231153111.png.md
+![[Pasted image 20241231153111.png]]
 
 The most popular model in this family is PixelCNN, an **autoregressive** generative model. Pixels approach image generation problems by turning them into a sequence modeling problem, where the next pixel value is determined by all the previously generated pixel values. The network scans an image one pixel at a time, and predicts conditional distributions over the possible pixel values. We want to assign a probability to every pixel image based on the last pixels that the network saw. For instance, if we're looking at the same horse images as in the previous example, we would be consistently predicting what the next anticipated pixel looks such as follows:
-!pasted-image-20241231153143.png.md
+![[Pasted image 20241231153143.png]]
 
 Based on the features that we've seen, will the next pixel still contain the horse's ear, or will it be background? While their training cycles are more stable than GANs, the biggest issue with the networks is that they generate new samples extremely slowly; the model must be run again fully in order to generate a new sample. They also block the execution, meaning that their processes cannot be run in parallel.
 
@@ -595,7 +595,7 @@ Based on the features that we've seen, will the next pixel still contain the hor
 A hidden Markov model is a type of **Markov model**, which is itself a subclass of **Dynamic Bayesian Networks**. Markov models are used to model randomly changing systems called **Markov processes** also called **Markov chains**. Simply put, a Markov process is a sequence of events where the probability of an event happening solely depends on the previous event.
 
 Markov chains appear as follows:
-!pasted-image-20241231153404.png.md
+![[Pasted image 20241231153404.png]]
 
 In this simple chain, there are three states, represented by the circles. We then have probabilities for transitioning to another state, as well as probabilities of staying in a current state. The classic example of a Markov chain is that of the taxi driver, where the driver finds himself currently solely depends on where he was last, in other words, his most recent fare. If we were to apply this example to the preceding Markov chain, the driver would have three possible locations to pick up or drop off customers; the associated probabilities between locations would represent the chance of him going to the other location or staying put.
 
@@ -603,7 +603,7 @@ Hidden Markov models are used to model Markov processes that we can't observe; w
 
 ### Boltzmann machines
 Boltzmann machines are a general class of models that contain take binary vectors as input and units that assign a probability distribution to each of those binary vectors. As you can see in the following diagram, each unit is dependent on every other unit:
-!pasted-image-20241231153508.png.md
+![[Pasted image 20241231153508.png]]
 
 A Boltzmann machine uses something called an **energy function**, which is similar to a loss function. For any given vector, the probability of a particular state is proportional to each of the energy function values. To convert this to an actual probability distribution, it's necessary to renormalize the distribution, but this problem becomes another intractable problem. Monte Carlo methods are again used here for sampling as a workaround, hence making Boltzmann machines a Monte Carlo-based method.
 

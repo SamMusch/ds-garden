@@ -48,7 +48,7 @@ word_count: 375
 ---
 
 Resources
-- deep-learning.md: Class notes, more detailed than below.
+- [[Deep-Learning]]: Class notes, more detailed than below.
 - [ChatGPT](https://chatgpt.com/share/681789dd-021c-8000-a07b-964d90d8e09d): for this markdown
 
 ---

@@ -48,8 +48,8 @@ word_count: 1167
 ---
 
 Deeper
-- theory-univariate.md - Univariate
-- video-series.md - Multivariate
+- [[Theory-Univariate]] - Univariate
+- [[Video-Series]] - Multivariate
 
 DL Resources
 - [Book: Deep Learning for Time Series Forecasting](file:///Users/Sam/Desktop/2%20DS/01%20Predictive/Book-Deep-TS/deep_learning_time_series_forecasting.pdf) by Jason Brownlee

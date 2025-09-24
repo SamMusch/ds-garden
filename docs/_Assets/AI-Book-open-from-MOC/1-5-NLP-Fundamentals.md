@@ -67,7 +67,7 @@ list from [[]] and !outgoing([[]])
 
 # HuggingFace Course
 
-For context: 1-2-transformers-simple.md
+For context: [[1-2-Transformers-Simple]]
 
 [HuggingFace](https://huggingface.co/learn/nlp-course/chapter1/1)  |  [Wikipedia](https://www.wikiwand.com/en/Transformer_(deep_learning_architecture))
 - **NLP** | field of linguistics & ML related to language. The aim is to understand single words & the context of those words together.
@@ -101,4 +101,4 @@ Transformer models are built with *attention layers*, which tell the model to pa
 
 ### 2. Using Transformers
 
-Moved to 1-6-hugging-face-workflows.md
+Moved to [[1-6-Hugging-Face-Workflows]]

@@ -65,10 +65,10 @@ word_count: 1570
 
 | Notes                            | Contains                          |
 | -------------------------------- | --------------------------------- |
-| supervised-2-classification.md  | Models, evaluation, and some code |
-| supervised-4-regression-eval.md | Evaluation                        |
-| supervised-6-ensemble.md        | Models                            |
-| deep-learning.md                |                                   |
+| [[Supervised-2-Classification]]  | Models, evaluation, and some code |
+| [[Supervised-4-Regression-Eval]] | Evaluation                        |
+| [[Supervised-6-Ensemble]]        | Models                            |
+| [[Deep-Learning]]                |                                   |
 
 ## Overview #cards
 
@@ -141,14 +141,14 @@ Dataset contains both inputs & corresponding labels. Tasks include:
 - **Regression**: Continuous values.
 #### Unsupervised Learning
 Identifies patterns without labeled data. Key methods are:
-- clustering.md: Group similar data points (k-means, Hierarchical Cluster Analysis (HCA), Expectation Maximization).
-- dimensionality-reduction.md: Simplify datasets without losing too much info.
+- [[Clustering]]: Group similar data points (k-means, Hierarchical Cluster Analysis (HCA), Expectation Maximization).
+- [[Dimensionality Reduction]]: Simplify datasets without losing too much info.
     - PCA | Principal Component Analysis
     - Kernel PCA
     - LLE | Locally-Linear Embedding
     - t-SNE | t-distributed Stochastic Neighbor Embedding
-- anomaly-detection.md: Identify deviations from normal behavior.
-- association-rules.md (Apriori, Eclat)
+- [[Anomaly detection]]: Identify deviations from normal behavior.
+- [[Association Rules]] (Apriori, Eclat)
 #### Semi-Supervised
 Some data is labeled, some isn't. (Typically lots of unlabeled data + some labeled data)
 - Most of these algorithms are combinations of unsupervised & supervised algorithms.
