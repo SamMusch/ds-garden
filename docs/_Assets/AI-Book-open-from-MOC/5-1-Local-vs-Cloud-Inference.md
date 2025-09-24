@@ -1,0 +1,87 @@
+---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: 5.1 Local vs Cloud Inference (Pros & Cons).md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
+children: 0
+created: '2025-07-18'
+cssclasses: null
+grandchildren: 0
+kMDItemContentCreationDate: 2025-05-20 16:36:09 +0000
+kMDItemContentCreationDate_Ranking: 2025-05-20 00:00:00 +0000
+kMDItemContentModificationDate: 2025-05-20 16:51:52 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-05-20 16:37:20 +0000
+kMDItemDocumentIdentifier: '167127'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-05-20 00:00:00 +0000
+kMDItemLastUsedDate: 2025-05-20 16:51:52 +0000
+kMDItemLastUsedDate_Ranking: 2025-05-20 00:00:00 +0000
+kMDItemUseCount: '8'
+kMDItemUsedDates: (
+modified: '2025-05-20'
+published: true
+reading_time: 0.7
+source_file: 5.1 Local vs Cloud Inference (Pros & Cons).md
+tags: null
+title: 5.1 Local vs Cloud Inference (Pros & Cons)
+word_count: 141
+---
+
+### 5.1 Local vs Cloud Inference (Pros & Cons)
+
+**Scope**  
+Decision‑guide for running model inference after training/fine‑tuning.
+
+#### Key Dimensions
+
+| Dimension | Local (Edge/Laptop)  | Cloud (AWS/GCP/Azure/HF) |
+| --------- | -------------------- | ------------------------ |
+| Latency   | Sub‑50 ms possible   | ≥ 150 ms typical         |
+| Privacy   | Data stays on‑device | Data traverses network   |
+| Cost      | CapEx once           | OpEx pay‑per‑request     |
+| Scale     | Limited to device    | Auto‑scales globally     |
+| Updates   | Manual scripts       | CI/CD pipelines          |
+| Failover  | Manual (UPS)         | Multi‑zone built‑in      |
+
+#### Heuristics
+
+* **Choose Local** for PII, demos, offline, deterministic batch size.  
+* **Choose Cloud** for bursty traffic, multi‑tenant SaaS, analytics APIs.
+
+#### Hybrid Patterns
+
+1. Client‑side reranking.  
+2. On‑device fallback.  
+3. Federated Learning.
+
+#### Latency Test Snippet
+
+```python
+import time, requests
+t0 = time.time(); _ = model(**inputs); print(f"local {1000*(time.time()-t0):.1f} ms")
+print("cloud", 1000*requests.get("https://api.yourmodel.com/ping").elapsed.total_seconds(), "ms")
+```
