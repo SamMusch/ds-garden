@@ -27,6 +27,9 @@ theme:
     admonition:
       sam: material/lightbulb-on-10  # pick any Material icon
 
+extra_css:
+  - stylesheets/oreilly.css
+
 plugins:
   - search
   - awesome-pages
