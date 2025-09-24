@@ -47,9 +47,13 @@ title: ' ML MOC'
 word_count: 19
 ---
 
-!!! warning "Heads up
-Content here.
-```
+1:49pm
+
+!!! warning "Heads up"
+    Content here.
+
+
+
 
 
 
@@ -62,9 +66,8 @@ Quality,
 
 
 sum(HoursRemain) as Remain
-from outgoing([[]])"
-
-
+from outgoing([[]])
+```
 
 
 
