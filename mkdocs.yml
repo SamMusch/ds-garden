@@ -7,16 +7,23 @@ theme:
   features:
     - navigation.sections
     - navigation.top
+    - navigation.tabs            # top-level tabs (optional)
     - toc.integrate
     - content.code.copy        # copy button on code blocks
+    - toc.follow                 # right “On this page” follows scroll
+  palette:
+    - scheme: default
+      toggle: { icon: material/weather-night, name: Switch to dark mode }
+    - scheme: slate
+      toggle: { icon: material/weather-sunny, name: Switch to light mode }
   icon:
     admonition:
       sam: material/lightbulb-on-10  # pick any Material icon
 
 plugins:
   - search
-  - roamlinks
   - awesome-pages
+  - roamlinks
 
 markdown_extensions:
   - admonition
@@ -28,3 +35,4 @@ extra_css:
   - stylesheets/ad-sam.css
 extra_javascript:
   - javascripts/copy-admonition.js   # adds a “Copy” button to sam boxes (optional)
+

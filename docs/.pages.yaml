@@ -1,0 +1,4 @@
+# Structure the left sidebar to organize/collapse
+# docs/.pages
+title: DS
+collapse_single_pages: true
