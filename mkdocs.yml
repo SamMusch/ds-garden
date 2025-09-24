@@ -1,34 +1,15 @@
 site_name: ds-garden
 site_url: https://sammusch.github.io/ds-garden/
 repo_url: https://github.com/SamMusch/ds-garden
+edit_uri: ""
 
 theme:
-  name: material
-  features:
-    - navigation.sections
-    - navigation.top
-    - toc.integrate
-    - content.code.copy        # copy button on code blocks
-    - toc.follow                 # right “On this page” follows scroll
-  palette:
-    - scheme: default
-      primary: white
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      primary: black
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-  icon:
-    admonition:
-      sam: material/lightbulb-on-10  # pick any Material icon
-
-extra_css:
-  - stylesheets/oreilly.css
+  name: gitbook
+  highlightjs: true       # GitBook theme supports Highlight.js
+  hljs_languages:
+    - yaml
+    - python
+    - bash
 
 plugins:
   - search
@@ -40,9 +21,8 @@ markdown_extensions:
   - attr_list
   - pymdownx.details
   - pymdownx.superfences
-
-extra_css:
-  - stylesheets/ad-sam.css
-extra_javascript:
-  - javascripts/copy-admonition.js   # adds a “Copy” button to sam boxes (optional)
-
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+  - def_list
