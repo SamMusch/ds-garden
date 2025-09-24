@@ -63,9 +63,9 @@ from outgoing([[]])
 
 | Note                             | Contains | Status  |
 | -------------------------------- | -------- | ------- |
-| [[ML]]                           |          | Cleaned |
-| [[Deep-Learning]]                |          | Cleaned |
+| [[ML-00]]                           |          | Cleaned |
+| [[ML-04-DL]]                |          | Cleaned |
 |                                  |          |         |
-| [[Supervised-2-Classification]]  |          |         |
-| [[Supervised-4-Regression-Eval]] |          |         |
-| [[Supervised-6-Ensemble]]        |          |         |
+| [[ML-01-Classification]]  |          |         |
+| [[ML-02-Regression]] |          |         |
+| [[ML-03-Ensemble]]        |          |         |

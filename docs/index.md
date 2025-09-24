@@ -55,9 +55,7 @@ word_count: 368
 
 ## MOCs
 
-[[_AI-MOC]]
 [[_ML-MOC]]
-[[_TS-MOC]]
 
 ## Review Resources
 
