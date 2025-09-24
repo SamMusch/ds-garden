@@ -8,6 +8,12 @@ extra_css:
 
 theme:
   name: gitbook
+  features:
+    - navigation.sections        # grouped, collapsible left nav
+    - navigation.expand          # auto-expand current section
+    - navigation.tracking        # highlight active heading in TOC
+    - content.code.copy          # copy button on code blocks
+    - toc.follow                 # right “On this page” follows scroll
   highlightjs: true       # GitBook theme supports Highlight.js
   hljs_languages:
     - yaml
