@@ -1,0 +1,34 @@
+/* Custom “sam” admonition */
+:root {
+  --sam-accent: #f59e0b; /* amber */
+  --sam-bg: #f8fafc;     /* subtle */
+  --sam-border: #e2e8f0;
+}
+
+/* container */
+.md-typeset .admonition.sam,
+.md-typeset details.sam {
+  border: 1px solid var(--sam-border);
+  border-left-width: .35rem;
+  border-left-color: var(--sam-accent);
+  background: var(--sam-bg);
+  border-radius: .4rem;
+}
+
+/* title row */
+.md-typeset .admonition.sam > .admonition-title,
+.md-typeset details.sam > summary {
+  background: color-mix(in oklab, var(--sam-accent) 10%, transparent);
+  font-weight: 600;
+}
+
+/* icon color */
+.md-typeset .admonition.sam > .admonition-title::before,
+.md-typeset details.sam > summary::before {
+  background-color: var(--sam-accent);
+}
+
+/* content spacing */
+.md-typeset .admonition.sam > .admonition-content {
+  padding-top: .2rem;
+}

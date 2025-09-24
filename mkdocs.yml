@@ -8,6 +8,10 @@ theme:
     - navigation.sections
     - navigation.top
     - toc.integrate
+    - content.code.copy        # copy button on code blocks
+  icon:
+    admonition:
+      sam: material/lightbulb-on-10  # pick any Material icon
 
 plugins:
   - search
@@ -19,3 +23,8 @@ markdown_extensions:
   - attr_list
   - pymdownx.details
   - pymdownx.superfences
+
+extra_css:
+  - stylesheets/ad-sam.css
+extra_javascript:
+  - javascripts/copy-admonition.js   # adds a “Copy” button to sam boxes (optional)
