@@ -63,26 +63,32 @@ DL Resources
     1. **Inputs vs. Outputs** (X vs Y)
        - **Inputs**: Historical data provided to the model in order to make a single forecast.
        - **Outputs**: Forecast for a future time step beyond the data provided as input.
+
     <br>
     1. **Endogenous vs. Exogenous** (Influencing each other?)
        - **Endogenous**: Input variables that *are* influenced by other variables in the system and on which the output variable depends.  
        - **Exogenous**: Input variables that *are not* influenced by other variables in the system and on which the output variable depends.
+
     <br>
     1. **Unstructured vs. Structured** (Time-dep patterns?)
        - **Unstructured**: No obvious systematic time-dependent pattern in a time series variable.  
        - **Structured**: Systematic time-dependent patterns in a time series variable (e.g. trend and/or seasonality).
+
     <br>
     1. **Univariate vs. Multivariate**
        - Uni and Multi **Inputs**: 1+ input variables measured over time.
        - Uni and Multi **Outputs**: 1+ output variables to be predicted.
+
     <br>
     1. **Single-step vs. Multi-step**
        - **One-step**: Forecast the next time step.
        - **Multi-step**: Forecast more than one future time steps.
+
     <br>
     1. **Static vs. Dynamic** (Streaming?)
        - **Static**: Model is fit once and used to make predictions.
        - **Dynamic**: Model is fit on newly available data prior to each prediction.
+
     <br>
     1. **Contiguous vs. Discontiguous** (Time uniform?)
        - **Contiguous**: Observations are uniform over time.  (eg 1 per hour)

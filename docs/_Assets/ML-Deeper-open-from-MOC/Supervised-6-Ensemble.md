@@ -55,7 +55,6 @@ word_count: 542
 
 - [Interactive Playground](http://arogozhnikov.github.io/2016/07/05/gradient_boosting_playground.html)
 - [Short Review Video](https://www.youtube.com/watch?v=m-S9Hojj1as)
-
 - [Bias vs Variance Graph](https://i.imgur.com/p6nfbsj.png)
 - [Summary of 6 techniques](https://i.imgur.com/PWVMWRG.png)
 

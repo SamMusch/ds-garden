@@ -77,8 +77,6 @@ word_count: 1570
 >
 >Almost all ML can be expressed in a fairly straight-forward formula; bringing together a dataset and model, along with a loss function and optimization technique that are applicable to the dataset and model. [Source](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/c72aa49d-41f1-4a15-bee5-9efc9190f282.xhtml)
 
-
-
 | Term                       | Cake Analogy Explanation                                                  | ML Examples                                                                                                 | ML Definition                                                                                       |
 | -------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | **Data**                   | Ingredients.                                                              | Raw dataset                                                                                                 |                                                                                                     |
@@ -139,6 +137,7 @@ The ML lifecycle includes several steps for transforming data into actionable in
 Dataset contains both inputs & corresponding labels. Tasks include:
 - **Classification**: Discrete categories.
 - **Regression**: Continuous values.
+
 #### Unsupervised Learning
 Identifies patterns without labeled data. Key methods are:
 - [[Clustering]]: Group similar data points (k-means, Hierarchical Cluster Analysis (HCA), Expectation Maximization).
@@ -149,10 +148,12 @@ Identifies patterns without labeled data. Key methods are:
     - t-SNE | t-distributed Stochastic Neighbor Embedding
 - [[Anomaly detection]]: Identify deviations from normal behavior.
 - [[Association Rules]] (Apriori, Eclat)
+
 #### Semi-Supervised
 Some data is labeled, some isn't. (Typically lots of unlabeled data + some labeled data)
 - Most of these algorithms are combinations of unsupervised & supervised algorithms.
 - Deep belief networks (DBNs), restricted Boltzmann machines (RBMs)
+
 #### Reinforcement Learning
 **Process**: The learning system (aka agent)
 1. Observes environment
@@ -264,10 +265,12 @@ accuracy = evaluate(best, x_test, y_test)
 Cross-validation splits data to validate models. Methods include:
 - **k-Fold**: Divides data into $k$ subsets for training and testing.
 - **Nested**: Addresses hyperparameter overfitting by adding an outer validation loop.
+
 #### Nested K-Fold
 Removes overfit "leak" from evaluating on train set.
 - Use when hyperparameters also need to be optimized
 - Estimates generalization error of the underlying model & hyperparameters
+
 Process
 - **Inner loop**: Fits model to each training set, then select hypers over validation set
 - **Outer loop**: Estimates generalization error by averaging test set scores over several dataset splits

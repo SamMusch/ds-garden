@@ -96,10 +96,12 @@ word_count: 980
     1. **Stationarity**
        - **Definition**: Constant mean, constant variance, and autocovariance depends only on lag.  
        - **Check**: Plot data, use ADF test, consider differencing if nonstationary.
+
     <br>
     1. **Autocorrelation Functions**  
        - **ACF**: Helps identify MA processes (autocorrelations that cut off abruptly often indicate MA).  
        - **PACF**: Helps identify AR processes (partial autocorrelations that cut off abruptly often indicate AR).
+
     <br>
     1. **Model Families**  
        - **AR(p)**: Depends on its own past **values**.  
@@ -107,17 +109,20 @@ word_count: 980
        - **ARMA(p, q)**: Combination of AR and MA (stationary).  
        - **ARIMA(p, d, q)**: Adds differencing for nonstationary data.  
        - **SARIMA**: Adds seasonal components.
+
     <br>
     1. **Model Selection**  
        - **ACF/PACF/EACF** to guess initial p, q.  
        - **AIC/BIC**: Compare candidate models; lower is better.  
        - Residual checks to ensure white-noise residuals.
+
     <br>
     1. **Forecasting**  
        - **Naive**: Use the last observed value.  
        - **Averaging**: Use the mean of recent observations.  
        - **Exponential Smoothing**: Heavier weight on recent observations.  
        - **ARIMA-based**: Incorporates AR/MA terms and differencing.
+
     <br>
     1. **Trends & Seasonality**  
        - **Deterministic Trend**: Model explicitly if present (linear, polynomial, etc.).  

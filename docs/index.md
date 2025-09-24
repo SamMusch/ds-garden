@@ -59,7 +59,6 @@ word_count: 368
 [[_ML-MOC]]
 [[_TS-MOC]]
 
-
 ## Review Resources
 
  [Stanford](https://stanford.edu/~shervine/teaching/cs-229): 3 separate courses.
@@ -67,7 +66,6 @@ word_count: 368
 - **ML**: Supervised | Unsupervised | Deep | Tips
 - **DL**: CNN | RNN | Tips
 - **Refreshers**: [algebra-calculus](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-algebra-calculus.pdf) |[probabilities-statistics](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-probabilities-statistics.pdf)
-
 
 ## Algorithm Types
 

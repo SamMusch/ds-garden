@@ -59,10 +59,6 @@ sum(HoursRemain) as Remain
 from outgoing([[]])
 ```
 
-
-
-
-
 ## Hide
 
 | Note                             | Contains | Status  |

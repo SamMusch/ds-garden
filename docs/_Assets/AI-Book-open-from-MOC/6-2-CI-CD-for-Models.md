@@ -67,6 +67,7 @@ jobs:
       - run: docker build -t ghcr.io/${{ github.repository }}:${{ github.sha }} .
       - run: echo $CR_PAT | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - run: docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
+
 ```
 
 **Secrets**: `CR_PAT` for GHCR, cloud deploy tokens.
