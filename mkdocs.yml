@@ -1,16 +1,17 @@
-site_name: ds-garden
+site_name: ""
 site_url: https://sammusch.github.io/ds-garden/
 repo_url: https://github.com/SamMusch/ds-garden
 edit_uri: ""
 
 extra_css:
   - stylesheets/ad-sam.css
+  - stylesheets/extra.css
 
 theme:
-  name: gitbook
+  name: material
+  palette:
+    primary: custom
   features:
-    - navigation.sections        # grouped, collapsible left nav
-    - navigation.expand          # auto-expand current section
     - navigation.tracking        # highlight active heading in TOC
     - content.code.copy          # copy button on code blocks
     - toc.follow                 # right “On this page” follows scroll
