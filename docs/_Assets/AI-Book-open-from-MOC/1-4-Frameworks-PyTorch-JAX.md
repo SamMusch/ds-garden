@@ -49,10 +49,10 @@ word_count: 270
 
 ## High-Level
 ### Business Analogy
-```ad-sam
-- **PyTorch**: kitchen that lets chefs experiment with recipes, then creates ready-to-serve meals. 
-- **JAX**: a factory line that automates recipe execution at scale
-```
+!!! note
+    - **PyTorch**: kitchen that lets chefs experiment with recipes, then creates ready-to-serve meals. 
+    - **JAX**: a factory line that automates recipe execution at scale
+
 
 ### High-Level Concept
 Modern ML frameworks combine ease of use with performance optimizations.

@@ -52,29 +52,28 @@ word_count: 376
 ---
 
 ### Context
-```ad-sam
+!!! note
+    - **Supervised**: learns a direct mapping from inputs to human-provided labels.
+    - **Unsupervised**: discovers structure or representation in unlabeled data.
+    - **Semi-supervised**: uses a small set of labels plus a large pool of unlabeled examples to improve performance.
+    - **Self-supervised (this doc)**: automatically creates its own labels from the data (e.g. masking, rotation prediction) to learn representations without manual annotation.
 
-- **Supervised**: learns a direct mapping from inputs to human-provided labels.
-- **Unsupervised**: discovers structure or representation in unlabeled data.
-- **Semi-supervised**: uses a small set of labels plus a large pool of unlabeled examples to improve performance.
-- **Self-supervised (this doc)**: automatically creates its own labels from the data (e.g. masking, rotation prediction) to learn representations without manual annotation.
-```
 
 ### Business Analogy
-```ad-sam
-**Puzzle-Building Analogy**  
+!!! note
+    **Puzzle-Building Analogy**  
 
-1. Someone put together a 1k piece puzzle.
-2. They hide a patch of 10 pieces.
-3. You need to predict what those 10 pieces look like.
-4. Repeat 2 & 3
-5. Over time, you get better at **understanding** the overall image, all without **seeing** the full completed picture.
+    1. Someone put together a 1k piece puzzle.
+    2. They hide a patch of 10 pieces.
+    3. You need to predict what those 10 pieces look like.
+    4. Repeat 2 & 3
+    5. Over time, you get better at **understanding** the overall image, all without **seeing** the full completed picture.
 
 
-- Hiding puzzle pieces = Masking inputs
-- Predicting them yourself = Creating your own training labels
-- Getting better at the full image = Learning rich representations
-```
+    - Hiding puzzle pieces = Masking inputs
+    - Predicting them yourself = Creating your own training labels
+    - Getting better at the full image = Learning rich representations
+
 
 ### High-Level Concept
 Self‑supervision is a way for models to generate their own “quiz” signals from raw data, eliminating the need for manually annotated examples. It powers breakthroughs in how systems understand patterns and adapt to new tasks.

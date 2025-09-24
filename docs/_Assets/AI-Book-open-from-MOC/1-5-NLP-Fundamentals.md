@@ -57,15 +57,13 @@ Back/Outgoing Links
 list from [[]] and !outgoing([[]])
 ```
 
-```ad-sam
+!!! note
+    Most common NLP methods
 
-Most common NLP methods
+    1. **Symbolic (Rule-Based):** Not really used anymore because of the advance of LLMs.
 
-1. **Symbolic (Rule-Based):** Not really used anymore because of the advance of LLMs.
+    2. **ML (Statistical & Neural)**
 
-2. **ML (Statistical & Neural)**
-
-```
 
 # HuggingFace Course
 
@@ -84,11 +82,11 @@ For context: 1-2-transformers-simple.md
 | [Decoder](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt)         | GPT  | Auto-Regressive      | Uses encoder's features + other inputs to generate target. | CTRL, GPT, GPT-2, Transformer XL, LLaMA    | Text generation                                                                  |
 | [Encoder-decoder](https://huggingface.co/learn/nlp-course/chapter1/7?fw=pt) | BART | Sequence-to-sequence |                                                            | BART, T5, Marian, mBART                    | Summarization, translation, generative question answering                        |
 
-```ad-sam
- All the Transformer models mentioned above (GPT, BERT, BART, T5, etc.) have been trained as ***language models***. This means they have been trained on large amounts of raw text in a **self-supervised** fashion. Self-supervised learning is a type of training in which the objective is automatically computed from the inputs of the model. That means that humans are not needed to label the data!
+!!! note
+     All the Transformer models mentioned above (GPT, BERT, BART, T5, etc.) have been trained as ***language models***. This means they have been trained on large amounts of raw text in a **self-supervised** fashion. Self-supervised learning is a type of training in which the objective is automatically computed from the inputs of the model. That means that humans are not needed to label the data!
 
-The general pretrained model then goes through ***transfer learning*** where the model is fine-tuned in a supervised way — that is, using human-annotated labels — on a given task.
-```
+    The general pretrained model then goes through ***transfer learning*** where the model is fine-tuned in a supervised way — that is, using human-annotated labels — on a given task.
+
 
 #### Transfer Learning
 - *Pretraining* is the act of training a model from scratch.

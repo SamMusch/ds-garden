@@ -98,26 +98,24 @@ https://chatgpt.com/share/682cb713-d830-8000-8157-64a1af0e1cb7
 
 #### Explained
 
-```ad-sam
+!!! note
+    [ChatGPT](https://chatgpt.com/share/6817848d-fc2c-8000-acc3-e7610850caeb)
 
-[ChatGPT](https://chatgpt.com/share/6817848d-fc2c-8000-acc3-e7610850caeb)
+    (1) **Core Concepts**
+    Refresh NN intuition. Need for transformers, self‑supervision, and modern frameworks like PyTorch.
 
-(1) **Core Concepts**
-Refresh NN intuition. Need for transformers, self‑supervision, and modern frameworks like PyTorch.
+    (2) **Generative AI Essentials**
+    Understand and **use** LLMs, prompt engineering, and RAG.  
 
-(2) **Generative AI Essentials**
-Understand and **use** LLMs, prompt engineering, and RAG.  
+    (3) **Practical MLOps**
+    Deploy, scale, and version models with minimal DevOps pain.  
 
-(3) **Practical MLOps**
-Deploy, scale, and version models with minimal DevOps pain.  
+    (4) **Responsible & Edge AI**
+    Privacy/security for devices and constrained environments.
 
-(4) **Responsible & Edge AI**
-Privacy/security for devices and constrained environments.
+    (5) **Applications & Career**
+    Tie to real business use‑cases / continuous learning habits.
 
-(5) **Applications & Career**
-Tie to real business use‑cases / continuous learning habits.
-
-```
 
 #### Resources / Cheats
 

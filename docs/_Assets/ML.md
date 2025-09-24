@@ -115,26 +115,24 @@ The ML lifecycle includes several steps for transforming data into actionable in
 
 ---
 ## Types of Systems
-```ad-sam
+!!! note
+    There are so many different types of ML systems that it is useful to classify them in broad categories based on:
 
-There are so many different types of ML systems that it is useful to classify them in broad categories based on:
+    - Are they trained with human supervision? 
+       - **Supervised**: Where data includes labels for learning.
+       - **Unsupervised**: Where data lacks explicit labels.
+       - **Semisupervised**: 
 
-- Are they trained with human supervision? 
-   - **Supervised**: Where data includes labels for learning.
-   - **Unsupervised**: Where data lacks explicit labels.
-   - **Semisupervised**: 
+       - **Reinforcement**: Where an agent learns by interacting with an environment.
 
-   - **Reinforcement**: Where an agent learns by interacting with an environment.
+    - Can they learn incrementally on the fly?
+       - **Online**: Yes
+       - **Batch**: No
 
-- Can they learn incrementally on the fly?
-   - **Online**: Yes
-   - **Batch**: No
+    - How do they generalize?
+       - **Instance-based**: Can simply comparing new data points to known data points
+       - **Model-based learning**: Require training data to detect patterns
 
-- How do they generalize?
-   - **Instance-based**: Can simply comparing new data points to known data points
-   - **Model-based learning**: Require training data to detect patterns
-
-```
 
 ### Human Supervision
 #### Supervised Learning

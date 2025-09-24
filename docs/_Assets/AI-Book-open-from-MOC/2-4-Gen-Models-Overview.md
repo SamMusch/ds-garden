@@ -80,18 +80,16 @@ When writing advanced models in TensorFlow, remember:
 Autoencoders learn succinct representations. They serve as a foundation for many generative and dimensionality-reduction techniques.
 Structurally, autoencoders consist of an **input layer**, a **hidden layer**, and an **output** **layer**: pasted-image-20241231143947.png.md
 
-```ad-sam
+!!! note
+    **Intuition**
 
-**Intuition**
+    **Autoencoders**: example of encoder --> decoder.
 
-**Autoencoders**: example of encoder --> decoder.
+    1. I have an **idea** that I want to share. I'll explain using an example. Three examples come to mind, and I choose the simplest one.
+    2. The listener hears my example, and then re-generates my original **idea**.
 
-1. I have an **idea** that I want to share. I'll explain using an example. Three examples come to mind, and I choose the simplest one.
-2. The listener hears my example, and then re-generates my original **idea**.
+    We want the **idea** I shared to be as close as possible to the **idea** the listener understands. ("Reconstruction loss")
 
-We want the **idea** I shared to be as close as possible to the **idea** the listener understands. ("Reconstruction loss")
-
-```
 
 **Autoencoders** are a self-supervised approach to representation learning. They operate with two main components:
 1. An **encoder** that compresses (or *encodes*) the input into a smaller, more compact representation (an “information bottleneck”).

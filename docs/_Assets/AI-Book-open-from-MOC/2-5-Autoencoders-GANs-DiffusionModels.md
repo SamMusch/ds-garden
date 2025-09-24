@@ -47,11 +47,11 @@ title: 2.5 Autoencoders, GANs & Diffusion Models (Hands‑On)
 word_count: 5455
 ---
 
-```ad-sam
-May20: Renamed from "Ch 17 Autoencoders, GANs, and Diffusion Models"
+!!! note
+    May20: Renamed from "Ch 17 Autoencoders, GANs, and Diffusion Models"
 
-Note to self - created March 22, 2025. 
-```
+    Note to self - created March 22, 2025. 
+
 
 ## Autoencoders
 

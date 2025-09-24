@@ -56,28 +56,28 @@ Resources
 - [ChatGPT](https://chatgpt.com/share/681792c6-48c0-8000-b324-765516a6ce87): This markdown
 
 ### Everyday Analogy
-```ad-sam
-Imagine reading a paragraph and instantly knowing which earlier sentences are important. 
-That’s what transformers do — they:
-1. read left-to-right AND
-2. weigh relevance across the whole passage in real time
-```
+!!! note
+    Imagine reading a paragraph and instantly knowing which earlier sentences are important. 
+    That’s what transformers do — they:
+    1. read left-to-right AND
+    2. weigh relevance across the whole passage in real time
+
 
 ### What is a Transformer?
-```ad-sam
-Transformers are 
-- a type of DL model
-- the **architecture** behind nearly every language model today.
+!!! note
+    Transformers are 
+    - a type of DL model
+    - the **architecture** behind nearly every language model today.
 
-They look at entire sentences (or documents) all at once.
-```
+    They look at entire sentences (or documents) all at once.
 
-```ad-sam
-Transformers marked a shift 
-from **sequence**-based models 
-to **attention**-based models.
-- **Attention** allows models to see everything at once — a breakthrough for understanding **context**.
-```
+
+!!! note
+    Transformers marked a shift 
+    from **sequence**-based models 
+    to **attention**-based models.
+    - **Attention** allows models to see everything at once — a breakthrough for understanding **context**.
+
 
 > Intro to [Attention is all you Need](https://arxiv.org/abs/1706.03762)
 >
@@ -86,24 +86,23 @@ to **attention**-based models.
 > We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
 
 ### Why They Matter
-```ad-sam
-Traditional models like RNNs had trouble (1) remembering long-term dependencies or (2) were slow to train. 
-Transformers solved both problems:
-- **Parallel Processing**: They process words simultaneously, not sequentially.
-- **Long-Range Context**: They can "attend" to any word, no matter how far apart.
-```
+!!! note
+    Traditional models like RNNs had trouble (1) remembering long-term dependencies or (2) were slow to train. 
+    Transformers solved both problems:
+    - **Parallel Processing**: They process words simultaneously, not sequentially.
+    - **Long-Range Context**: They can "attend" to any word, no matter how far apart.
+
 
 ### Key Ingredients (Without Equations)
-```ad-sam
-**Self-attention is like scanning a room and deciding who’s worth listening to** — for every word in the sentence.
+!!! note
+    **Self-attention is like scanning a room and deciding who’s worth listening to** — for every word in the sentence.
 
 
-- **Tokens**: Break input into chunks (usually words or subwords).
-- **Embeddings**: Convert those chunks into numbers.
-- **Self-Attention**: Each token "looks" at others to decide what matters.
-- **Layers**: These operations repeat multiple times to refine understanding.
+    - **Tokens**: Break input into chunks (usually words or subwords).
+    - **Embeddings**: Convert those chunks into numbers.
+    - **Self-Attention**: Each token "looks" at others to decide what matters.
+    - **Layers**: These operations repeat multiple times to refine understanding.
 
-```
 
 ### Remaining Questions #research
 1. Is it only transformers that have tokens/embeddings/self-attention/layers?

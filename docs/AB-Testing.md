@@ -56,26 +56,25 @@ word_count: 63
 ## Terms
 Assume A is control, B is test.
 
-```ad-sam
-Dependent Variable
-- Continuous
-- Proportions
-```
+!!! note
+    Dependent Variable
+    - Continuous
+    - Proportions
 
-```ad-sam
-Are A & B 2 separate, independent groups?
-- Yes --> **Unpaired**
-- No --> **Paired** (same group, multiple periods)
-```
 
-```ad-sam
-Are we simply comparing B to a known benchmark?
-- Yes --> **One-Sample**
-- No --> **Two-Sample**
-```
+!!! note
+    Are A & B 2 separate, independent groups?
+    - Yes --> **Unpaired**
+    - No --> **Paired** (same group, multiple periods)
 
-```ad-sam
-Does B need to out-perform control?
-- Yes --> **One-Sided**
-- No --> **Two-Sided**
-```
+
+!!! note
+    Are we simply comparing B to a known benchmark?
+    - Yes --> **One-Sample**
+    - No --> **Two-Sample**
+
+
+!!! note
+    Does B need to out-perform control?
+    - Yes --> **One-Sided**
+    - No --> **Two-Sided**
