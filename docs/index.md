@@ -55,10 +55,7 @@ word_count: 368
 
 ## MOCs
 
-_ai-moc.md
-_ml-moc.md
-_ts-moc.md
-
+[[_ML-MOC]]
 
 ## Review Resources
 
@@ -67,7 +64,6 @@ _ts-moc.md
 - **ML**: Supervised | Unsupervised | Deep | Tips
 - **DL**: CNN | RNN | Tips
 - **Refreshers**: [algebra-calculus](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-algebra-calculus.pdf) |[probabilities-statistics](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-probabilities-statistics.pdf)
-
 
 ## Algorithm Types
 

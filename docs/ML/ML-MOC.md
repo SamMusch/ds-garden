@@ -59,17 +59,13 @@ sum(HoursRemain) as Remain
 from outgoing([[]])
 ```
 
-
-
-
-
 ## Hide
 
 | Note                             | Contains | Status  |
 | -------------------------------- | -------- | ------- |
-| ml.md                           |          | Cleaned |
-| deep-learning.md                |          | Cleaned |
+| [[ML-00]]                           |          | Cleaned |
+| [[ML-04-DL]]                |          | Cleaned |
 |                                  |          |         |
-| supervised-2-classification.md  |          |         |
-| supervised-4-regression-eval.md |          |         |
-| supervised-6-ensemble.md        |          |         |
+| [[ML-01-Classification]]  |          |         |
+| [[ML-02-Regression]] |          |         |
+| [[ML-03-Ensemble]]        |          |         |
