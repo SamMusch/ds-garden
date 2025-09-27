@@ -51,12 +51,6 @@ title: Supervised 2 Classification
 word_count: 2107
 ---
 
-Resources
-
-- [Stanford Cheatsheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-machine-learning-tips-and-tricks)
-
-- [k-nn - 100 days guide](https://github.com/Avik-Jain/100-Days-Of-ML-Code/blob/master/Code/Day%2011%20K-NN.md)
-
 [Image: Decision Boundaries](https://i.imgur.com/rljQgL9.jpeg)
 
 

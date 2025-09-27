@@ -73,7 +73,7 @@ word_count: 368
 
 ## Algorithm Types
 
-Regression
+Regression 
 
 - OLS
 
