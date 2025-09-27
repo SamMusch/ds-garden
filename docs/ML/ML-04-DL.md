@@ -2,30 +2,30 @@
 CoverImage: null
 Covers: null
 Due: null
-Function: Hierarchy
-HoursDone: 1
-HoursRemain: 2
-Objective: Reference
-Quality: ★
-QualityComment: Why isn't this a 10?
-ReviewFreq: Weekly, 1-Month, 2-Month, 3-Month
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: Deep Learning.md
+_kMDItemDisplayNameWithExtensions: ML-04-DL.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-07-18'
+created: '2025-09-27'
 cssclasses: null
 grandchildren: 0
-kMDItemContentCreationDate: 2024-09-08 16:01:23 +0000
-kMDItemContentCreationDate_Ranking: 2025-02-01 00:00:00 +0000
-kMDItemContentModificationDate: 2025-05-18 14:35:25 +0000
+kMDItemContentCreationDate: 2025-07-28 00:40:32 +0000
+kMDItemContentCreationDate_Ranking: 2025-09-24 00:00:00 +0000
+kMDItemContentModificationDate: 2025-09-27 21:29:36 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-02-01 17:16:38 +0000
-kMDItemDocumentIdentifier: '97064'
+kMDItemDateAdded: 2025-09-24 21:27:25 +0000
+kMDItemDocumentIdentifier: '173238'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
 kMDItemFSHasCustomIcon: (null)
@@ -37,20 +37,18 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-05-04 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-09-27 00:00:00 +0000
 kMDItemLastUsedDate: 2025-05-04 15:19:41 +0000
 kMDItemLastUsedDate_Ranking: 2025-05-04 00:00:00 +0000
 kMDItemUseCount: '8'
 kMDItemUsedDates: (
-modified: '2025-05-18'
+modified: '2025-09-27'
 published: true
 reading_time: 6.0
-source_file: Deep Learning.md
-tags:
-
-- ml_
-title: Deep Learning
-word_count: 1204
+source_file: ML-04-DL.md
+tags: null
+title: ML 04 DL
+word_count: 1201
 ---
 
 ## GENERAL NEURAL NETWORKS

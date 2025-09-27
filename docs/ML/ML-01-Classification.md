@@ -11,21 +11,21 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: Supervised-2-Classification.md
+_kMDItemDisplayNameWithExtensions: ML-01-Classification.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-07-18'
+created: '2025-09-27'
 cssclasses: null
 grandchildren: 0
-kMDItemContentCreationDate: 2025-02-02 17:03:21 +0000
-kMDItemContentCreationDate_Ranking: 2025-05-18 00:00:00 +0000
-kMDItemContentModificationDate: 2025-07-19 04:04:39 +0000
+kMDItemContentCreationDate: 2025-07-28 00:40:32 +0000
+kMDItemContentCreationDate_Ranking: 2025-07-28 00:00:00 +0000
+kMDItemContentModificationDate: 2025-09-27 21:29:36 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-05-18 14:44:10 +0000
-kMDItemDocumentIdentifier: '97643'
+kMDItemDateAdded: 2025-09-24 21:27:20 +0000
+kMDItemDocumentIdentifier: '173239'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
 kMDItemFSHasCustomIcon: (null)
@@ -37,18 +37,20 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-07-19 00:00:00 +0000
-kMDItemLastUsedDate: 2025-08-02 16:52:34 +0000
-kMDItemLastUsedDate_Ranking: 2025-08-02 00:00:00 +0000
-kMDItemUseCount: '4'
+kMDItemInterestingDate_Ranking: 2025-09-26 00:00:00 +0000
+kMDItemLastUsedDate: 2025-09-26 17:07:57 +0000
+kMDItemLastUsedDate_Ranking: 2025-09-26 00:00:00 +0000
+kMDItemUseCount: '106'
 kMDItemUsedDates: (
-modified: '2025-07-18'
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+modified: '2025-09-27'
 published: true
-reading_time: 10.5
-source_file: Supervised-2-Classification.md
+reading_time: 8.3
+source_file: ML-01-Classification.md
 tags: null
-title: Supervised 2 Classification
-word_count: 2107
+title: ML 01 Classification
+word_count: 1654
 ---
 
 ## Algorithm Summary

@@ -2,34 +2,30 @@
 CoverImage: null
 Covers: null
 Due: null
-Function: Hierarchy
-HoursDone: 0
-HoursRemain: 0
-Objective: Reference
-Quality: ★
-QualityComment: Why isn't this a 10?
-ReviewFreq: Weekly, 1-Month, 2-Month, 3-Month
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: DataScience-HOME.md
+_kMDItemDisplayNameWithExtensions: index.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-07-18'
-cssclasses:
-
-- cards
-
-- cards-readline-off
+created: '2025-09-27'
+cssclasses: null
 grandchildren: 0
-kMDItemContentCreationDate: 2024-12-27 00:02:15 +0000
-kMDItemContentCreationDate_Ranking: 2025-02-01 00:00:00 +0000
-kMDItemContentModificationDate: 2025-07-19 04:40:28 +0000
+kMDItemContentCreationDate: 2025-07-28 00:40:32 +0000
+kMDItemContentCreationDate_Ranking: 2025-07-28 00:00:00 +0000
+kMDItemContentModificationDate: 2025-09-27 21:29:36 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-02-01 17:16:37 +0000
-kMDItemDocumentIdentifier: '96657'
+kMDItemDateAdded: 2025-07-28 00:40:32 +0000
+kMDItemDocumentIdentifier: '173234'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
 kMDItemFSHasCustomIcon: (null)
@@ -41,18 +37,20 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2024-12-31 00:00:00 +0000
-kMDItemLastUsedDate: 2024-12-31 22:44:10 +0000
-kMDItemLastUsedDate_Ranking: 2024-12-31 00:00:00 +0000
-kMDItemUseCount: '24'
+kMDItemInterestingDate_Ranking: 2025-09-27 00:00:00 +0000
+kMDItemLastUsedDate: 2025-09-27 16:57:40 +0000
+kMDItemLastUsedDate_Ranking: 2025-09-27 00:00:00 +0000
+kMDItemUseCount: '94'
 kMDItemUsedDates: (
-modified: '2025-07-18'
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+modified: '2025-09-27'
 published: true
-reading_time: 1.8
-source_file: DataScience-HOME.md
+reading_time: 1.1
+source_file: index.md
 tags: null
-title: DataScience HOME
-word_count: 368
+title: index
+word_count: 222
 ---
 
 ## MOCs
