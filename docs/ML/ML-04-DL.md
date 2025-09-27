@@ -57,8 +57,6 @@ word_count: 1204
 
 https://www.tensorflow.org/tutorials
 
-*From class notes*
-
 Links
 
 - [Ch 13 Code](https://github.com/ageron/handson-ml/blob/637bc1c298a593e02b439ce54aa5de9f8e7f71b4/13_convolutional_neural_networks.ipynb): CNNs
@@ -70,6 +68,7 @@ Links
 - [Andrew Ng Code](https://github.com/dibgerge/ml-coursera-python-assignments/blob/master/Exercise4/exercise4.ipynb): Neural Nets
 
 The activation function is a hyperparameter, the weights and biases are parameters.
+
 
 ### Ch 10
 > In the first part of this chapter, we will introduce artificial neural networks, starting with a quick tour of the very first ANN architectures, leading up to Multi-Layer Per‐ ceptrons (MLPs) which are heavily used today (other architectures will be explored in the next chapters).

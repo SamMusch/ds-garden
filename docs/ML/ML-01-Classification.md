@@ -51,19 +51,7 @@ title: Supervised 2 Classification
 word_count: 2107
 ---
 
-[Image: Decision Boundaries](https://i.imgur.com/rljQgL9.jpeg)
-
-
-## Overview
-
-- **Purity Measures**: Gauge how homogeneous or “pure” each segment is after splitting.
-
-- **Information Gain**: Measures the effectiveness of a new split (or segment) compared to the original.
-
-- **Statistical Significance**: Each additional “child” branch in a tree should be validated, often with a chi-squared test, to confirm that the improvement in segmentation is statistically significant.
-
-## Table Summary
-[ChatGPT](https://chatgpt.com/share/679fc159-020c-8000-b16e-e3fd1b93bfc7)
+## Algorithm Summary
 
 - **k-NN** is intuitive and simple but can be slow for large datasets.
 
@@ -80,22 +68,6 @@ word_count: 2107
 | **Logistic Regression** | Estimates the probability of each class via a **linear combination** of features passed through a **sigmoid** (or softmax) function, making it a **parametric** model. | **Parametric**     | **C**: Inverse regularization strength. <br><br>**multi_class**: One-vs-Rest or multinomial. <br><br>**Regularization** type                                      | Interpretable coefficients. <br><br>Can incorporate **regularization** <br><br>Good when data is linearly (or log-linearly) separable.   | May struggle with highly non-linear relationships. <br><br>Sensitive to outliers if **regularization** is not used properly. Assumes linear (or log-linear) deci-bound.                            | **L1 (Lasso)** <br><br>**L2 (Ridge)** <br><br>**Elastic Net**: Combo of L1 and L2.              |
 | **Decision Trees**      | Splits data into **hierarchical** branches based on feature values, aiming to maximize “purity” at each split.                                                         | **Non-parametric** | **max_depth**: Maximum tree depth.<br><br>**min_samples_leaf**: Minimum samples required in a leaf node. <br><br>Splitting **criterion** (e.g., Gini or Entropy). | Highly interpretable <br><br>Handles numeric & categorical <br><br>Don't need scaling or dummies. <br><br>Handles multi-output problems. | **Overfitting** if grown without constraints. <br><br>Greedy splitting may not yield a global optimum. <br><br>Sensitive to data imbalance. <br><br>Can struggle with certain complex interactions | Indirectly via **max_depth**, **min_samples_leaf**, etc. <br><br>Pruning can reduce overfitting |
 
-## Extra Details
-### Naive Bayes
-
-!!! sam
-    Intuition
-
-    - For each observation, given its characteristics (features), the model computes the probability that it belongs to a particular class. (Often relies on different distributions for numeric columns.)
-
-
-    **Prob of being in group**
-    = prop of my attribute given that they were in the group 
-    \* prop of dataset in the group 
-    / prop of dataset with my attribute
-
-    <img src="https://i.imgur.com/pgtG11S.png" style="zoom:33%;" />
-
 
 ### Logistic
 
@@ -111,52 +83,52 @@ word_count: 2107
 
     $probability(x) \: = \: \frac{1}{e^(-1 \: * \: regression \: model)}$
 
-    [Image | Logistic Regression Sigmoid Curve](https://i.imgur.com/nq0l2cu.png)
+    [Image | Logistic Regression Sigmoid Curve](https://images.prismic.io/encord/434cb8dd-bf4d-4b00-95b6-12fda6d97dc7_Logistic+Regression.png?auto=compress%2Cformat&fit=max)
 
+
+
+!!! sam
     Steps
 
-    1. For each observation in the raw data, we calculate the sum of the coefficients for all variables. This is f(x).
+    1. **Compute linear score:** Per observation, add up the weighted contribution of each variable (ie, model’s raw score).
 
-    2. The x-axis location on the logit plot is the f(x) we calculated above for each observation.
+    2. **Convert to probability:** Pass that score through the S-shaped logistic curve to get a probability between 0 and 1.
 
-    3. For each observation, we then assign the probability of fitting into the top or bottom group according to the logit curve.
+    3. **Compare to reality:** Check how far those probabilities are from the actual group labels (0/1).
 
-    4. We use the probabilities that we found in the logit model as a way to best fit the line that separates our groups apart to minimize the error in our sample. This is how we determine our original slope and intercept.
+    4. **Fit the model:** Adjust the weights so the probabilities match reality as closely as possible across all observations.
 
-    5. We assign L1 as the maximum f(x) that we are willing to allow. (This is lambda)
-       More complex = higher f(x) = larger diamond
+    5. **Regularize (if needed):** Add a penalty for overly large weights so the model stays simple and generalizes better.
 
-    6. We 'underfit' the model until it connects with the blue diamond (ie max complexity we allow). This new model will provide us with a new slope and intercept that will generalize better.
+    6. **Final model:** Use the adjusted weights to make predictions on new data.
+
+
 
 
 #### Regularization
 
-!!! sam
-    Regularization helps prevent **overfitting** by penalizing large coefficients.
+Helps prevent **overfitting** by penalizing large coefficients.
 
-    | **Type**                | **Penalty**                                 | **Key Characteristics**                                                                                          |
-    |-------------------------|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-    | **L1 (Lasso)**          | Sum of absolute values of weights           | - Encourages sparsity (some coefficients may become zero)<br/>- Can be unstable with highly correlated features<br/>- Avoids using all features if many are redundant |
-    | **L2 (Ridge)**          | Sum of squared values of weights            | - Tends to shrink coefficients but rarely sets any to zero<br/>- More stable in the presence of correlated features |
-    | **Elastic Net (L1 + L2)** | Combination of L1 and L2 penalties         | - Useful when multiple correlated features are suspected<br/>- Retains feature selection from L1 while benefiting from L2’s stability |
-    [Image | Regularization](https://i.imgur.com/kkS2s4S.png)
-    [Image | Normalization](https://i.imgur.com/sZeYixm.png)
+| **Type**                  | **Penalty**                         | **Key Characteristics**                                                                                                                                               |
+| ------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **L1 (Lasso)**            | Sum of *absolute* values of weights | - Encourages sparsity (some coefficients may become zero)<br/>- Can be unstable with highly correlated features<br/>- Avoids using all features if many are redundant |
+| **L2 (Ridge)**            | Sum of *squared* values of weights  | - Tends to shrink coefficients but rarely sets any to zero<br/>- More stable in the presence of correlated features                                                   |
+| **Elastic Net (L1 + L2)** | Combination of L1 and L2 penalties  | - Useful when multiple correlated features are suspected<br/>- Retains feature selection from L1 while benefiting from L2’s stability                                 |
 
 
-### Decision Trees
 
-#### Purity
+### DT Purity
 
-!!! sam
-    When deciding how to split a node, decision tree algorithms use measures like **Gini Impurity** or **Entropy** to assess how "pure" the resulting child nodes are. Below is a quick comparison:
+When deciding how to split a node, decision tree algorithms use measures like **Gini Impurity** or **Entropy** to assess how "pure" the resulting child nodes are.
 
-    | **Measure**      | **Range (Binary Setting)** | **Calculation**                  | **Characteristics**                                                                                  |
-    |------------------|----------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------|
-    | **Gini Impurity**| 0 (pure) to 0.5 (impure)  | Uses squares of class probabilities | - Slightly faster to compute<br>- Tends to isolate the most frequent class                          |
-    | **Entropy**      | 0 (pure) to 0.5 (impure)  | Uses logs of class probabilities    | - Tends to produce more balanced splits                                                              |
+| **Measure**      | **Range (Binary Setting)** | **Calculation**                  | **Characteristics**                                                                                  |
+|------------------|----------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Gini Impurity**| 0 (pure) to 0.5 (impure)  | Uses squares of class probabilities | - Slightly faster to compute<br>- Tends to isolate the most frequent class                          |
+| **Entropy**      | 0 (pure) to 0.5 (impure)  | Uses logs of class probabilities    | - Tends to produce more balanced splits                                                              |
 
 
-## Week 3: Class Eval
+
+## Evaluation
 
 - [How to train a model](https://sebastianraschka.com/faq/docs/evaluate-a-model.html)
 
@@ -168,7 +140,7 @@ word_count: 2107
 
 1. **Imbalanced Class Distributions**: When one class dominates, accuracy may inflate how well the model performs.
 
-2. **Ignoring Economic Costs/Benefits**: Different types of errors can have varying costs. It’s often more insightful to build a cost/benefit matrix and maximize profit, rather than maximizing accuracy.
+2. **Ignoring Economic Costs/Benefits**: Use a cost/benefit matrix to maximize profit.
 
 Cost-Benefit Approach
 
@@ -182,13 +154,12 @@ Cost-Benefit Approach
 
 ### Formulas (TP, FP, TN, FN)
 
-!!! sam
-    | **Metric**                            | **Formula**          |
-    | ------------------------------------- | -------------------- |
-    | **True Positive Rate (TPR) / Recall** | $\frac{TP}{TP + FN}$ |
-    | **False Positive Rate (FPR)**         | $\frac{FP}{FP + TN}$ |
-    | **Precision**                         | $\frac{TP}{TP + FP}$ |
-    | **Recall (Same as TPR)**              | $\frac{TP}{TP + FN}$ |
+| **Metric**                            | **Formula**          |
+| ------------------------------------- | -------------------- |
+| **True Positive Rate (TPR) / Recall** | $\frac{TP}{TP + FN}$ |
+| **False Positive Rate (FPR)**         | $\frac{FP}{FP + TN}$ |
+| **Precision**                         | $\frac{TP}{TP + FP}$ |
+| **Recall (Same as TPR)**              | $\frac{TP}{TP + FN}$ |
 
 
 ### Model Evaluation Techniques
@@ -197,36 +168,35 @@ Cost-Benefit Approach
 
 `Scope`
 
-- **Within**: These methods evaluate how well a single model is performing, often helping diagnose issues like overfitting, threshold tuning, and class imbalance.
+- **Within**: Evaluate a single model (diagnose overfitting, threshold tuning, and class imbalance)
 
-- **Across**: These methods compare multiple models or evaluate the model’s added value over a random baseline.
+- **Across**: Compare multiple models, or compare model vs baseline.
 
-- **Either**: Some techniques can be used **either within a model** (e.g., tuning a threshold) or **across models** (e.g., selecting the best-performing one).
+- **Either**
 
-!!! sam
-    | `Scope` | **Evaluation Technique**                                | **What**                                                                                                              | **Why**                                                                                                                    | **Imbalanced Data Suitability**                                                                                       |                                                                                                     |
-    | ------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-    | Within  | **Confusion Matrix**                                    | Shows the counts of (TP, TN, FP, FN)                                                                                  | From here, can derive performance metrics.                                                                                 | -                                                                                                                     | [Imgur](https://i.imgur.com/GqFRVwK.png)                                                            |
-    | Within  | **ROC Curve**<br> <br>Receiver Operating Characteristic | Plots TPR vs. FPR at different probability thresholds.                                                                | Offers insight into the trade-off between TP & FP.                                                                         | **Bad**. When negative class is large, the FPR remains deceptively low, which makes ROC curve look overly optimistic. | [Img1](https://i.imgur.com/MWVJ5bc.png), [Img2](https://i.imgur.com/icN6gnX.png)                    |
-    | Either  | **AUC**<br><br>Area Under the ROC Curve                 | A single-number summary (the area under the ROC curve).                                                               | $\text{AUC} = 1$ indicates a perfect model. <br><br>$\text{AUC} = 0.5$ indicates a model with no discriminative power.     | -                                                                                                                     | [Imgur](https://i.imgur.com/HLScrQ3.png)                                                            |
-    | Either  | **Precision-Recall Curve**                              | Plots precision vs. recall as the decision threshold varies.                                                          | Especially useful for imbalanced datasets, or when false positives and false negatives incur high costs.                   | **Good**. Focuses on the minority class, where precision and recall are most critical.                                | [Img](https://i.imgur.com/oD7MUiT.png)<br><br>[Best & Worst Cases](https://i.imgur.com/3ukkvJx.png) |
-    | Across  | **Lift Chart**                                          | Compares the model’s performance against a random baseline.                                                           | Shows how many more positives are identified by the model compared to random selection.                                    | **Good**. Especially relevant if you’re trying to identify a small minority class more effectively than chance.       | [Imgur](https://i.imgur.com/F6HmCkn.png)                                                            |
-    | Across  | **Gain Chart**                                          | Displays cumulative gain (the fraction of positives identified) as you move through the sorted predictions.           | Similar to Lift, it shows the improvement gained by the model over random selection.                                       | **Good**. Like the Lift chart, it highlights model performance on minority classes.                                   | [Imgur - Profit Curve](https://i.imgur.com/SD9BQdL.png)                                             |
-    | Across  | **Cumulative Response Curve**                           | Shows the proportion of positive instances captured as you move through the ranked predictions.                       | Commonly used in marketing and lead-generation applications to understand how quickly you capture most of the “yes” cases. | -                                                                                                                     | [Cumulative response curve](https://i.imgur.com/MJdeBr0.png)                                        |
-    | Within  | **Validation Curve**                                    | Plots the training and validation scores across different levels of model complexity (e.g., varying hyperparameters). | Helps diagnose overfitting or underfitting by showing whether the model performance is improving or plateauing.            | -                                                                                                                     | [Imgur](https://i.imgur.com/lnaPwKO.png)                                                            |
+| `Scope` | **Evaluation Technique**                                | **What**                                                                                                              | **Why**                                                                                                                    | **Imbalanced Data Suitability**                                                                                       |
+| ------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Within  | **Confusion Matrix**                                    | Shows counts of TP, TN, FP, FN                                                                                        | Derive performance metrics.                                                                                                | -                                                                                                                     |
+| Within  | **ROC Curve**<br> <br>Receiver Operating Characteristic | Plots TPR vs. FPR at different probability thresholds.                                                                | Offers insight into the trade-off between TP & FP.                                                                         | **Bad**. When negative class is large, the FPR remains deceptively low, which makes ROC curve look overly optimistic. |
+| Either  | **AUC**<br><br>Area Under the ROC Curve                 | A single-number summary (the area under the ROC curve).                                                               | $\text{AUC} = 1$ indicates a perfect model. <br><br>$\text{AUC} = 0.5$ indicates a model with no discriminative power.     | -                                                                                                                     |
+| Either  | **Precision-Recall Curve**                              | Plots precision vs. recall as the decision threshold varies.                                                          | Especially useful for imbalanced datasets, or when false positives and false negatives incur high costs.                   | **Good**. Focuses on the minority class, where precision and recall are most critical.                                |
+| Across  | **Lift Chart**                                          | Compares the model’s performance against a random baseline.                                                           | Shows how many more positives are identified by the model compared to random selection.                                    | **Good**. Especially relevant if you’re trying to identify a small minority class more effectively than chance.       |
+| Across  | **Gain Chart**                                          | Displays cumulative gain (the fraction of positives identified) as you move through the sorted predictions.           | Similar to Lift, it shows the improvement gained by the model over random selection.                                       | **Good**. Like the Lift chart, it highlights model performance on minority classes.                                   |
+| Across  | **Cumulative Response Curve**                           | Shows the proportion of positive instances captured as you move through the ranked predictions.                       | Commonly used in marketing and lead-generation applications to understand how quickly you capture most of the “yes” cases. | -                                                                                                                     |
+| Within  | **Validation Curve**                                    | Plots the training and validation scores across different levels of model complexity (e.g., varying hyperparameters). | Helps diagnose overfitting or underfitting by showing whether the model performance is improving or plateauing.            | -                                                                                                                     |
+
 
 
 ### Single-Value Measures
 
-!!! sam
-    | **Metric**                                 | **What**                                                                                                                                                                          | **Why**                                                                                                                               | **Imbalanced Data Suitability**                                                                              |                                          |
-    | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-    | **F-Measure (F1 Score)**                   | The harmonic mean of precision and recall: <br> $F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$                                    | Combines precision and recall into a single metric, weighting them equally.                                                           | **Good**. Highlights performance on the minority class, where both precision and recall can be low.          | [Imgur](https://i.imgur.com/yV39H3u.png) |
-    | **Matthews Correlation Coefficient (MCC)** | A correlation coefficient between observed and predicted classifications: <br> $\text{MCC} = \frac{(TP \times TN) - (FP \times FN)}{\sqrt{(TP + FP)(TP + FN)(TN + FP)(TN + FN)}}$ | Accounts for all four quadrants (\(TP, TN, FP, FN\)) and provides a balanced measure even if the classes are of very different sizes. | **Good**. MCC is often more informative than accuracy and works well with imbalanced classes.                | [Imgur](https://i.imgur.com/ekP8auk.png) |
-    | **Cohen’s Kappa**                          | Measures agreement between the model’s predictions and the true labels, adjusted for chance agreement.                                                                            | In imbalanced scenarios, a model might appear good by randomly guessing the majority class. Kappa accounts for this chance agreement. | **Mostly good**. While it adjusts for chance, it can still be influenced by highly imbalanced distributions. | [Imgur](https://i.imgur.com/nKydIUS.png) |
+| **Metric**                                 | **What**                                                                                                                                                                          | **Why**                                                                                                                               | **Imbalanced Data Suitability**                                                                              |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **F-Measure (F1 Score)**                   | The harmonic mean of precision and recall: <br> $F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$                                    | Combines precision and recall into a single metric, weighting them equally.                                                           | **Good**. Highlights performance on the minority class, where both precision and recall can be low.          |
+| **Matthews Correlation Coefficient (MCC)** | A correlation coefficient between observed and predicted classifications: <br> $\text{MCC} = \frac{(TP \times TN) - (FP \times FN)}{\sqrt{(TP + FP)(TP + FN)(TN + FP)(TN + FN)}}$ | Accounts for all four quadrants (\(TP, TN, FP, FN\)) and provides a balanced measure even if the classes are of very different sizes. | **Good**. MCC is often more informative than accuracy and works well with imbalanced classes.                |
+| **Cohen’s Kappa**                          | Measures agreement between the model’s predictions and the true labels, adjusted for chance agreement.                                                                            | In imbalanced scenarios, a model might appear good by randomly guessing the majority class. Kappa accounts for this chance agreement. | **Mostly good**. While it adjusts for chance, it can still be influenced by highly imbalanced distributions. |
 
 
-[ChatGPT - Types of Means](https://chatgpt.com/share/679fa4e5-5a1c-8000-a4c1-0c6d86650e7e) - Arithmetic, harmonic, geometric
+
 
 ## Classification Code
 

@@ -51,15 +51,12 @@ title: Supervised 6 Ensemble
 word_count: 542
 ---
 
-## Week 6: Ensemble
-
-- [Interactive Playground](http://arogozhnikov.github.io/2016/07/05/gradient_boosting_playground.html)
-
 - [Short Review Video](https://www.youtube.com/watch?v=m-S9Hojj1as)
 
 - [Bias vs Variance Graph](https://i.imgur.com/p6nfbsj.png)
 
 - [Summary of 6 techniques](https://i.imgur.com/PWVMWRG.png)
+
 
 Data vs Model
 
@@ -76,6 +73,7 @@ Why ensemble?
 2. Bias: when no matter how many obs we get, our model will never reach perfection
 
 3. Variance: we are limited to samples, and these samples are never identical
+
 
 **Bias/Variance Tradeoff**
 

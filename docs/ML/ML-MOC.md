@@ -47,25 +47,10 @@ title: ' ML MOC'
 word_count: 19
 ---
 
-```dataview
-TABLE without id
-
-file.link,
-
-Quality,
-
-
-sum(HoursRemain) as Remain
-from outgoing([[]])
-```
-
-## Hide
-
-| Note                             | Contains | Status  |
-| -------------------------------- | -------- | ------- |
-| [[ML-00]]                           |          | Cleaned |
-| [[ML-04-DL]]                |          | Cleaned |
-|                                  |          |         |
-| [[ML-01-Classification]]  |          |         |
-| [[ML-02-Regression]] |          |         |
-| [[ML-03-Ensemble]]        |          |         |
+| Note                     | Contains |
+| ------------------------ | -------- |
+| [[ML-00]]                |          |
+| [[ML-01-Classification]] |          |
+| [[ML-02-Regression]]     |          |
+| [[ML-03-Ensemble]]       |          |
+| [[ML-04-DL]]             |          |

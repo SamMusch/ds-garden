@@ -51,8 +51,6 @@ title: Supervised 4 Regression Eval
 word_count: 76
 ---
 
-## Week 4: Regression Eval
-
 ### Evaluation
 
 - **MAE** = Mean absolute error
