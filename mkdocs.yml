@@ -7,10 +7,15 @@ extra_css:
   - stylesheets/ad-sam.css
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/ad-sam-copy.js
+
 strict: false   # ✅ add here to turn build errors into warnings
+
 
 theme:
   name: material
+  favicon: images/favicon.svg
   palette:
     primary: custom
   font:

@@ -32,3 +32,51 @@
 .md-typeset .admonition.sam > .admonition-content {
   padding-top: .2rem;
 }
+
+
+
+
+/* Hide the title line inside ad-sam admonitions */
+.md-typeset .admonition.sam > .admonition-title {
+  display: none;
+}
+
+/* Tighten top spacing since the title is gone and position container for the copy button */
+.md-typeset .admonition.sam {
+  position: relative;
+  padding-top: .5rem;
+}
+
+
+
+/* --------------- COPY BUTTON --------------- */
+/* Copy button in the top-right of the box */
+.md-typeset .admonition.sam .ad-sam__copy {
+  position: absolute;
+  top: .4rem;
+  right: .6rem;
+  padding: .2rem .5rem;
+  font-size: .72rem;
+  line-height: 1;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: .35rem;
+  background: rgba(0,0,0,.04);
+  cursor: pointer;
+}
+
+.md-typeset .admonition.sam .ad-sam__copy:hover {
+  background: rgba(0,0,0,.08);
+}
+
+.md-typeset .admonition.sam .ad-sam__copy--ok {
+  border-color: transparent;
+  background: rgba(0,150,0,.12);
+}
+
+/* Make copy button 30% of its previous size */
+.md-typeset .admonition.sam .ad-sam__copy {
+  transform: scale(0.8);     /* shrink the whole button */
+  transform-origin: top right;
+  font-size: 80%;            /* scale text as well (fallback for browsers) */
+  padding: 0.1rem 0.3rem;    /* adjust padding for visual balance */
+}

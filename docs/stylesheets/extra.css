@@ -39,3 +39,13 @@
   text-decoration: underline;
   opacity: 0.85;
 }
+
+
+
+
+/* === Change top-left site icon color === */
+.md-header .md-icon,
+.md-header .md-icon svg {
+  color: #b388ff !important;
+  fill: #b388ff !important;
+}
