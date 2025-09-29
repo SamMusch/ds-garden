@@ -49,8 +49,18 @@ word_count: 16
 
 | Note                     | Contains |
 | ------------------------ | -------- |
-| [[ML-00]]                |          |
-| [[ML-01-Classification]] |          |
-| [[ML-02-Regression]]     |          |
-| [[ML-03-Ensemble]]       |          |
-| [[ML-04-DL]]             |          |
+| [[ML-01]]                |          |
+| [[ML-03-Classification]] |          |
+| [[ML-04-Regression]]     |          |
+| [[ML-07-Ensemble]]       |          |
+| [[ML-10-DL]]             |          |
+
+ [Stanford](https://stanford.edu/~shervine/teaching/cs-229): 3 separate courses.
+
+- **AI**: Reflex | States | Variables | Logic
+
+- **ML**: Supervised | Unsupervised | Deep | Tips
+
+- **DL**: CNN | RNN | Tips
+
+- **Refreshers**: [algebra-calculus](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-algebra-calculus.pdf) |[probabilities-statistics](https://github.com/afshinea/stanford-cs-229-machine-learning/blob/master/en/refresher-probabilities-statistics.pdf)
