@@ -47,15 +47,7 @@ title: ' ML MOC'
 word_count: 16
 ---
 
-| Note                     | Contains |
-| ------------------------ | -------- |
-| [[ML-01]]                |          |
-| [[ML-03-Classification]] |          |
-| [[ML-04-Regression]]     |          |
-| [[ML-07-Ensemble]]       |          |
-| [[ML-10-DL]]             |          |
-
- [Stanford](https://stanford.edu/~shervine/teaching/cs-229): 3 separate courses.
+[Stanford](https://stanford.edu/~shervine/teaching/cs-229): 3 separate courses.
 
 - **AI**: Reflex | States | Variables | Logic
 
