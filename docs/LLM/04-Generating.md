@@ -2,15 +2,18 @@
 published: true
 ---
 
-**Ch 3** (INDEX): create KB | non-parametric memory | convert and store data in numerical form for later retrieval.
+!!! sam
+    **Ch 3** (INDEX): create KB | non-parametric memory | convert and store data in numerical form for later retrieval.
 
-**Ch 4** (GENERATE): create a generation pipeline to use ^
+    **Ch 4** (GENERATE): create a generation pipeline to use ^
 
-1. **R** | Retrieve relevant information from the KB based on a user query.
+    1. **R** | Retrieve relevant information from the KB based on a user query.
 
-2. **A** | Augment user query with fetched information to create a prompt for the LLM.
+    2. **A** | Augment user query with fetched information to create a prompt for the LLM.
 
-3. **G** | Generated response via LLM.
+    3. **G** | Generated response via LLM.
+
+
 
 ## Retrieval
 R ⟶ A ⟶ G
