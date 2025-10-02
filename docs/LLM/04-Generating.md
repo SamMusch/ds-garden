@@ -2,11 +2,9 @@
 published: true
 ---
 
-- **Ch 3** (INDEX): create KB | non-parametric memory | convert and store data in numerical form for later retrieval.
+**Ch 3** (INDEX): create KB | non-parametric memory | convert and store data in numerical form for later retrieval.
 
-- **Ch 4** (GENERATE): create a generation pipeline to use ^
-
-Process:
+**Ch 4** (GENERATE): create a generation pipeline to use ^
 
 1. **R** | Retrieve relevant information from the KB based on a user query.
 
@@ -15,7 +13,6 @@ Process:
 3. **G** | Generated response via LLM.
 
 ## Retrieval
-
 R ⟶ A ⟶ G
 
 - **R: Retrieve info**
@@ -24,14 +21,11 @@ R ⟶ A ⟶ G
 
 - G: Generate response
 
-**Information retrieval** (IR): the science of searching.
-**KB**: Several volumes of *documents*, where *documents* refers to stored embeddings in the vector db.
-
 !!! sam
     **Retrieval**: for an input query, the process of finding & extracting most relevant info from KB.
     **Retriever**: component doing this ^.
 
-    - **process**: accept query as input ⟶ return a list of matching documents as output
+    - **process**: accept query as input ⟶ return a list of matching documents (stored embeddings) as output
 
     - see [Figure 4.1 Generation pipeline](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH04_F01_Kimothi.png)
 
@@ -76,7 +70,7 @@ R ⟶ A ⟶ G
 
 
 !!! sam
-    Besides methods above, some other popular retrievers:
+    Besides above methods, other popular retrievers:
 
     1. **Vector stores and DBs**:
 
@@ -90,7 +84,6 @@ R ⟶ A ⟶ G
 
 
 ## Augmentation
-
 R ⟶ A ⟶ G
 
 - R: Retrieve info
@@ -119,7 +112,6 @@ R ⟶ A ⟶ G
 | Chain-of-thought (CoT) prompting | Introduces intermediate reasoning steps                                                     | Improves performance on complex reasoning tasks  | Complex queries requiring step-by-step analysis | Medium     |
 
 ## Generation
-
 **R ⟶ A ⟶ G
 
 - R: Retrieve info
@@ -136,7 +128,8 @@ Choosing an LLM | 3 themes to help categorize:
 
 - Model size
 
-#### Foundation v fine-tuned
+
+1st theme | **Foundation v fine-tuned**
 
 !!! sam
     **Foundation models**: massive pre-trained LLMs.
@@ -156,7 +149,8 @@ Choosing an LLM | 3 themes to help categorize:
     - **benefits**: Domain specialization, retrieval integration w KB, response customization, output control
 
 
-#### Open source v proprietary
+
+2nd theme | **Open source v proprietary**
 
 !!! sam
     **Open source**: more flexible, but need infrastructure and maintenance.
@@ -172,7 +166,8 @@ Choosing an LLM | 3 themes to help categorize:
     - *Cost*: Open source has higher up-front fixed costs, lower variable costs over time.
 
 
-#### Model sizes
+
+3rd theme | Model size
 
 !!! sam
     Criteria
