@@ -11,17 +11,17 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: ML-03-Ensemble.md
+_kMDItemDisplayNameWithExtensions: ML-07-Ensemble.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-09-27'
+created: '2025-10-04'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-07-28 00:40:32 +0000
-kMDItemContentCreationDate_Ranking: 2025-09-24 00:00:00 +0000
-kMDItemContentModificationDate: 2025-09-27 21:29:36 +0000
+kMDItemContentCreationDate_Ranking: 2025-07-28 00:00:00 +0000
+kMDItemContentModificationDate: 2025-10-04 15:51:55 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-09-24 21:27:23 +0000
@@ -37,18 +37,20 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-08-02 00:00:00 +0000
-kMDItemLastUsedDate: 2025-08-02 16:52:41 +0000
-kMDItemLastUsedDate_Ranking: 2025-08-02 00:00:00 +0000
-kMDItemUseCount: '35'
+kMDItemInterestingDate_Ranking: 2025-09-29 00:00:00 +0000
+kMDItemLastUsedDate: 2025-09-29 14:53:00 +0000
+kMDItemLastUsedDate_Ranking: 2025-09-29 00:00:00 +0000
+kMDItemUseCount: '218'
 kMDItemUsedDates: (
-modified: '2025-09-27'
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+modified: '2025-10-04'
 published: true
-reading_time: 2.6
-source_file: ML-03-Ensemble.md
+reading_time: 3.1
+source_file: ML-07-Ensemble.md
 tags: null
-title: ML 03 Ensemble
-word_count: 528
+title: ML 07 Ensemble
+word_count: 614
 ---
 
 Quick Review
