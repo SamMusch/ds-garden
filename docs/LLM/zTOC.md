@@ -50,16 +50,11 @@ word_count: 374
 Delete this after completing the book.
 
 
-**Textbook**: A Simple Guide to RAG
+**Textbook**: A Simple Guide to RAG | [Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html) | [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG)
 
-- [Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html)
-
-- [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG)
 
 !!! sam
-    Intuition, not from this textbook.
-
-    [RECAP: RAG and Fine-Tuning](https://www.coursera.org/learn/generative-ai-for-everyone/lecture/GTmd7/practically-speaking-retrieval-meets-refinement)
+    Intuition, not from this textbook. [RECAP: RAG and Fine-Tuning](https://www.coursera.org/learn/generative-ai-for-everyone/lecture/GTmd7/practically-speaking-retrieval-meets-refinement)
 
     - **RAG**: Smart student being given new info right before an exam.
 

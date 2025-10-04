@@ -64,7 +64,7 @@ This framework involves the following six stages:
 6. *Maintenance*: Track and improve
 
 
-In detail
+In greater detail
 
 1. *Initiation*
 
@@ -129,11 +129,7 @@ Requirement gathering, multiple lenses:
 
 #### 9.1.1 Requirements analysis
 
-Should
-
-- be clear, precise, and quantifiable
-
-- lead to specific dev steps
+Should be quantifiable and lead to specific dev steps.
 
 good criteria for success metrics
 
