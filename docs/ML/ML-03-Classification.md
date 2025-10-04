@@ -11,17 +11,17 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: ML-01-Classification.md
+_kMDItemDisplayNameWithExtensions: ML-03-Classification.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-09-27'
+created: '2025-10-04'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-07-28 00:40:32 +0000
 kMDItemContentCreationDate_Ranking: 2025-07-28 00:00:00 +0000
-kMDItemContentModificationDate: 2025-09-27 21:29:36 +0000
+kMDItemContentModificationDate: 2025-10-04 15:51:55 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-09-24 21:27:20 +0000
@@ -40,16 +40,16 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-09-26 00:00:00 +0000
 kMDItemLastUsedDate: 2025-09-26 17:07:57 +0000
 kMDItemLastUsedDate_Ranking: 2025-09-26 00:00:00 +0000
-kMDItemUseCount: '106'
+kMDItemUseCount: '118'
 kMDItemUsedDates: (
 kMDItemUserModifiedDate: (
 kMDItemUserModifiedUserHandle: (
-modified: '2025-09-27'
+modified: '2025-10-04'
 published: true
 reading_time: 8.3
-source_file: ML-01-Classification.md
+source_file: ML-03-Classification.md
 tags: null
-title: ML 01 Classification
+title: ML 03 Classification
 word_count: 1654
 ---
 

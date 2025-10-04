@@ -16,12 +16,12 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-09-27'
+created: '2025-10-04'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-07-28 00:40:32 +0000
 kMDItemContentCreationDate_Ranking: 2025-09-24 00:00:00 +0000
-kMDItemContentModificationDate: 2025-09-27 21:29:36 +0000
+kMDItemContentModificationDate: 2025-10-04 15:51:55 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-09-24 21:28:18 +0000
@@ -37,14 +37,14 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-09-27 00:00:00 +0000
-modified: '2025-09-27'
+kMDItemInterestingDate_Ranking: 2025-10-04 00:00:00 +0000
+modified: '2025-10-04'
 published: true
-reading_time: 0.1
+reading_time: 0.3
 source_file: _ML-MOC.md
 tags: null
 title: ' ML MOC'
-word_count: 16
+word_count: 62
 ---
 
 [Stanford](https://stanford.edu/~shervine/teaching/cs-229): 3 separate courses.

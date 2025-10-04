@@ -11,17 +11,17 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: ML-04-DL.md
+_kMDItemDisplayNameWithExtensions: ML-10-DL.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-09-27'
+created: '2025-10-04'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-07-28 00:40:32 +0000
 kMDItemContentCreationDate_Ranking: 2025-09-24 00:00:00 +0000
-kMDItemContentModificationDate: 2025-09-27 21:29:36 +0000
+kMDItemContentModificationDate: 2025-10-04 15:51:55 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-09-24 21:27:25 +0000
@@ -37,18 +37,18 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-09-27 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-10-04 00:00:00 +0000
 kMDItemLastUsedDate: 2025-05-04 15:19:41 +0000
 kMDItemLastUsedDate_Ranking: 2025-05-04 00:00:00 +0000
 kMDItemUseCount: '8'
 kMDItemUsedDates: (
-modified: '2025-09-27'
+modified: '2025-10-04'
 published: true
-reading_time: 6.0
-source_file: ML-04-DL.md
+reading_time: 5.7
+source_file: ML-10-DL.md
 tags: null
-title: ML 04 DL
-word_count: 1201
+title: ML 10 DL
+word_count: 1149
 ---
 
 ## GENERAL NEURAL NETWORKS
