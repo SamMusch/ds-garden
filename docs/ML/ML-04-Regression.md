@@ -56,7 +56,7 @@ word_count: 239
 
     1. **a closed-form solution** (Normal Equation): a mathematical equation that gives the result directly
 
-    2. **iterative optimization** (GD: batch, stochastic, mini-batch): initialize model parameters randomly --> tweak to min cost function
+    2. **iterative optimization** (GD: batch, stochastic, mini-batch): initialize model parameters randomly ---> tweak to min cost function
 
     Iterative optimization (gradient descent)
 

@@ -184,7 +184,7 @@ Recall:
 Complexity increases with scale.
 Pay attention to the source systems & their file formats.
 
-Questions about connecting **data layer** --> **source systems**:
+Questions about connecting **data layer** ---> **source systems**:
 
 - which tools do we need?
 
@@ -213,7 +213,7 @@ Answers determine the
 
 
 #### Considerations: Data transformation
-source data --> data layer --> *transformation step*
+source data ---> data layer ---> *transformation step*
 
 *transformation step* converts the data into a suitable format for the knowledge base. 
 
@@ -280,7 +280,7 @@ embeddings questions
 - Do we need to fine-tune embeddings for our use case? Do we have the training data for fine-tuning? How will the training data be sourced?
 
 #### Considerations: Data storage
-source data --> data layer --> transformation step --> *storage*
+source data ---> data layer ---> transformation step ---> *storage*
 
 "The final component of the data layer is the storage."
 

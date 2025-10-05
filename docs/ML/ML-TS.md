@@ -769,7 +769,7 @@ Huber Loss for training: Good for optimizing MAE
 
 Early Stopping Callback:
 
-- Patience = 10  --> Interupts training when validation doesn't improve for 10 consecutive epochs
+- Patience = 10  ---> Interupts training when validation doesn't improve for 10 consecutive epochs
 
 - This allows us to set epochs = 500 because early stopping will happen way sooner
 

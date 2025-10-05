@@ -110,7 +110,7 @@ len(openai_embedding[0]) # 1536
 # 3.4.2
 # vector index: FAISS from Facebook
 
-# TASK: convert the 285 chunks --> vector embeddings --> stored in a FAISS vector index
+# TASK: convert the 285 chunks ---> vector embeddings ---> stored in a FAISS vector index
 
 from langchain_community.vectorstores import FAISS
 from langchain_community.docstore.in_memory import InMemoryDocstore

@@ -66,9 +66,9 @@ Quick Review
 !!! sam
     A model’s **generalization error** is the sum of 3 different errors:
 
-    1. **Bias**: Error due to wrong assumptions, eg functional form. High bias --> underfit.
+    1. **Bias**: Error due to wrong assumptions, eg functional form. High bias ---> underfit.
 
-    2. **Variance**: Error due to model’s sensitivity to small variations in the training data. High variance --> overfit.
+    2. **Variance**: Error due to model’s sensitivity to small variations in the training data. High variance ---> overfit.
 
     3. **Irreducible error**: Error due to data noise.
 
@@ -200,9 +200,9 @@ Pg 205 for hyperparameters
 
     **Components**:
 
-    - Training data --> 1st subset (for training each base predictor)
+    - Training data ---> 1st subset (for training each base predictor)
 
-    - Training data --> 2nd subset (*hold-out* set for training the blender)
+    - Training data ---> 2nd subset (*hold-out* set for training the blender)
 
     **Process**: [Image](https://i.imgur.com/BrYlLUb.png)
 
@@ -212,7 +212,7 @@ Pg 205 for hyperparameters
 
     3. **Predict**: Make predictions on the *holdout* set. 
 
-    4. **Assemble new training set**: Take predicted values --> use as input features in new training set (3D).
+    4. **Assemble new training set**: Take predicted values ---> use as input features in new training set (3D).
 
     5. **Train/Blend**: Train new model based on only these 3 features. (Called a "meta-model" or *blender*.)
 
