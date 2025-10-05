@@ -114,32 +114,8 @@ NOTE 25-09-30:
     - *Security*: protect against prompt injection, data poisoning, etc
 
 
-**Evaluation**
-
-!!! sam
-    **Evaluation and monitoring**: covers relevance between the..
-
-    - retrieved info & query
-
-    - final response & retrieved info
-
-    - final response & original query
-
-    **Common metrics**: relevance scores, recall, precision
-
-    **TruEra's framework**: Checks "in-between" each step.
-
-    1. User prompt:
-        ***Context relevance***: Is the retrieved info relevant?
-
-    2. Retrieval:
-        ***Groundedness***: Is the response faithful to the retrieved context?
-
-    3. Response:
-        ***Answer relevance***: Is the answer relevant to the user's query?
 
 
-[Figure 2.7 Evaluation proposed by TruEra.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH02_F07_Kimothi.png)
 
 ### RAGOps / Layers
 
