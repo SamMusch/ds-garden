@@ -32,7 +32,7 @@ jobs:
           python -m pip install             mkdocs             mkdocs-material             mkdocs-awesome-pages-plugin             mkdocs-roamlinks-plugin
 
       - name: Verify plugin import
-        run: python -c "import mkdocs_mermaid2_plugin, mkdocs; print('mkdocs', mkdocs.__version__)"
+        run: python -c "import mkdocs; print('mkdocs', mkdocs.__version__)"
 
       - name: Build site
         run: |
