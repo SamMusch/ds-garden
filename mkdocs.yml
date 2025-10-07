@@ -36,14 +36,19 @@ plugins:
   - search
   - awesome-pages
   - roamlinks
+  - mermaid2
 
 markdown_extensions:
   - admonition
   - attr_list
   - pymdownx.details
-  - pymdownx.superfences
   - toc:
       permalink: true
   - tables
   - footnotes
   - def_list
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
