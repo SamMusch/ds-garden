@@ -9,6 +9,8 @@ extra_css:
 
 extra_javascript:
   - javascripts/ad-sam-copy.js
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/init-mermaid.js
 
 strict: false   # build warnings are okay; switch to true later
 
@@ -35,10 +37,10 @@ plugins:
   - search
   - awesome-pages
   - roamlinks
-  - mermaid2:
-      arguments:
-        theme: default
-      javascript: https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs
+#  - mermaid2:
+#      arguments:
+#        theme: default
+#      javascript: https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs
 
 markdown_extensions:
   - admonition
