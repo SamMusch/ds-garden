@@ -5,7 +5,6 @@ published: true
 ## Summary
 
 ```mermaid
-
 flowchart LR
   %% Nodes
   QS[Quality Scores]
@@ -25,7 +24,6 @@ flowchart LR
   QS -- influence --> RA
   EM -- depend_on --> GT
   FW -- generate --> GT
-
 ```
 
 **evaluation | info flow**:

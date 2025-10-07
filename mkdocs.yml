@@ -10,8 +10,7 @@ extra_css:
 extra_javascript:
   - javascripts/ad-sam-copy.js
 
-strict: false   # ✅ add here to turn build errors into warnings
-
+strict: false   # build warnings are okay; switch to true later
 
 theme:
   name: material
@@ -22,21 +21,24 @@ theme:
     text: Inter
     code: "Nunito Sans"
   features:
-    - navigation.expand      # Expands active section but allows collapse
-    - navigation.tracking        # highlight active heading in TOC
-    - content.code.copy          # copy button on code blocks
-    - toc.follow                 # right “On this page” follows scroll
-  highlightjs: true       # GitBook theme supports Highlight.js
+    - navigation.expand           # expands active section but allows collapse
+    - navigation.tracking         # highlights active heading in TOC
+    - content.code.copy           # copy button on code blocks
+    - toc.follow                  # right “On this page” follows scroll
+  highlightjs: true
   hljs_languages:
     - yaml
     - python
     - bash
-    - mermaid2
 
 plugins:
   - search
   - awesome-pages
   - roamlinks
+  - mermaid2:
+      arguments:
+        theme: default
+      javascript: https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs
 
 markdown_extensions:
   - admonition
@@ -48,4 +50,8 @@ markdown_extensions:
   - tables
   - footnotes
   - def_list
-
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
