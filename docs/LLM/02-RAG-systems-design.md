@@ -73,7 +73,6 @@ NOTE 25-09-30:
 
 
 
-
 ### Pipelines
 
 *Analogy*: Pipelines are like the *assembly line*.
