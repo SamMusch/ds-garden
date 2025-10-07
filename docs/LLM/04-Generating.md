@@ -166,7 +166,7 @@ R ⟶ A ⟶ G
 | Chain-of-thought (CoT) prompting | Introduces intermediate reasoning steps                                                     | Improves performance on complex reasoning tasks  | Complex queries requiring step-by-step analysis | Medium     |
 
 ## Generation
-**R ⟶ A ⟶ G
+**R ⟶ A ⟶ G**
 
 - R: Retrieve info
 
