@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -24,23 +24,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
-      - name: Install deps (no requirements.txt)
+      - name: Install dependencies
         run: |
-          which python; python -V
-          which pip;    pip -V
-          # Ensure pip and python are the same interpreter
           python -m pip install --upgrade pip
           python -m pip install             mkdocs             mkdocs-material             mkdocs-awesome-pages-plugin             mkdocs-roamlinks-plugin             mkdocs-mermaid2-plugin
-          # Sanity check: verify plugin import path
-          python - <<'PY'
-import sys, importlib
-print("python exe:", sys.executable)
-import mkdocs; print("mkdocs version:", mkdocs.__version__)
-m = importlib.import_module("mkdocs_mermaid2_plugin")
-print("mermaid2 path:", m.__file__)
-PY
+
+      - name: Verify plugin import
+        run: python -c "import mkdocs_mermaid2_plugin, mkdocs; print('mkdocs', mkdocs.__version__)"
 
       - name: Build site
         run: |
