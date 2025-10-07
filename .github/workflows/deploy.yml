@@ -28,18 +28,24 @@ jobs:
 
       - name: Install deps (no requirements.txt)
         run: |
+          which python; python -V
+          which pip;    pip -V
+          # Ensure pip and python are the same interpreter
           python -m pip install --upgrade pip
-          pip install \
-            mkdocs \
-            mkdocs-material \
-            mkdocs-awesome-pages-plugin \
-            mkdocs-roamlinks-plugin \
-            mkdocs-mermaid2-plugin
-          python -c "import mkdocs_mermaid2_plugin; print('mermaid2 OK')"
-          python -m mkdocs --version
+          python -m pip install             mkdocs             mkdocs-material             mkdocs-awesome-pages-plugin             mkdocs-roamlinks-plugin             mkdocs-mermaid2-plugin
+          # Sanity check: verify plugin import path
+          python - <<'PY'
+import sys, importlib
+print("python exe:", sys.executable)
+import mkdocs; print("mkdocs version:", mkdocs.__version__)
+m = importlib.import_module("mkdocs_mermaid2_plugin")
+print("mermaid2 path:", m.__file__)
+PY
 
       - name: Build site
-        run: python -m mkdocs build --clean
+        run: |
+          python -m mkdocs --version
+          python -m mkdocs build --clean
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
