@@ -77,7 +77,7 @@ Delete this after completing the book.
 
 **Part 2: Creating RAG systems**
 
-- [[03-Indexing]]: Create KB  |  *load ⟶ split ⟶ embed ⟶ store*
+- [[LLM/03-INDEXING]]: Create KB  |  *load ⟶ split ⟶ embed ⟶ store*
 
 - [[04-Generation pipeline]]: Gen responses  |  *R ⟶ A ⟶ G*
 
