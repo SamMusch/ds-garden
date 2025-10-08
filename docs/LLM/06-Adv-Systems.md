@@ -23,7 +23,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 ```
 
 
-## Summary
+### Summary
 
 **RAG System**
 
@@ -58,9 +58,9 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 ---
 
-### Details
 
-#### 1. Naïve
+
+### 1. Naïve
 **Limitations**
 
 - **R** ⟶ {low precision, low recall}
@@ -69,7 +69,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 - **G** ⟶ {hallucination, bias, overreliance on retrieved context}
 
-#### 2. Advanced
+### 2. Advanced
 ##### *2.1 Pre-R Stage*
 
 - **includes** ⟶ {**Index Optimization**, **Query Optimization**}
@@ -140,7 +140,7 @@ Optimize our user Q before retrieval.
 
 ---
 
-#### 3. Modular
+### 3. Modular
 
 - **extends** ⟶ Advanced RAG
 
