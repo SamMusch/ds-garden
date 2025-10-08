@@ -2,97 +2,26 @@
 published: true
 ---
 
-Ontology: Advanced and Modular RAG Systems
-
 ```mermaid 
 
-graph TD
+graph LR
 
-RAG["RAG System"]
 NR["Naïve RAG"]
 AR["Advanced RAG"]
 MR["Modular RAG"]
 
-RAG --> NR
-RAG --> AR
-RAG --> MR
+NR --> AR --> MR
 
-%% Naïve RAG
-NR -->|Process| NR1["Retrieve ⟶ Read"]
-NR -->|Limitations| NR2["Low Precision / Recall, Redundancy, Hallucination"]
+NR -->|Process| P1["Retrieve ⟶ Read"]
 
-%% Advanced RAG
-AR -->|Extends| NR
-AR -->|Process| AR1["Rewrite ⟶ Retrieve ⟶ Re-rank ⟶ Read"]
-AR -->|Stages| PR["Pre-Retrieval"]
-AR -->|Stages| RT["Retrieval"]
-AR -->|Stages| PO["Post-Retrieval"]
+AR -->|Enhancements| P2["Pre-R ⟶ Retrieval ⟶ Post-R"]
+P2 -->|Goal| G1["Higher Precision & Recall"]
 
-%% Pre-Retrieval
-PR --> IDX["Index Optimization"]
-PR --> QO["Query Optimization"]
-IDX -->|Improves| KB["Knowledge Base Quality"]
-QO -->|Improves| UQ["User Query Alignment"]
-
-%% Retrieval & Post
-RT -->|Methods| R1["Hybrid / Iterative / Recursive / Adaptive"]
-PO -->|Methods| P1["Compression / Re-ranking"]
-
-%% Modular RAG
-MR -->|Extends| AR
-MR -->|Core Modules| CM["Index / Retrieve / Generate"]
-MR -->|New Modules| NM["Fusion / Memory / Routing / Task Adapter"]
-MR -->|Goal| FX["Flexibility & Scalability"]
-
-%% Meta
-NR -->|Subset of| AR
-AR -->|Subset of| MR
+MR -->|Architecture| P3["Interchangeable Modules"]
+P3 -->|Goal| G2["Flexibility & Scalability"]
 
 ```
 
-```
-├── 1. RAG System
-│     ├── 1.1 Naïve RAG
-│     │     ├── Process: Retrieve ⟶ Read
-│     │
-│     ├── 1.2 Advanced RAG
-│     │     ├── Process: Rewrite ⟶ Retrieve ⟶ Re-rank ⟶ Read
-│     │     ├── Pre-R Techniques
-│     │     │     ├── Index Opt
-│     │     │     └── Query Opt
-│     │     │
-│     │     ├── Retrieval Strategies
-│     │     │     ├── Hybrid
-│     │     │     ├── Iterative
-│     │     │     ├── Recursive
-│     │     │     └── Adaptive
-│     │     │
-│     │     ├── Post-R Techniques
-│     │     │     ├── Compression
-│     │     └──   └── Re-ranking
-│     │
-│     └── 1.3 Modular RAG
-│           ├── Core Modules
-│           │     ├── I
-│           │     ├── R
-│           │     ├── G
-│           │     ├── Pre-R
-│           │     └── Post-R
-│           │
-│           ├── New Modules
-│           │     ├── Search
-│           │     ├── Fusion (multi-query merging)
-│           │     ├── Memory (LLM internal recall)
-│           │     ├── Routing (query path selection)
-│           │     └── Task Adapter (downstream adaptation)
-│           │
-│           └── Design Principles
-│                 ├── Modular & Interchangeable Components
-│                 ├── Clear Interfaces (inputs / outputs)
-│                 ├── Orchestration Layer for Mixing Modules
-└──               └── Tradeoff: Flexibility ↔ Complexity
-
-```
 
 ## Summary
 
@@ -102,88 +31,87 @@ AR -->|Subset of| MR
 
 - **has_pipelines** ⟶ {**Indexing**, **Generation**}
 
-#### 1. **Naïve**
 
-- **implements_framework** ⟶ “Retrieve ⟶ Read”
+!!! sam
+    [[#1. Naïve]]
 
-- **has_limitations**
+    - **implements_framework** ⟶ “Retrieve ⟶ Read”
 
-  - **R Failures** ⟶ {low precision, low recall}
+    [[#2. Advanced]]
 
-  - **A Issues** ⟶ {redundancy, disjoint context, context length limits}
+    - **extends**: Naïve
 
-  - **G Errors** ⟶ {hallucination, bias, overreliance on retrieved context}
+    - **implements_framework**: *Rewrite* ⟶ Retrieve ⟶ *Re-rank* ⟶ Read
 
-#### [[#2. Advanced]]
+    - **composed_of_stages**: {**Pre-R**, **Retrieval**, **Post-R**}
 
-- **extends** ⟶ Naïve
+    - **aims_to** ⟶ improve precision, recall, and contextual alignment
 
-- **implements_framework** ⟶ “*Rewrite* ⟶ Retrieve ⟶ *Re-rank* ⟶ Read”
 
-- **composed_of_stages** ⟶ {**Pre-R**, **Retrieval**, **Post-R**}
+    [[#3. Modular]]
 
-- **aims_to** ⟶ improve precision, recall, and contextual alignment
+    - **extends** ⟶ Advanced RAG
 
-#### [[#3. Modular]]
+    - **decomposes_into_modules** ⟶ {**Core**, **New**}
 
-- **extends** ⟶ Advanced RAG
 
-- **decomposes_into_modules** ⟶ {**Core**, **New**}
 
 ---
 
 ### Details
 
-#### 2. Advanced
+#### 1. Naïve
+**Limitations**
 
+- **R** ⟶ {low precision, low recall}
+
+- **A** ⟶ {redundancy, disjoint context, context length limits}
+
+- **G** ⟶ {hallucination, bias, overreliance on retrieved context}
+
+#### 2. Advanced
 ##### *2.1 Pre-R Stage*
 
 - **includes** ⟶ {**Index Optimization**, **Query Optimization**}
 
-**2.1.1 Index Optimization**
+###### 2.1.1 Index Optimization
+Optimize our KB.
+
 !!! sam
-    - **optimizes** ⟶ KB structure
+    **Strategies**
 
-    - **has_strategies**
+    - **Chunk**: Improve conversion of docs --> chunks
 
-        - **Chunk Optimization** ⟶ {Chunk Size Tuning, Context-Enriched Chunking, Surrounding-Chunk Retrieval}
+        - <abbr title="Small chunks increase precision but lose context.">Chunk Size Tuning</abbr> · <abbr title="Add a brief summary of the larger doc to each chunk to improve coherence and retrieval accuracy.">Context-Enriched Chunking</abbr> · <abbr title="Retrieve both the matched chunks and their neighbors to preserve flow and context in long docs.">Surrounding-Chunk Retrieval</abbr>
 
-        - **Metadata Enhancement** ⟶ {Metadata Filtering, Metadata Enrichment}
+    - **Metadata**: Improve our "data about data"
 
-        - **Index Structure** ⟶ {Parent-Child Hierarchy, Knowledge Graph Index}
+        - <abbr title="Use structured attributes to filter chunks before similarity search; reduces noise and boosts relevance.">Metadata Filtering</abbr> · <abbr title="Augment chunks with richer fields (even synthetic/derived) to improve semantic matching during retrieval.">Metadata Enrichment</abbr>
+
+    - **Index**: Improve how we structure info
+
+        - <abbr title="Organize docs hierarchically so retrieval can combine detailed child content with broader parent context.">Parent-Child Hierarchy</abbr> · <abbr title="Represent entities and relations (GraphRAG) to enable reasoning, disambiguation, and explainability.">Knowledge Graph Index</abbr>
 
 
-**Chunk Optimization**
 
-* **Chunk Size Tuning**: Small chunks increase precision but lose context.
+###### 2.1.2 Query Optimization
+Optimize our user Q before retrieval.
 
-* **Context-Enriched Chunking**: Add brief summary of larger doc to each chunk. Improves coherence & retrieval accuracy.
-
-* **Surrounding-Chunk Retrieval**: Retrieve matched & neighboring chunks. Preserves flow and context in long docs.
-
-**Metadata Enhancement**
-
-* **Metadata Filtering**: Use attributes to filter chunks before similarity search. Reduces noise & improves relevance.
-
-* **Metadata Enrichment**: Add metadata to improve semantic matching during retrieval. (Metadata could be synthetic or derived.)
-
-**Index Structure**
-
-* **Parent-Child Hierarchy**: Organizes docs hierarchically so retrieval can combine detailed “child” content with broader “parent” context.
-
-* **Knowledge Graph Index**: Structures information as entities and relationships (GraphRAG), enabling reasoning, disambiguation, and explainability.
-
-**2.1.2 Query Optimization**
 !!! sam
-    - **optimizes** ⟶ Q before retrieval
+    Methods
 
-    - **has_methods**
+    - **Query Expansion**
 
-        - **Query Expansion** ⟶ {Multi-Query, Sub-Query, Step-Back}
+        - <abbr title="Generate multiple semantically varied queries from the same user input to improve recall.">Multi-Query</abbr> · <abbr title="Decompose a complex question into smaller, focused sub-queries that retrieve different facets of the answer.">Sub-Query</abbr> · <abbr title="Ask a higher-level or more general version of the question first, then step back to the original for better coverage.">Step-Back</abbr>
 
-        - **Query Transformation** ⟶ {Rewrite, HyDE}
+    - **Query Transformation**
 
-        - **Query Routing** ⟶ {Intent-Based, Metadata-Based, Semantic-Based}
+        - <abbr title="Rephrase or reformulate the query (often via LLM) to better match document phrasing and intent.">Rewrite</abbr> · <abbr title="Generate a hypothetical answer and embed it as the query (Hypothetical Document Embedding) to enhance semantic retrieval.">HyDE</abbr>
+
+    - **Query Routing**
+
+        - <abbr title="Route the query based on inferred intent (e.g., factual vs. reasoning) to specialized retrievers or models.">Intent-Based</abbr> · <abbr title="Use metadata (like source, author, or time) to direct the query to specific filtered indexes.">Metadata-Based</abbr> · <abbr title="Select the retriever or index whose embedding space best matches the query’s semantic profile.">Semantic-Based</abbr>
+
 
 
 ##### *2.2 Retrieval Stage*
