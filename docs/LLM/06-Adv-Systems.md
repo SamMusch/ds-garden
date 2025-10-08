@@ -18,12 +18,12 @@ RAG --> AR
 RAG --> MR
 
 %% Naïve RAG
-NR -->|Process| NR1["Retrieve → Read"]
+NR -->|Process| NR1["Retrieve ⟶ Read"]
 NR -->|Limitations| NR2["Low Precision / Recall, Redundancy, Hallucination"]
 
 %% Advanced RAG
 AR -->|Extends| NR
-AR -->|Process| AR1["Rewrite → Retrieve → Re-rank → Read"]
+AR -->|Process| AR1["Rewrite ⟶ Retrieve ⟶ Re-rank ⟶ Read"]
 AR -->|Stages| PR["Pre-Retrieval"]
 AR -->|Stages| RT["Retrieval"]
 AR -->|Stages| PO["Post-Retrieval"]
@@ -114,7 +114,7 @@ AR -->|Subset of| MR
 
   - **G Errors** ⟶ {hallucination, bias, overreliance on retrieved context}
 
-#### [[#2. Advanced]] 
+#### [[#2. Advanced]]
 
 - **extends** ⟶ Naïve
 
@@ -153,8 +153,6 @@ AR -->|Subset of| MR
         - **Index Structure** ⟶ {Parent-Child Hierarchy, Knowledge Graph Index}
 
 
-
-
 **Chunk Optimization**
 
 * **Chunk Size Tuning**: Small chunks increase precision but lose context.
@@ -174,8 +172,6 @@ AR -->|Subset of| MR
 * **Parent-Child Hierarchy**: Organizes docs hierarchically so retrieval can combine detailed “child” content with broader “parent” context.
 
 * **Knowledge Graph Index**: Structures information as entities and relationships (GraphRAG), enabling reasoning, disambiguation, and explainability.
-
-
 
 **2.1.2 Query Optimization**
 !!! sam
