@@ -22,15 +22,13 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 ```
 
-
 ### Summary
 
 **RAG System**
 
-- **has_subtypes** ⟶ {**Naïve**, **Advanced**, **Modular**}
+- subtypes ⟶ {Naïve, Advanced, Modular}
 
-- **has_pipelines** ⟶ {**Indexing**, **Generation**}
-
+- pipelines ⟶ {Indexing, Generation}
 
 !!! sam
     [[#1. Naïve]]
@@ -55,10 +53,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
     - **decomposes_into_modules** ⟶ {**Core**, **New**}
 
 
-
 ---
-
-
 
 ### 1. Naïve
 **Limitations**
@@ -72,46 +67,28 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 ### 2. Advanced
 ##### *2.1 Pre-R Stage*
 
-- **includes** ⟶ {**Index Optimization**, **Query Optimization**}
+- **Index Optimization**: Optimize our KB.
 
-###### 2.1.1 Index Optimization
-Optimize our KB.
-
-!!! sam
-    **Strategies**
-
-    - **Chunk**: Improve conversion of docs --> chunks
-
-        - <abbr title="Small chunks increase precision but lose context.">Chunk Size Tuning</abbr> · <abbr title="Add a brief summary of the larger doc to each chunk to improve coherence and retrieval accuracy.">Context-Enriched Chunking</abbr> · <abbr title="Retrieve both the matched chunks and their neighbors to preserve flow and context in long docs.">Surrounding-Chunk Retrieval</abbr>
-
-    - **Metadata**: Improve our "data about data"
-
-        - <abbr title="Use structured attributes to filter chunks before similarity search; reduces noise and boosts relevance.">Metadata Filtering</abbr> · <abbr title="Augment chunks with richer fields (even synthetic/derived) to improve semantic matching during retrieval.">Metadata Enrichment</abbr>
-
-    - **Index**: Improve how we structure info
-
-        - <abbr title="Organize docs hierarchically so retrieval can combine detailed child content with broader parent context.">Parent-Child Hierarchy</abbr> · <abbr title="Represent entities and relations (GraphRAG) to enable reasoning, disambiguation, and explainability.">Knowledge Graph Index</abbr>
-
-
-
-###### 2.1.2 Query Optimization
-Optimize our user Q before retrieval.
+- **Query Optimization**: Optimize our user Q before retrieval.
 
 !!! sam
-    Methods
+    **Index Optimization**
 
-    - **Query Expansion**
+    - **Chunk**: <abbr title="Small chunks increase precision but lose context.">Chunk Size Tuning</abbr> · <abbr title="Add a brief summary of the larger doc to each chunk to improve coherence and retrieval accuracy.">Context-Enriched Chunking</abbr> · <abbr title="Retrieve both the matched chunks and their neighbors to preserve flow and context in long docs.">Surrounding-Chunk Retrieval</abbr>
 
-        - <abbr title="Generate multiple semantically varied queries from the same user input to improve recall.">Multi-Query</abbr> · <abbr title="Decompose a complex question into smaller, focused sub-queries that retrieve different facets of the answer.">Sub-Query</abbr> · <abbr title="Ask a higher-level or more general version of the question first, then step back to the original for better coverage.">Step-Back</abbr>
+    - **Metadata**: <abbr title="Use structured attributes to filter chunks before similarity search; reduces noise and boosts relevance.">Metadata Filtering</abbr> · <abbr title="Augment chunks with richer fields (even synthetic/derived) to improve semantic matching during retrieval.">Metadata Enrichment</abbr>
 
-    - **Query Transformation**
+    - **Index**: <abbr title="Organize docs hierarchically so retrieval can combine detailed child content with broader parent context.">Parent-Child Hierarchy</abbr> · <abbr title="Represent entities and relations (GraphRAG) to enable reasoning, disambiguation, and explainability.">Knowledge Graph Index</abbr>
 
-        - <abbr title="Rephrase or reformulate the query (often via LLM) to better match document phrasing and intent.">Rewrite</abbr> · <abbr title="Generate a hypothetical answer and embed it as the query (Hypothetical Document Embedding) to enhance semantic retrieval.">HyDE</abbr>
 
-    - **Query Routing**
+!!! sam
+    **Query Optimization**
 
-        - <abbr title="Route the query based on inferred intent (e.g., factual vs. reasoning) to specialized retrievers or models.">Intent-Based</abbr> · <abbr title="Use metadata (like source, author, or time) to direct the query to specific filtered indexes.">Metadata-Based</abbr> · <abbr title="Select the retriever or index whose embedding space best matches the query’s semantic profile.">Semantic-Based</abbr>
+    - **Query Expansion**: <abbr title="Generate multiple semantically varied queries from the same user input to improve recall.">Multi-Query</abbr> · <abbr title="Decompose a complex question into smaller, focused sub-queries that retrieve different facets of the answer.">Sub-Query</abbr> · <abbr title="Ask a higher-level or more general version of the question first, then step back to the original for better coverage.">Step-Back</abbr>
 
+    - **Query Transformation**: <abbr title="Rephrase or reformulate the query (often via LLM) to better match document phrasing and intent.">Rewrite</abbr> · <abbr title="Generate a hypothetical answer and embed it as the query (Hypothetical Document Embedding) to enhance semantic retrieval.">HyDE</abbr>
+
+    - **Query Routing**: <abbr title="Route the query based on inferred intent (e.g., factual vs. reasoning) to specialized retrievers or models.">Intent-Based</abbr> · <abbr title="Use metadata (like source, author, or time) to direct the query to specific filtered indexes.">Metadata-Based</abbr> · <abbr title="Select the retriever or index whose embedding space best matches the query’s semantic profile.">Semantic-Based</abbr>
 
 
 ##### *2.2 Retrieval Stage*
