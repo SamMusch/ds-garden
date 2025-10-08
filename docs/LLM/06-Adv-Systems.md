@@ -33,7 +33,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 !!! sam
     [[#1. Naïve]]
 
-    - **implements_framework** ⟶ “Retrieve ⟶ Read”
+    - **implements_framework**: Retrieve ⟶ Read
 
     [[#2. Advanced]]
 
@@ -65,7 +65,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 - **G** ⟶ {hallucination, bias, overreliance on retrieved context}
 
 ### 2. Advanced
-##### *2.1 Pre-R Stage*
+#### *2.1 Pre-R Stage*
 
 - **Index Optimization**: Optimize our KB.
 
@@ -91,7 +91,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
     - **Query Routing**: <abbr title="Route the query based on inferred intent (e.g., factual vs. reasoning) to specialized retrievers or models.">Intent-Based</abbr> · <abbr title="Use metadata (like source, author, or time) to direct the query to specific filtered indexes.">Metadata-Based</abbr> · <abbr title="Select the retriever or index whose embedding space best matches the query’s semantic profile.">Semantic-Based</abbr>
 
 
-##### *2.2 Retrieval Stage*
+#### *2.2 Retrieval Stage*
 !!! sam
     - **uses_strategies**:
 
@@ -106,7 +106,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
         - **is_a_subtype_of** ⟶ Agentic AI
 
 
-##### *2.3 Post-R Stage*
+#### *2.3 Post-R Stage*
 !!! sam
     - **includes**:
 
@@ -123,7 +123,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 - **decomposes_into_modules** ⟶ {**Core**, **New**}
 
-##### 3.1 **Core**
+#### 3.1 Core
 !!! sam
     Modules:
 
@@ -138,7 +138,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
     - **Post-R** ⟶ encapsulates Post-R techniques
 
 
-##### 3.2 **New**
+#### 3.2 New
 !!! sam
     - **Search** ⟶ expands access to multiple data sources
 
