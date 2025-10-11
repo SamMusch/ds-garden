@@ -53,7 +53,7 @@ title: 04 GENERATING
 word_count: 795
 ---
 
-!!! sam
+??? sam
     **Ch 3** (INDEX): create KB | non-parametric memory | convert and store data in numerical form for later retrieval.
 
     **Ch 4** (GENERATE): create a generation pipeline to use ^
