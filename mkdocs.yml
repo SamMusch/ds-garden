@@ -4,8 +4,8 @@ repo_url: https://github.com/SamMusch/ds-garden
 edit_uri: ""
 
 extra_css:
-  - stylesheets/ad-sam.css
   - stylesheets/extra.css
+  - stylesheets/ad-sam.css
 
 extra_javascript:
   - javascripts/ad-sam-copy.js
@@ -20,10 +20,11 @@ theme:
   palette:
     primary: custom
   font:
-    text: Inter
-    code: "Nunito Sans"
+    text: Mulish # Inter
+    code: 'Greycliff CF' # "Nunito Sans"
   features:
-    - navigation.expand           # expands active section but allows collapse
+    # - navigation.expand           # expands active section but allows collapse
+    # - navigation.instant          # for state persistence
     - navigation.tracking         # highlights active heading in TOC
     - content.code.copy           # copy button on code blocks
     - toc.follow                  # right “On this page” follows scroll
@@ -32,11 +33,13 @@ theme:
     - yaml
     - python
     - bash
+  custom_dir: overrides
 
 plugins:
   - search
   - awesome-pages
   - roamlinks
+
 #  - mermaid2:
 #      arguments:
 #        theme: default

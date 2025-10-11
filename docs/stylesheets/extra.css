@@ -1,45 +1,56 @@
-:root  > * {
+:root {
   --md-primary-fg-color:        #6C757D;
   --md-primary-fg-color--light: #3A3D40;
   --md-primary-fg-color--dark:  #3A3D40;
+  --md-text-font: 'Mulish', sans-serif;
+  --md-code-font: 'Greycliff CF', monospace;
+  --md-default-bg-color: #f9fafb;   /* Body background */
 }
-
-
-/* Right sidebar full background */
-.md-sidebar--secondary,
-.md-sidebar--secondary .md-sidebar__scrollwrap,
-.md-sidebar--secondary nav {
-  background-color: #FAFAFA;
-}
-
-/* Apply to page body (Material content area) */
-.md-typeset {
-  line-height: 1.4 !important;   /* ~50% of default (~1.6) */
-}
-
 
 /* Reduce font size to ~80% of default */
 .md-typeset {
   font-size: 0.7rem !important;  /* Default ≈ 1rem */
+  line-height: 1.4 !important;   /* ~50% of default (~1.6) */
 }
 
 
-/* External links (with target=_blank) → blue */
+/* Headings: closer to Bear-style */
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-family: 'Greycliff CF', sans-serif;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: -0.01em;
+  margin-top: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+/* Paragraph spacing like Mado Miniflow */
+.md-typeset p {
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+}
+
+/* Links: blue external, purple internal */
 .md-typeset a[href^="http"] {
-  color: #92b6f0; /* professional blue */
+  color: #0000FF;
 }
 
-/* Wiki links (internal) → your custom color */
-.md-typeset a:not([href^="http"]) {
-  color: #b388ff; /* your purple from screenshot */
-}
-
-
-.md-typeset a:not([href^="http"]):hover {
+.md-typeset a:hover {
   text-decoration: underline;
   opacity: 0.85;
 }
 
+/* Sidebar and background refinement */
+.md-sidebar--secondary,
+.md-sidebar--secondary .md-sidebar__scrollwrap,
+.md-sidebar--secondary nav {
+  background-color: #f9fafb;
+}
+
+/* Reduce space above/below bold headers like Bear-style */
+.md-typeset p:has(> strong:only-child) { margin-bottom: 0; }
+.md-typeset p:has(> strong:only-child) + ul,
+.md-typeset p:has(> strong:only-child) + ol { margin-top: 0; }
 
 
 
@@ -51,9 +62,83 @@
 }
 
 
+/* LIST SPACING */
+.md-typeset ul, .md-typeset ol {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  padding-left: 1.2em;
+}
 
 
-/* Kill gap between a bold-only label line and the next list */
-.md-typeset p:has(> strong:only-child) { margin-bottom: 0; }
-.md-typeset p:has(> strong:only-child) + ul,
-.md-typeset p:has(> strong:only-child) + ol { margin-top: 0; }
+/* ===== Obsidian Mado Miniflow parity ===== */
+
+/* 1) Text colors (from Mado variables) */
+/* Italics = --color-italic (Mado light theme) */
+.md-typeset em { 
+  color: hsla(215, 43%, 63%, 1);  /* Mado: --color-italic */
+  font-style: italic;
+}
+/* Inline code = --color-red (Mado light theme) */
+.md-typeset :not(pre) > code {
+  color: hsla(365, 85%, 55%, 1);  /* Mado: --color-red */
+  background: transparent;
+  font-weight: 500;
+  padding: 0;
+}
+/* Keep multi-line blocks as-is */
+.md-typeset pre code {
+  color: inherit;
+  background: inherit;
+  font-weight: normal;
+  padding: 0;
+}
+
+/* 2) Cardy “panel” surfaces (match Mado radii) */
+:root {
+  /* Mado has 4px button radius and 8px panel radius */
+  --sam-button-radius: 4px;
+  --sam-panel-radius: 8px;
+}
+
+/* Blockquotes → subtle card with left accent, like Mado */
+.md-typeset blockquote {
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: var(--sam-button-radius);
+  background: #f7f9fc;
+  position: relative;
+  padding: 1.0rem 1.4rem 1.0rem 1.9rem;
+}
+.md-typeset blockquote::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: var(--sam-button-radius);
+  background: color-mix(in oklab, #826af9 45%, #6a48ff);
+}
+
+/* Tables → soft container with panel radius */
+.md-typeset table {
+  margin: .7rem .4rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: var(--sam-panel-radius);
+  overflow: hidden; /* keep radius */
+}
+.md-typeset thead { 
+  border-top: 2px solid color-mix(in oklab, #826af9 60%, #6a48ff);
+}
+.md-typeset th, .md-typeset td { 
+  padding: .35rem .75rem;
+}
+
+/* Admonitions (Material) → round like Mado “panels” */
+.md-typeset .admonition, 
+.md-typeset details {
+  border-radius: var(--sam-panel-radius);
+}
+
+

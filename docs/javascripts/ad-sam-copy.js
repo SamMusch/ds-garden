@@ -88,9 +88,17 @@ function htmlToMd(node, ctx = { depth: 0, ordered: false, index: 1 }) {
   }
 }
 
+
+
+
+/* Inject a copy button into every ad-sam box on the page */
 function injectSamCopyButtons(root = document) {
-  const boxes = root.querySelectorAll(".md-typeset .admonition.sam");
+  const boxes = root.querySelectorAll(
+    ".md-typeset .admonition.sam, .md-typeset details.sam"
+  );
+
   boxes.forEach((box) => {
+    // Avoid duplicates
     if (box.querySelector(".ad-sam__copy")) return;
 
     const btn = document.createElement("button");
@@ -98,9 +106,10 @@ function injectSamCopyButtons(root = document) {
     btn.className = "ad-sam__copy";
     btn.setAttribute("aria-label", "Copy");
     btn.title = "Copy as Markdown";
-    btn.innerHTML = "Copy";
+    btn.textContent = "Copy";
 
     btn.addEventListener("click", async () => {
+      // Clone visible content only (exclude title + button)
       const frag = document.createElement("div");
       Array.from(box.children).forEach((el) => {
         if (
@@ -121,13 +130,10 @@ function injectSamCopyButtons(root = document) {
           btn.classList.remove("ad-sam__copy--ok");
           btn.textContent = "Copy";
         }, 1200);
-      } catch {
-        const ta = document.createElement("textarea");
-        ta.value = markdown;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand("copy");
-        document.body.removeChild(ta);
+      } catch (e) {
+        console.error("[ad-sam] Clipboard write failed:", e);
+        btn.textContent = "Copy (blocked)";
+        setTimeout(() => (btn.textContent = "Copy"), 1400);
       }
     });
 
@@ -135,10 +141,21 @@ function injectSamCopyButtons(root = document) {
   });
 }
 
+/* Run once on initial load */
 document.addEventListener("DOMContentLoaded", () => injectSamCopyButtons(document));
 
+/* Re-run on every Material page change */
 if (window && window.document$ && typeof window.document$.subscribe === "function") {
-  window.document$.subscribe(() => {
-    injectSamCopyButtons(document);
-  });
+  window.document$.subscribe(() => injectSamCopyButtons(document));
 }
+
+/* As a final safety net, observe DOM mutations (e.g., late-rendered content) */
+const observer = new MutationObserver((mutations) => {
+  for (const m of mutations) {
+    if (m.addedNodes && m.addedNodes.length) {
+      injectSamCopyButtons(document);
+      break;
+    }
+  }
+});
+observer.observe(document.documentElement, { childList: true, subtree: true });
