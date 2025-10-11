@@ -49,3 +49,11 @@
   color: #b388ff !important;
   fill: #b388ff !important;
 }
+
+
+
+
+/* Kill gap between a bold-only label line and the next list */
+.md-typeset p:has(> strong:only-child) { margin-bottom: 0; }
+.md-typeset p:has(> strong:only-child) + ul,
+.md-typeset p:has(> strong:only-child) + ol { margin-top: 0; }
