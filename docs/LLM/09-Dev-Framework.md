@@ -16,16 +16,16 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-10-04'
+created: '2025-10-11'
 cssclasses: null
 grandchildren: 0
-kMDItemContentCreationDate: 2025-09-30 19:11:59 +0000
-kMDItemContentCreationDate_Ranking: 2025-09-30 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-04 15:51:54 +0000
+kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
+kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
+kMDItemContentModificationDate: 2025-10-11 18:35:18 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-09-30 19:11:59 +0000
-kMDItemDocumentIdentifier: '185062'
+kMDItemDateAdded: 2025-10-07 22:23:24 +0000
+kMDItemDocumentIdentifier: '222800'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
 kMDItemFSHasCustomIcon: (null)
@@ -37,14 +37,14 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-10-04 00:00:00 +0000
-modified: '2025-10-04'
+kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
+modified: '2025-10-11'
 published: true
-reading_time: 25.6
+reading_time: 0.6
 source_file: 09-Dev-Framework.md
 tags: null
 title: 09 Dev Framework
-word_count: 5125
+word_count: 116
 ---
 
 ### Taxonomy
@@ -62,7 +62,6 @@ This framework involves the following six stages:
 5. *Deployment*: Deploy to users
 
 6. *Maintenance*: Track and improve
-
 
 In greater detail
 

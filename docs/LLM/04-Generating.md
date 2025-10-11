@@ -11,21 +11,21 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: 04-Generating.md
+_kMDItemDisplayNameWithExtensions: 04-GENERATING.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-10-04'
+created: '2025-10-11'
 cssclasses: null
 grandchildren: 0
-kMDItemContentCreationDate: 2025-08-08 21:03:13 +0000
-kMDItemContentCreationDate_Ranking: 2025-08-08 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-04 15:51:54 +0000
+kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
+kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
+kMDItemContentModificationDate: 2025-10-11 18:35:03 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-10-02 19:57:53 +0000
-kMDItemDocumentIdentifier: '185085'
+kMDItemDateAdded: 2025-10-07 22:23:24 +0000
+kMDItemDocumentIdentifier: '222798'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
 kMDItemFSHasCustomIcon: (null)
@@ -37,19 +37,19 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-10-02 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
 kMDItemLastUsedDate: 2025-10-02 19:57:12 +0000
 kMDItemLastUsedDate_Ranking: 2025-10-02 00:00:00 +0000
 kMDItemUseCount: '55'
 kMDItemUsedDates: (
 kMDItemUserModifiedDate: (
 kMDItemUserModifiedUserHandle: (
-modified: '2025-10-04'
+modified: '2025-10-11'
 published: true
 reading_time: 4.0
-source_file: 04-Generating.md
+source_file: 04-GENERATING.md
 tags: null
-title: 04 Generating
+title: 04 GENERATING
 word_count: 795
 ---
 
@@ -63,7 +63,6 @@ word_count: 795
     2. **A** | Augment user query with fetched information to create a prompt for the LLM.
 
     3. **G** | Generated response via LLM.
-
 
 
 ## Retrieval
@@ -182,7 +181,6 @@ Choosing an LLM | 3 themes to help categorize:
 
 - Model size
 
-
 1st theme | **Foundation v fine-tuned**
 
 !!! sam
@@ -203,7 +201,6 @@ Choosing an LLM | 3 themes to help categorize:
     - **benefits**: Domain specialization, retrieval integration w KB, response customization, output control
 
 
-
 2nd theme | **Open source v proprietary**
 
 !!! sam
@@ -218,7 +215,6 @@ Choosing an LLM | 3 themes to help categorize:
     - *Deployment flexibility*: Open source are customizable(private cloud, on-premises)
 
     - *Cost*: Open source has higher up-front fixed costs, lower variable costs over time.
-
 
 
 3rd theme | Model size

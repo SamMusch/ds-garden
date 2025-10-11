@@ -1,5 +1,56 @@
 ---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: 07-RAG-Ops.md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
+children: 0
+created: '2025-10-11'
+cssclasses: null
+grandchildren: 0
+kMDItemContentCreationDate: 2025-10-11 15:57:58 +0000
+kMDItemContentCreationDate_Ranking: 2025-10-11 00:00:00 +0000
+kMDItemContentModificationDate: 2025-10-11 18:35:15 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-10-11 15:57:58 +0000
+kMDItemDocumentIdentifier: '222999'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
+kMDItemLastUsedDate: 2025-10-11 16:41:54 +0000
+kMDItemLastUsedDate_Ranking: 2025-10-11 00:00:00 +0000
+kMDItemUseCount: '77'
+kMDItemUsedDates: (
+kMDItemUserCreatedDate: (
+kMDItemUserCreatedUserHandle: (
+modified: '2025-10-11'
 published: true
+reading_time: 2.4
+source_file: 07-RAG-Ops.md
+tags: null
+title: 07 RAG Ops
+word_count: 472
 ---
 
 ## **RAGOps Stack**
@@ -18,7 +69,6 @@ Relations
 
 - Together they form a **progressive architecture**:
        `Data ⟶ Model ⟶ Deployment ⟶ Orchestration ⟶ Evaluation ⟶ Enhancement`
-
 
 ```
 Critical Layers
@@ -52,8 +102,8 @@ Enhancement Layers
 - Explainability
 
 - Collaboration & Experimentation
-```
 
+```
 
 ------
 

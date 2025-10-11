@@ -16,16 +16,16 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-10-04'
+created: '2025-10-11'
 cssclasses: null
 grandchildren: 0
-kMDItemContentCreationDate: 2025-08-08 20:55:35 +0000
-kMDItemContentCreationDate_Ranking: 2025-08-08 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-04 15:51:54 +0000
+kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
+kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
+kMDItemContentModificationDate: 2025-10-11 18:34:44 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-08-08 21:16:13 +0000
-kMDItemDocumentIdentifier: '176544'
+kMDItemDateAdded: 2025-10-07 22:23:24 +0000
+kMDItemDocumentIdentifier: '222795'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
 kMDItemFSHasCustomIcon: (null)
@@ -37,24 +37,23 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-09-30 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
 kMDItemLastUsedDate: 2025-09-30 17:04:51 +0000
 kMDItemLastUsedDate_Ranking: 2025-09-30 00:00:00 +0000
 kMDItemUseCount: '34'
 kMDItemUsedDates: (
-modified: '2025-10-04'
+modified: '2025-10-11'
 published: true
 reading_time: 0.9
 source_file: 01-LLMs-RAG.md
 tags: null
 title: 01 LLMs RAG
-word_count: 189
+word_count: 187
 ---
 
 ```
 Note Topics: RAG's definition and purpose.
 ```
-
 
 !!! sam
     **RAG**:
@@ -64,7 +63,6 @@ Note Topics: RAG's definition and purpose.
     - _augmented_: provide to LLM
 
     - _generation_: improve LLM's result
-
 
 
 !!! sam
@@ -79,14 +77,12 @@ Note Topics: RAG's definition and purpose.
     - **challenges**: knowledge cut-off, data/compute limits, hallucinations, bias, context-length
 
 
-
 !!! sam
     **Memory**: LLM x RAG models use memory for generation
 
     - *Parametric*: info learned during LLM training
 
     - *Non-parametric*: info learned afterwards from RAG
-
 
 
 !!! sam
@@ -101,7 +97,6 @@ Note Topics: RAG's definition and purpose.
     4. A | Add KB info to prompt, send to LLM
 
     5. G | LLM generates response
-
 
 
 !!! sam

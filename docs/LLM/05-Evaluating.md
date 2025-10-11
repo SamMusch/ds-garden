@@ -1,5 +1,50 @@
 ---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: 05-Evaluating.md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
+children: 0
+created: '2025-10-11'
+cssclasses: null
+grandchildren: 0
+kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
+kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
+kMDItemContentModificationDate: 2025-10-11 18:35:09 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-10-07 22:23:24 +0000
+kMDItemDocumentIdentifier: '222799'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
+modified: '2025-10-11'
 published: true
+reading_time: 3.6
+source_file: 05-Evaluating.md
+tags: null
+title: 05 Evaluating
+word_count: 722
 ---
 
 ## Summary
@@ -81,3 +126,145 @@ RAG Evaluation
       └── Counterfactual Robustness
 
 ```
+
+### 5.1-Quality-Scores
+
+- **Definition**: Evaluate R & G outputs.
+
+- **Subclasses**:
+
+  - **Context Relevance**
+
+    - *Definition*: Degree of alignment between Q & retrieved context.
+
+    - *Metrics*: Precision, Recall.
+
+    - *Evaluated By*: Human annotation, semantic similarity, frameworks.
+
+  - **Answer Faithfulness** (Groundedness)
+
+    - *Definition*: Degree to which generated answer is factually supported by retrieved context.
+
+    - *Inverse Metric*: Hallucination Rate.
+
+    - *Related Metric*: Coverage (how much retrieved info appears in the answer).
+
+  - **Answer Relevance**
+
+    - *Definition*: How well the answer addresses the query semantically.
+
+    - *Metric Type*: Similarity-based (e.g., cosine similarity of synthetic vs. original questions).
+
+- **Relations**:
+
+  - `influences` ⟶ Frameworks
+
+  - `depends_on` ⟶ R & G Components
+
+[Figure 2.7 Evaluation proposed by TruEra.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH02_F07_Kimothi.png)
+
+### 5.2-Evaluation-Metrics
+
+- **Definition**: Quantitative functions measuring RAG performance.
+
+- **Categories**:
+
+  - **Retrieval Metrics**
+
+    - *Accuracy*: Correct retrieval proportion.
+
+    - *Precision*: Relevance ratio among retrieved docs.
+
+    - *Precision@k*: Precision among top-k retrieved results.
+
+    - *Recall*: Coverage of all relevant docs.
+
+    - *F1-Score*: Harmonic mean of Precision and Recall.
+
+    - *Mean Reciprocal Rank (MRR)*: Rank position of first relevant result.
+
+    - *Mean Average Precision (MAP)*: Combined precision over multiple cutoff points.
+
+    - *nDCG*: Rank quality weighted by graded relevance.
+
+  - **RAG-Specific Metrics**
+
+    - *Context Relevance*
+
+    - *Answer Faithfulness*
+
+        - *Hallucination Rate*
+
+        - *Coverage Score*
+
+    - *Answer Relevance*
+
+- **Relations**:
+
+  - `implemented_in` ⟶ Frameworks
+
+  - `used_in` ⟶ Benchmarks
+
+### 5.3-Frameworks
+
+- **Definition**: Tools that automate evaluation and data generation.
+
+- **Subclasses**:
+
+  - <abbr title="Retrieval-Augmented Generation Assessment">RAGAs</abbr>
+
+  - <abbr title="Automated RAG evaluation system">ARES</abbr>
+
+  - Others: TruLens, DeepEval, RAGChecker
+
+- **Relations**:
+
+  - `implements` ⟶ Evaluation Metrics
+
+  - `supports` ⟶ Ground Truth Generation
+
+  - `used_with` ⟶ Benchmarks
+
+### 5.4-Benchmarks
+
+!!! sam
+    - **Definition**: Standardized datasets and tasks to compare RAG systems.
+
+    - **Subclasses**:
+
+        - **Classical**: SQuAD, HotpotQA, BEIR
+
+        - **RAG-Specific Benchmarks**
+
+        - **RGB**
+
+            - *Focus*: Noise robustness, negative rejection, counterfactual robustness.
+
+        - **Multi-hop RAG**
+
+            - *Focus*: Multi-document reasoning (Inference, Comparison, Temporal, Null queries).
+
+        - **CRAG**
+
+            - *Focus*: Evaluating factual QA with diverse question types
+
+
+### 5.5-Abilities
+
+- **Definition**: Functional capacities that determine robustness and utility of RAG systems.
+
+- **Subclasses**:
+
+  - *Noise Robustness*: Ability to ignore irrelevant or weakly related documents.
+
+    - *Related Component*: R.
+
+  - *Negative Rejection*: Ability to respond with “I don’t know” when context lacks relevant info.
+
+    - *Related Component*: G.
+
+  - *Information Integration*: Ability to synthesize answers from multiple sources.
+
+  - *Counterfactual Robustness*: Ability to reject incorrect or contradictory context.
+
+- **Additional Attributes**: *Latency*, *Bias & Toxicity*, *Robustness*
