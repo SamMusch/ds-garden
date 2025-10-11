@@ -25,7 +25,7 @@ Enhancement Layers
 
 
 
-#### **RAGOps Stack**
+## **RAGOps Stack**
 
 - **composed_of** ⟶ {**Critical Layers**, **Essential Layers**, **Enhancement Layers**}
 
@@ -48,7 +48,7 @@ Relations
 
 ------
 
-#### 1. **Critical Layers**
+### 1. **Critical Layers**
 
 - **definition**: Foundational components required for a RAG system to operate.
 
@@ -96,38 +96,38 @@ Relations
 
 ------
 
-#### 2. **Essential Layers**
+### 2. **Essential Layers**
 
 - **definition**: Support layers ensuring performance, reliability, and safety.
 
 - **includes** ⟶ {Prompt Layer, Evaluation Layer, Monitoring Layer, Security & Privacy Layer, Caching Layer}
 
-    ##### 2.1 **Prompt Layer**
+    #### 2.1 **Prompt Layer**
 
     - **function** ⟶ guide LLM behavior through effective prompt design.
 
-    ##### 2.2 **Evaluation Layer**
+    #### 2.2 **Evaluation Layer**
 
     - **function** ⟶ assess retrieval accuracy and response quality.
 
-    ##### 2.3 **Monitoring Layer**
+    #### 2.3 **Monitoring Layer**
 
     - **function** ⟶ track latency, health, and model behavior over time.
 
-    ##### 2.4 **Security & Privacy Layer**
+    #### 2.4 **Security & Privacy Layer**
 
     - **function** ⟶ protect data integrity and user privacy.
 
     - **methods** ⟶ {Anonymization, Encryption, Differential Privacy, Guardrails}
 
-    ##### 2.5 **Caching Layer**
+    #### 2.5 **Caching Layer**
 
     - **function** ⟶ store frequent queries and responses to reduce latency and cost.
 
 
 ------
 
-#### 3. **Enhancement Layers**
+### 3. **Enhancement Layers**
 
 - **definition**: Optional layers that improve scalability, usability, and oversight.
 
