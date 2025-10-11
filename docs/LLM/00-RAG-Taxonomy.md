@@ -47,9 +47,28 @@ title: 00 RAG Taxonomy
 word_count: 63
 ---
 
-Update this after completing the book.
+**Textbook**: A Simple Guide to RAG | [Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html) | [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG)
 
-**Components**
+**Terms & Symbols**
+
+- **Indexing Pipeline**: create & maintain KB
+
+- **Generation Pipeline**: enable interaction with LLM.
+
+
+
+| Symbol | Term           |                      |
+| ------ | -------------- | -------------------- |
+| I      | Indexing       | Create & maintain KB |
+| KB     | Knowledge Base | Our docs             |
+| R      | Retrieve       | Get from KB          |
+| A      | Augment        | Provide to LLM       |
+| G      | Generation     | Gen KB + LLM         |
+
+
+### Hierarchies
+
+#### Pipeline
 
 - Indexing Pipeline
 
@@ -83,16 +102,37 @@ Update this after completing the book.
 
     - _LLM constructing (generating)_
 
-- System-level 
 
-    - *caching*, *guardrails*, *security*
+#### Layers
 
+- Critical Layers
 
----
+    - *Data*
 
+    - *Model*
 
-**Terms**
+    - *Model Deployment*
 
-- **Indexing Pipeline**: create & maintain KB
+    - *App Orchestration*
 
-- **Generation Pipeline**: enable real-time interaction with LLM.
+- Essential Layers
+
+    - *Prompt*
+
+    - *Evaluation*
+
+    - *Monitoring*
+
+    - *Security & Privacy*
+
+    - *Caching*
+
+- Enhancement Layers
+
+    - *Human-in-the-Loop*
+
+    - *Cost Optimization*
+
+    - *Explainability*
+
+    - *Collaboration & Experimentation*

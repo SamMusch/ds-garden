@@ -94,15 +94,13 @@ Note Topics: RAG's definition and purpose.
 
     1. Train LLM. Get *parametric* memory
 
-    2. Create *non-parametric* memory (external knowledge base)
+    2. Create *non-parametric* memory (external KB)
 
-    3. Retriever fetches info from KB
+    3. R | Fetch info from KB
 
-    4. Add KB info to prompt
+    4. A | Add KB info to prompt, send to LLM
 
-    5. Send augmented prompt to LLM
-
-    6. LLM generates response
+    5. G | LLM generates response
 
 
 

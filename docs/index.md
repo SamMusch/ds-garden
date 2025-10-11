@@ -12,7 +12,6 @@
   - [[LLM/06-Adv-Systems|06-Adv-Systems]]
   - [[LLM/07-RAG-Ops|07-RAG-Ops]]
   - [[LLM/09-Dev-Framework|09-Dev-Framework]] — 25.6 min
-  - [[LLM/zTOC|00-RAG-TOC]] — 1.9 min
   - **Ch-Details/**
     - [[LLM/Ch-Details/03-Indexing-Code|03-Indexing-Code]] — 1.7 min
     - [[LLM/Ch-Details/3.1-Loading|3.1-Loading]] — 0.4 min
