@@ -10,6 +10,7 @@
   - [[LLM/04-Generating|04-Generating]] — 4 min
   - [[LLM/05-Evaluating|05-Evaluating]]
   - [[LLM/06-Adv-Systems|06-Adv-Systems]]
+  - [[LLM/07-RAG-Ops|07-RAG-Ops]]
   - [[LLM/09-Dev-Framework|09-Dev-Framework]] — 25.6 min
   - [[LLM/zTOC|00-RAG-TOC]] — 1.9 min
   - **Ch-Details/**
