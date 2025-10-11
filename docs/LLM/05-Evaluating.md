@@ -85,13 +85,13 @@ flowchart LR
 
 Use *frameworks* and *evaluation metrics* to evaluate the *3 quality scores* and *4 abilities*. Compare against *benchmarks*.
 
-| Section                    | Are        | Purpose                                             | Subclasses                                                                                                                                                                                                                                                                                                                                                                      |
-| -------------------------- | ---------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[5.1-Quality-Scores]]     | Goals      | Define what “good” looks like (semantic dimensions) | (3) <abbr title="For a given query, how relevant is the retrieved info from KB?">context relevance</abbr>, <abbr title="Is LLM using the retrieved info?">answer faithfulness</abbr>, <abbr title="For a given query, how relevant is the system's answer?">answer relevance</abbr>                                                                                             |
-| [[5.2-Evaluation-Metrics]] | Formulas   | Quantify the scores                                 | Retrieval Metrics, RAG-Specific Metrics                                                                                                                                                                                                                                                                                                                                         |
-| [[5.3-Frameworks]]         | Tools      | Implement metrics in code                           | <abbr title="Retrieval-Augmented Generation Assessment">RAGAs</abbr>, <abbr title="Automated RAG evaluation system">ARES</abbr>                                                                                                                                                                                                                                                 |
-| [[5.4-Benchmarks]]         | Datasets   | Supply shared test conditions                       | Classical QA, RAG-Specific, Domain-Specific                                                                                                                                                                                                                                                                                                                                     |
-| [[5.5-Abilities]]          | Properties | Reflect core RAG capabilities                       | (4) <abbr title="Among KB docs related to Q, only want actionable ones.">Noise robustness</abbr>, <abbr title="If KB doesn't have relevant info, don't hallucinate.">Negative rejection</abbr>, <abbr title="If multiple KB docs, can RAG integrate?">Info integration</abbr>, <abbr title=" If info in KB is inaccurate, can RAG address it?">Counterfactual robustness</abbr> |
+| Section                     | Are        | Purpose                                             | Subclasses                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------------------- | ---------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [[#5.1-Quality-Scores]]     | Goals      | Define what “good” looks like (semantic dimensions) | (3) <abbr title="For a given query, how relevant is the retrieved info from KB?">context relevance</abbr>, <abbr title="Is LLM using the retrieved info?">answer faithfulness</abbr>, <abbr title="For a given query, how relevant is the system's answer?">answer relevance</abbr>                                                                                             |
+| [[#5.2-Evaluation-Metrics]] | Formulas   | Quantify the scores                                 | Retrieval Metrics, RAG-Specific Metrics                                                                                                                                                                                                                                                                                                                                         |
+| [[#5.3-Frameworks]]         | Tools      | Implement metrics in code                           | <abbr title="Retrieval-Augmented Generation Assessment">RAGAs</abbr>, <abbr title="Automated RAG evaluation system">ARES</abbr>                                                                                                                                                                                                                                                 |
+| [[#5.4-Benchmarks]]         | Datasets   | Supply shared test conditions                       | Classical QA, RAG-Specific, Domain-Specific                                                                                                                                                                                                                                                                                                                                     |
+| [[#5.5-Abilities]]          | Properties | Reflect core RAG capabilities                       | (4) <abbr title="Among KB docs related to Q, only want actionable ones.">Noise robustness</abbr>, <abbr title="If KB doesn't have relevant info, don't hallucinate.">Negative rejection</abbr>, <abbr title="If multiple KB docs, can RAG integrate?">Info integration</abbr>, <abbr title=" If info in KB is inaccurate, can RAG address it?">Counterfactual robustness</abbr> |
 
 ```
 RAG Evaluation
@@ -129,101 +129,107 @@ RAG Evaluation
 
 ### 5.1-Quality-Scores
 
-- **Definition**: Evaluate R & G outputs.
+!!! sam
+    - **Definition**: Evaluate R & G outputs.
 
-- **Subclasses**:
+    - **Subclasses**:
 
-  - **Context Relevance**
+        - **Context Relevance**
 
-    - *Definition*: Degree of alignment between Q & retrieved context.
+        - *Definition*: Degree of alignment between Q & retrieved context.
 
-    - *Metrics*: Precision, Recall.
+        - *Metrics*: Precision, Recall.
 
-    - *Evaluated By*: Human annotation, semantic similarity, frameworks.
+        - *Evaluated By*: Human annotation, semantic similarity, frameworks.
 
-  - **Answer Faithfulness** (Groundedness)
+        - **Answer Faithfulness** (Groundedness)
 
-    - *Definition*: Degree to which generated answer is factually supported by retrieved context.
+        - *Definition*: Degree to which generated answer is factually supported by retrieved context.
 
-    - *Inverse Metric*: Hallucination Rate.
+        - *Inverse Metric*: Hallucination Rate.
 
-    - *Related Metric*: Coverage (how much retrieved info appears in the answer).
+        - *Related Metric*: Coverage (how much retrieved info appears in the answer).
 
-  - **Answer Relevance**
+        - **Answer Relevance**
 
-    - *Definition*: How well the answer addresses the query semantically.
+        - *Definition*: How well the answer addresses the query semantically.
 
-    - *Metric Type*: Similarity-based (e.g., cosine similarity of synthetic vs. original questions).
+        - *Metric Type*: Similarity-based (e.g., cosine similarity of synthetic vs. original questions).
 
-- **Relations**:
+    - **Relations**:
 
-  - `influences` ⟶ Frameworks
+        - `influences` ⟶ Frameworks
 
-  - `depends_on` ⟶ R & G Components
+        - `depends_on` ⟶ R & G Components
+
 
 [Figure 2.7 Evaluation proposed by TruEra.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH02_F07_Kimothi.png)
 
 ### 5.2-Evaluation-Metrics
 
-- **Definition**: Quantitative functions measuring RAG performance.
+!!! sam
+    - **Definition**: Quantitative functions measuring RAG performance.
 
-- **Categories**:
+    - **Categories**:
 
-  - **Retrieval Metrics**
+        - **Retrieval Metrics**
 
-    - *Accuracy*: Correct retrieval proportion.
+        - *Accuracy*: Correct retrieval proportion.
 
-    - *Precision*: Relevance ratio among retrieved docs.
+        - *Precision*: Relevance ratio among retrieved docs.
 
-    - *Precision@k*: Precision among top-k retrieved results.
+        - *Precision@k*: Precision among top-k retrieved results.
 
-    - *Recall*: Coverage of all relevant docs.
+        - *Recall*: Coverage of all relevant docs.
 
-    - *F1-Score*: Harmonic mean of Precision and Recall.
+        - *F1-Score*: Harmonic mean of Precision and Recall.
 
-    - *Mean Reciprocal Rank (MRR)*: Rank position of first relevant result.
+        - *Mean Reciprocal Rank (MRR)*: Rank position of first relevant result.
 
-    - *Mean Average Precision (MAP)*: Combined precision over multiple cutoff points.
+        - *Mean Average Precision (MAP)*: Combined precision over multiple cutoff points.
 
-    - *nDCG*: Rank quality weighted by graded relevance.
+        - *nDCG*: Rank quality weighted by graded relevance.
 
-  - **RAG-Specific Metrics**
+        - **RAG-Specific Metrics**
 
-    - *Context Relevance*
+        - *Context Relevance*
 
-    - *Answer Faithfulness*
+        - *Answer Faithfulness*
 
-        - *Hallucination Rate*
+            - *Hallucination Rate*
 
-        - *Coverage Score*
+            - *Coverage Score*
 
-    - *Answer Relevance*
+        - *Answer Relevance*
 
-- **Relations**:
+    - **Relations**:
 
-  - `implemented_in` ⟶ Frameworks
+        - `implemented_in` ⟶ Frameworks
 
-  - `used_in` ⟶ Benchmarks
+        - `used_in` ⟶ Benchmarks
+
 
 ### 5.3-Frameworks
 
-- **Definition**: Tools that automate evaluation and data generation.
+!!! sam
+    - **Definition**: Tools that automate evaluation and data generation.
 
-- **Subclasses**:
+    - **Subclasses**:
 
-  - <abbr title="Retrieval-Augmented Generation Assessment">RAGAs</abbr>
+        - <abbr title="Retrieval-Augmented Generation Assessment">RAGAs</abbr>
 
-  - <abbr title="Automated RAG evaluation system">ARES</abbr>
+        - <abbr title="Automated RAG evaluation system">ARES</abbr>
 
-  - Others: TruLens, DeepEval, RAGChecker
+        - Others: TruLens, DeepEval, RAGChecker
 
-- **Relations**:
+    - **Relations**:
 
-  - `implements` ⟶ Evaluation Metrics
+        - `implements` ⟶ Evaluation Metrics
 
-  - `supports` ⟶ Ground Truth Generation
+        - `supports` ⟶ Ground Truth Generation
 
-  - `used_with` ⟶ Benchmarks
+        - `used_with` ⟶ Benchmarks
+
 
 ### 5.4-Benchmarks
 
@@ -251,20 +257,21 @@ RAG Evaluation
 
 ### 5.5-Abilities
 
-- **Definition**: Functional capacities that determine robustness and utility of RAG systems.
+!!! sam
+    - **Definition**: Functional capacities that determine robustness and utility of RAG systems.
 
-- **Subclasses**:
+    - **Subclasses**:
 
-  - *Noise Robustness*: Ability to ignore irrelevant or weakly related documents.
+        - *Noise Robustness*: Ability to ignore irrelevant or weakly related documents.
 
-    - *Related Component*: R.
+        - *Related Component*: R.
 
-  - *Negative Rejection*: Ability to respond with “I don’t know” when context lacks relevant info.
+        - *Negative Rejection*: Ability to respond with “I don’t know” when context lacks relevant info.
 
-    - *Related Component*: G.
+        - *Related Component*: G.
 
-  - *Information Integration*: Ability to synthesize answers from multiple sources.
+        - *Information Integration*: Ability to synthesize answers from multiple sources.
 
-  - *Counterfactual Robustness*: Ability to reject incorrect or contradictory context.
+        - *Counterfactual Robustness*: Ability to reject incorrect or contradictory context.
 
-- **Additional Attributes**: *Latency*, *Bias & Toxicity*, *Robustness*
+    - **Additional Attributes**: *Latency*, *Bias & Toxicity*, *Robustness*

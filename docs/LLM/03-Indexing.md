@@ -73,10 +73,11 @@ Steps
 
 4. [[#3.4 Storage (vector DBs)]]: Index & store vector embeddings for semantic search & retrieval
 
-[[03-Indexing-Code]]
+[[#Indexing-Code]]
 
 [Figure 2.3 | PIPELINES](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH02_F03_Kimothi.png)
 [Figure 2.4 | PIPELINES & COMPONENTS](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH02_F04_Kimothi.png)
+
 
 ## 3.1-Loading
 *load* ⟶ split ⟶ embed ⟶ store
@@ -309,7 +310,7 @@ popular providers:
 
 - **Pinecone**: offers managed services & customization
 
-## Code
+## Indexing-Code
 
 ### 3.1 Loading
 

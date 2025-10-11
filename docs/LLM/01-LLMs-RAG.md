@@ -51,9 +51,9 @@ title: 01 LLMs RAG
 word_count: 187
 ---
 
-```
-Note Topics: RAG's definition and purpose.
-```
+!!! sam
+    Note Topics: RAG's definition and purpose.
+
 
 !!! sam
     **RAG**:

@@ -16,16 +16,16 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-10-04'
+created: '2025-10-07'
 cssclasses: null
 grandchildren: 0
-kMDItemContentCreationDate: 2025-07-28 00:40:32 +0000
-kMDItemContentCreationDate_Ranking: 2025-09-24 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-04 15:51:55 +0000
+kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
+kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
+kMDItemContentModificationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-09-24 21:28:18 +0000
-kMDItemDocumentIdentifier: '173237'
+kMDItemDateAdded: 2025-10-07 22:23:24 +0000
+kMDItemDocumentIdentifier: '222824'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
 kMDItemFSHasCustomIcon: (null)
@@ -37,8 +37,8 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-10-04 00:00:00 +0000
-modified: '2025-10-04'
+kMDItemInterestingDate_Ranking: 2025-10-07 00:00:00 +0000
+modified: '2025-10-07'
 published: true
 reading_time: 0.3
 source_file: _ML-MOC.md

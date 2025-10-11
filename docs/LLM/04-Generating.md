@@ -137,7 +137,7 @@ R ⟶ A ⟶ G
 
 
 ## Augmentation
-R ⟶ A ⟶ G
+**R ⟶ A ⟶ G**
 
 - R: Retrieve info
 

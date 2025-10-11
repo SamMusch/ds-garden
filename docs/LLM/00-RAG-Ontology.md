@@ -47,16 +47,15 @@ title: 00 RAG Ontology
 word_count: 211
 ---
 
-```
-For this doc
+!!! sam
+    For this doc
 
-- Ontology ⟶ meaning and relationships
+    - Ontology ⟶ meaning and relationships
 
-- Taxonomy ⟶ grouping
+    - Taxonomy ⟶ grouping
 
-- Hierarchy ⟶ order
+    - Hierarchy ⟶ order
 
-```
 
 **Textbook**: A Simple Guide to RAG | [Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html) | [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG)
 
