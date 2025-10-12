@@ -77,9 +77,9 @@ word*count: 211
 
 2 major *structural hierarchies*:
 
-- **Layer hierarchy** ⟶ architectural decomposition (how the system *is built*)
+- **Layer hierarchy** ⟶ architectural (how the system *is built*)
 
-- **Pipeline hierarchy** ⟶ functional decomposition (what the system *does*)
+- **Pipeline hierarchy** ⟶ functional (what the system *does*)
 
 #### Layers
 !!! sam
