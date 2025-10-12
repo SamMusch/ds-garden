@@ -13,6 +13,7 @@ extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/init-mermaid.js
   - javascripts/heading-fold.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 strict: false   # build warnings are okay; switch to true later
 
@@ -52,6 +53,9 @@ markdown_extensions:
   - attr_list
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.mark
   - toc:
       permalink: true
   - tables
