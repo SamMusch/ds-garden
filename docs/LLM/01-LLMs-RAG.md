@@ -52,10 +52,6 @@ word_count: 187
 ---
 
 !!! sam
-    Note Topics: RAG's definition and purpose.
-
-
-!!! sam
     **RAG**:
 
     - _retrieval_: adds info from external data
@@ -90,7 +86,7 @@ word_count: 187
 
     1. Train LLM. Get *parametric* memory
 
-    2. Create *non-parametric* memory (external KB)
+    2. I | Create *non-parametric* memory (external KB)
 
     3. R | Fetch info from KB
 
@@ -105,3 +101,34 @@ word_count: 187
     - **are**: NN architecture based on attention mechanisms
 
     - **do**: let LLMs store & present knowledge
+
+
+!!! sam
+    LangChain
+
+    - **is**: an open source framework developed by Harrison Chase
+
+    - **purpose**: helps build LLM apps
+
+    - **languages**: Python and JavaScript
+
+    - **other uses**: chatbots, document summarizers, synthetic data generation
+
+    - **integrates with**:
+
+        - **LLM providers**: eg OpenAI, Anthropic, Hugging Face
+
+        - **vector store providers**
+
+        - **cloud storage systems**: eg AWS, Google, Azure, SQL & NoSQL databases
+
+        - **APIs**: eg news, weather
+
+
+
+!!! sam
+    Tokens
+
+    - **are**: the fundamental semantic units used in NLP
+
+    - OpenAI suggests one token to be made of four characters or 0.75 words

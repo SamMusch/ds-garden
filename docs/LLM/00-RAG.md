@@ -11,20 +11,20 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: 00-RAG-Ontology.md
-ai_abstract: null
-ai_key_terms: []
+ai*abstract: null
+ai*key*terms: []
 aliases: null
 children: 0
 created: '2025-10-11'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
-kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
+kMDItemContentCreationDate*Ranking: 2025-10-07 00:00:00 +0000
 kMDItemContentModificationDate: 2025-10-11 18:34:40 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
+kMDItemDisplayNameWithExtensions: 00-RAG-Ontology.md
 kMDItemDocumentIdentifier: '222794'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
@@ -37,14 +37,14 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
+kMDItemInterestingDate*Ranking: 2025-10-11 00:00:00 +0000
 modified: '2025-10-11'
 published: true
-reading_time: 1.1
-source_file: 00-RAG-Ontology.md
+reading*time: 1.1
+source*file: 00-RAG-Ontology.md
 tags: null
 title: 00 RAG Ontology
-word_count: 211
+word*count: 211
 ---
 
 !!! sam
@@ -59,6 +59,7 @@ word_count: 211
 
 **Textbook**: A Simple Guide to RAG | [Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html) | [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG)
 
+
 **Terms & Symbols**
 
 | Symbol | Term           | Purpose              |
@@ -69,82 +70,90 @@ word_count: 211
 | A      | Augment        | Provide to LLM       |
 | G      | Generation     | Gen KB + LLM         |
 
-### Structural Hierarchies
 
-!!! sam
-    There are 2 major *structural* hierarchies that organize nearly all aspects of LLM × RAG systems:
 
-    - **Layer hierarchy** ⟶ architectural decomposition (how the system _is built_)
 
-    - **Pipeline hierarchy** ⟶ functional decomposition (what the system _does_)
+### Hierarchies
 
-    (Besides *structural*, there's also 3 *meta-functional* hierarchies (<abbr title="what the system can do">capability</abbr>, <abbr title="what the system knows">knowledge</abbr>, <abbr title="how the system improves itself">evaluation</abbr>)).
+2 major *structural hierarchies*:
 
+- **Layer hierarchy** ⟶ architectural decomposition (how the system *is built*)
+
+- **Pipeline hierarchy** ⟶ functional decomposition (what the system *does*)
 
 #### Layers
+!!! sam
+    - Critical Layers
 
-- Critical Layers
+        - *Data*
 
-    - *Data*
+        - *Model*
 
-    - *Model*
+        - *Model Deployment*
 
-    - *Model Deployment*
+        - *App Orchestration*
 
-    - *App Orchestration*
+    - Essential Layers
 
-- Essential Layers
+        - *Prompt*
 
-    - *Prompt*
+        - *Evaluation*
 
-    - *Evaluation*
+        - *Monitoring*
 
-    - *Monitoring*
+        - *Security & Privacy*
 
-    - *Security & Privacy*
+        - *Caching*
 
-    - *Caching*
+    - Enhancement Layers
 
-- Enhancement Layers
+        - *Human-in-the-Loop*
 
-    - *Human-in-the-Loop*
+        - *Cost Optimization*
 
-    - *Cost Optimization*
+        - *Explainability*
 
-    - *Explainability*
+        - *Collaboration & Experimentation*
 
-    - *Collaboration & Experimentation*
 
 #### Pipeline
+!!! sam
+    - Indexing Pipeline
 
-- Indexing Pipeline
+        - *loading*
 
-    - _loading_
+            - *Connect* to source
 
-        - *Connect* to source
+            - *Extract* & *parse*
 
-        - *Extract* & *parse*
+            - *Metadata* review
 
-        - *Metadata* review
+            - *Transform* and clean
 
-        - *Transform* and clean
+        - *splitting (chunking)*
 
-    - _splitting (chunking)_
+            - *Divide*
 
-        - *Divide*
+            - *Merge*
 
-        - *Merge*
+            - *Overlap*
 
-        - *Overlap*
+        - *converting (embedding)*
 
-    - _converting (embedding)_
+        - *storing (vector DB)*
 
-    - _storing (vector DB)_
+    - Generating Pipeline
 
-- Generating Pipeline
+        - R | *retrieving*
 
-    - _retrieving_
+        - A | *prompt managing (augmenting)*
 
-    - _prompt managing (augmenting)_
+        - G | *LLM constructing (generating)*
 
-    - _LLM constructing (generating)_
+
+
+
+
+
+<img src="https://i.imgur.com/clHMu8p.png" alt="Indexing Pipeline" width="50%">
+<img src="https://i.imgur.com/Ab8rMqF.png" alt="Generation Pipeline" width="50%">

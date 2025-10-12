@@ -53,136 +53,66 @@ title: 04 GENERATING
 word_count: 795
 ---
 
+## Summary
 !!! sam
-    **Ch 3** (INDEX): create KB | non-parametric memory | convert and store data in numerical form for later retrieval.
+    **Generation pipeline**: Tie together user Q with our **indexing pipeline**.
 
-    **Ch 4** (GENERATE): create a generation pipeline to use ^
+    1. **R** | Retrieve info from KB based on Q.
 
-    1. **R** | Retrieve relevant information from the KB based on a user query.
+    2. **A** | Augment Q with fetched info, create prompt for LLM.
 
-    2. **A** | Augment user query with fetched information to create a prompt for the LLM.
-
-    3. **G** | Generated response via LLM.
+    3. **G** | Generate response via LLM.
 
 
-## Retrieval
-R ⟶ A ⟶ G
+## 1. Retrieval
+**Process**: Take Q ⟶ find matching docs ⟶ extract relevant info ⟶ return a list of matching documents (stored embeddings) as output
 
-- **R: Retrieve info**
-
-- A: Augment user query
-
-- G: Generate response
-
+### Retrieval methods
+LangChain has abstracted these algorithms ⟶ retrievers.
 !!! sam
-    **Retrieval**: for an input query, the process of finding & extracting most relevant info from KB.
-    **Retriever**: component doing this ^.
+    **TF-IDF**: keyword-based, uses <abbr title="term frequency">TF</abbr> and <abbr title="inverse document frequency">IDF</abbr> to score words.
 
-    - **process**: accept query as input ⟶ return a list of matching documents (stored embeddings) as output
+    **BM25**: probabilistic variant of TF-IDF. Adds length normalization & saturation effects so longer documents aren’t unfairly favored.
 
-    - see [Figure 4.1 Generation pipeline](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH04_F01_Kimothi.png)
+    **Static Word Embeddings**: vector-based semantics (fixed meaning per word)
+
+    * Represents words as dense vectors (e.g., `Word2Vec`, `GloVe`)
+
+    **==Contextual Embeddings==**: context-aware semantics (meanings shift with context)
+
+    * Handles polysemy & nuanced meanings
+
+    * Embeddings from models (e.g., `BERT`, `GPT`)
 
 
+### Other popular retrievers
 !!! sam
-    **Popular retrieval methods**
-
-    **TF-IDF** | [Example](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH04_F03_Kimothi.png)
-
-    * **keyword-based**, uses term frequency (TF) and inverse document frequency (IDF) to score words.
-
-    * Retrieval is based on exact word overlap between query and documents.
-
-    **BM25** | [Example](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH04_F04_Kimothi.png)
-
-    * **keyword-based**, probabilistic variant of TF-IDF.
-
-    * Adds length normalization & saturation effects so longer documents aren’t unfairly favored.
-
-    **Static Word Embeddings** 
-
-    * **vector-based semantics** (fixed meaning per word)
-
-    * Represents words as dense vectors (e.g., `Word2Vec`, `GloVe`).
-
-    * Captures semantic similarity beyond exact keywords.
-
-    * Limitation: each word has a single vector, so polysemy isn’t handled well.
-
-    **Contextual Embeddings** (==most popular==)
-
-    * **context-aware semantics** (meanings shift with usage)
-
-    * Embeddings from models like `BERT` or `GPT` (based on transformers)
-
-    * Word/document representations depend on surrounding context.
-
-    * Handles polysemy and nuanced meanings, enabling semantically rich retrieval.
-
-
-    LangChain provides integrations where the algorithms have been abstracted as retrievers to use.
-
-
-!!! sam
-    Besides above methods, other popular retrievers:
-
     1. **Vector stores and DBs**:
 
-        1. `FAISS` & contextual embedding model
+        1. Combine `FAISS` with contextual embedding model
 
-        2. `PineCone` / `Milvus` / `Weaviate` provide hybrid search functionality by combining dense retrieval methods.
+        2. `PineCone` / `Milvus` / `Weaviate` combine dense retrieval methods ⟶ provide hybrid search functionality.
 
-    2. **Cloud providers**: Integration provides developers with infrastructure, APIs, and tools for info retrieval
+    2. **Cloud providers**: Includes infrastructure, APIs, and tools for info retrieval
 
-    3. **Web information resources**: Can connect to Wikipedia, Arxiv, AskNews, etc. [Langchain retrievers documentation](https://python.langchain.com/v0.2/docs/integrations/retrievers/) .
-
-
-## Augmentation
-**R ⟶ A ⟶ G**
-
-- R: Retrieve info
-
-- **A: Augment user query**
-
-- G: Generate response
-
-!!! sam
-    **Prompt engineering techniques** to augment the user query with the retrieved information.
-
-    - *Contextual prompting*: “Answer only based on the context provided below.”
-
-    - *Controlled generation prompting*: “If the question cannot be answered based on the provided context, say I don’t know.”
-
-    - *Few-shot prompting*: Providing a few examples
-
-    - *CoT prompting*: Provide intermediate reasoning steps
+    3. **Web info**: Connect to Wikipedia / Arxiv / AskNews / etc. See [Langchain](https://python.langchain.com/v0.2/docs/integrations/retrievers/) .
 
 
-| Technique                        | Description                                                                                 | Key advantage                                    | Best use case                                   | Complexity |
-| -------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------- | ---------- |
-| Contextual prompting             | Adds retrieved information to the prompt with instructions to focus on the provided context | Ensures focus on relevant information            | General RAG queries                             | Low        |
-| Controlled generation prompting  | Instructs the model to say “I don’t know” when information is not available                 | Reduces hallucination risk                       | When accuracy is critical                       | Low        |
-| Few-shot prompting               | Provides examples in the prompt to guide response format and style                          | Improves output consistency and format adherence | When a specific output format is required       | Medium     |
-| Chain-of-thought (CoT) prompting | Introduces intermediate reasoning steps                                                     | Improves performance on complex reasoning tasks  | Complex queries requiring step-by-step analysis | Medium     |
+## 2. Augmentation
+We can control **prompt engineering** to best augment Q with retrieved info.
 
-## Generation
-**R ⟶ A ⟶ G**
+| Prompting Technique      | Description                                                          |
+| ------------------------ | -------------------------------------------------------------------- |
+| *Contextual*             | “Answer based on only the context provided below.”                   |
+| *Controlled generation*  | "Say 'I don’t know' when provided context doesn't have needed info." |
+| *Few-shot*               | Provide examples in prompt                                           |
+| *Chain-of-thought (CoT)* | Provide intermediate reasoning steps                                 |
 
-- R: Retrieve info
+## 3. Generation
 
-- A: Augment user query
+For G, the key decision is the LLM to use. There are 3 themes to consider.
 
-- **G: Generate response**
-
-Choosing an LLM | 3 themes to help categorize:
-
-- Original vs. fine-tuned models
-
-- Open source vs. proprietary
-
-- Model size
-
-1st theme | **Foundation v fine-tuned**
-
+### 3.1 Foundation v fine-tuned
 !!! sam
     **Foundation models**: massive pre-trained LLMs.
 
@@ -201,8 +131,7 @@ Choosing an LLM | 3 themes to help categorize:
     - **benefits**: Domain specialization, retrieval integration w KB, response customization, output control
 
 
-2nd theme | **Open source v proprietary**
-
+### 3.2 Open source v proprietary
 !!! sam
     **Open source**: more flexible, but need infrastructure and maintenance.
 
@@ -217,15 +146,18 @@ Choosing an LLM | 3 themes to help categorize:
     - *Cost*: Open source has higher up-front fixed costs, lower variable costs over time.
 
 
-3rd theme | Model size
-
+### 3.3 Model size
 !!! sam
-    Criteria
+    Small models..
 
-    - *Resource constraints*: Small models have lower resource usage.
+    pros:
 
-    - *Reasoning capability*: Small models rely on the quality of retrieved information / KB.
+    - Face fewer *resource constraints*
 
-    - *Deployment options*: Small models easier to deploy to a wide range of devices and environments.
+    - Are easier to *deploy*
 
-    - *Context handling*: Small models could struggle with context windows and diverse queries.
+    cons:
+
+    - Have limited *reasoning capability* (rely heavily on KB)
+
+    - Could struggle with *context windows* & diverse queries.
