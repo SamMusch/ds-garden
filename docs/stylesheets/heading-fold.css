@@ -1,0 +1,45 @@
+/* Look-and-feel for collapsible headings */
+.hf-block {
+  margin: 0; /* let summary and content control spacing */
+  border: 0;
+  padding: 0;
+}
+
+/* Summary should visually mimic the heading it replaced */
+.hf-summary {
+  cursor: pointer;
+  display: block;
+  list-style: none;            /* hide default marker (some browsers) */
+  outline: none;
+  margin: 1em 0 0.4em 0;       /* top/bottom spacing like Material headings */
+}
+
+/* Level-specific sizing (tune as you like) */
+.hf-summary.hf-h2 {
+  font: var(--md-headline-font, 700 1.5rem/1.3 var(--md-text-font, system-ui));
+  color: var(--md-default-fg-color);
+}
+.hf-summary.hf-h3 {
+  font: var(--md-headline-font, 700 1.25rem/1.35 var(--md-text-font, system-ui));
+  color: var(--md-default-fg-color);
+}
+
+/* Add a disclosure chevron that rotates when open */
+.hf-summary::before {
+  content: "▸";
+  display: inline-block;
+  transform: translateY(-0.05em);
+  margin-right: 0.5rem;
+  transition: transform 0.15s ease;
+}
+.hf-block[open] > .hf-summary::before {
+  transform: rotate(90deg) translateY(-0.05em);
+}
+
+/* Inner content spacing */
+.hf-content {
+  margin: 0 0 0.8em 1.2rem; /* slight indent under the summary */
+}
+
+/* Opt-out: headings with {:.no-collapse} remain as-is */
+.no-collapse {}

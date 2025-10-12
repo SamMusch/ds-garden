@@ -6,11 +6,13 @@ edit_uri: ""
 extra_css:
   - stylesheets/extra.css
   - stylesheets/ad-sam.css
+  - styles/heading-fold.css
 
 extra_javascript:
   - javascripts/ad-sam-copy.js
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/init-mermaid.js
+  - javascripts/heading-fold.js
 
 strict: false   # build warnings are okay; switch to true later
 
