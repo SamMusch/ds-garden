@@ -70,147 +70,152 @@ Relations
 - Together they form a **progressive architecture**:
        `Data ⟶ Model ⟶ Deployment ⟶ Orchestration ⟶ Evaluation ⟶ Enhancement`
 
-```
-Critical Layers
+!!! sam
+    Critical Layers
 
-- Data                 ⟶ {Ingestion, Transformation, Storage}
+    - Data                 ⟶ {Ingestion, Transformation, Storage}
 
-- Model                ⟶ {Embeddings Models, Foundation Models, Task-Specific Models}
+    - Model                ⟶ {Embeddings Models, Foundation Models, Task-Specific Models}
 
-- Model Deployment     ⟶ {Fully Managed, Self-Hosted, Local/Edge}
+    - Model Deployment     ⟶ {Fully Managed, Self-Hosted, Local/Edge}
 
-- App Orchestration    ⟶ {Multi-Agent Orchestration, Workflow Automation}
+    - App Orchestration    ⟶ {Multi-Agent Orchestration, Workflow Automation}
 
-Essential Layers
+    Essential Layers
 
-- Prompt
+    - Prompt
 
-- Evaluation
+    - Evaluation
 
-- Monitoring
+    - Monitoring
 
-- Security & Privacy
+    - Security & Privacy
 
-- Caching
+    - Caching
 
-Enhancement Layers
+    Enhancement Layers
 
-- Human-in-the-Loop
+    - Human-in-the-Loop
 
-- Cost Optimization
+    - Cost Optimization
 
-- Explainability
+    - Explainability
 
-- Collaboration & Experimentation
+    - Collaboration & Experimentation
 
-```
 
 ------
 
-### 1. **Critical Layers**
+#### 1. **Critical Layers**
 
 - **definition**: Foundational components required for a RAG system to operate.
 
 - **includes**:
 
-    #### 1.1 **Data Layer**
+!!! sam
+    - **Data Layer**
 
-    - **function** ⟶ create & manage the KB.
+        - **function** ⟶ create & manage the KB.
 
-    - **composed_of** ⟶ {Ingestion, Transformation, Storage}
+        - **composed_of** ⟶ {Ingestion, Transformation, Storage}
 
-    - **feeds** ⟶ Model Layer
+        - **feeds** ⟶ Model Layer
 
-    - [Figure](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F02_Kimothi.png)
-    
-    #### 1.2 **Model Layer**
+        - [Figure](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F02_Kimothi.png)
 
-    - **function** ⟶ transform/generate/evaluate content.
+    - **Model Layer**
 
-    - **composed_of** ⟶ {Embeddings Models, Foundation Models, Task-Specific Models}
+        - **function** ⟶ transform/generate/evaluate content.
 
-    - **interacts_with** ⟶ Data Layer & Deployment Layer
+        - **composed_of** ⟶ {Embeddings Models, Foundation Models, Task-Specific Models}
 
-    - [Figure](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F03_Kimothi.png)
-    
-    #### 1.3 **Model Deployment Layer**
+        - **interacts_with** ⟶ Data Layer & Deployment Layer
 
-    - **function** ⟶ host & serve models
+        - [Figure](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F03_Kimothi.png)
 
-    - **deployment_modes** ⟶ {Fully Managed, Self-Hosted, Local/Edge}
+    - **Model Deployment Layer**
 
-    - **enables** ⟶ efficient inference
+        - **function** ⟶ host & serve models
 
-    - [Figure](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F04_Kimothi.png)
-    
-    #### 1.4 **App Orchestration Layer**
+        - **deployment_modes** ⟶ {Fully Managed, Self-Hosted, Local/Edge}
 
-    - **function** ⟶ coordinate flow between Data & Model layers.
+        - **enables** ⟶ efficient inference
 
-    - **subcomponents** ⟶ {Q Orchestration, R Coordination, G Coordination}
+        - [Figure](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F04_Kimothi.png)
 
-    - **extended_by** ⟶ {Multi-Agent Orchestration, Workflow Automation}
+    - 1.4 **App Orchestration Layer**
 
-    - [Figure](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F05_Kimothi.png)
+        - **function** ⟶ coordinate flow between Data & Model layers.
+
+        - **subcomponents** ⟶ {Q Orchestration, R Coordination, G Coordination}
+
+        - **extended_by** ⟶ {Multi-Agent Orchestration, Workflow Automation}
+
+        - [Figure](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F05_Kimothi.png)
+
 
 [Figure | The I & G pipelines.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F01_Kimothi.png) - The *critical layers* enable these 2 pipelines.
 [Figure | Core RAG-Ops Stack](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F06_Kimothi.png)
 
 ------
 
-### 2. **Essential Layers**
+#### 2. **Essential Layers**
 
 - **definition**: Support layers ensuring performance, reliability, and safety.
 
 - **includes**:
 
-    #### 2.1 **Prompt Layer**
+!!! sam
+    - **Prompt Layer**
 
-    - **function** ⟶ guide LLM behavior through effective prompt design.
+        - **function** ⟶ guide LLM behavior through effective prompt design.
 
-    #### 2.2 **Evaluation Layer**
+    - **Evaluation Layer**
 
-    - **function** ⟶ assess retrieval accuracy and response quality.
+        - **function** ⟶ assess retrieval accuracy and response quality.
 
-    #### 2.3 **Monitoring Layer**
+    - **Monitoring Layer**
 
-    - **function** ⟶ track latency, health, and model behavior over time.
+        - **function** ⟶ track latency, health, and model behavior over time.
 
-    #### 2.4 **Security & Privacy Layer**
+    - **Security & Privacy Layer**
 
-    - **function** ⟶ protect data integrity and user privacy.
+        - **function** ⟶ protect data integrity and user privacy.
 
-    - **methods** ⟶ {Anonymization, Encryption, Differential Privacy, Guardrails}
+        - **methods** ⟶ {Anonymization, Encryption, Differential Privacy, Guardrails}
 
-    #### 2.5 **Caching Layer**
+    - **Caching Layer**
 
-    - **function** ⟶ store frequent queries and responses to reduce latency and cost.
+        - **function** ⟶ store frequent queries and responses to reduce latency and cost.
+
 
 ------
 
-### 3. **Enhancement Layers**
+#### 3. **Enhancement Layers**
 
 - **definition**: Optional layers that improve scalability, usability, and oversight.
 
 - **includes**:
 
-    #### 3.1 **Human-in-the-Loop Layer**
+!!! sam
+    - **Human-in-the-Loop Layer**
 
-    - **adds** ⟶ expert verification and ethical oversight.
+        - **adds** ⟶ expert verification and ethical oversight.
 
-    #### 3.2 **Cost Optimization Layer**
+    - **Cost Optimization Layer**
 
-    - **optimizes** ⟶ infrastructure and inference resources.
+        - **optimizes** ⟶ infrastructure and inference resources.
 
-    #### 3.3 **Explainability Layer**
+    - **Explainability Layer**
 
-    - **provides** ⟶ transparency for regulated or high-stakes domains.
-    
-    #### 3.4 **Collaboration & Experimentation Layer**
+        - **provides** ⟶ transparency for regulated or high-stakes domains.
 
-    - **enables** ⟶ shared development and iterative improvement.
+    - **Collaboration & Experimentation Layer**
 
-#### **Production Best Practices**
+        - **enables** ⟶ shared development and iterative improvement.
+
+
+##### **Production Best Practices**
 
 - **associated_with** ⟶ {Latency, Hallucination, Scalability, Domain Adaptation, Data Privacy}
 
