@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-11 18:34:44 +0000
+kMDItemContentModificationDate: 2025-10-12 01:19:58 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -37,18 +37,18 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-10-12 00:00:00 +0000
 kMDItemLastUsedDate: 2025-09-30 17:04:51 +0000
 kMDItemLastUsedDate_Ranking: 2025-09-30 00:00:00 +0000
 kMDItemUseCount: '34'
 kMDItemUsedDates: (
 modified: '2025-10-11'
 published: true
-reading_time: 0.9
+reading_time: 1.3
 source_file: 01-LLMs-RAG.md
 tags: null
 title: 01 LLMs RAG
-word_count: 187
+word_count: 261
 ---
 
 !!! sam

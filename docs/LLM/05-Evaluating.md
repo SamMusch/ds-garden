@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-11 18:35:09 +0000
+kMDItemContentModificationDate: 2025-10-11 19:03:34 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -44,7 +44,7 @@ reading_time: 3.6
 source_file: 05-Evaluating.md
 tags: null
 title: 05 Evaluating
-word_count: 722
+word_count: 730
 ---
 
 ## Summary

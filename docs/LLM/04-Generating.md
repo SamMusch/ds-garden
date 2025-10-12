@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-11 18:35:03 +0000
+kMDItemContentModificationDate: 2025-10-12 01:16:23 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -38,19 +38,19 @@ kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
-kMDItemLastUsedDate: 2025-10-02 19:57:12 +0000
-kMDItemLastUsedDate_Ranking: 2025-10-02 00:00:00 +0000
-kMDItemUseCount: '55'
+kMDItemLastUsedDate: 2025-10-11 18:59:16 +0000
+kMDItemLastUsedDate_Ranking: 2025-10-11 00:00:00 +0000
+kMDItemUseCount: '43'
 kMDItemUsedDates: (
 kMDItemUserModifiedDate: (
 kMDItemUserModifiedUserHandle: (
 modified: '2025-10-11'
 published: true
-reading_time: 4.0
+reading_time: 2.3
 source_file: 04-GENERATING.md
 tags: null
 title: 04 GENERATING
-word_count: 795
+word_count: 467
 ---
 
 ## Summary

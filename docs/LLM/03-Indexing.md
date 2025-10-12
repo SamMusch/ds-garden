@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-11 18:34:47 +0000
+kMDItemContentModificationDate: 2025-10-12 01:55:46 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -37,18 +37,18 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-10-12 00:00:00 +0000
 kMDItemLastUsedDate: 2025-08-08 21:11:56 +0000
 kMDItemLastUsedDate_Ranking: 2025-08-08 00:00:00 +0000
 kMDItemUseCount: '23'
 kMDItemUsedDates: (
 modified: '2025-10-11'
 published: true
-reading_time: 6.7
+reading_time: 4.1
 source_file: 03-INDEXING.md
 tags: null
 title: 03 INDEXING
-word_count: 1340
+word_count: 823
 ---
 
 Steps
@@ -232,6 +232,7 @@ similarity calculations | common measures
 
     - also offer <abbr title="scalability, security, multi-tenancy, versioning, data management, query processing, interfaces">traditional features</abbr> of dbs
 
+
 ```tabs
 
 tab: vector DBs
@@ -264,6 +265,7 @@ tab: choice considerations
 - *Cost*
 
 ```
+
 
 popular providers:
 
