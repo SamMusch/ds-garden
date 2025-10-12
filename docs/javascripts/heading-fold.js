@@ -15,10 +15,10 @@
     root.__headingFoldApplied = true;
 
     // Which levels to fold
-    const levels = new Set(['H2', 'H3']);
+    const levels = new Set(['H4']);
 
     // Collect headings to process (only direct content area)
-    const headings = Array.from(root.querySelectorAll('h2, h3'))
+    const headings = Array.from(root.querySelectorAll('h4'))
       .filter(h => !h.classList.contains('no-collapse'));
 
     // Helper: make a <summary> that looks like a heading
