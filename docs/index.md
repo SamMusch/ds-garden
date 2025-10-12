@@ -2,6 +2,7 @@
 <!-- toc:start -->
 
 - [[projects|projects]] — 2 min
+- [[test|test]]
 **LLM/**
   - [[LLM/00-RAG|00-RAG]] — 0.9 min
   - [[LLM/01-LLMs-RAG|01-LLMs-RAG]] — 1.3 min
