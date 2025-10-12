@@ -11,7 +11,7 @@
   - [04-GENERATING](LLM/04-Generating/) — 2.3 min
   - [05-Evaluating](LLM/05-Evaluating/) — 3.6 min
   - [06-Adv-Systems](LLM/06-Adv-Systems/) — 3 min
-  - [07-RAG-Ops](LLM/07-RAG-Ops/) — 2.4 min
+  - [07-RAG-Ops](LLM/07-RAG-Ops/) — 2.3 min
   - [09-Dev-Framework](LLM/09-Dev-Framework/) — 0.6 min
   - [Indexing-Code](LLM/Indexing-Code/) — 1.7 min
   - [z02-RAG-systems-design](LLM/z02-RAG-systems-design/) — 1.3 min

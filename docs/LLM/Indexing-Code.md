@@ -16,12 +16,12 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-10-11'
+created: '2025-10-12'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-12 01:35:50 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-12 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-12 01:36:02 +0000
+kMDItemContentModificationDate: 2025-10-12 14:06:38 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-12 01:36:05 +0000
@@ -38,7 +38,7 @@ kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-12 00:00:00 +0000
-modified: '2025-10-11'
+modified: '2025-10-12'
 published: true
 reading_time: 1.7
 source_file: Indexing-Code.md
