@@ -43,3 +43,15 @@
 
 /* Opt-out: headings with {:.no-collapse} remain as-is */
 .no-collapse {}
+
+
+/* Remove blue border/focus ring from collapsible block */
+.hf-block,
+.hf-block:focus,
+.hf-block:focus-visible,
+.hf-summary:focus,
+.hf-summary:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
