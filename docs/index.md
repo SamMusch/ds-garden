@@ -3,6 +3,10 @@
 
 - [projects](projects/) — 2 min
 
+**BigData/**
+
+  - [Hadoop](BigData/Hadoop/)
+
 **LLM/**
 
   - [00-RAG](LLM/00-RAG/) — 0.9 min
