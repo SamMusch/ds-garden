@@ -6,6 +6,11 @@
 **BigData/**
 
   - [Hadoop](BigData/Hadoop/)
+  - [Snowflake](BigData/Snowflake/)
+
+**Conceptual/**
+
+  - [Systems-Thinking](Conceptual/Systems-Thinking/)
 
 **LLM/**
 

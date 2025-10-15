@@ -2,20 +2,21 @@
 published: true
 ---
 
+| Layer            | Description                                                  |
+| ---------------- | ------------------------------------------------------------ |
+| **Purpose**      | Distributed processing of large data sets                    |
+| **Capabilities** | Store + process massive data across clusters                 |
+| **Mechanisms**   | Batch parallelism (MapReduce), distributed storage (HDFS)    |
+| **Architecture** | Master/Worker model: NameNode + DataNodes + YARN             |
+| **Components**   | HDFS, MapReduce, YARN, Hive, Pig, Spark (extended ecosystem) |
+
+
 ### Overview
 
 !!! sam
     Hadoop 
 
     - **definition**: *a distributed data platform* (`HDFS` + `YARN`) that hosts engines (eg `Spark`/`Hive`)
-
-    - **components**:
-
-        - `HDFS` (storage)
-
-        - `YARN` (cluster resource manager)
-
-        - Common services like cataloging / security / coordination.
 
     - **capabilities**:
 
@@ -30,6 +31,14 @@ published: true
         - *fault tolerance*: built in data redundancy (3 copies) in case a node fails
 
         - *resource isolation:* `YARN` containers (CPU/RAM) allocated to engines
+
+    - **components**:
+
+        - `HDFS` (storage)
+
+        - `YARN` (cluster resource manager)
+
+        - Common services like cataloging / security / coordination.
 
 
 ### Sequential process
