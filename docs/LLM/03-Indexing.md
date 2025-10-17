@@ -51,226 +51,154 @@ title: 03 INDEXING
 word_count: 823
 ---
 
-Steps
+## Summary
 
-1. [[#3.1-Loading]]: Use LangChain to connect to source ⟶ extract docs ⟶ parse text
-
-2. [[#3.2 Data splitting (chunking)]]: Take parsed data ⟶ chunk. Choose between fixed-size, specialized, or semantic
-
-3. [[#3.3 Data conversion (embeddings)]]: Take chunks ⟶ embed into vectors to enable similarity search
-
-4. [[#3.4 Storage (vector DBs)]]: Index & store vector embeddings for semantic search & retrieval
-
-[[#Indexing-Code]]
-
-[Figure 2.4 | PIPELINES & COMPONENTS](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH02_F04_Kimothi.png)
-
-
-load ⟶ split ⟶ embed ⟶ store
-
-
-## 3.1-Load
 !!! sam
-    *data loading*: process of sourcing data from its original location
+    LLM x RAG systems generate reponses to user questions.
+    They have 2 sources of **memory** available.
 
-    data-loading components:
+    - *Parametric*: learned during initial LLM training.
+
+    - *Non-parametric*: info stored in our knowledge base (KB) for RAG to learn from.
+
+        - *==Indexing==* pipeline: creates KB (**THIS DOC**)
+
+        - *Generation* pipeline: retrieves from KB
+
+
+**Indexing pipeline steps to create the KB**:
+[[#1-Load]] information from source systems
+[[#2-Chunk]] into smaller pieces
+[[#3-Embed]] into vectors to enable similarity search
+[[#4-Store]] in a vector DB
+
+<img src="https://i.imgur.com/clHMu8p.png" alt="Indexing Pipeline" width="50%">
+
+## 1-Load
+!!! sam
+    **steps**:
 
     1. *Connect* to source
 
-    2. *Extract* & *parse*
+    2. *Extract* & parse
 
     3. *Metadata* review
 
     4. *Transform* and clean
 
 
+    Source data could be in many formats: md / data lakes / data warehouses / internet
 
 
-## 3.2 Split-Chunk
+
+## 2-Chunk
 
 !!! sam
-    **chunking**
+    **steps**:
 
-    - **advantages**
+    1. *Divide* long text ⟶ compact units
 
-        - *Context window of LLMs*
+    2. *Merge* units ⟶ larger chunks
 
-        - *Lost-in-the-middle problem*
+    3. *Overlap* chunks to maintain context continuity
 
-        - *Ease of search*
 
-    - **process**: from small ⟶ big
+!!! sam
+    **advantages | why *chunking* helps LLMs**:
 
-        1. **Divide**: Long text ⟶ compact units (eg sentences)
+    - *Context window*: LLMs ignore content beyond token limit.
 
-        2. **Merge**: Units ⟶ larger chunks
+    - *Lost-in-the-middle problem*: LLMs struggle with relevant info in middle of prompts.
 
-        3. **Overlap**: Maintain overlap for context continuity
+    - *Search*: LLMs struggle when searching over large text.
 
-    - **methods**
 
-        - **Fixed-size** (when uniform data): split using special list of characters
+!!! sam
+    **methods**:
 
-        - **Specialized** (when html, md, json, code): split using h tags, key-value pairs, etc
+    - *Fixed-size*: based on special characters (eg characters / tokens / sentences / paragraphs)
 
-        - **Semantic** (when need semantics): group sentences based on semantic similarity
+    - *Specialized*: based on file structure (eg h tags / key-value pairs)
 
-    - **method considerations**
+    - *Semantic*: sentence groups are based on semantic similarity
 
-        - **Nature of content**: could use different methods per source
+    **method considerations**: Nature of source content / use case / embedding model
 
-        - **Q length/complexity**
 
-        - **Use case**: short ⟶ Q&A, long ⟶ summarization
+## 3-Embed
 
-        - **Embeddings model**
+(See [[01-Building-Blocks#Embedding]] for context.)
 
+!!! sam
+    **steps**:
 
+    1. *Convert* chunks ⟶ numerical vectors
 
+    2. *Normalize*
 
-## 3.3 Data conversion (embeddings)
+    3. *Validate* vector quality
 
-load ⟶ split ⟶ *embed* ⟶ store
 
-- store chunks as **embeddings** ⟶ store in *vector database*
+!!! sam
+    **advantages | why *embeddings* helps LLMs**:
 
-**embeddings | motivating example**: 2 ways to find info
+    - _Semantics_: better than just keywords
 
-- keywords ⟶ match docs ⟶ show results
+    - _Vector similarity_: rank docs by context relevance, send best to LLM (via `cosine similarity` or `dot-product distance`)
 
-- semantics ⟶ match **embeddings** ⟶ show results
+    - _Scalability_: turns text into numeric vectors, making search and comparison fast.
 
-**embeddings**
+    - _Cross-modal alignment_: compare text / images / etc under a shared representation space.
 
-- **are**: vector representations of data (words, sentences, etc)
 
-- **are**: data transformed into *n*-dimensional matrices
+!!! sam
+    [HF MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard)
 
-- **do**: calc similarity & establish semantic relationships
+    | Embedding algos                                                                              | Team            | Note                                           |
+    | -------------------------------------------------------------------------------------------- | --------------- | ---------------------------------------------- |
+    | *Word2Vec*                                                                                   | Google          | shallow NN                                     |
+    | *<abbr title="Global Vectors for Word Representations">GloVe</abbr>*                         | Stanford        | unsupervised learning                          |
+    | *FastText*                                                                                   | Meta            | shallow NN, extends Word2Vec                   |
+    | *<abbr title="Embeddings from Language Models">ELMo</abbr>*                                  | Allen Institute | for Q&A and sentiment                          |
+    | *<abbr title="Bidirectional Encoder Representations from Transformers">BERT</abbr>* (Transf) | Google          | provides contextualized word embeddings via bi |
 
-**embedding models** (for w/s/p)
 
-- **purpose**: Enable similarity search. Position similar w/s/p near each other.
+## 4-Store
 
-- **how**: convert w/s/p into *n*-dim ***vectors***
+!!! sam
+    **Non-vector DB types**: *Relational*, *NoSQL*, *Graph*
 
-**embeddings** use cases:
+    ***Vector DBs***:
 
-- *Text search (RAG)*: search KB for optimal chunk
-
-- *Clustering*: categorize similar data together
-
-- *ML*: convert text ⟶ numbers (features)
-
-**embedding algos** | considerations:
-
-- ***Use case***: select based on your task (eg retrieval, semantic text similarity, summarization)
-
-- ***Cost***: more tokens ⟶ more dollars
-
-[HF MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard)
-
-| Embedding algos                                                                              | Team            | Note                                           |
-| -------------------------------------------------------------------------------------------- | --------------- | ---------------------------------------------- |
-| *Word2Vec*                                                                                   | Google          | shallow NN                                     |
-| *<abbr title="Global Vectors for Word Representations">GloVe</abbr>*                         | Stanford        | unsupervised learning                          |
-| *FastText*                                                                                   | Meta            | shallow NN, extends Word2Vec                   |
-| *<abbr title="Embeddings from Language Models">ELMo</abbr>*                                  | Allen Institute | for Q&A and sentiment                          |
-| *<abbr title="Bidirectional Encoder Representations from Transformers">BERT</abbr>* (Transf) | Google          | provides contextualized word embeddings via bi |
-
-OpenAI's:
-
-- *ada-002* (2022-12) 1536 dims
-
-- *3-small* (2024-01) 1536 dims. Users can adjust size based on their needs.
-
-- *3-large* (2024-01) 3072 dims.
-
-#### Extra Notes
-*vector*:
-
-- **in physics**: an object with magnitude (length) & direction
-
-- **in ML**: an abstract representation of data (array or list, rep a feature/attribute)
-
-- **in NLP**: can rep a doc, a sentence, a word.
-
-embedding example:
-
-- **words**: dog, bark, fly.
-
-- **similarities** (2D):
-
-    - **contextually**: dog & bark
-
-    - **grammatically**: bark & fly (verbs)
-
-**SIMILARITY**
-Similar pieces of text lie close to each other.
-similarity calculations | common measures
-
-- *cosine similarity*: use **angles**. (0 deg = similar, 90 deg = unrelated, 180 deg = opposite)
-
-- *euclidean distance*: use **distance**
-
-## 3.4 Storage (vector DBs)
-
-
-**databases**: organized collections of data
-
-- **Relational**: organize structured data into rows x columns. (MySQL)
-
-- **NoSQL**: handle unstructured & semi-structured (MongoDB)
-
-- **Graph**: query graph data (Neo4j)
-
-- ***Vector*: handle high-d vectors**
-
-    - efficiently store and retrieve vector data such as embeddings
+    - store & retrieve vector data
 
     - index & store vector embeddings for semantic search & retrieval
 
-    - also offer <abbr title="scalability, security, multi-tenancy, versioning, data management, query processing, interfaces">traditional features</abbr> of dbs
+
+!!! sam
+    **vector DB categories & providers**:
+
+    | category                 | core focus                                  | <abbr title="scalability, security, multi-tenancy, versioning, data management, query processing, interfaces">traditional features</abbr> | providers                                                                                                                                                                                                                                 |
+    | ------------------------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | *Vector indexes*         | Index & search                              | N                                                                                                                                         | <abbr title="Facebook AI Similarity Search">`FAISS`</abbr>, <abbr title="Non-Metric Space Library">NMSLIB</abbr>, <abbr title="Approximate Nearest Neighbors Oh Yeah">ANNOY</abbr>, <abbr title="Scalable Nearest Neighbors">ScaNN</abbr> |
+    | *Specialized vector DBs* | Index & search                              | Y                                                                                                                                         | `Pinecone`, `ChromaDB`, Milvus, Qdrant, Weaviate, Vald                                                                                                                                                                                    |
+    | *Search platforms*       | full text search & vector similarity search |                                                                                                                                           | Solr, Elastic Search, Open Search, Apache Lucene                                                                                                                                                                                          |
+    | *SQL databases*          | add-on vector capability                    |                                                                                                                                           | Azure SQL, Postgres, SingleStore, CloudSQL                                                                                                                                                                                                |
+    | *NoSQL databases*        | add-on vector capability                    |                                                                                                                                           | MongoDB                                                                                                                                                                                                                                   |
+    | *Graph databases*        | add-on vector capability                    |                                                                                                                                           | Neo4j                                                                                                                                                                                                                                     |
 
 
-```tabs
+!!! sam
+    **vector DB choice considerations**:
 
-tab: vector DBs
-***vector* databases** | 6 categories:
+    - *Accuracy vs. speed*
 
-- *Vector indexes*: focus on **indexing** and **search**. No <abbr title="scalability, security, multi-tenancy, versioning, data management, query processing, interfaces">traditional features</abbr>. (eg <abbr title="Facebook AI Similarity Search">FAISS</abbr>, <abbr title="Non-Metric Space Library">NMSLIB</abbr>, <abbr title="Approximate Nearest Neighbors Oh Yeah">ANNOY</abbr>, <abbr title="Scalable Nearest Neighbors">ScaNN</abbr>)
+    - *Flexibility vs. performance*: customizations add overhead
 
-- *Specialized vector DBs*: same as ^, plus <abbr title="scalability, security, multi-tenancy, versioning, data management, query processing, interfaces">traditional features</abbr>. (eg Pinecone, ChromaDB, Milvus, Qdrant, Weaviate, Vald, LanceDB, Vespa, Marqo.)
+    - *Local vs. cloud storage*: local (storage speed, access) **vs** cloud (security, redundancy, scalability)
 
-- *Search platforms*: built for full text search, have now added vector similarity search capabilities. (eg Solr, Elastic Search, Open Search, and Apache Lucene)
+    - *Direct access vs. API*: need tight control via direct libraries? or are ease-of-use abstractions like APIs better?
 
-- *SQL databases*: added vector capability. (eg Azure SQL, Postgres SQL(pgvector), SingleStore, and CloudSQL)
+    - *Advanced features*: how advanced do we need to be?
 
-- *NoSQL databases*: added vector capability. (eg MongoDB)
-
-- *Graph databases*: have vector capability. (eg Neo4j)
-
-tab: choice considerations
-
-- *Accuracy vs. speed*
-
-- *Flexibility vs. performance*: customizations add overhead
-
-- *Local vs. cloud storage*: local (storage speed, access) **vs** cloud (security, redundancy, scalability)
-
-- *Direct access vs. API*: need tight control via direct libraries? or are ease-of-use abstractions like APIs better?
-
-- *Simplicity vs. advanced features*: how advanced do we need to be?
-
-- *Cost*
-
-```
-
-
-popular providers:
-
-- **<abbr title="Facebook AI Similarity Search">FAISS</abbr>**: light, works for many applications
-
-- **ChromaDB**: user-friendly vector DB
-
-- **Pinecone**: offers managed services & customization
+    - *Cost*

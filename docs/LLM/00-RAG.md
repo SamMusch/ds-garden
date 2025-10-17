@@ -55,40 +55,49 @@ word*count: 211
 word_count: 190
 ---
 
+These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html), [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG)). This text uses RAG to improve upon LLM and LangChain as an orchestration framework.
+
 !!! sam
-    For this doc
+    **RAG**:
 
-    - Ontology ⟶ meaning and relationships
+    - _retrieval_: adds info from external data
 
-    - Taxonomy ⟶ grouping
+    - _augmented_: provide to LLM
 
-    - Hierarchy ⟶ order
+    - _generation_: improve LLM's result
+
+    **RAG** purpose: Enhance accuracy & relevance of LLMs.
 
 
-**Textbook**: A Simple Guide to RAG | [Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html) | [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG)
 
-**Terms & Symbols**
 
-| Symbol | Term           | Purpose              |
-| ------ | -------------- | -------------------- |
-| I      | Indexing       | Create & maintain KB |
-| KB     | Knowledge Base | Our docs             |
-| R      | Retrieve       | Get from KB          |
-| A      | Augment        | Provide to LLM       |
-| G      | Generation     | Gen KB + LLM         |
+!!! sam
+    My acronyms:
+
+    | Symbol | Term           | Purpose              |
+    | ------ | -------------- | -------------------- |
+    | I      | Indexing       | Create & maintain KB |
+    | KB     | Knowledge Base | Our docs             |
+    | R      | Retrieve       | Get from KB          |
+    | A      | Augment        | Provide to LLM       |
+    | G      | Generation     | Gen KB + LLM         |
 
 
 
 
 ### Hierarchies
 
-2 major *structural hierarchies*:
+!!! sam
+    2 major *structural hierarchies*:
 
-- **Layer hierarchy** ⟶ architectural (how the system *is built*)
+    - **Layer hierarchy** ⟶ architectural (how the system *is built*)
 
-- **Pipeline hierarchy** ⟶ functional (what the system *does*)
+    - **Pipeline hierarchy** ⟶ functional (what the system *does*)
 
-#### Layers
+
+
+#### Layers Hierarchy
+
 !!! sam
     - Critical Layers
 
@@ -123,21 +132,22 @@ word_count: 190
         - *Collaboration & Experimentation*
 
 
-#### Pipeline
+
+#### Pipeline Hierarchy
 !!! sam
     - Indexing Pipeline
 
-        - *loading*
+        - ***load***:
 
             - *Connect* to source
 
-            - *Extract* & *parse*
+            - *Extract* / parse
 
             - *Metadata* review
 
-            - *Transform* and clean
+            - *Transform* / clean
 
-        - *splitting (chunking)*
+        - ***chunk***
 
             - *Divide*
 
@@ -145,9 +155,9 @@ word_count: 190
 
             - *Overlap*
 
-        - *converting (embedding)*
+        - ***embed***
 
-        - *storing (vector DB)*
+        - ***store***
 
     - Generating Pipeline
 

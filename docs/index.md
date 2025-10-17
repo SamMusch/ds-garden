@@ -3,19 +3,19 @@
 
 - [projects](projects/) — 2 min
 
+**_Conceptual/**
+
+  - [Systems-Thinking](_Conceptual/Systems-Thinking/)
+
 **BigData/**
 
   - [Hadoop](BigData/Hadoop/)
   - [Snowflake](BigData/Snowflake/)
 
-**Conceptual/**
-
-  - [Systems-Thinking](Conceptual/Systems-Thinking/)
-
 **LLM/**
 
   - [00-RAG](LLM/00-RAG/) — 0.9 min
-  - [01-LLMs-RAG](LLM/01-LLMs-RAG/) — 1.3 min
+  - [01-LLMs-RAG](LLM/01-Building-Blocks/) — 1.3 min
   - [03-INDEXING](LLM/03-Indexing/) — 4.1 min
   - [04-GENERATING](LLM/04-Generating/) — 2.3 min
   - [05-Evaluating](LLM/05-Evaluating/) — 3.6 min

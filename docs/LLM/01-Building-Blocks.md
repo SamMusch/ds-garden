@@ -52,13 +52,11 @@ word_count: 261
 ---
 
 !!! sam
-    **RAG**:
+    Tokens
 
-    - _retrieval_: adds info from external data
+    - **are**: the fundamental semantic units used in NLP
 
-    - _augmented_: provide to LLM
-
-    - _generation_: improve LLM's result
+    - OpenAI suggests one token to be made of four characters or 0.75 words
 
 
 !!! sam
@@ -103,6 +101,9 @@ word_count: 261
     - **do**: let LLMs store & present knowledge
 
 
+
+### LangChain
+
 !!! sam
     LangChain
 
@@ -126,9 +127,34 @@ word_count: 261
 
 
 
+
+
+### Similarity
+
 !!! sam
-    Tokens
+    Similar pieces of text lie close to each other in space.
 
-    - **are**: the fundamental semantic units used in NLP
+    similarity calculations | common measures
 
-    - OpenAI suggests one token to be made of four characters or 0.75 words
+    - *cosine similarity*: use **angles**. (0 deg = similar, 90 deg = unrelated, 180 deg = opposite)
+
+    - *euclidean distance*: use **distance**
+
+
+
+### Embedding
+
+!!! sam
+    ***embedding* (process)**: converting raw data (chunks) ⟶ numerical *vectors*. Enables similarity search based on semantics, not just keywords.
+
+
+    **textbook example**: We have 3 words. We want to find their **similarities** in 2D space.
+
+    **data**: `dog`, `bark`, `fly`
+    **similarities** (2D):
+
+    - **x-axis**: *grammatically* ---> `fly` & `bark` are close (verbs)
+
+    - **y-axis**: *contextually* ---> `dog` & `bark` are close
+
+    ![](https://i.imgur.com/B6PJCBN.png)

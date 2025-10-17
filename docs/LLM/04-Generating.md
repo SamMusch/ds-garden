@@ -53,6 +53,20 @@ title: 04 GENERATING
 word_count: 467
 ---
 
+!!! sam
+    LLM x RAG systems generate reponses to user questions.
+    They have 2 sources of **memory** available.
+
+    - *Parametric*: learned during initial LLM training.
+
+    - *Non-parametric*: info stored in our knowledge base (KB) for RAG to learn from.
+
+        - *Indexing* pipeline: creates KB
+
+        - *==Generation==* pipeline: retrieves from KB (**THIS DOC**)
+
+
+
 ## Summary
 !!! sam
     **Generation pipeline**: Tie together user Q with our **indexing pipeline**.
