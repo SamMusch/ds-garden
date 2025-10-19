@@ -55,6 +55,8 @@ word*count: 211
 word_count: 190
 ---
 
+My Streamlit app: [Streamlit](https://smllmcode.streamlit.app/)
+
 These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html), [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG), based on [arXiv](https://arxiv.org/abs/2005.11401)). This text uses RAG to improve upon LLM, and uses LangChain as an orchestration framework.
 
 !!! sam
