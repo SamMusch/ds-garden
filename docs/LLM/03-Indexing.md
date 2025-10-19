@@ -92,7 +92,6 @@ word_count: 823
 
 
 ## 2-Chunk
-
 !!! sam
     **steps**:
 
@@ -125,8 +124,8 @@ word_count: 823
     **method considerations**: Nature of source content / use case / embedding model
 
 
-## 3-Embed
 
+## 3-Embed
 (See [[01-Building-Blocks#Embedding]] for context.)
 
 !!! sam
@@ -163,8 +162,8 @@ word_count: 823
     | *<abbr title="Bidirectional Encoder Representations from Transformers">BERT</abbr>* (Transf) | Google          | provides contextualized word embeddings via bi |
 
 
-## 4-Store
 
+## 4-Store
 !!! sam
     **Non-vector DB types**: *Relational*, *NoSQL*, *Graph*
 
