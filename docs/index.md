@@ -24,10 +24,6 @@
   - [09-Dev-Framework](LLM/09-Dev-Framework/) — 0.6 min
   - [z02-RAG-systems-design](LLM/z02-RAG-systems-design/) — 1.3 min
 
-**llm_code/**
-
-  - [README](llm_code/README/)
-
 **ML/**
 
   - [ML-01](ML/ML-01/) — 4.2 min
