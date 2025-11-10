@@ -71,7 +71,6 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
     **RAG** purpose: Enhance accuracy & relevance of LLMs.
 
 
-
 !!! sam
     My acronyms:
 
@@ -90,7 +89,6 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
     | KG     | Knowledge Graphs |              |
 
 
-
 ### Hierarchies
 
 !!! sam
@@ -99,7 +97,6 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
     - **Layer hierarchy** ⟶ architectural (how the system *is built*)
 
     - **Pipeline hierarchy** ⟶ functional (what the system *does*)
-
 
 
 #### Layers Hierarchy
@@ -138,8 +135,46 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
         - *Collaboration & Experimentation*
 
 
-
 #### Pipeline Hierarchy
+
+```horizontal
+
+- Indexing Pipeline
+
+    - ***load***:
+
+        - *Connect* to source
+
+        - *Extract* / parse
+
+        - *Metadata* review
+
+        - *Transform* / clean
+
+    - ***chunk***
+
+        - *Divide*
+
+        - *Merge*
+
+        - *Overlap*
+
+    - ***embed***
+
+    - ***store***
+
+---
+
+- Generating Pipeline
+
+    - R | *retrieving*
+
+    - A | *prompt managing (augmenting)*
+
+    - G | *LLM constructing (generating)*
+
+```
+
 !!! sam
     - Indexing Pipeline
 
@@ -172,10 +207,6 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
         - A | *prompt managing (augmenting)*
 
         - G | *LLM constructing (generating)*
-
-
-
-
 
 
 <img src="https://i.imgur.com/clHMu8p.png" alt="Indexing Pipeline" width="50%">
