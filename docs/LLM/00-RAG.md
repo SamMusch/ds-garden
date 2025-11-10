@@ -78,10 +78,16 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
     | Symbol | Term           | Purpose              |
     | ------ | -------------- | -------------------- |
     | I      | Indexing       | Create & maintain KB |
-    | KB     | Knowledge Base | Our docs             |
     | R      | Retrieve       | Get from KB          |
     | A      | Augment        | Provide to LLM       |
     | G      | Generation     | Gen KB + LLM         |
+
+
+
+    | Symbol | Term           | Purpose              |
+    | ------ | -------------- | -------------------- |
+    | KB     | Knowledge Base | Our docs             |
+    | KG     | Knowledge Graphs |              |
 
 
 
