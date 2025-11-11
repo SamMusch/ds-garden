@@ -101,113 +101,78 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
 
 #### Layers Hierarchy
 
-!!! sam
-    - Critical Layers
+```horizontal
 
-        - *Data*
+Critical Layers
 
-        - *Model*
+- *Data*
 
-        - *Model Deployment*
+- *Model*
 
-        - *App Orchestration*
+- *Model Deployment*
 
-    - Essential Layers
+- *App Orchestration*
+   
+---
 
-        - *Prompt*
+Essential Layers
 
-        - *Evaluation*
+- *Prompt*
 
-        - *Monitoring*
+- *Evaluation*
 
-        - *Security & Privacy*
+- *Monitoring*
 
-        - *Caching*
+- *Security & Privacy*
 
-    - Enhancement Layers
+- *Caching*
 
-        - *Human-in-the-Loop*
+---
+   
+Enhancement Layers
 
-        - *Cost Optimization*
+- *Human-in-the-Loop*
 
-        - *Explainability*
+- *Cost Optimization*
 
-        - *Collaboration & Experimentation*
+- *Explainability*
 
+- *Collaboration & Experimentation*
+
+```
 
 #### Pipeline Hierarchy
 
 ```horizontal
 
-- Indexing Pipeline
+Indexing Pipeline
 
-    - ***load***:
+- ***load***: *Connect* ⟶ *Extract* ⟶ *Metadata* ⟶ *Transform*
 
-        - *Connect* to source
+- ***chunk***: *Divide* ⟶ *Merge* ⟶ *Overlap*
 
-        - *Extract* / parse
+- ***embed***
 
-        - *Metadata* review
-
-        - *Transform* / clean
-
-    - ***chunk***
-
-        - *Divide*
-
-        - *Merge*
-
-        - *Overlap*
-
-    - ***embed***
-
-    - ***store***
+- ***store***
 
 ---
 
-- Generating Pipeline
+Generating Pipeline
 
-    - R | *retrieving*
+- R | *retrieving*
 
-    - A | *prompt managing (augmenting)*
+- A | *prompt managing (augmenting)*
 
-    - G | *LLM constructing (generating)*
+- G | *LLM constructing (generating)*
 
 ```
 
-!!! sam
-    - Indexing Pipeline
+```horizontal
 
-        - ***load***:
+<img src="https://i.imgur.com/clHMu8p.png" alt="Indexing Pipeline">
 
-            - *Connect* to source
+---
 
-            - *Extract* / parse
+<img src="https://i.imgur.com/Ab8rMqF.png" alt="Generation Pipeline">
 
-            - *Metadata* review
-
-            - *Transform* / clean
-
-        - ***chunk***
-
-            - *Divide*
-
-            - *Merge*
-
-            - *Overlap*
-
-        - ***embed***
-
-        - ***store***
-
-    - Generating Pipeline
-
-        - R | *retrieving*
-
-        - A | *prompt managing (augmenting)*
-
-        - G | *LLM constructing (generating)*
-
-
-<img src="https://i.imgur.com/clHMu8p.png" alt="Indexing Pipeline" width="50%">
-<img src="https://i.imgur.com/Ab8rMqF.png" alt="Generation Pipeline" width="50%">
+```
