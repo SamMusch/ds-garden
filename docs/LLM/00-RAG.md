@@ -24,7 +24,7 @@ grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate*Ranking: 2025-10-07 00:00:00 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-13 21:20:41 +0000
+kMDItemContentModificationDate: 2025-11-13 21:26:32 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -169,5 +169,34 @@ Generating Pipeline
   </div>
   <div class="hb-col" markdown="block">
 <img src="https://i.imgur.com/Ab8rMqF.png" alt="Generation Pipeline">
+  </div>
+</div>
+
+
+
+
+
+# Test
+
+<div class="hb-row" markdown="block">
+  <div class="hb-col" markdown="block">
+Indexing Pipeline
+
+- ***load***: *Connect* ⟶ *Extract* ⟶ *Metadata* ⟶ *Transform*
+
+- ***chunk***: *Divide* ⟶ *Merge* ⟶ *Overlap*
+
+- ***embed***
+
+- ***store***
+  </div>
+  <div class="hb-col" markdown="block">
+Generating Pipeline
+
+- R | *retrieving*
+
+- A | *prompt managing (augmenting)*
+
+- G | *LLM constructing (generating)*
   </div>
 </div>
