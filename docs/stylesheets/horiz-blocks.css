@@ -9,12 +9,13 @@
 
 /* Individual column cards */
 .hb-col {
-  flex: 1 1 0;            /* equal-width columns */
+  flex: 1 1 0;
   padding: 1rem 1.25rem;
-  border-radius: 0.5rem;
+  border-right: 1px solid rgba(0,0,0,0.06);
+}
 
-  background-color: var(--md-default-bg-color);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+.hb-col:last-child {
+  border-right: none;
 }
 
 .hb-col h3,
