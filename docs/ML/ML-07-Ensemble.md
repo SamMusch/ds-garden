@@ -102,6 +102,7 @@ Quick Review
 ### Bagging and Pasting
 
 !!! sam
+
     - Use the same algorithm, but train on different subsets of the training data (at the same time).
 
     - Typically helps reduce variance without adding much bias
@@ -122,6 +123,7 @@ Quick Review
 ### Random Patches
 
 !!! sam
+
     - Samples rows & columns.
 
     - Reduces variance because its comparing averages, not just one answer. Helps keep accuracy high for both in-sample and out-of-sample.

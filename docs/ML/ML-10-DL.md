@@ -196,6 +196,7 @@ Pg 299-316
 Pg 323 | [Paper by Leslie Smith](https://arxiv.org/abs/1803.09820)
 
 !!! sam
+
     - **\# hidden layers**: Start with 1 or 2 hidden layers. Early layers find simple patterns, later layers find complex. Add until we start overfitting.
 
     - **\# neurons per hidden layer**: Typically use the same for each (100), but could try adding more neurons to early layers if needed.
@@ -248,6 +249,7 @@ Pg 323 | [Paper by Leslie Smith](https://arxiv.org/abs/1803.09820)
 ### Why not just add more layers?
 
 !!! sam
+
     - **Vanishing gradient**: First layers not nearly as impacted as later stages because much large variance in later stages
 
         - **ReLU**: A change in the slope from one neuron to the next will have the same impact on each resulting layer

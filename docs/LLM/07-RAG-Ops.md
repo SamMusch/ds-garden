@@ -113,6 +113,7 @@ Relations
 - **includes**:
 
 !!! sam
+
     - **Data Layer**
 
         - **function** ⟶ create & manage the KB.
@@ -166,6 +167,7 @@ Relations
 - **includes**:
 
 !!! sam
+
     - **Prompt Layer**
 
         - **function** ⟶ guide LLM behavior through effective prompt design.
@@ -198,6 +200,7 @@ Relations
 - **includes**:
 
 !!! sam
+
     - **Human-in-the-Loop Layer**
 
         - **adds** ⟶ expert verification and ethical oversight.

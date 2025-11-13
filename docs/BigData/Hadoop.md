@@ -119,6 +119,7 @@ published: true
 (Core Entities & Relations)
 
 !!! sam
+
     - **HDFS**
 
         - *stores* ⟶ **Files** (⟶ *broken_into* ⟶ **Blocks** (≈128 MB))

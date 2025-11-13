@@ -101,6 +101,7 @@ LangChain has abstracted these algorithms ⟶ retrievers.
 
 ### Other popular retrievers
 !!! sam
+
     1. **Vector stores and DBs**:
 
         1. Combine `FAISS` with contextual embedding model

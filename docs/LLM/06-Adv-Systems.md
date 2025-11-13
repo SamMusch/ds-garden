@@ -145,6 +145,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 #### *2.2 Retrieval Stage*
 !!! sam
+
     - **uses_strategies**:
 
         - **Hybrid R** ⟶ combines sparse + dense + graph retrieval
@@ -160,6 +161,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 #### *2.3 Post-R Stage*
 !!! sam
+
     - **includes**:
 
         - **Compression** ⟶ removes irrelevant tokens, fits LLM context window
@@ -192,6 +194,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 #### 3.2 New
 !!! sam
+
     - **Search** ⟶ expands access to multiple data sources
 
     - **Fusion** ⟶ aggregates multi-query results

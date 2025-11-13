@@ -107,6 +107,7 @@ DL Resources
 
 
 !!! sam
+
     1. **Stationarity**
 
         - **Definition**: Constant mean, constant variance, and autocovariance depends only on lag.  
@@ -184,6 +185,7 @@ DL Resources
 
 ### Random Walk (Nonstationary)
 !!! sam
+
     - Values evolve via accumulating errors over time.
 
     - Variance grows with time.
@@ -193,6 +195,7 @@ DL Resources
 
 ### Converting to Stationary
 !!! sam
+
     1. **1st differencing**:  
 
         - A random walk $Y_t$ becomes stationary if you take $Y_t - Y_{t-1}$.  
@@ -211,6 +214,7 @@ DL Resources
 ### 4.1 White Noise
 
 !!! sam
+
     - **Definition**: Sequence of i.i.d. RVs with mean 0 and constant variance.
 
     - **Autocorrelation**: Zero at all lags.
@@ -219,6 +223,7 @@ DL Resources
 ### 4.2 Moving Average (MA)
 
 !!! sam
+
     - **MA(q)**: Current value depends on past $q$ errors (white-noise terms).
 
     - Example: **MA(2)**
@@ -235,6 +240,7 @@ DL Resources
 ### 4.3 Autoregressive (AR)
 
 !!! sam
+
     - **AR(p)**: Current value depends on its own past $p$ values.
 
     - Example: **AR(1)**
@@ -253,6 +259,7 @@ DL Resources
 #### Backshift Notation
 
 !!! sam
+
     - **Backshift operator** $B$: $B(X_{t}) = X_{t-1}$.
 
     - **AR(1) in backshift form**:
@@ -263,6 +270,7 @@ DL Resources
 ### 4.4 ARMA
 
 !!! sam
+
     - **ARMA(p, q)** = Autoregressive part (p) + Moving Average part (q).
 
     - **Stationarity**: Required for ARMA to work properly.
@@ -271,6 +279,7 @@ DL Resources
 ### 4.5 ARIMA
 
 !!! sam
+
     - **ARIMA(p, d, q)**: Same as ARMA but the series is differenced $d$ times to achieve stationarity.
 
     - In backshift form:
@@ -281,6 +290,7 @@ DL Resources
 ### 4.6 SARIMA
 
 !!! sam
+
     - Adds **seasonal** terms for both autoregressive and moving-average, as well as seasonal differencing.
 
     - Notation: **SARIMA$(p,d,q)(P,D,Q)_m$** where $m$ is the seasonal period (e.g., 12 for monthly data with yearly seasonality).
@@ -291,6 +301,7 @@ DL Resources
 ## 6. **Forecasting Methods**
 
 !!! sam
+
     1. **Naive**  
 
         - Forecast is simply the last observed value.
@@ -317,6 +328,7 @@ DL Resources
 ## 7. **Trends & Seasonality**
 
 !!! sam
+
     - **Deterministic Trend**:  
 
         - A function of time (linear, polynomial).  
@@ -348,6 +360,7 @@ DL Resources
 #### 02. Taxonomy
 
 !!! sam
+
     1. **Inputs vs. Outputs** (X vs Y)
 
         - **Inputs**: Historical data provided to the model in order to make a single forecast.

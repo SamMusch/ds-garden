@@ -130,6 +130,7 @@ RAG Evaluation
 ### 5.1-Quality-Scores
 
 !!! sam
+
     - **Definition**: Evaluate R & G outputs.
 
     - **Subclasses**:
@@ -168,6 +169,7 @@ RAG Evaluation
 ### 5.2-Evaluation-Metrics
 
 !!! sam
+
     - **Definition**: Quantitative functions measuring RAG performance.
 
     - **Categories**:
@@ -212,6 +214,7 @@ RAG Evaluation
 ### 5.3-Frameworks
 
 !!! sam
+
     - **Definition**: Tools that automate evaluation and data generation.
 
     - **Subclasses**:
@@ -234,6 +237,7 @@ RAG Evaluation
 ### 5.4-Benchmarks
 
 !!! sam
+
     - **Definition**: Standardized datasets and tasks to compare RAG systems.
 
     - **Subclasses**:
@@ -258,6 +262,7 @@ RAG Evaluation
 ### 5.5-Abilities
 
 !!! sam
+
     - **Definition**: Functional capacities that determine robustness and utility of RAG systems.
 
     - **Subclasses**:
