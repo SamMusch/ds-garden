@@ -21,3 +21,16 @@
 .hb-col h4 {
   margin-top: 0;
 }
+
+
+/* Match ad-sam background for the entire horizontal block wrapper */
+.hf-block .hb-row {
+  background-color: var(--md-default-bg-color);
+  border-radius: 0.75rem; /* same rounded feel as ad-sam */
+  padding: 1rem 1.25rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+
+  /* optional: light outline similar to your ad-sam card */
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.04);
+}
