@@ -1,5 +1,54 @@
 ---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: Snowflake.md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
+children: 0
+created: '2025-10-23'
+cssclasses: null
+grandchildren: 0
+kMDItemContentCreationDate: 2025-10-15 16:38:16 +0000
+kMDItemContentCreationDate_Ranking: 2025-10-15 00:00:00 +0000
+kMDItemContentModificationDate: 2025-10-15 21:36:47 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-10-15 17:13:58 +0000
+kMDItemDocumentIdentifier: '223516'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-10-15 00:00:00 +0000
+kMDItemLastUsedDate: 2025-10-15 21:12:58 +0000
+kMDItemLastUsedDate_Ranking: 2025-10-15 00:00:00 +0000
+kMDItemUseCount: '55'
+kMDItemUsedDates: (
+modified: '2025-10-15'
 published: true
+reading_time: 2.5
+source_file: Snowflake.md
+tags: null
+title: Snowflake
+word_count: 507
 ---
 
 ### Systems-Thinking Model

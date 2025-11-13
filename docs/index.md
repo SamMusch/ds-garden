@@ -5,24 +5,24 @@
 
 **_Conceptual/**
 
-  - [LRAT](_Conceptual/README/)
-  - [Systems-Thinking](_Conceptual/Systems-Thinking/)
+  - [README](_Conceptual/README/) — 4.8 min
+  - [Systems-Thinking](_Conceptual/Systems-Thinking/) — 0.3 min
 
 **BigData/**
 
-  - [Hadoop](BigData/Hadoop/)
-  - [Snowflake](BigData/Snowflake/)
+  - [Hadoop](BigData/Hadoop/) — 1.6 min
+  - [Snowflake](BigData/Snowflake/) — 2.5 min
 
 **LLM/**
 
-  - [00-RAG](LLM/00-RAG/) — 0.9 min
-  - [01-LLMs-RAG](LLM/01-Building-Blocks/) — 1.3 min
-  - [03-INDEXING](LLM/03-Indexing/) — 4.1 min
-  - [04-GENERATING](LLM/04-Generating/) — 2.3 min
+  - [00-RAG](LLM/00-RAG/) — 1.2 min
+  - [01-Building-Blocks](LLM/01-Building-Blocks/) — 1.7 min
+  - [03-INDEXING](LLM/03-Indexing/) — 2.9 min
+  - [04-GENERATING](LLM/04-Generating/) — 2.6 min
   - [05-Evaluating](LLM/05-Evaluating/) — 3.6 min
   - [06-Adv-Systems](LLM/06-Adv-Systems/) — 3 min
   - [07-RAG-Ops](LLM/07-RAG-Ops/) — 2.3 min
-  - [08-RAG-Variants](LLM/08-RAG-Variants/)
+  - [08-RAG-Variants](LLM/08-RAG-Variants/) — 38 min
   - [09-Dev-Framework](LLM/09-Dev-Framework/) — 0.6 min
   - [z02-RAG-systems-design](LLM/z02-RAG-systems-design/) — 1.3 min
 
