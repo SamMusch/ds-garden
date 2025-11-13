@@ -16,12 +16,12 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-10-23'
+created: '2025-11-13'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-15 16:38:16 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-15 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-15 21:36:47 +0000
+kMDItemContentModificationDate: 2025-11-13 21:26:32 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-15 17:13:58 +0000
@@ -40,9 +40,9 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-15 00:00:00 +0000
 kMDItemLastUsedDate: 2025-10-15 21:12:58 +0000
 kMDItemLastUsedDate_Ranking: 2025-10-15 00:00:00 +0000
-kMDItemUseCount: '55'
+kMDItemUseCount: '57'
 kMDItemUsedDates: (
-modified: '2025-10-15'
+modified: '2025-11-13'
 published: true
 reading_time: 2.5
 source_file: Snowflake.md
