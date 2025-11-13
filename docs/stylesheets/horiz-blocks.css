@@ -1,37 +1,35 @@
 /* Horizontal Blocks: container */
-.hb-row {
-  display: flex;          /* force columns to sit side-by-side */
-  flex-wrap: nowrap;      /* no wrapping: always one row on desktop widths */
-  gap: 1.0rem;
-  width: 100%;
-  margin: 1.5rem 0;
+.hb-row {                          
+  display: flex;                   /* arrange children horizontally */
+  flex-wrap: nowrap;               /* prevent wrapping to multiple rows */
+  gap: 1.0rem;                     /* spacing between the columns */
+  width: 100%;                     /* allow the row to span full width */
+  margin: 0.5rem 0;                /* vertical spacing around the row */
 }
 
 /* Individual column cards */
-.hb-col {
-  flex: 1 1 0;
-  padding: 1rem 1.25rem;
-  border-right: 1px solid rgba(0,0,0,0.06);
+.hb-col {                          /* each column inside the row */
+  flex: 1 1 0;                     /* equal-width flexible columns */
+  padding: 1rem 1.25rem;           /* internal spacing around content */
+  border-right: 1px solid rgba(0,0,0,0.06); /* light divider between columns */
 }
 
-.hb-col:last-child {
-  border-right: none;
+.hb-col:last-child {               /* last column in the row */
+  border-right: none;              /* remove divider on the far right */
 }
 
-.hb-col h3,
-.hb-col h4 {
-  margin-top: 0;
+.hb-col h3,                        /* headings inside a column */
+.hb-col h4 {                       /* supports both h3 and h4 usage */
+  margin-top: 0;                   /* tighten spacing so headings align cleanly */
 }
-
 
 /* Match ad-sam background for the entire horizontal block wrapper */
-.hf-block .hb-row {
-  background-color: var(--md-default-bg-color);
-  border-radius: 0.75rem; /* same rounded feel as ad-sam */
-  padding: 1rem 1.25rem;
-  margin-top: 0.75rem;
-  margin-bottom: 1.5rem;
+.hf-block .hb-row {                /* horizontal block when inside hf-block */
+  background-color: var(--md-default-bg-color); /* same background as ad-sam */
+  border-radius: 0.75rem;          /* rounded corners to match ad-sam */
+  padding: 1rem 1.25rem;           /* consistent internal spacing */
+  margin-top: 0.75rem;             /* space above the block */
+  margin-bottom: 1.5rem;           /* space below the block */
 
-  /* optional: light outline similar to your ad-sam card */
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.04);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.04); /* subtle outline to match ad-sam visual weight */
 }
