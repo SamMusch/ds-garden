@@ -18,6 +18,7 @@ extra_javascript:
 
 strict: false   # build warnings are okay; switch to true later
 
+
 theme:
   name: material
   favicon: images/favicon.svg
