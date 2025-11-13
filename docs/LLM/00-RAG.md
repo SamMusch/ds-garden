@@ -90,7 +90,6 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
 
 
 ### Hierarchies
-
 !!! sam
     2 major *structural hierarchies*:
 
@@ -100,7 +99,6 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
 
 
 #### Layers Hierarchy
-
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 Critical Layers
@@ -141,7 +139,6 @@ Enhancement Layers
 
 
 #### Pipeline Hierarchy
-
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 Indexing Pipeline
