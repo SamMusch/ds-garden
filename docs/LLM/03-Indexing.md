@@ -67,10 +67,14 @@ word_count: 571
 
 
 **Indexing pipeline steps to create the KB**:
-[[#1-Load]] information from source systems
-[[#2-Chunk]] into smaller pieces
-[[#3-Embed]] into vectors to enable similarity search
-[[#4-Store]] in a vector DB
+
+1. [[#1-Load]] information from source systems
+
+2. [[#2-Chunk]] into smaller pieces
+
+3. [[#3-Embed]] into vectors to enable similarity search
+
+4. [[#4-Store]] in a vector DB
 
 <img src="https://i.imgur.com/clHMu8p.png" alt="Indexing Pipeline" width="50%">
 

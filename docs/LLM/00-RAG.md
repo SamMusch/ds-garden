@@ -55,9 +55,10 @@ word*count: 211
 word_count: 238
 ---
 
-My Streamlit app: [Streamlit](https://smllmcode.streamlit.app/)
+**Textbook**: *A Simple Guide to RAG* by Abhinav Kimothi. ([Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html), [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG), based on [arXiv](https://arxiv.org/abs/2005.11401))
 
-These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html), [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG), based on [arXiv](https://arxiv.org/abs/2005.11401)). This text uses RAG to improve upon LLM, and uses LangChain as an orchestration framework.
+**Purpose**: With LangChain as the orchestration framework, improve upon LLM by applying a RAG system.
+
 
 !!! sam
     **RAG**:
@@ -71,6 +72,7 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
     **RAG** purpose: Enhance accuracy & relevance of LLMs.
 
 
+
 !!! sam
     My acronyms:
 
@@ -80,13 +82,8 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
     | R      | Retrieve       | Get from KB          |
     | A      | Augment        | Provide to LLM       |
     | G      | Generation     | Gen KB + LLM         |
-
-
-
-    | Symbol | Term           | Purpose              |
-    | ------ | -------------- | -------------------- |
     | KB     | Knowledge Base | Our docs             |
-    | KG     | Knowledge Graphs |              |
+
 
 
 ### Hierarchies
@@ -169,34 +166,5 @@ Generating Pipeline
   </div>
   <div class="hb-col" markdown="block">
 <img src="https://i.imgur.com/Ab8rMqF.png" alt="Generation Pipeline">
-  </div>
-</div>
-
-
-
-
-
-# Test
-
-<div class="hb-row" markdown="block">
-  <div class="hb-col" markdown="block">
-Indexing Pipeline
-
-- ***load***: *Connect* ⟶ *Extract* ⟶ *Metadata* ⟶ *Transform*
-
-- ***chunk***: *Divide* ⟶ *Merge* ⟶ *Overlap*
-
-- ***embed***
-
-- ***store***
-  </div>
-  <div class="hb-col" markdown="block">
-Generating Pipeline
-
-- R | *retrieving*
-
-- A | *prompt managing (augmenting)*
-
-- G | *LLM constructing (generating)*
   </div>
 </div>

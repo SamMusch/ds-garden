@@ -53,7 +53,7 @@ word_count: 268
 
 NOTE 25-09-30: 
 
-- I moved the indexing pipeline info into ch 3 to rm redundancy.
+- Integrated indexing pipeline info into ch 3 to rm redundancy.
 
 - Do the same with the rest of the info.
 
