@@ -7,7 +7,8 @@
 
 /* Container */
 .md-typeset .admonition.sam,
-.md-typeset details.sam {
+.md-typeset details.sam,
+.md-typeset .hb-row {
   border: 1px solid var(--sam-border);
   border-left: 4px solid var(--sam-accent);
   background-color: var(--sam-bg);
@@ -31,7 +32,8 @@
 
 /* --- Ensure the ad-sam copy button is visible and clickable --- */
 .md-typeset .admonition.sam,
-.md-typeset details.sam {
+.md-typeset details.sam,
+.md-typeset .hb-row {
   position: relative; /* anchor for absolutely positioned button */
 }
 
