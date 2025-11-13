@@ -1,0 +1,13 @@
+.hb-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.hb-col {
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--md-default-bg-color);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
+}

@@ -7,6 +7,7 @@ extra_css:
   - stylesheets/extra.css
   - stylesheets/ad-sam.css
   - styles/heading-fold.css
+  - styles/horiz-blocks.css
 
 extra_javascript:
   - javascripts/ad-sam-copy.js
