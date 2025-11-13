@@ -2,7 +2,7 @@
 .hb-row {
   display: flex;          /* force columns to sit side-by-side */
   flex-wrap: nowrap;      /* no wrapping: always one row on desktop widths */
-  gap: 1.5rem;
+  gap: 1.0rem;
   width: 100%;
   margin: 1.5rem 0;
 }
