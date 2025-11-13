@@ -18,13 +18,13 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-10-12'
+created: '2025-11-13'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate*Ranking: 2025-10-07 00:00:00 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-12 14:06:38 +0000
+kMDItemContentModificationDate: 2025-11-13 21:20:41 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -42,17 +42,17 @@ kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
 kMDItemInterestingDate*Ranking: 2025-10-11 00:00:00 +0000
-kMDItemInterestingDate_Ranking: 2025-10-12 00:00:00 +0000
-modified: '2025-10-12'
+kMDItemInterestingDate_Ranking: 2025-11-13 00:00:00 +0000
+modified: '2025-11-13'
 published: true
 reading*time: 1.1
-reading_time: 0.9
+reading_time: 1.2
 source*file: 00-RAG-Ontology.md
 source_file: 00-RAG.md
 tags: null
 title: 00 RAG
 word*count: 211
-word_count: 190
+word_count: 238
 ---
 
 My Streamlit app: [Streamlit](https://smllmcode.streamlit.app/)
@@ -90,7 +90,6 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
 
 
 ### Hierarchies
-
 !!! sam
     2 major *structural hierarchies*:
 
@@ -100,7 +99,6 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
 
 
 #### Layers Hierarchy
-
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 Critical Layers
@@ -141,7 +139,6 @@ Enhancement Layers
 
 
 #### Pipeline Hierarchy
-
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 Indexing Pipeline

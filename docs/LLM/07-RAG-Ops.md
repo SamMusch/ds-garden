@@ -16,12 +16,12 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-10-12'
+created: '2025-10-23'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-11 15:57:58 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-11 00:00:00 +0000
-kMDItemContentModificationDate: 2025-10-12 17:20:20 +0000
+kMDItemContentModificationDate: 2025-10-12 18:14:40 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-11 15:57:58 +0000
@@ -40,7 +40,7 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
 kMDItemLastUsedDate: 2025-10-11 16:41:54 +0000
 kMDItemLastUsedDate_Ranking: 2025-10-11 00:00:00 +0000
-kMDItemUseCount: '100'
+kMDItemUseCount: '104'
 kMDItemUsedDates: (
 kMDItemUserCreatedDate: (
 kMDItemUserCreatedUserHandle: (
