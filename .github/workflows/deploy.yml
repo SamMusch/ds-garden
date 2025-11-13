@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install             mkdocs             mkdocs-material             mkdocs-awesome-pages-plugin             mkdocs-roamlinks-plugin
+          python -m pip install             mkdocs             mkdocs-material             mkdocs-awesome-pages-plugin             mkdocs-roamlinks-plugin             
 
       - name: Verify plugin import
         run: python -c "import mkdocs; print('mkdocs', mkdocs.__version__)"
