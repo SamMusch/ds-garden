@@ -4,7 +4,7 @@
   flex-wrap: nowrap;               /* prevent wrapping to multiple rows */
   gap: 1.0rem;                     /* spacing between the columns */
   width: 100%;                     /* allow the row to span full width */
-  margin: 0.5rem 0;                /* vertical spacing around the row */
+  margin: 0.1rem 0;                /* vertical spacing around the row */
 }
 
 /* Individual column cards */
@@ -27,9 +27,12 @@
 .hf-block .hb-row {                /* horizontal block when inside hf-block */
   background-color: var(--md-default-bg-color); /* same background as ad-sam */
   border-radius: 0.75rem;          /* rounded corners to match ad-sam */
-  padding: 1rem 1.25rem;           /* consistent internal spacing */
-  margin-top: 0.75rem;             /* space above the block */
-  margin-bottom: 1.5rem;           /* space below the block */
+  /* padding: 1rem 1.25rem; */           /* consistent internal spacing */
+  padding: 0.0rem 0.0rem;        /* tighter vertical spacing */
+  margin-top: 0.0rem;              /* reduced outer spacing */
+  margin-bottom: 0.0rem;           /* reduced outer spacing */
+  margin-top: 0.5rem;             /* space above the block */
+  margin-bottom: 0.5rem;           /* space below the block */
 
   box-shadow: 0 0 0 1px rgba(0,0,0,0.04); /* subtle outline to match ad-sam visual weight */
 }
