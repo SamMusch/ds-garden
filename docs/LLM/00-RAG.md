@@ -101,8 +101,8 @@ These notes come from *A Simple Guide to RAG* by by Abhinav Kimothi. ([Oreilly](
 
 #### Layers Hierarchy
 
-```horizontal
-
+<div class="hb-row" markdown="block">
+  <div class="hb-col" markdown="block">
 Critical Layers
 
 - *Data*
@@ -112,9 +112,8 @@ Critical Layers
 - *Model Deployment*
 
 - *App Orchestration*
-   
----
-
+  </div>
+  <div class="hb-col" markdown="block">
 Essential Layers
 
 - *Prompt*
@@ -126,9 +125,8 @@ Essential Layers
 - *Security & Privacy*
 
 - *Caching*
-
----
-   
+  </div>
+  <div class="hb-col" markdown="block">
 Enhancement Layers
 
 - *Human-in-the-Loop*
@@ -138,13 +136,14 @@ Enhancement Layers
 - *Explainability*
 
 - *Collaboration & Experimentation*
+  </div>
+</div>
 
-```
 
 #### Pipeline Hierarchy
 
-```horizontal
-
+<div class="hb-row" markdown="block">
+  <div class="hb-col" markdown="block">
 Indexing Pipeline
 
 - ***load***: *Connect* ⟶ *Extract* ⟶ *Metadata* ⟶ *Transform*
@@ -154,9 +153,8 @@ Indexing Pipeline
 - ***embed***
 
 - ***store***
-
----
-
+  </div>
+  <div class="hb-col" markdown="block">
 Generating Pipeline
 
 - R | *retrieving*
@@ -164,15 +162,15 @@ Generating Pipeline
 - A | *prompt managing (augmenting)*
 
 - G | *LLM constructing (generating)*
+  </div>
+</div>
 
-```
 
-```horizontal
-
+<div class="hb-row" markdown="block">
+  <div class="hb-col" markdown="block">
 <img src="https://i.imgur.com/clHMu8p.png" alt="Indexing Pipeline">
-
----
-
+  </div>
+  <div class="hb-col" markdown="block">
 <img src="https://i.imgur.com/Ab8rMqF.png" alt="Generation Pipeline">
-
-```
+  </div>
+</div>
