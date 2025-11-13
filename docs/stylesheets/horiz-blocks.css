@@ -1,22 +1,23 @@
-/* Container for each horizontal block */
+/* Horizontal Blocks: container */
 .hb-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  display: flex;          /* force columns to sit side-by-side */
+  flex-wrap: nowrap;      /* no wrapping: always one row on desktop widths */
+  gap: 1.5rem;
+  width: 100%;
   margin: 1.5rem 0;
 }
 
-/* Individual columns */
+/* Individual column cards */
 .hb-col {
+  flex: 1 1 0;            /* equal-width columns */
   padding: 1rem 1.25rem;
   border-radius: 0.5rem;
 
-  /* play nicely with MkDocs Material colors */
   background-color: var(--md-default-bg-color);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 .hb-col h3,
 .hb-col h4 {
-  margin-top: 0.25rem;
+  margin-top: 0;
 }
