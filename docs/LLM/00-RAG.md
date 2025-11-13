@@ -171,3 +171,32 @@ Generating Pipeline
 <img src="https://i.imgur.com/Ab8rMqF.png" alt="Generation Pipeline">
   </div>
 </div>
+
+
+
+
+
+# Test
+
+<div class="hb-row" markdown="block">
+  <div class="hb-col" markdown="block">
+Indexing Pipeline
+
+- ***load***: *Connect* ⟶ *Extract* ⟶ *Metadata* ⟶ *Transform*
+
+- ***chunk***: *Divide* ⟶ *Merge* ⟶ *Overlap*
+
+- ***embed***
+
+- ***store***
+  </div>
+  <div class="hb-col" markdown="block">
+Generating Pipeline
+
+- R | *retrieving*
+
+- A | *prompt managing (augmenting)*
+
+- G | *LLM constructing (generating)*
+  </div>
+</div>
