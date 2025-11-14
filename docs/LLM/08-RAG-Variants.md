@@ -67,6 +67,8 @@ Book contents
 
 Chapter 8 looks at some popular RAG variants. These solve challenges from Ch 6.
 
+---
+
 3 most popular RAG variants
 
 - KG
@@ -115,32 +117,39 @@ makes the system both flexible and domain aware.
 ## 8.2 Multimodal RAG
 
 
-### 8.2.1 Data modality
+8.2.1 Data modality
 
-*Modality*: data format
+- *Modality*: data format
 
-*Multimodal RAG*: RAG + capability to process multiple modalities. 
+- *Multimodal RAG*: RAG + capability to process multiple modalities. 
 
+8.2.3 Changes
 
+- Indexing Pipeline
 
-### 8.2.3 Multimodal RAG pipelines
+- Generation Pipeline
 
-Dev change: loading & indexing
+#### Multimodal | I Pipeline
 
+Key challenges include:
 
+* **Complexity**: Multimodal embeddings help but still produce errors.
 
-#### Multimodal indexing pipeline
+* **Cost**: Requires heavier preprocessing & compute.
 
-I: Each of the 4
+* **Latency**: Both in I & G.
 
-- *Load*: Connectors and data loaders
+Update the *indexing pipeline* in each step (*Load* ⟶ *Chunk* ⟶ *Embed* ⟶ *Store*).
 
-- *Chunk*:
+| Indexing component | Text-only RAG                                                         | Multimodal RAG                                                                 |
+| ------------------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Loading            | Use standard text data loaders                                        | Use connectors for additional data types.                                      |
+| Chunking           | Based on context or structure, then optionally enriched semantically. | Text: Same<br><br>Other data types require advanced chunking.                  |
+| Embeddings         | Text embeddings model                                                 | Multimodal embeddings models to unify all data types in a shared vector space. |
+| Storage            | Embeddings stored in vector DB.                                       | Same + additional storage for raw multimodal files                             |
 
-- *Embed*:
-
-- *Store*:
-
+<div class="hb-row" markdown="block">
+  <div class="hb-col" markdown="block">
 *Load*
 
 - `Pillow` (`PIL`): images
@@ -152,7 +161,8 @@ I: Each of the 4
     - `UnstructuredImageLoader`: images. 
 
     - `OpenAIWhisperParser`, `AssemblyAIAudioTranscriptLoader`, and `YoutubeLoader`: audio/video
-
+  </div>
+  <div class="hb-col" markdown="block">
 *Chunking* methods
 
 - **Audio**: Voice activity detection (VAD)
@@ -163,7 +173,8 @@ I: Each of the 4
 
 - **Code**: By function/class
  `semantic_chunkers`: library for chunking of text/video/audio
-
+  </div>
+  <div class="hb-col" markdown="block">
 *Embeddings* methods
 
 - **shared/joint embedding models**: map diverse data types into a unified embeddings space (eg image ---> text description). `Google Vertex AI`.
@@ -171,45 +182,25 @@ I: Each of the 4
 - **modality-specific embeddings**: instead of a single embeddings space for all modalities, the embeddings space maps only two modalities. `CLIP`
 
 - **conversion of non-text into text**: use multimodal LLM ---> convert nontext data into text ---> follow standard text-only RAG approach
-
+  </div>
+  <div class="hb-col" markdown="block">
 *Storing*
 
 - vector storage AND document storage (`Redis`)
+  </div>
+</div>
 
 
 
-**Table 8.1**: I pipelines (text-only vs. multimodal)
-
-| Indexing component | Text-only RAG                                                | Multimodal RAG                                               |
-| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Loading            | Standard text data loaders are used to load documents, such as plain text files, PDFs, and other text-based formats. | Requires connectors for additional data types. For images, libraries such as `Pillow` (`PIL`) and `Unstructured­ImageLoader` in LangChain are used; for audio, we use libraries such as `Pydub` or `OpenAIWhisperParser`, whereas `CSVLoader` and `DataFrameLoader` are used for tabular data. Audio and video transcription tools such as AssemblyAI and YoutubeLoader are also incorporated to preprocess audio/video content. |
-| Chunking           | Text data is divided into segments (chunks) based on context or structure (e.g., sentences, paragraphs) and optionally enriched semantically. | Follows text chunking when data is transcribed to text (audio/video). For raw audio, voice activity detection (VAD) can be used to chunk by pauses. For videos, scene detection identifies visual transitions, and tabular data can be chunked row/column-wise. Image chunking is typically skipped. |
-| Embeddings         | Text embeddings are created using a single-modality text embeddings model (e.g., OpenAI embeddings or BERT), which vectorizes each chunk for storage and retrieval. | Embeddings can be generated via multimodal embeddings models, which unify all data types in a shared vector space for cross-modal retrieval, modality-specific embeddings such as CLIP and CLAP or converting multimodal data to text first and use text embeddings, although this may cause information loss. |
-| Storage            | Embeddings are stored in vector databases.                   | Embeddings are stored in vector databases, but additional document storage for raw multimodal files may be used. |
 
 
-#### Multimodal generation pipeline
-
-Table 8.2 Indexing pipelines of text-only vs. multimodal RAG
+#### Multimodal | G Pipeline
 
 | Generation component | Text-only RAG                                              | Multimodal RAG                                                                                                                                                                                                                                                                                                                                  |
 | -------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | R                    | *Similarity search*: Retrieves similar text embedding to Q | **shared embeddings model**: a similarity search is employed regardless of modality, converting the query into a multimodal vector. <br><br>**modality-specific embeddings**: multi-vector retrieval is used for modality-specific results<br><br>**text-converted nontext data**: standard text retrieval + raw files mapped to text summaries |
 | A                    | Adds R to prompt                                           | Same + includes the raw multimodal files alongside the text in the prompt.                                                                                                                                                                                                                                                                      |
 | G                    | LLMs generates responses                                   | Uses multimodal LLMs                                                                                                                                                                                                                                                                                                                            |
-
-
-### 8.2.4 Challenges and best practices
-
-Multimodal RAG systems are gaining prominence owing to the diversity present in enterprise data. However, one must note that with multimodality, the complexity of the system increases along with higher latency and more expenditure on multimodal embeddings and generation. Some of the common challenges associated with multimodal RAG are
-
-- Ensuring coherent alignment between different data modalities (e.g., text and images) can be difficult. Utilizing multimodal embeddings projecting different modalities into a common embedding space does create better integration, but these embeddings models can still lead to inaccuracies and must be evaluated.
-
-- Handling multiple data types may increase computational requirements and processing time. Robust preprocessing pipelines to standardize and align data from various modalities are essential. Sometimes, converting multimodal data to text and following a text-only RAG approach may be enough to generate the desired results.
-
-- Not all models are capable of effectively processing and integrating multimodal data of all modalities. Incorporate only those that add significant value to the task to optimize performance and resource utilization.
-
-We have looked at a RAG variant that extends the capability of RAG to different data modalities. However, standard RAG is still deficient when the information is dispersed across different documents. Let’s now look at a pattern in which KGs are used to establish higher-order relationships.
 
 
 
@@ -219,9 +210,7 @@ We have looked at a RAG variant that extends the capability of RAG to different 
 
 ## 8.3 KG RAG
 
-Summarization is tough because there isn't a specific chunk with the summary.
-
-Instead, requires:
+Summarization is difficult because there isn't one specific chunk with the summary. Instead, it requires:
 
 - multi-hop reasoning, 
 
@@ -238,25 +227,27 @@ KG RAG or simply *graph RAG*
 
 Google popularized the term *KG* by integrating an **entity-relationship structure** into its search engine.
 
-node-and-edge structure
+!!! sam
+    node-and-edge structure
 
-- **Nodes** represent *entities* such as people, organizations, products
+    - **Nodes** represent *entities* such as people, organizations, products
 
-- **Edges** represent *relationships* between the nodes (such as *is a part of*, *works at*, *is related to*)
-Structure also have *attributes* such as id, timestamp, etc.
-
-
-KGs 
-
-- rely on *semantics* to create a human-like understanding of data. 
-
-- prioritize *relationships* & *context*, an advantage over standard structured databases.
-
-- enhance with *context-aware* R.
+    - **Edges** represent *relationships* between the nodes (such as *is a part of*, *works at*, *is related to*)
+    Structure also have *attributes* such as id, timestamp, etc.
 
 
+!!! sam
+    KGs 
 
-KGs storage and data processing is unique. `Neo4j`, `Amazon Neptune`
+    - rely on *semantics* to create a human-like understanding of data. 
+
+    - prioritize *relationships* & *context*, an advantage over standard structured databases.
+
+    - enhance with *context-aware* R.
+
+    KGs storage and data processing is unique. `Neo4j`, `Amazon Neptune`
+
+
 
 **graph DBs** | Building blocks
 
@@ -279,38 +270,83 @@ KGs storage and data processing is unique. `Neo4j`, `Amazon Neptune`
     - *Graph traversal*: The method of navigating through nodes and edges to discover paths / patterns / insights.
 
 
+---
+
 
 ### 8.3.3 Graph RAG approaches
 
+Knowledge graphs let you add structure to retrieval. 
 
-#### Structure awareness through graphs
+3 common patterns:
 
-This is the simplest approach to incorporating KGs. Recall that in the standard vector-based RAG approach, documents are chunked, and embeddings are created then and stored for retrieval. The problem that may arise is that the information in the adjacent chunks might not be retrieved, and a certain degree of context loss may happen. In section 6.2.1, we discussed a hierarchical indexing structure such as a parent–child structure. The parent document contains overarching themes or summaries, while child documents delve into specific details. During retrieval, the system can first locate the most relevant child documents and then refer to the parent documents for additional context if required. This approach enhances the precision of retrieval, while maintaining the broader context.
+1. Structure-aware retrieval
 
-An efficient way to store documents in a hierarchical structure is in graphs. Parent and child documents can be stored in the nodes with a relationship “is child of.” More levels of hierarchies can be created. In figure 8.7, there are three levels of indexing hierarchy, and while the search happens at the lowest level, parent documents at a higher hierarchy level are retrieved for deeper context.
+2. Graph-enhanced vector search
 
-Figure 8.7 While search in a hierarchical index structure happens at the lowest level, retrieved documents are more contextually complete from a higher level of hierarchy.
+3. Graph communities and community summaries
+
+For all 3, need to modify I and R pipelines to
+
+- incorporate the graph
+
+- create hybrid retrieval system with vector DBs **and** graph DBs
 
 
-[A screenshot of a diagram  AI-generated content may be incorrect.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH08_F07_Kimothi.png)
+!!! sam
+    (1/3) **Structure-aware retrieval**
+    A standard vector RAG chunks documents ⟶ embeds each chunk *independently*.
+
+    - Issue: Lost context because adjacent or related chunks may not be retrieved together.
+
+    Instead, index docs *hierarchically* (parent → child). 
+
+    - **parent nodes**: hold summaries or themes
+
+    - **child nodes**: hold detailed chunks
+
+    After Q: retrieve child nodes ⟶ retrieve parents to restore broader context.
 
 
 
-#### Graph-enhanced vector search
+!!! sam
+    (2/3) **Graph-enhanced vector search**
 
-Graphs are not mandatory when implementing hierarchical indexing. The true value of KGs is realized when connections can be made across chunks. Standard vector-based search on a collection of chunks can be enhanced by traversing a KG to retrieve related chunks. To do this, a set of entities and relationships are extracted from the chunks using an LLM.
+    (Doesn't use hierarchy)
+    **Motivation**: Use KGs to make connections *across chunks*. Use an LLM to extract a set of entities & relationships from the chunks.
 
-In the retrieval stage, the first step is a usual vector search executed based on the user query. An initial set of chunks is identified that has a high similarity with the user query. In the next step, the KG is traversed to fetch-related entities around the entities of the chunks identified in the first step. By doing this, the retriever fetches not only the chunks similar to the user query but also related chunks, which leads to deeper context and can be quite effective in solving multi-hop queries. This is often coupled with hierarchical structures and a re-ranking of retrieved documents. Figure 8.8 shows an enhanced KG, where chuwnks also have the extracted entities and relationships. During retrieval, in addition to similar chunks, the parent chunks of related entities are also retrieved.
+    Steps:
 
-[img](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH08_F08_Kimothi.png)
+    1. R: Take corpus ⟶ chunk ⟶ extract entities/relations with an LLM to build the KG.
 
-Figure 8.8 Entities and relationships extracted from the chunks play a crucial role. When chunks similar to the user query are retrieved, the chunks that have entities related to the entities of similar chunks are also retrieved.
+    2. Run vector search ⟶ get top-similar chunks ⟶ follow their entities ⟶ traverse KG to find related chunks.
 
-#### Graph communities and community summaries
+    3. (Optional) Add hierarchical parents ⟶ re-rank results.
 
-As discussed before, KGs are about entities and their relationships. Depending on the process, there may be patterns in which certain entities interact more with each other. Graph communities are a subset of entities connected more densely. For example, communities of customers with similar demographics and buying patterns can be identified or clusters of product features that appear together can be discovered. Community detection algorithms such as the Leiden and the Louvain algorithm are employed to detect communities within a KG. After detecting these communities, an LLM is used to generate summaries of the entities and the relationship information in the community. The retrieval process can be similar to vector search, where initial nodes are identified using a similarity score and community summaries related to the nodes are fetched, or vector search can be employed directly on the community summaries since they already contain a deeper context of several entities. This approach is particularly useful when queries relate to the broader themes within the knowledge base. Figure 8.9 shows how the retrieval at a community level is sufficient to answer questions at a broader thematic level.
+    **Output**: similar chunks & KG-connected chunks
 
-In any of these approaches, both the indexing and the retrieval pipeline need to be modified to incorporate the graph and create a hybrid retrieval system where both vector databases and graph databases exist.
+    **Retrieval**: related chunks & their parents
+
+
+
+!!! sam
+    (3/3) **Graph communities and community summaries**
+
+    **Purpose**: Provide improved context to answer broader, theme-level queries.
+    **How**: Take many tightly connected entities ⟶ collapse into an enriched unit of meaning.
+
+    **Steps:**
+
+    1. Take KG ⟶ detect communities (Leiden/Louvain).
+
+    2. Take each community ⟶ generate LLM summary of its entities/relations.
+
+    3. Take query ⟶ run vector search for nodes ⟶ fetch linked community summaries; or search directly over the summaries.
+
+    4. Use summaries ⟶ answer broad, thematic questions.
+
+
+
+
 
 ### 8.3.4 Graph RAG pipelines
 
@@ -326,9 +362,8 @@ The knowledge base in graph RAG requires a different kind of parsing and storage
 
 - *Entity relationship attribute extraction (for graph-enhanced RAG)*—This is a crucial step in graph enhancement because the quality of responses will depend on how well the entities and relationships have been identified. This step can be customized
 
-![A diagram of a community  AI-generated content may be incorrect.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH08_F09_Kimothi.png)
+[Figure 8.9 Communities club entities under a consistent theme and summarize the information at this group level. Since the summaries are created from a high number of thematically related chunks, these summaries can answer broad queries.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH08_F09_Kimothi.png)
 
-Figure 8.9 Communities club entities under a consistent theme and summarize the information at this group level. Since the summaries are created from a high number of thematically related chunks, these summaries can answer broad queries.
 
 - according to the need and complexity of the use case. The simplest approach can be to ask an LLM directly to do the extraction. The exact kind of entities and relationships can also be predetermined, say, allowed entities are “people,” “country,” and “organization,” and allowed relationships are “nationality,” “located at,” and “works at.” There can be another approach in which an LLM is used to identify the schema of the KG. Attributes can also be added to the entities and relationships. There can be multiple passes of this step to ensure that an exhaustive list has been created. Another step can be employed to remove redundancies and duplication. In LangChain, `LLMGraphTransformer` class is available in the `langchain_experimental` library that abstracts the entity relationship extraction from documents.
 
@@ -338,9 +373,9 @@ Figure 8.9 Communities club entities under a consistent theme and summarize the 
 
 This graph database can be used as the complete knowledge base or be treated as an addition to the regular vector database in the knowledge base. Figure 8.10 illustrates the indexing pipeline with each step.
 
-![A diagram of a graph  AI-generated content may be incorrect.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH08_F10_Kimothi.png)
+[Figure 8.10 Indexing pipeline for graph RAG. Chunks can directly be stored for simple structure-aware indexing, and community summaries can be created and stored with the graph.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH08_F10_Kimothi.png)
 
-Figure 8.10 Indexing pipeline for graph RAG. Chunks can directly be stored for simple structure-aware indexing, and community summaries can be created and stored with the graph.
+
 
 #### Generation pipeline
 
