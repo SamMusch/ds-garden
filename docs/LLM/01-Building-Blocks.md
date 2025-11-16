@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-12 15:55:56 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-12 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-13 21:47:44 +0000
+kMDItemContentModificationDate: 2025-11-16 16:58:39 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-12 15:55:56 +0000
@@ -37,12 +37,12 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-11-13 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-11-16 00:00:00 +0000
 kMDItemLastUsedDate: 2025-09-30 17:04:51 +0000
 kMDItemLastUsedDate_Ranking: 2025-09-30 00:00:00 +0000
 kMDItemUseCount: '34'
 kMDItemUsedDates: (
-modified: '2025-11-13'
+modified: '2025-11-16'
 published: true
 reading_time: 1.7
 source_file: 01-Building-Blocks.md

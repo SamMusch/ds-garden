@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-11 15:57:58 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-11 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-13 21:47:44 +0000
+kMDItemContentModificationDate: 2025-11-16 16:58:39 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-11 15:57:58 +0000
@@ -40,11 +40,11 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-11 00:00:00 +0000
 kMDItemLastUsedDate: 2025-10-11 16:41:54 +0000
 kMDItemLastUsedDate_Ranking: 2025-10-11 00:00:00 +0000
-kMDItemUseCount: '111'
+kMDItemUseCount: '112'
 kMDItemUsedDates: (
 kMDItemUserCreatedDate: (
 kMDItemUserCreatedUserHandle: (
-modified: '2025-11-13'
+modified: '2025-11-16'
 published: true
 reading_time: 2.3
 source_file: 07-RAG-Ops.md

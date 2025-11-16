@@ -22,7 +22,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-13 17:58:20 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-13 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-13 21:47:44 +0000
+kMDItemContentModificationDate: 2025-11-16 16:58:40 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-13 20:41:40 +0000
@@ -41,10 +41,10 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-13 00:00:00 +0000
 kMDItemLastUsedDate: 2025-10-13 17:58:37 +0000
 kMDItemLastUsedDate_Ranking: 2025-10-13 00:00:00 +0000
-kMDItemUseCount: '147'
+kMDItemUseCount: '148'
 kMDItemUsedDates: (
 kMDItemWhereFroms: (
-modified: '2025-11-13'
+modified: '2025-11-16'
 published: true
 reading_time: 1.6
 source_file: Hadoop.md

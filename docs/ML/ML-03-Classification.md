@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-13 21:47:44 +0000
+kMDItemContentModificationDate: 2025-11-16 16:58:39 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -37,14 +37,14 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-11-13 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-11-16 00:00:00 +0000
 kMDItemLastUsedDate: 2025-09-26 17:07:57 +0000
 kMDItemLastUsedDate_Ranking: 2025-09-26 00:00:00 +0000
 kMDItemUseCount: '118'
 kMDItemUsedDates: (
 kMDItemUserModifiedDate: (
 kMDItemUserModifiedUserHandle: (
-modified: '2025-11-13'
+modified: '2025-11-16'
 published: true
 reading_time: 8.3
 source_file: ML-03-Classification.md
