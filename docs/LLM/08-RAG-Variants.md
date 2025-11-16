@@ -147,7 +147,7 @@ word_count: 6712
 </div>
 
 
-## **2/3. Knowledge-Graph RAG (Graph RAG)**
+## 2/3. Knowledge-Graph RAG (Graph RAG)
 
 !!! sam
     Graph RAG exists because vector search cannot answer questions requiring **relationships** across chunks.
@@ -242,7 +242,7 @@ This solves broad queries without enumerating chunks.
 </div>
 
 
-## **3/3. Agentic RAG**
+## 3/3. Agentic RAG
 
 !!! sam
     Agentic RAG 

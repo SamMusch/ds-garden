@@ -2,7 +2,6 @@
 <!-- toc:start -->
 
 - [projects](projects/) — 2 min
-- [v1.10.3](v1.10.3/) — 4.1 min
 
 **_Conceptual/**
 
