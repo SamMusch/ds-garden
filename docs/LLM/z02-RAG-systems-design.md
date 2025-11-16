@@ -16,12 +16,12 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-11-13'
+created: '2025-11-16'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-13 21:26:32 +0000
+kMDItemContentModificationDate: 2025-11-13 22:42:36 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -48,7 +48,7 @@ reading_time: 1.3
 source_file: z02-RAG-systems-design.md
 tags: null
 title: z02 RAG systems design
-word_count: 268
+word_count: 266
 ---
 
 NOTE 25-09-30: 

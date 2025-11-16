@@ -18,13 +18,13 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-11-13'
+created: '2025-11-16'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate*Ranking: 2025-10-07 00:00:00 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-13 21:26:32 +0000
+kMDItemContentModificationDate: 2025-11-13 22:40:29 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -46,13 +46,13 @@ kMDItemInterestingDate_Ranking: 2025-11-13 00:00:00 +0000
 modified: '2025-11-13'
 published: true
 reading*time: 1.1
-reading_time: 1.2
+reading_time: 1.1
 source*file: 00-RAG-Ontology.md
 source_file: 00-RAG.md
 tags: null
 title: 00 RAG
 word*count: 211
-word_count: 238
+word_count: 220
 ---
 
 **Textbook**: *A Simple Guide to RAG* by Abhinav Kimothi. ([Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html), [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG), based on [arXiv](https://arxiv.org/abs/2005.11401))
