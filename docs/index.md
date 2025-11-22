@@ -5,7 +5,6 @@
 
 **_Conceptual/**
 
-  - [README](_Conceptual/README/) — 4.8 min
   - [Systems-Thinking](_Conceptual/Systems-Thinking/) — 0.3 min
 
 **BigData/**

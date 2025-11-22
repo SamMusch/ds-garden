@@ -84,7 +84,7 @@ word_count: 6712
 !!! sam
     *Multimodal RAG*: 
 
-    - **does**: lets you retrieve + generate from multiple data types.
+    - **does**: enables retrieve + generate from multiple data types.
 
     - **downsides/challenges**:
 
