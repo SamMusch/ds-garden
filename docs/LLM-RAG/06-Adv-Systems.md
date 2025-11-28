@@ -16,13 +16,13 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-11-16'
+created: '2025-11-28'
 cssclasses: null
 grandchildren: 0
 kMDItemAlternateNames: (
 kMDItemContentCreationDate: 2025-10-08 15:01:34 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-08 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-16 16:58:39 +0000
+kMDItemContentModificationDate: 2025-11-28 18:57:20 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-08 15:01:34 +0000
@@ -41,17 +41,17 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-08 00:00:00 +0000
 kMDItemLastUsedDate: 2025-10-08 15:01:34 +0000
 kMDItemLastUsedDate_Ranking: 2025-10-08 00:00:00 +0000
-kMDItemUseCount: '211'
+kMDItemUseCount: '217'
 kMDItemUsedDates: (
 kMDItemUserCreatedDate: (
 kMDItemUserCreatedUserHandle: (
-modified: '2025-11-16'
+modified: '2025-11-28'
 published: true
 reading_time: 3.0
 source_file: 06-Adv-Systems.md
 tags: null
 title: 06 Adv Systems
-word_count: 591
+word_count: 593
 ---
 
 ## TL;DR

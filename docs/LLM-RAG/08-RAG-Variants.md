@@ -16,12 +16,12 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-11-16'
+created: '2025-11-28'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-08-08 21:04:53 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-26 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-16 16:58:39 +0000
+kMDItemContentModificationDate: 2025-11-28 22:40:16 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-26 17:13:42 +0000
@@ -40,15 +40,15 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-26 00:00:00 +0000
 kMDItemLastUsedDate: 2025-10-26 17:16:09 +0000
 kMDItemLastUsedDate_Ranking: 2025-10-26 00:00:00 +0000
-kMDItemUseCount: '196'
+kMDItemUseCount: '278'
 kMDItemUsedDates: (
-modified: '2025-11-16'
+modified: '2025-11-28'
 published: true
-reading_time: 33.6
+reading_time: 3.3
 source_file: 08-RAG-Variants.md
 tags: null
 title: 08 RAG Variants
-word_count: 6712
+word_count: 656
 ---
 
 ## Overview

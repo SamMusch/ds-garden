@@ -14,15 +14,15 @@
 
 **LLM-RAG/**
 
-  - [01-Building-Blocks](LLM-RAG/00-Building-Blocks/) — 1.7 min
-  - [00-RAG](LLM-RAG/01-RAG-Intro/) — 1.1 min
-  - [z02-RAG-systems-design](LLM-RAG/02-RAG-System-Design/) — 1.3 min
-  - [03-INDEXING](LLM-RAG/03-INDEXING/) — 2.9 min
+  - [00-Building-Blocks](LLM-RAG/00-Building-Blocks/) — 2.4 min
+  - [01-RAG-Intro](LLM-RAG/01-RAG-Intro/) — 2.2 min
+  - [02-RAG-System-Design](LLM-RAG/02-RAG-System-Design/) — 0.8 min
+  - [03-INDEXING](LLM-RAG/03-INDEXING/) — 2.8 min
   - [04-GENERATING](LLM-RAG/04-GENERATING/) — 2.6 min
-  - [05-Evaluating](LLM-RAG/05-Evaluating/) — 3.6 min
+  - [05-Evaluating](LLM-RAG/05-Evaluating/) — 3.5 min
   - [06-Adv-Systems](LLM-RAG/06-Adv-Systems/) — 3 min
-  - [07-RAG-Ops](LLM-RAG/07-RAG-Ops/) — 2.3 min
-  - [08-RAG-Variants](LLM-RAG/08-RAG-Variants/) — 33.6 min
+  - [07-RAG-Ops](LLM-RAG/07-RAG-Ops/) — 2.2 min
+  - [08-RAG-Variants](LLM-RAG/08-RAG-Variants/) — 3.3 min
 
 **ML/**
 

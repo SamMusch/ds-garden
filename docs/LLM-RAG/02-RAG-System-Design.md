@@ -11,17 +11,17 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: z02-RAG-systems-design.md
+_kMDItemDisplayNameWithExtensions: 02-RAG-System-Design.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-11-16'
+created: '2025-11-28'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-16 16:58:39 +0000
+kMDItemContentModificationDate: 2025-11-28 22:41:06 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -37,18 +37,18 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-11-16 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-11-28 00:00:00 +0000
 kMDItemLastUsedDate: 2025-08-09 21:06:48 +0000
 kMDItemLastUsedDate_Ranking: 2025-08-09 00:00:00 +0000
 kMDItemUseCount: '135'
 kMDItemUsedDates: (
-modified: '2025-11-16'
+modified: '2025-11-28'
 published: true
-reading_time: 1.3
-source_file: z02-RAG-systems-design.md
+reading_time: 0.8
+source_file: 02-RAG-System-Design.md
 tags: null
-title: z02 RAG systems design
-word_count: 266
+title: 02 RAG System Design
+word_count: 150
 ---
 
 !!! sam

@@ -11,20 +11,20 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: 00-RAG.md
+_kMDItemDisplayNameWithExtensions: 01-RAG-Intro.md
 ai*abstract: null
 ai*key*terms: []
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-11-16'
+created: '2025-11-28'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
 kMDItemContentCreationDate*Ranking: 2025-10-07 00:00:00 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-16 16:58:39 +0000
+kMDItemContentModificationDate: 2025-11-28 22:32:11 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
@@ -42,17 +42,17 @@ kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
 kMDItemInterestingDate*Ranking: 2025-10-11 00:00:00 +0000
-kMDItemInterestingDate_Ranking: 2025-11-16 00:00:00 +0000
-modified: '2025-11-16'
+kMDItemInterestingDate_Ranking: 2025-11-28 00:00:00 +0000
+modified: '2025-11-28'
 published: true
 reading*time: 1.1
-reading_time: 1.1
+reading_time: 2.2
 source*file: 00-RAG-Ontology.md
-source_file: 00-RAG.md
+source_file: 01-RAG-Intro.md
 tags: null
-title: 00 RAG
+title: 01 RAG Intro
 word*count: 211
-word_count: 220
+word_count: 434
 ---
 
 **Overall objective of these notes**: With LangChain as the orchestration framework, improve LLMs by applying a RAG system.

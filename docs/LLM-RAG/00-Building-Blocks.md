@@ -11,17 +11,17 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: 01-Building-Blocks.md
+_kMDItemDisplayNameWithExtensions: 00-Building-Blocks.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-11-16'
+created: '2025-11-28'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-12 15:55:56 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-12 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-16 16:58:39 +0000
+kMDItemContentModificationDate: 2025-11-28 20:35:30 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-12 15:55:56 +0000
@@ -37,18 +37,18 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-11-16 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2025-11-28 00:00:00 +0000
 kMDItemLastUsedDate: 2025-09-30 17:04:51 +0000
 kMDItemLastUsedDate_Ranking: 2025-09-30 00:00:00 +0000
 kMDItemUseCount: '34'
 kMDItemUsedDates: (
-modified: '2025-11-16'
+modified: '2025-11-28'
 published: true
-reading_time: 1.7
-source_file: 01-Building-Blocks.md
+reading_time: 2.4
+source_file: 00-Building-Blocks.md
 tags: null
-title: 01 Building Blocks
-word_count: 341
+title: 00 Building Blocks
+word_count: 470
 ---
 
 *This doc contains foundational **concepts** applied in the rest of the docs, basically an appendix.*
