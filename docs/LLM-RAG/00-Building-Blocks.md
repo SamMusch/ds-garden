@@ -51,12 +51,22 @@ title: 01 Building Blocks
 word_count: 341
 ---
 
+*This doc contains foundational **concepts** applied in the rest of the docs, basically an appendix.*
+
+Sources
+
+- **Textbook**: *A Simple Guide to RAG* by Abhinav Kimothi. ([Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html), [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG), based on [arXiv](https://arxiv.org/abs/2005.11401))
+
+- **Documentation**: [LangChain](https://docs.langchain.com/oss/python/langchain/overview), [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview), [LangSmith](https://docs.langchain.com/langsmith/home)
+
+---
+
 !!! sam
     Tokens
 
     - **are**: the fundamental semantic units used in NLP
 
-    - OpenAI suggests one token to be made of four characters or 0.75 words
+    - 1 token ~ 4 characters (OpenAI suggestion)
 
 
 !!! sam
@@ -107,24 +117,58 @@ word_count: 341
 !!! sam
     LangChain
 
-    - **is**: an open source framework developed by Harrison Chase
+    - **is**: a modular framework
 
     - **purpose**: helps build LLM apps
 
-    - **languages**: Python and JavaScript
+    - **languages**: Python, JavaScript
 
     - **other uses**: chatbots, document summarizers, synthetic data generation
 
     - **integrates with**:
 
-        - **LLM providers**: eg OpenAI, Anthropic, Hugging Face
+        - **LLM providers**
 
         - **vector store providers**
 
-        - **cloud storage systems**: eg AWS, Google, Azure, SQL & NoSQL databases
+        - **cloud storage systems**: eg AWS, SQL & NoSQL databases
 
         - **APIs**: eg news, weather
 
+
+<div class="hb-row" markdown="block">
+  <div class="hb-col" markdown="block">
+LangChain
+
+- **is**: a modular *framework*
+
+- **does**: provides building blocks to implement LLM apps
+  </div>
+  <div class="hb-col" markdown="block">
+LangGraph
+
+- **is**: a graph-based *orchestration engine*
+
+- **does**: enables complex workflows for LLM-powered systems
+  </div>
+  <div class="hb-col" markdown="block">
+LangSmith
+
+- **is**: a platform
+
+- **does**: enables observability, debugging, evaluation, and monitoring
+  </div>
+</div>
+
+
+!!! sam
+    Analogy:
+
+    - *LangChain*: individual workers doing straightforward tasks
+
+    - *LangGraph*: a coordinated team with a manager who oversees complex workflows
+
+    - *LangSmith*: quality control
 
 
 

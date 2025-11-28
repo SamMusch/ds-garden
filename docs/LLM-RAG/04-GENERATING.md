@@ -53,33 +53,45 @@ title: 04 GENERATING
 word_count: 516
 ---
 
+## TL;DR
+
 !!! sam
-    LLM x RAG systems generate reponses to user questions.
-    They have 2 sources of **memory** available.
+    LLM x RAG systems have 2 sources of **memory** available.
 
     - *Parametric*: learned during initial LLM training.
 
-    - *Non-parametric*: info stored in our knowledge base (KB) for RAG to learn from.
+    - *Non-parametric*: info stored in our KB
 
         - *Indexing* pipeline: creates KB
 
         - *==Generation==* pipeline: retrieves from KB (**THIS DOC**)
 
 
+**Generation Pipeline: input Q ⟶ respond with LLM x RAG**:
 
-## Summary
-!!! sam
-    **Generation pipeline**: Tie together user Q with our **indexing pipeline**.
+1. [[#1. Retrieval]]: Retrieve info from KB based on Q.
 
-    1. **R** | Retrieve info from KB based on Q.
+2. [[#2. Augmentation]]: Augment Q with fetched info, create prompt for LLM.
 
-    2. **A** | Augment Q with fetched info, create prompt for LLM.
+3. [[#3. Generation]]: Generate response via LLM.
 
-    3. **G** | Generate response via LLM.
+<img src="https://i.imgur.com/Ab8rMqF.png" alt="Generation Pipeline" width="50%">
 
+---
 
 ## 1. Retrieval
-**Process**: Take Q ⟶ find matching docs ⟶ extract relevant info ⟶ return a list of matching documents (stored embeddings) as output
+
+!!! sam
+    **Process**: 
+
+    1. Input Q
+
+    2. Search KB for matching docs (stored embeddings)
+
+    3. Fetch info
+
+    4. Output list
+
 
 ### Retrieval methods
 LangChain has abstracted these algorithms ⟶ retrievers.
@@ -113,8 +125,9 @@ LangChain has abstracted these algorithms ⟶ retrievers.
     3. **Web info**: Connect to Wikipedia / Arxiv / AskNews / etc. See [Langchain](https://python.langchain.com/v0.2/docs/integrations/retrievers/) .
 
 
+
 ## 2. Augmentation
-We can control **prompt engineering** to best augment Q with retrieved info.
+Apply **prompt engineering**. Goal is to best augment Q with retrieved info.
 
 | Prompting Technique      | Description                                                          |
 | ------------------------ | -------------------------------------------------------------------- |
@@ -123,9 +136,12 @@ We can control **prompt engineering** to best augment Q with retrieved info.
 | *Few-shot*               | Provide examples in prompt                                           |
 | *Chain-of-thought (CoT)* | Provide intermediate reasoning steps                                 |
 
+
 ## 3. Generation
 
-For G, the key decision is the LLM to use. There are 3 themes to consider.
+Key question: **Which LLM to use?** 
+
+Consider these 3 major themes.
 
 ### 3.1 Foundation v fine-tuned
 !!! sam

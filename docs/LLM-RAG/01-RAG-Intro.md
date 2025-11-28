@@ -55,34 +55,70 @@ word*count: 211
 word_count: 220
 ---
 
-**Textbook**: *A Simple Guide to RAG* by Abhinav Kimothi. ([Oreilly](https://learning.oreilly.com/library/view/a-simple-guide/9781633435858/OEBPS/Text/part-1.html), [Github](https://github.com/abhinav-kimothi/A-Simple-Guide-to-RAG), based on [arXiv](https://arxiv.org/abs/2005.11401))
+**Overall objective of these notes**: With LangChain as the orchestration framework, improve LLMs by applying a RAG system.
 
-**Purpose**: With LangChain as the orchestration framework, improve upon LLM by applying a RAG system.
+- This folder contains conceptual notes.
+
+- [This repo](https://github.com/SamMusch/llm_code) contains working code.
+
+---
+
+### Intuition behind LLMxRAG
+
+There are 2 sources of info:
+
+- *public* - what LLMs have
+
+- *private* - what LLMs DO NOT have. *RAG* is how we provide this private info to the LLM.
+
+!!! sam
+    More technically:
+    After applying RAG, the LLM has 2 sources of **memory**:
+
+    - *parametric*: public info LLM already learned
+
+    - *non-parametric*: private documents we provide
 
 
 !!! sam
-    **RAG**:
+    **RAG** stands for retrieval-augmented generation.
 
-    - _retrieval_: adds info from external data
+    - *retrieval*: pulls our private documents
 
-    - _augmented_: provide to LLM
+    - *augmented*: sends to LLM
 
-    - _generation_: improve LLM's result
-
-    **RAG** purpose: Enhance accuracy & relevance of LLMs.
+    - *generation*: use our private documents to respond
 
 
+
+Overall, a **LLMxRAG** system's purpose is to enhance an LLM's accuracy & relevance.
+
+
+---
+### Acronyms
 
 !!! sam
-    My acronyms:
+    My acronyms, in sequantial order.
 
-    | Symbol | Term           | Purpose              |
-    | ------ | -------------- | -------------------- |
-    | I      | Indexing       | Create & maintain KB |
-    | R      | Retrieve       | Get from KB          |
-    | A      | Augment        | Provide to LLM       |
-    | G      | Generation     | Gen KB + LLM         |
-    | KB     | Knowledge Base | Our docs             |
+
+    **Indexing Pipeline**
+
+    - `docs` | our internal *documents*, unknown to the LLM
+
+    - `KB` | the *knowledge base* where we store these docs as embeddings
+
+    - `I` | the *indexing pipeline* which prepares info for the generation pipeline
+
+
+    **Generation (RAG) Pipeline**
+
+    - `Q` | The user's query/prompt.
+
+    - `R` | The *retrieval* process where we pull docs from KB
+
+    - `A` | The *augmentation* where we send R to LLM
+
+    - `G` | The *generation* process where answer Q
 
 
 
@@ -95,10 +131,11 @@ word_count: 220
     - **Pipeline hierarchy** ⟶ functional (what the system *does*)
 
 
-#### Layers Hierarchy
+#### Hierarchy 1: Layers
+See [[LLM-RAG/07-RAG-Ops|07-RAG-Ops]]
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
-Critical Layers
+**Critical Layers**
 
 - *Data*
 
@@ -109,7 +146,7 @@ Critical Layers
 - *App Orchestration*
   </div>
   <div class="hb-col" markdown="block">
-Essential Layers
+**Essential Layers**
 
 - *Prompt*
 
@@ -122,7 +159,7 @@ Essential Layers
 - *Caching*
   </div>
   <div class="hb-col" markdown="block">
-Enhancement Layers
+**Enhancement Layers**
 
 - *Human-in-the-Loop*
 
@@ -135,7 +172,8 @@ Enhancement Layers
 </div>
 
 
-#### Pipeline Hierarchy
+#### Hierarchy 2: Pipelines
+See [[LLM-RAG/03-INDEXING|03-INDEXING]] and [[LLM-RAG/04-GENERATING|04-GENERATING]]
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 Indexing Pipeline
@@ -151,11 +189,11 @@ Indexing Pipeline
   <div class="hb-col" markdown="block">
 Generating Pipeline
 
-- R | *retrieving*
+- ***R*** | *retrieving*
 
-- A | *prompt managing (augmenting)*
+- ***A*** | *prompt managing (augmenting)*
 
-- G | *LLM constructing (generating)*
+- ***G*** | *LLM constructing (generating)*
   </div>
 </div>
 
@@ -168,3 +206,42 @@ Generating Pipeline
 <img src="https://i.imgur.com/Ab8rMqF.png" alt="Generation Pipeline">
   </div>
 </div>
+
+
+---
+
+## Footnotes
+Images from textbook:
+
+- **Hierarchy 1**: [Layers](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F06_Kimothi.png) (just the *critical layers*)
+
+- **Hierarchy 2**: [Pipelines](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH07_F01_Kimothi.png)
+
+
+!!! sam
+    RAG system analogy
+
+    - **Pipelines** (*assembly line*)
+
+    - **System-level components** (*quality inspector*)
+
+    - **RAGOps infrastructure / `layers`** (*electricity in factory*)
+
+
+
+!!! sam
+    Ch 9 - dev framework
+
+    6 stages:
+
+    1. *Initiation*: gather reqs, design architecture
+
+    2. *Design*: I & G pipelines
+
+    3. *Development*: develop pipelines, create prototype for evaluation
+
+    4. *Evaluation*: assess components & system performance
+
+    5. *Deployment*
+
+    6. *Maintenance*: track & improve

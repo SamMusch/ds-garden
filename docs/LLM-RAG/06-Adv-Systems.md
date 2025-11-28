@@ -54,6 +54,8 @@ title: 06 Adv Systems
 word_count: 591
 ---
 
+## TL;DR
+
 ```mermaid 
 
 graph LR
@@ -74,7 +76,6 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 ```
 
-### Summary
 
 **RAG System**
 
@@ -107,16 +108,17 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 ---
 
-### 1. Naïve
+
+## 1. Naïve
 **Limitations**
 
 - **R** ⟶ {low precision, low recall}
 
 - **A** ⟶ {redundancy, disjoint context, context length limits}
 
-- **G** ⟶ {hallucination, bias, overreliance on retrieved context}
+- **G** ⟶ {hallucination, bias, over-reliance on retrieved context}
 
-### 2. Advanced
+## 2. Advanced
 #### *2.1 Pre-R Stage*
 
 - **Index Optimization**: Optimize our KB.
@@ -171,7 +173,7 @@ P3 -->|Goal| G2["Flexibility & Scalability"]
 
 ---
 
-### 3. Modular
+## 3. Modular
 
 - **extends** ⟶ Advanced RAG
 

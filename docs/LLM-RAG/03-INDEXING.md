@@ -51,22 +51,21 @@ title: 03 INDEXING
 word_count: 575
 ---
 
-## Summary
+## TL;DR
 
 !!! sam
-    LLM x RAG systems generate reponses to user questions.
-    They have 2 sources of **memory** available.
+    LLM x RAG systems have 2 sources of **memory**:
 
     - *Parametric*: learned during initial LLM training.
 
-    - *Non-parametric*: info stored in our knowledge base (KB) for RAG to learn from.
+    - *Non-parametric*: info stored in our KB
 
         - *==Indexing==* pipeline: creates KB (**THIS DOC**)
 
         - *Generation* pipeline: retrieves from KB
 
 
-**Indexing pipeline steps to create the KB**:
+**Indexing Pipeline steps to create the KB**:
 
 1. [[#1-Load]] information from source systems
 
@@ -77,6 +76,8 @@ word_count: 575
 4. [[#4-Store]] in a vector DB
 
 <img src="https://i.imgur.com/clHMu8p.png" alt="Indexing Pipeline" width="50%">
+
+---
 
 ## 1-Load
 !!! sam
@@ -130,7 +131,7 @@ word_count: 575
 
 
 ## 3-Embed
-(See [[01-Building-Blocks#Embedding]] for context.)
+(See [[00-Building-Blocks#Embedding]] for context.)
 
 !!! sam
     **steps**:

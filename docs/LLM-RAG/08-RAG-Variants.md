@@ -58,7 +58,7 @@ word_count: 6712
 
     - **are**: *specializations* of basic RAG that solve limits of naïve, text-only retrieval.
 
-    - **function**: make the system both flexible and domain aware.
+    - **purpose**: make the system both flexible and domain aware.
 
         - Handle **non-text data** (images, audio, video, tables).
 
@@ -69,39 +69,50 @@ word_count: 6712
         - Improve **accuracy**, **speed**, or **reasoning** in specific contexts.
 
 
-!!! sam
-    3 most popular RAG variants
 
-    - *Multimodal RAG*: retrieve + generate from multiple data types
-
-    - *KG RAG*: adds relational reasoning + multi-hop context.
-
-    - *Agentic RAG*: adds LLM agents for routing, tool use, adaptive retrieval.
-
-
-## 1/3 Multimodal RAG
-
-!!! sam
-    *Multimodal RAG*: 
-
-    - **does**: enables retrieve + generate from multiple data types.
-
-    - **downsides/challenges**:
-
-        - Slower (latency)
-
-        - More expensive (embedding + multimodal LLMs)
-
-        - Possible information loss if you convert images ⟶ text
-
-        - Alignment errors between embeddings spaces
-
-
-#### **Mechanics**
-
+3 most popular RAG variants
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
-###### **Indexing Changes**
+[[#1. Multimodal RAG]]
+
+- Performs R + G across multiple data types.
+  </div>
+  <div class="hb-col" markdown="block">
+[[#2. Knowledge-Graph RAG]]
+
+- Adds *relational reasoning* & *multi-hop context*.
+  </div>
+  <div class="hb-col" markdown="block">
+[[#3. Agentic RAG]]
+
+- Adds LLM agents for *routing*, *tool use*, and *adaptive retrieval*.
+  </div>
+</div>
+
+
+
+## 1. Multimodal RAG
+!!! sam
+    ***Multimodal RAG***
+
+    **does**: enables retrieve + generate from multiple data types.
+
+
+    **downsides/challenges**:
+
+    - Slower (latency)
+
+    - More expensive (embedding + multimodal LLMs)
+
+    - Possible information loss if you convert images ⟶ text
+
+    - Alignment errors between embeddings spaces
+
+
+#### Mechanics: Pipeline Changes
+<div class="hb-row" markdown="block">
+  <div class="hb-col" markdown="block">
+###### **Indexing Pipeline**
 
 1. **Loading**: Use image/etc loaders. (PIL, Unstructured, Whisper, CSVLoader).
 
@@ -115,7 +126,7 @@ word_count: 6712
 
     - Tables ⟶ row/column chunks
 
-3. **Embeddings (3 strategies)**
+3. **Embeddings** (3 strategies)
 
     1. **Shared multimodal embeddings** ⟶ one vector space for all modalities.
 
@@ -130,7 +141,7 @@ word_count: 6712
     - **Raw files**: Need document store (Redis, etc.).
   </div>
   <div class="hb-col" markdown="block">
-###### **Generation Changes**
+###### **Generation Pipeline**
 
 - **Retrieval** depends on embedding strategy:
 
@@ -147,24 +158,23 @@ word_count: 6712
 </div>
 
 
-## 2/3. Knowledge-Graph RAG (Graph RAG)
-
+## 2. Knowledge-Graph RAG
 !!! sam
-    Graph RAG exists because vector search cannot answer questions requiring **relationships** across chunks.
+    ***Graph RAG*** 
 
-    Graph RAG 
+    **purpose**: vector search can't answer questions requiring *relationships* across chunks.
 
-    - **does**: adds **relational reasoning** and **context stitching** that vectors alone can’t provide.
+    **does**: adds *relational reasoning* and *context stitching* that vectors alone can’t provide.
 
-    Graph RAG solves:
+    **solves**:
 
-    - **Multi-hop questions**: “Which products are endorsed by the same celebrity?”
+    - *Multi-hop questions*: “Which products are endorsed by the same celebrity?”
 
-    - **Theme synthesis**: “What are the main themes across all these reports?”
+    - *Theme synthesis*: “What are the main themes across all these reports?”
 
-    - **Entity-level reasoning**: “Link symptoms ⟶ drugs ⟶ dosage interactions.”
+    - *Entity-level reasoning*: “Link symptoms ⟶ drugs ⟶ dosage interactions.”
 
-    Graph RAG Challenges
+    **challenges**:
 
     - Hard to build/maintain a clean ontology
 
@@ -173,8 +183,7 @@ word_count: 6712
     - Requires domain constraints (entity types)
 
 
-#### **Mechanics: Three Approaches**
-
+#### Mechanics: 3 Approaches
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 **Structure-Aware Retrieval (Simple)**
@@ -183,7 +192,7 @@ word_count: 6712
 
 - Retrieve at the leaf level ⟶ add parents automatically.
 
-- Implementable with or without a graph DB.
+- Implementable w or w/o a graph DB.
   </div>
   <div class="hb-col" markdown="block">
 **Graph-Enhanced Vector Search (Hybrid)**
@@ -212,21 +221,20 @@ This solves broad queries without enumerating chunks.
 </div>
 
 
-#### **Mechanics: Pipeline Differences**
-
+#### Mechanics: Pipeline Changes
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 **Indexing**
 
 - Load + chunk (same as RAG).
 
-- **Extract entities + relationships** using an LLM.
+- Extract entities + relationships using an LLM.
 
 - Store in a **graph DB** (Neo4j).
 
-- Detect **communities** and generate **summaries**.
+- Detect **communities**, gen **summaries**.
 
-- Optionally store summaries as vectors for hybrid retrieval.
+- Could store summaries as vectors for hybrid retrieval.
   </div>
   <div class="hb-col" markdown="block">
 **Generation**
@@ -242,30 +250,29 @@ This solves broad queries without enumerating chunks.
 </div>
 
 
-## 3/3. Agentic RAG
-
+## 3. Agentic RAG
 !!! sam
-    Agentic RAG 
+    ***Agentic RAG***
 
-    - **does**: adds an LLM “brain” that makes decisions at every RAG stage.
+    **purpose**:
 
-    Agentic RAG solves two problems:
+    1. makes sure each Q searches the right database(s)
 
-    1. Not all queries should search the same database.
+    2. enables multi-step reasoning
 
-    2. Some queries require multi-step reasoning.
+    **does**: adds an LLM “brain” that makes decisions at every RAG stage.
 
-    Agentic RAG adds:
+    **adds**:
 
-    - **Query routing** ⟶ “This is a code question; search the docs DB only.”
+    - *Query routing* ⟶ “This is a code question; search the docs DB only.”
 
-    - **Tool use** ⟶ search web, call SQL, call APIs.
+    - *Tool use* ⟶ search web, call SQL, call APIs.
 
-    - **Adaptive retrieval** ⟶ agent decides: retrieve more? refine query? switch DB?
+    - *Adaptive retrieval* ⟶ agent decides: retrieve more? refine query? switch DB?
 
-    - **Iterative generation (ReAct / IterRetGen)** ⟶ revise ⟶ retrieve ⟶ revise again.
+    - *Iterative generation* (`ReAct` / `IterRetGen`) ⟶ revise ⟶ retrieve ⟶ revise again.
 
-    **Challenges (Functionality Perspective)**
+    **challenges**
 
     - Hard to control (agents can misfire)
 
@@ -278,30 +285,27 @@ This solves broad queries without enumerating chunks.
     - Workflow complexity increases
 
 
-#### **Mechanics | Pipeline Differences**
-
+#### Mechanics: Pipeline Changes
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
-**Indexing** | Agents can:
+**Indexing** | agents can:
 
-- Parse PDFs more accurately
+- **loading**: improve parsing, gen metadata
 
-- Generate metadata
+- **chunking**: task-specific chunking via sentiment/entity grouping
 
-- Perform sentiment/entity grouping for task-specific chunking
+- **embedding**: dynamically choose embedding models 
 
-- Pick embedding models dynamically
-
-- Route different parts of documents to different collections
+- **store**: route doc chunks ⟶ different collections
   </div>
   <div class="hb-col" markdown="block">
-**Generation**
+**Generation** | agents can:
 
-1. **Retrieval**: Agent decides *which* knowledge base, whether to use tools, whether to refine the query.
-    
-2. **Augmentation**: Agent dynamically builds prompts.
-    
-3. **Generation**: Uses iterative patterns:
-    *Generate ⟶ critique ⟶ retrieve ⟶ regenerate.*
+1. **retrieval**: determine *which* KB, tool reqs, query refinement reqs
+
+2. **augmentation**: dynamically builds prompts
+
+3. **generation**: use iterative patterns:
+    *Generate ⟶ critique ⟶ retrieve ⟶ regenerate*
   </div>
 </div>
