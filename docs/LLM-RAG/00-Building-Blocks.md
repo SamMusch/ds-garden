@@ -51,7 +51,7 @@ title: 00 Building Blocks
 word_count: 470
 ---
 
-*This doc contains foundational **concepts** applied in the rest of the docs, basically an appendix.*
+This doc contains foundational **concepts** applied in the rest of the docs.
 
 Sources
 

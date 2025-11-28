@@ -151,7 +151,7 @@ flowchart LR
     - `depends_on` ⟶ R & G Components
 
 
-[TrueEra's proposed evaluation](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH02_F07_Kimothi.png):
+[TrueEra's proposed evaluation](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781633435858/files/OEBPS/Images/CH02_F07_Kimothi.png) (where Q = user query, R = retrieved info/context, G = generated response)
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 *Context Relevance* compares
@@ -176,7 +176,6 @@ flowchart LR
   </div>
 </div>
 
-(where Q = user query, R = retrieved info/context, G = generated response)
 
 **In greater detail**:
 <div class="hb-row" markdown="block">
