@@ -48,45 +48,48 @@ Beginning of December.
 
 
 
-**more details**
-`agent.py` is the "driver" that calls other scripts.
+!!! sam
+    **more details**
+    `agent.py` is the "driver" that calls other scripts.
 
-- tools
+    - tools
 
-    - rebuild_index()
+        - rebuild_index()
 
-    - search_docs()
+        - search_docs()
 
-- middleware
+    - [middleware](https://docs.langchain.com/oss/javascript/langchain/middleware/overview)
 
-    - trim_history()
+        - trim_history()
 
-    - max_context_chars()
+        - max_context_chars()
 
-- CLI
+    - CLI
 
-    - index()
+        - index()
 
-    - ask()
+        - ask()
+
 
 ---
 
-**next steps**
+!!! sam
+    **next steps**
 
-- **middleware**: more to add
+    - **middleware**: more to add
 
-- **evaluation**: LangSmith Datasets and Evaluation, subgraphs, guardrails
+    - **evaluation**: LangSmith Datasets and Evaluation, subgraphs, guardrails
 
-- **graph**: add router/branching logic (currently graph is linear)
+    - **graph**: add router/branching logic (currently graph is linear)
 
-- **tools**: add semantic routing
+    - **tools**: add semantic routing
 
-- **loading**: chunk / splitter module (currently default loader)
+    - **loading**: chunk / splitter module (currently default loader)
 
-- **async pipeline**: currently 1 step at a time
+    - **async pipeline**: currently 1 step at a time
 
-- **output**: want json, currently plain text
+    - **output**: want json, currently plain text
 
-- [chat UI](https://docs.langchain.com/oss/javascript/langgraph/ui)
+    - [chat UI](https://docs.langchain.com/oss/javascript/langgraph/ui)
 
-- **`py` files**: simplify, continue refactoring to match langchain
+    - **`.py` files**: simplify, continue refactoring to match langchain
