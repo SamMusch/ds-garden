@@ -5,12 +5,19 @@
 
 **_Conceptual/**
 
+  - [llm_lang_chain_graph](_Conceptual/Lang/) — 1.5 min
   - [Systems-Thinking](_Conceptual/Systems-Thinking/) — 0.3 min
 
 **BigData/**
 
   - [Hadoop](BigData/Hadoop/) — 1.6 min
   - [Snowflake](BigData/Snowflake/) — 2.5 min
+
+**Clippings/**
+
+  - [Meridian-Demo](Clippings/Meridian-Demo/)
+  - [R ⟶ serialized format](Clippings/RAG-agent-LangChain/)
+  - [index into KB for search](Clippings/RAG-agent-LangGraph/)
 
 **LLM-RAG/**
 
@@ -23,6 +30,7 @@
   - [06-Adv-Systems](LLM-RAG/06-Adv-Systems/) — 3 min
   - [07-RAG-Ops](LLM-RAG/07-RAG-Ops/) — 2.2 min
   - [08-RAG-Variants](LLM-RAG/08-RAG-Variants/) — 3.3 min
+  - [09-Current](LLM-RAG/09-Current/)
 
 **ML/**
 
