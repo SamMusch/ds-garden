@@ -2,11 +2,12 @@
 published: true
 ---
 
+## Architecture
 ### Local
 
 - **Core app code**
 
-    - *codebase*: `llm_code`, LangChain / LangGraph / LangSmith
+    - *codebase*: `llm_code`
 
     - *config*: interacts with AWS backends
 
@@ -14,7 +15,7 @@ published: true
 
     - *retriever*: wrapper that talks to the vector DB
 
-- **Data side**    
+- **Data side**
 
     - *ingest*: FileClerk
 
@@ -32,7 +33,6 @@ published: true
 
     - *tracking LLM x RAG behavior*: LangSmith
 
-
 ---
 
 ### AWS
@@ -43,7 +43,7 @@ published: true
 
     - *embedding model*: Amazon Bedrock or self-hosted model on EC2/SageMaker
 
-- **Vector + metadata store**    
+- **Vector + metadata store**
 
     - *doc embeddings + metadata*: Amazon Aurora PostgreSQL with `pgvector`
 
@@ -58,40 +58,102 @@ published: true
     - *permissions*: IAM for secure access from your local app to Bedrock, Aurora, and S3
 
 
----
-
-
 # llm_code - 12-13
 
-!!! sam
-    What should go in Docker?
+### init
 
-    * **Model server in Docker** (serves an HTTP API)
+1. Run **Ollama server** as a container
 
-    * **llm_code** **in Docker** (calls that API)
+2. Persist model files in a **Docker volume**
 
-    * **Models/weights stored on a Docker volume** (not baked into the image)
+3. Bind the API to **localhost-only**
 
-    This makes “local now → AWS later” a mostly config-only change (you point llm_code at a different base URL).
+```bash
+# step 1 — Create a persistent volume (stores weights)
+	# Docker image stores data under `/root/.ollama`
+docker volume create ollama
+
+# Step 2 — Run Ollama server in Docker (localhost-only)
+	# matches the official image usage 
+	# keeps API from being exposed on your LAN
+docker run -d \
+  --name ollama \
+  -p 127.0.0.1:11434:11434 \
+  -v ollama:/root/.ollama \
+  ollama/ollama
+
+# Step 3 — Confirm the server responds
+curl http://localhost:11434/api/version
 
 
+# Step 4 — Pull a model into the volume
+docker exec -it ollama ollama pull llama3.2:1b
 
-!!! sam
-    Local model: Ollama
+# list models
+docker exec -it ollama ollama list
 
-    * Easiest “download + run” workflow and a simple local API (http://localhost:11434). ([Ollama Docs](https://docs.ollama.com/api/introduction?utm_source=chatgpt.com))
+# Step 5 — Quick inference test over HTTP
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama3.2:1b",
+  "prompt": "Say hello in one sentence."
+}'
+```
 
-    * Good for quickly swapping models and iterating.
 
+### Current state
+In Docker, 2 containers:
 
+- **model server**: `Ollama`
 
-!!! sam
-    Security notes
+- **RAG app**: `llm_code`
 
-    * **governance**: confirm the **model license allows commercial use**
+    - **models**: on a Docker volume, model lives at `http://ollama:11434`
+These 2 containers talk over a local network defined by `docker-compose.yml`.
 
-    * **model server**: keep private-by-default
+Not in Docker
 
-        * Bind to 127.0.0.1 locally, or put it on a private Docker network; do not expose ports broadly.
+- **Retrieval**: local docs
 
-        * Add authentication if there’s any chance it becomes reachable beyond localhost (especially later on AWS).
+- **Generation**: local model via Ollama
+
+- **Embeddings**: still OpenAI
+
+`docker-compose.yml`, a **map** that says:
+
+- which containers exist / how they start / which containers can talk
+
+- which ports are visible to your Mac
+
+- which data persists
+
+you now have:
+
+- everything reproducible on any machine
+
+- a structure that maps 1-to-1 to AWS later
+
+- a UI (LangGraph Studio)
+
+from here:
+
+- switch models ≠ changing app code
+
+- switch machines ≠ reinstalling Python
+
+- move to AWS ≠ rewriting architecture, just point `llm_code` to a different base URL
+
+### Details
+
+`localhost`
+
+- on personal machine ⟶ `http://localhost:2024`
+
+- inside a container ⟶ `http://ollama:11434`
+
+By default, containers can talk to each other BUT your Mac cannot talk to containers.
+`Ports` are just **doors**. To get the browser to connect, we opened ports:
+
+- `11434` ⟶ model API
+
+- `2024` ⟶ LangGraph dev server
+Then bound the server to `0.0.0.0`
