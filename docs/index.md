@@ -2,6 +2,7 @@
 <!-- toc:start -->
 
 - [projects](projects/) — 2 min
+- [llm_code - 12-13](RAG-Architecture/)
 
 **_Conceptual/**
 
@@ -10,6 +11,7 @@
 
 **BigData/**
 
+  - [Docker](BigData/Docker/)
   - [Hadoop](BigData/Hadoop/) — 1.6 min
   - [Snowflake](BigData/Snowflake/) — 2.5 min
 
