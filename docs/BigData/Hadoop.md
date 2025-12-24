@@ -61,9 +61,7 @@ word_count: 321
 | **Architecture** | Master/Worker model: NameNode + DataNodes + YARN             |
 | **Components**   | HDFS, MapReduce, YARN, Hive, Pig, Spark (extended ecosystem) |
 
-
 ### Overview
-
 !!! sam
     Hadoop 
 
@@ -93,7 +91,6 @@ word_count: 321
 
 
 ### Sequential process
-
 !!! sam
     Hadoop flow: **Ingest ⟶ Store ⟶ Govern ⟶ Coordinate ⟶ Process/Analyze/Serve ⟶ Persist**
 
@@ -156,7 +153,9 @@ word_count: 321
         - *serve*: via BI/ML/search
 
 
-- Modern stacks typically:
+
+!!! sam
+    Modern stacks typically:
 
     - favor **Spark** over classic MR,
 
@@ -164,8 +163,8 @@ word_count: 321
 
     - lean on **Parquet/ORC** or **table formats** for manageability
 
----
 
+---
 ### Ontology
 (Core Entities & Relations)
 

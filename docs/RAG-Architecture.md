@@ -39,13 +39,13 @@ published: true
 
 - **Model / LLM**
 
-    - *chat model*: Amazon Bedrock
+    - *chat model*: Bedrock
 
-    - *embedding model*: Amazon Bedrock or self-hosted model on EC2/SageMaker
+    - *embedding model*: Bedrock or self-hosted model on EC2/SageMaker
 
 - **Vector + metadata store**
 
-    - *doc embeddings + metadata*: Amazon Aurora PostgreSQL with `pgvector`
+    - *doc embeddings + metadata*: Aurora PostgreSQL with `pgvector`
 
 - **Storage**
 

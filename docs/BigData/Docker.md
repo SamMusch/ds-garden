@@ -16,6 +16,7 @@ Terms
 
 - runtime instance
 
+
 [Cheatsheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
 
 **Key Problem**: You built an app on your machine. Now, how can we replicate the software our environment needs onto any machine?

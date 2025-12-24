@@ -12,8 +12,21 @@
 **BigData/**
 
   - [Docker](BigData/Docker/)
+  - [For each state, how many employees earn > 75k?](BigData/Hadoop-Full/)
   - [Hadoop](BigData/Hadoop/) — 1.6 min
   - [Snowflake](BigData/Snowflake/) — 2.5 min
+
+**BigData-AWS/**
+
+  - [Analytics](BigData-AWS/Analytics/)
+  - [AWS-MOC](BigData-AWS/AWS-MOC/)
+  - [Compute](BigData-AWS/Compute/)
+  - [Containers](BigData-AWS/Containers/)
+  - [DB-Aurora](BigData-AWS/DB-Aurora/)
+  - [Details](BigData-AWS/DB-DynamoDB/)
+  - [DB](BigData-AWS/DB/)
+  - [MLAI-Bedrock](BigData-AWS/MLAI-Bedrock/)
+  - [MLAI](BigData-AWS/MLAI/)
 
 **Clippings/**
 
