@@ -31,7 +31,7 @@ description: Chapter 2. API Paradigms Picking the right API paradigm is importan
 grandchildren: 0
 kMDItemContentCreationDate: 2025-12-30 21:11:39 +0000
 kMDItemContentCreationDate_Ranking: 2025-12-30 00:00:00 +0000
-kMDItemContentModificationDate: 2025-12-30 21:11:39 +0000
+kMDItemContentModificationDate: 2025-12-30 21:16:17 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-12-30 21:11:39 +0000
@@ -55,7 +55,7 @@ source: https://learning.oreilly.com/library/view/designing-web-apis/97814920269
 source_file: API-2-Paradigms.md
 tags: null
 title: API 2 Paradigms
-word_count: 161
+word_count: 160
 ---
 
 APIs are about *how* clients talk to servers.
@@ -91,8 +91,6 @@ Everything else (frameworks, tools, cloud services) exists to support that idea.
 
 
 ```bash
-# EXAMPLE
-
 # Request
 POST /ask
 { "question": "What is X?" }

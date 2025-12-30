@@ -16,13 +16,13 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-11-28'
+created: '2025-12-30'
 cssclasses: null
 grandchildren: 0
 kMDItemAlternateNames: (
 kMDItemContentCreationDate: 2025-10-08 15:01:34 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-08 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-28 22:47:58 +0000
+kMDItemContentModificationDate: 2025-12-30 21:14:31 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-08 15:01:34 +0000
@@ -41,11 +41,11 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-08 00:00:00 +0000
 kMDItemLastUsedDate: 2025-10-08 15:01:34 +0000
 kMDItemLastUsedDate_Ranking: 2025-10-08 00:00:00 +0000
-kMDItemUseCount: '218'
+kMDItemUseCount: '219'
 kMDItemUsedDates: (
 kMDItemUserCreatedDate: (
 kMDItemUserCreatedUserHandle: (
-modified: '2025-11-28'
+modified: '2025-12-30'
 published: true
 reading_time: 3.0
 source_file: 06-Adv-Systems.md

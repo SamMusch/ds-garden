@@ -31,7 +31,7 @@ description: Chapter 1. What’s an API? “What’s an API?” When a new progr
 grandchildren: 0
 kMDItemContentCreationDate: 2025-12-30 21:11:39 +0000
 kMDItemContentCreationDate_Ranking: 2025-12-30 00:00:00 +0000
-kMDItemContentModificationDate: 2025-12-30 21:11:39 +0000
+kMDItemContentModificationDate: 2025-12-30 21:14:32 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-12-30 21:11:39 +0000
