@@ -17,7 +17,7 @@ published: true
 
 - **Data side**
 
-    - *ingest*: FileClerk
+    - *ingest*
 
     - *indexing pipeline*
 

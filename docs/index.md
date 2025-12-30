@@ -11,9 +11,15 @@
 
 **BigData/**
 
-  - [Docker](BigData/Docker/)
+  - [API-1-Overview](BigData/API-1-Overview/)
+  - [EXAMPLE](BigData/API-2-Paradigms/)
+  - [API-3-Security](BigData/API-3-Security/)
+  - [Database-History](BigData/Database-History/)
   - [For each state, how many employees earn > 75k?](BigData/Hadoop-Full/)
   - [Hadoop](BigData/Hadoop/) — 1.6 min
+  - [Networking-Docker](BigData/Networking-Docker/)
+  - [Networking-Servers](BigData/Networking-Servers/)
+  - [Networking](BigData/Networking/)
   - [Snowflake](BigData/Snowflake/) — 2.5 min
 
 **BigData-AWS/**
@@ -28,12 +34,6 @@
   - [MLAI-Bedrock](BigData-AWS/MLAI-Bedrock/)
   - [MLAI](BigData-AWS/MLAI/)
 
-**Clippings/**
-
-  - [Meridian-Demo](Clippings/Meridian-Demo/)
-  - [R ⟶ serialized format](Clippings/RAG-agent-LangChain/)
-  - [index into KB for search](Clippings/RAG-agent-LangGraph/)
-
 **LLM-RAG/**
 
   - [00-Building-Blocks](LLM-RAG/00-Building-Blocks/) — 2.4 min
@@ -46,9 +46,12 @@
   - [07-RAG-Ops](LLM-RAG/07-RAG-Ops/) — 2.2 min
   - [08-RAG-Variants](LLM-RAG/08-RAG-Variants/) — 3.3 min
   - [09-Current](LLM-RAG/09-Current/)
+  - [R ⟶ serialized format](LLM-RAG/RAG-agent-LangChain/)
+  - [index into KB for search](LLM-RAG/RAG-agent-LangGraph/)
 
 **ML/**
 
+  - [Meridian-Demo](ML/Meridian-Demo/)
   - [ML-01](ML/ML-01/) — 4.2 min
   - [ML-03-Classification](ML/ML-03-Classification/) — 8.3 min
   - [ML-04-Regression](ML/ML-04-Regression/) — 1.2 min
