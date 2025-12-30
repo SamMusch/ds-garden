@@ -1,4 +1,20 @@
 ---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: API-3-Security.md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
 author:
 
 - '[[Figure 3-2]]'
@@ -12,16 +28,40 @@ author:
 - '[[Amir Shevat]]'
 
 - '[[Authentication and Authorization]]'
-created: 2025-12-29
+children: 0
+created: '2025-12-30'
+cssclasses: null
 description: Chapter 3. API Security Security is a critical element of any web application,
   particularly so for APIs. New security issues and vulnerabilities are always being
   discovered, and it’s important...
+grandchildren: 0
+kMDItemContentCreationDate: 2025-12-30 21:11:39 +0000
+kMDItemContentCreationDate_Ranking: 2025-12-30 00:00:00 +0000
+kMDItemContentModificationDate: 2025-12-30 21:11:39 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-12-30 21:11:39 +0000
+kMDItemDocumentIdentifier: '0'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-12-30 00:00:00 +0000
+modified: '2025-12-30'
 published: true
+reading_time: 1.2
 source: https://learning.oreilly.com/library/view/designing-web-apis/9781492026914/ch03.html
-tags:
-
-- clippings
-title: API Security
+source_file: API-3-Security.md
+tags: null
+title: API 3 Security
+word_count: 234
 ---
 
 > **Security isn’t about blocking users. It’s about knowing who’s talking to you and why.**

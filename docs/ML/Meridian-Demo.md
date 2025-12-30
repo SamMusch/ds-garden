@@ -1,15 +1,55 @@
 ---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: Meridian-Demo.md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
 author:
 
 - '[[Google for Developers]]'
-created: 2025-12-06
+children: 0
+created: '2025-12-30'
+cssclasses: null
 description: null
+grandchildren: 0
+kMDItemContentCreationDate: 2025-12-30 21:11:39 +0000
+kMDItemContentCreationDate_Ranking: 2025-12-30 00:00:00 +0000
+kMDItemContentModificationDate: 2025-12-30 21:11:39 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-12-30 21:11:39 +0000
+kMDItemDocumentIdentifier: '0'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-12-30 00:00:00 +0000
+modified: '2025-12-30'
 published: true
+reading_time: 1.4
 source: https://developers.google.com/meridian/notebook/meridian-getting-started#step_2_configure_the_model
-tags:
-
-- clippings
-title: Introduction to Meridian Demo
+source_file: Meridian-Demo.md
+tags: null
+title: Meridian Demo
+word_count: 290
 ---
 
 [GitHub - google/meridian](https://github.com/google/meridian/tree/main?tab=readme-ov-file)

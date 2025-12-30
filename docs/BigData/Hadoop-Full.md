@@ -1,5 +1,56 @@
 ---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: Hadoop-Full.md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
+children: 0
+created: '2025-12-23'
+cssclasses: null
+grandchildren: 0
+kMDItemContentCreationDate: 2021-08-23 18:14:02 +0000
+kMDItemContentCreationDate_Ranking: 2021-08-23 00:00:00 +0000
+kMDItemContentModificationDate: 2025-12-23 20:28:36 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-12-23 20:20:53 +0000
+kMDItemDocumentIdentifier: '625921'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2025-12-23 00:00:00 +0000
+kMDItemLastUsedDate: 2025-12-23 20:18:38 +0000
+kMDItemLastUsedDate_Ranking: 2025-12-23 00:00:00 +0000
+kMDItemUseCount: '286'
+kMDItemUsedDates: (
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+modified: '2025-12-23'
 published: true
+reading_time: 5.0
+source_file: Hadoop-Full.md
+tags: null
+title: Hadoop Full
+word_count: 1003
 ---
 
 This document is heavier in detail. Information might be outdated.

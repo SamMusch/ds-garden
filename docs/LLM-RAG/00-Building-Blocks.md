@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-12 15:55:56 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-12 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-28 20:35:30 +0000
+kMDItemContentModificationDate: 2025-11-28 22:51:33 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-12 15:55:56 +0000
@@ -44,11 +44,11 @@ kMDItemUseCount: '34'
 kMDItemUsedDates: (
 modified: '2025-11-28'
 published: true
-reading_time: 2.4
+reading_time: 2.3
 source_file: 00-Building-Blocks.md
 tags: null
 title: 00 Building Blocks
-word_count: 470
+word_count: 467
 ---
 
 This doc contains foundational **concepts** applied in the rest of the docs.

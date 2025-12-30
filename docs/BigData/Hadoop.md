@@ -17,15 +17,15 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-11-18'
+created: '2025-12-23'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-13 17:58:20 +0000
-kMDItemContentCreationDate_Ranking: 2025-10-13 00:00:00 +0000
-kMDItemContentModificationDate: 2025-11-16 17:22:14 +0000
+kMDItemContentCreationDate_Ranking: 2025-12-23 00:00:00 +0000
+kMDItemContentModificationDate: 2025-12-23 20:27:32 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-10-13 20:41:40 +0000
+kMDItemDateAdded: 2025-12-23 20:20:53 +0000
 kMDItemDocumentIdentifier: '223490'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
@@ -38,19 +38,19 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-10-13 00:00:00 +0000
-kMDItemLastUsedDate: 2025-10-13 17:58:37 +0000
-kMDItemLastUsedDate_Ranking: 2025-10-13 00:00:00 +0000
-kMDItemUseCount: '149'
+kMDItemInterestingDate_Ranking: 2025-12-23 00:00:00 +0000
+kMDItemLastUsedDate: 2025-12-23 19:11:19 +0000
+kMDItemLastUsedDate_Ranking: 2025-12-23 00:00:00 +0000
+kMDItemUseCount: '161'
 kMDItemUsedDates: (
 kMDItemWhereFroms: (
-modified: '2025-11-16'
+modified: '2025-12-23'
 published: true
 reading_time: 1.6
 source_file: Hadoop.md
 tags: null
 title: Hadoop
-word_count: 321
+word_count: 323
 ---
 
 | Layer            | Description                                                  |
