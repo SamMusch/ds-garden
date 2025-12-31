@@ -102,7 +102,7 @@ Container [[Networking-Docker]]
 
 ---
 
-### PreReq-Servers
+####  PreReq-Servers
 !!! sam
     **Client vs Server** (roles, not machines)
 
@@ -117,7 +117,6 @@ Container [[Networking-Docker]]
     - sit **inside** the server.  
 
     - handle routing/parsing/responses
-
 
 
 ## Networking Concepts
@@ -228,7 +227,6 @@ Database **application**
 
 
 ### 5: Cloud Networking (VPC, Subnets, Gateways)
-
 !!! sam
 
     - **Problem**: Maintaining **physical servers** is getting expensive and slow.
@@ -260,7 +258,6 @@ Database **application**
     6. lock it down with *Security Groups / NACLs* (ports + allowed sources).
 
     [Image](https://i.imgur.com/vrjgAu6.png)
-
 
 
 ### 6: Container Networking
