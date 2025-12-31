@@ -63,10 +63,8 @@ word_count: 246
 An API is a contract that lets software systems talk to each other in a predictable way.
 It defines _what you can ask for_, _how you ask_, and _what you get back_.
 
-An API is **not** about technology first.  
-It’s about **agreement and separation of responsibility**.
 
-### 1. What an API is
+### What an API is
 !!! sam
     An API is a **structured interface** between 2 systems.  
     One system asks for something. The other responds in a defined format.
@@ -80,7 +78,7 @@ It’s about **agreement and separation of responsibility**.
     The API defines **how that conversation must happen**.
 
 
-### 2. Why APIs exist
+### Why APIs exist
 !!! sam
     APIs exist to:
 
@@ -93,34 +91,7 @@ It’s about **agreement and separation of responsibility**.
     Without APIs, every system would need to know how every other system works internally.
 
 
-### 3. APIs are contracts
-!!! sam
-    An API is a promise:
-
-    - If you send _this kind of request_
-
-    - You will get _this kind of response_
-
-    This contract matters more than implementation details.
-
-
-### 4. APIs are about communication, not code
-!!! sam
-    APIs are **not libraries** and **not shared code**.  
-    They are communication agreements between independent systems.
-
-    This is why APIs work across:
-
-    - Programming languages
-
-    - Machines
-
-    - Companies
-
-    - Cloud boundaries
-
-
-### 5. Web APIs
+### Web APIs
 !!! sam
     Most modern APIs use:
 
@@ -143,14 +114,12 @@ It’s about **agreement and separation of responsibility**.
     - Your RAG system receives questions
 
 
+
 ## PARADIGMS
 
 APIs are about *how* clients talk to servers.
 
 An API “*paradigm*”: a pattern for how requests & responses are shaped.
-
-Key idea: **APIs are contracts for conversation between systems.**
-Everything else (frameworks, tools, cloud services) exists to support that idea.
 
 ### REST model
 <div class="hb-row" markdown="block">
@@ -186,8 +155,8 @@ POST /ask
 { "answer": "..." }
 ```
 
-### 3. Resource-based thinking
-Instead of “doing actions,” APIs expose *resources*. Why?
+### Resource-based thinking
+Instead of “doing actions”, APIs expose *resources*. Why?
 
 - Keeps APIs predictable
 
@@ -217,7 +186,7 @@ You interact with **resources** using **verbs**:
 </div>
 
 
-### 4. Synchronous vs asynchronous APIs
+### Synchronous vs asynchronous APIs
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 **Synchronous**
@@ -240,26 +209,18 @@ You interact with **resources** using **verbs**:
 </div>
 
 
+
 ## SECURITY
-
-> **Security isn’t about blocking users. It’s about knowing who’s talking to you and why.**
-
-Chapter 3 is about **keeping APIs safe without making them unusable**.  
-
-### 1. Why API security exists
 
 Since APIs are exposed to the internet, anyone can **try** to call them.
 
-Security answers:
+Security questions to answer:
 
 - _Who is calling me?_
 
 - _Are they allowed to do this?_
 
-- _Can I trust the data in transit?_
-
-### 2. Authentication vs Authorization
-You almost always need both.
+### Authentication vs Authorization
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 **Authentication = who are you?**  
@@ -284,29 +245,9 @@ Examples:
 </div>
 
 
-### 3. API keys
-An *API key*: a secret string sent with each request.
-<div class="hb-row" markdown="block">
-  <div class="hb-col" markdown="block">
-**Pros:**
-
-- Simple
-
-- Easy to implement
-  </div>
-  <div class="hb-col" markdown="block">
-**Cons:**
-
-- Anyone with the key has access
-
-- Hard to manage at scale
-  </div>
-</div>
-
-
-### 4. HTTPS
+### HTTPS
 !!! sam
-    HTTPS:
+    HTTPS is mandatory for modern APIs:
 
     - Encrypts data in transit
 
@@ -314,22 +255,16 @@ An *API key*: a secret string sent with each request.
 
     - Verifies the server identity
 
-    HTTPS is mandatory for modern APIs.
 
+### CORS
 
-### 5. CORS
-
-(why browsers block things)
-
-CORS exists to protect users.
+CORS are a **browser safety rule** to protect users.
 
 Browsers block requests when:
 
 - A web page tries to call a different domain
 
-- The server doesn’t explicitly allow it
-
-This is **not a server security feature** — it’s a browser safety rule.
+- The server doesn’t allow the requests
 
 That’s why:
 
@@ -337,22 +272,4 @@ That’s why:
 
 - Server-to-server calls work
 
-- Browsers sometimes fail
-
-### 6. Trust boundaries (mental model)
-
-Every system boundary **matters**:
-
-- Browser ⟶ API
-
-- API ⟶ database
-
-- ChatGPT ⟶ your API
-
-Each boundary **needs**:
-
-- Authentication
-
-- Validation
-
-- Logging
+- **Browsers** sometimes fail

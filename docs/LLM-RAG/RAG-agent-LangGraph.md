@@ -67,7 +67,6 @@ Tutorial
 
 3. Build an agentic RAG system (decides when to use the R tool)
 
-
 ### Concepts
 We will cover the following concepts:
 

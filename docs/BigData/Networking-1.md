@@ -102,6 +102,24 @@ Container [[Networking-Docker]]
 
 ---
 
+### PreReq-Servers
+!!! sam
+    **Client vs Server** (roles, not machines)
+
+    - _Client_: initiates requests
+
+    - _Server_: waits and responds  
+
+    **Mental model:**  `Client ⟶ Network (IP + Port) ⟶ Server ⟶ Code ⟶ Response`
+
+    *Frameworks* (FastAPI, Flask, etc.) 
+
+    - sit **inside** the server.  
+
+    - handle routing/parsing/responses
+
+
+
 ## Networking Concepts
 
 [Every Networking Concept](https://www.youtube.com/watch?v=xj_GjnD4uyI)
@@ -157,6 +175,14 @@ Database **application**
 
     **Q3**: When a client request arrives, where should the **server** direct it?
     **A3**: To the appropriate *port* (in this case, the **website** on `port 80`)
+
+
+!!! sam
+    *Port mapping* (or *binding*) is **how** the server routes outside calls to the right port.
+
+    1. Someone calls the building (the host *machine*) via the front desk phone number (the host *port*).
+
+    2. Reception forwards to the apartment (the *container*) via the apartment number (the container *port*).
 
 
 ### 3: Security and Segmentation (Subnets, Routing, Firewall)
@@ -232,7 +258,10 @@ Database **application**
     5. attach a *NAT Gateway* (private subnet outbound internet).
 
     6. lock it down with *Security Groups / NACLs* (ports + allowed sources).
+
     [Image](https://i.imgur.com/vrjgAu6.png)
+
+
 
 ### 6: Container Networking
 !!! sam
@@ -247,34 +276,4 @@ Database **application**
 
     - settings
 
-
-!!! sam
-    Let's say our *server* has 2 ***containers*** (`TravelBuddy` & Payment system).
-
-    **Q9**: When there are 2+ containers, how do they talk?
-    **A9**: Via a *bridge network* that Docker creates.
-
-    *Bridge network*: a private *network* that exists **only on that server**.
-
-
-!!! sam
-    **Q10**: How to go from external requests ⟶ container ⟶ application?
-    **A10**: Via *port mapping* (or *binding*).
-
-    Analogy: *Port mapping* is a receptionist routing outside calls ⟶ the right apartment.
-
-    - The building = the *host machine*
-
-    - Front desk phone \# = *host port*
-
-    - Each apartment = a *container*
-
-    - Apartment phone \# = *container ports*
-
-
-
-**NEXT**
-As we grow further, we run *containers* on multiple *servers*.
-Microservices need to communicate across servers, not just within 1 machine.
-
-Docker’s *overlay network* creates a virtual network spanning multiple hosts, making containers on different servers appear to be on the same network.
+    See note [[Networking-2-Containers]].

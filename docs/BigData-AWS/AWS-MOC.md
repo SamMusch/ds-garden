@@ -55,8 +55,6 @@ my docker app
 
 - [[DB-Aurora]] or [[DB-DynamoDB]]
 
-- [[MLAI-Bedrock]]
-
 Terms
 
 - *serverless*: pay as you go

@@ -14,9 +14,8 @@
   - [Database-History](BigData/Database-History/) — 0.9 min
   - [Hadoop-Full](BigData/Hadoop-Full/) — 5 min
   - [Hadoop](BigData/Hadoop/) — 1.6 min
-  - [Networking-Docker](BigData/Networking-Docker/) — 0.7 min
-  - [Networking-Servers](BigData/Networking-Servers/) — 1.7 min
-  - [Networking](BigData/Networking/) — 3.5 min
+  - [Networking](BigData/Networking-1/) — 3.5 min
+  - [Networking-Docker](BigData/Networking-2-Containers/) — 0.7 min
   - [Oreilly](BigData/Oreilly/)
   - [Snowflake](BigData/Snowflake/) — 2.5 min
 
@@ -29,8 +28,6 @@
   - [DB-Aurora](BigData-AWS/DB-Aurora/) — 1.4 min
   - [DB-DynamoDB](BigData-AWS/DB-DynamoDB/) — 1.8 min
   - [DB](BigData-AWS/DB/) — 0.1 min
-  - [MLAI-Bedrock](BigData-AWS/MLAI-Bedrock/) — 0 min
-  - [MLAI](BigData-AWS/MLAI/) — 0 min
 
 **LLM-RAG/**
 

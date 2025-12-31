@@ -56,23 +56,26 @@ Resources
 ### Glossary
 [Figure 1.12 Diagram](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure1-12.png)
 !!! sam
-    *Images*: contain the below to start the app as a *container*
+    **Problem**: We move to microservices for scalability, but deployment becomes harder.
+    **Solution**: A *container* packages **everything an application needs** into 1 portable unit.
 
-    - a single app
+    - code
 
-    - dependencies
+    - runtime
 
-    - metadata
+    - libraries
 
-    *Container*: an isolated part of an OS designed to run a single app
+    - settings
+
+    *Images*: a read-only template containing everything needed to run a container
+
+    *Container*: a running, isolated instance of an image
+
+    ---
 
     *Registry*: a centralized place for storing and retrieving images
 
-
-!!! sam
-    *Host*: where\* the *container* executes. The host provides the OS that every container shares.
-
-    - \*a physical server or a VM
+    *Host*: where (physical server or VM) the *container* executes. The host provides the OS that every container shares.
 
     *Runtime environment*: where the program executes + the necessary resources/services
 
@@ -80,10 +83,11 @@ Resources
 
     *Microservices*: a design pattern where every feature is dev/deployed/managed as its own small app/microservice
 
-    *Ollama*: a platform for running LLMs
+    *Bridge network*: a private *network* that exists **only on that server** and allows containers to talk.
 
 
-### Why containers
+
+### Images & Containers
 !!! sam
     **Issue**: dev & prod environments had different versions of libraries & dependencies.
 
@@ -97,7 +101,6 @@ Resources
     Containers virtualize the OS, not the hardware.
 
 
-### Big picture view
 !!! sam
     The steps in *containerizing* an application:
 
@@ -113,7 +116,7 @@ Resources
 
 
 !!! sam
-    **The anatomy**:
+    **Under the hood**:
 
     Shared OS (kernel)
 
@@ -121,16 +124,10 @@ Resources
 
     - Container 2 (runs 1 app)
 
+    - Container ...
+
     Each container is NOT aware of others.
 
-
----
-
-**Analogy**:
-
-- classes ⟶ objects
-
-- ***images*** ⟶ ***containers***
 
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
@@ -170,10 +167,10 @@ Resources
 
     - **Old way**: *monolithic applications*. Every feature is dev/deployed/managed as **1 complex app**.
 
-    - **New way**: *Microservices*. Every feature is dev/deployed/managed as **its own indy app**.
+    - **New way**: *microservices*. Every feature is dev/deployed/managed as **its own indy app**.
 
+    ---
 
-!!! sam
     The term *microservice* comes from:
 
     - Small (micro)
@@ -184,8 +181,7 @@ Resources
 
 
 !!! sam
-    **Example**: 
-    1 microservices **application** with `6` *microservices*.
+    **Example**: 1 microservices **application** with `6` *microservices*.
 
     Each of the `6` *microservices*:
 
@@ -212,5 +208,4 @@ Resources
 
     Deploy using **`docker compose`** command.
 
-
-Example:[Figure 6.2. The Compose file.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure6-2.png)
+    Example:[Figure 6.2. The Compose file.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure6-2.png)
