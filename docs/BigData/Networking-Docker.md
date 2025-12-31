@@ -47,61 +47,170 @@ title: Networking Docker
 word_count: 144
 ---
 
-Terms
+Resources
 
-- artifact
+- [Getting Started with Docker and AI by Nigel Poulton](https://learning.oreilly.com/library/view/getting-started-with/9781837022878/chap02.xhtml)
 
-- kernel
+- [Docker Cheatsheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
 
-- software vs apps
+### Glossary
+[Figure 1.12 Diagram](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure1-12.png)
+!!! sam
+    *Images*: contain the below to start the app as a *container*
 
-- environment
+    - a single app
 
-- daemon
+    - dependencies
 
-- runtime instance
+    - metadata
 
+    *Container*: an isolated part of an OS designed to run a single app
 
-[Cheatsheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf)  |  [Image](https://i.imgur.com/xQGvfrT.png)
+    *Registry*: a centralized place for storing and retrieving images
+
 
 !!! sam
-    **Key Problem**: After building an app on your machine, how can we replicate the software our environment needs onto any machine?
+    *Host*: where\* the *container* executes. The host provides the OS that every container shares.
 
-    **Solution**: Docker packages software into *containers* that can run in any environment.
+    - \*a physical server or a VM
 
-    - Containers virtualize the OS, not the hardware.
+    *Runtime environment*: where the program executes + the necessary resources/services
 
-    - In other words, all software & apps are run by a single kernel.
+    *Kernel*: the core features & functions of an OS. (Sometimes *kernel* & *OS* are used interchangeably.)
+
+    *Microservices*: a design pattern where every feature is dev/deployed/managed as its own small app/microservice
+
+    *Ollama*: a platform for running LLMs
 
 
+### Why containers
+!!! sam
+    **Issue**: dev & prod environments had different versions of libraries & dependencies.
 
-**Docker 3 elements**
+    **Solution**: Docker makes it easy to package **applications** + **dependencies**.
+
+    - ***image***: the standard **package**
+
+    - ***container***: the standard **runtime**
+
+
+    Containers virtualize the OS, not the hardware.
+
+
+### Big picture view
+!!! sam
+    The steps in *containerizing* an application:
+
+    1. Dev app
+
+    2. Package app + dependencies as an ***image*** (called *containerization*)
+
+    3. Ship ***image*** to a registry (optional)
+
+    4. Run as a ***container*** (using a tool like Docker)
+
+    A ***container*** is a ring-fenced part of an OS dedicated to a single app. (*isolated execution environment*)
+
+
+!!! sam
+    **The anatomy**:
+
+    Shared OS (kernel)
+
+    - Container 1 (runs 1 app)
+
+    - Container 2 (runs 1 app)
+
+    Each container is NOT aware of others.
+
+
+---
+
+**Analogy**:
+
+- classes ⟶ objects
+
+- ***images*** ⟶ ***containers***
+
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
-***Dockerfile***
+### Images
 
-- **is**: a `.txt` build recipe
+3 layers ⟶ 1 ***image***
 
-- **composed of**: Ordered commands (`FROM`, `RUN`, ..)
-
-- **purpose**: Define *how* an image is built
+![Figure 1.3. Image layering.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure1-3.png)
   </div>
   <div class="hb-col" markdown="block">
-***Image***
+### Containers
 
-- **is**: a packaged snapshot of software & dependencies
+1 ***image*** ⟶ 1+ ***containers***
 
-- **composed of**: read-only layers from Dockerfile
-
-- **purpose**: provides template for running software
-  </div>
-  <div class="hb-col" markdown="block">
-***Container***
-
-- **is**: a runtime process of an image
-
-- **composed of**: image + runtime layer + a started cmd
-
-- **purpose**: execute the app
+![Figure 1.5. Single image starting three containers.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure1-5.png)
   </div>
 </div>
+
+
+### Registries
+!!! sam
+    *registries*
+
+    - **are**: centralized places to store & retrieve images
+
+    - **aka**: container registries | Docker registries | OCI registries.
+
+    actions ([Figure](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure1-6.png))
+
+    - *pushing*: storing images
+
+    - *pulling*: retrieving images
+
+
+### Microservices
+!!! sam
+
+    - **Old way**: *monolithic applications*. Every feature is dev/deployed/managed as **1 complex app**.
+
+    - **New way**: *Microservices*. Every feature is dev/deployed/managed as **its own indy app**.
+
+
+!!! sam
+    The term *microservice* comes from:
+
+    - Small (micro)
+
+    - Application (service)
+
+    *microservices*: a design pattern where **indy app features** are dev/deployed/managed as **indy apps** running as containers.
+
+
+!!! sam
+    **Example**: 
+    1 microservices **application** with `6` *microservices*.
+
+    Each of the `6` *microservices*:
+
+    - is **built** as its own ***image***
+
+    - is **deployed** as its own ***container***
+
+    - is coupled with **other microservices** over the **IP network**.
+
+    - can be updated & scaled independently
+
+
+### Docker Compose
+!!! sam
+    *Docker Compose* is how we can deploy/manage *multi-container apps* (aka *microservices apps*).
+
+    Note that Compose refers to *containers* as *services*.
+
+    The *compose file* is where we define the app.
+
+    - define the **services**
+
+    - define the **network**
+
+    Deploy using **`docker compose`** command.
+
+
+Example:[Figure 6.2. The Compose file.](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure6-2.png)

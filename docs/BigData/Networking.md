@@ -47,40 +47,38 @@ title: Networking
 word_count: 690
 ---
 
-[Every Networking Concept](https://www.youtube.com/watch?v=xj_GjnD4uyI&t=378s)
-
-**In this doc**:
+This doc covers:
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 Core Networking Concepts
 
-- IP Addresses
+- <abbr title="On a network ⟶ unique ID per device.">IP Addresses</abbr>
 
-- DNS
+- <abbr title="Translates human domain names ⟶ IP addresses.">DNS</abbr>
 
-- Ports
+- <abbr title="Endpoints IDing specific services on a device.">Ports</abbr>
   </div>
   <div class="hb-col" markdown="block">
 Security & Network Organization
 
-- Subnets
+- <abbr title="Large network ⟶ smaller network segments">Subnets</abbr>
 
-- Routing
+- <abbr title="Directing traffic between networks.">Routing</abbr>
 
-- Firewalls
+- <abbr title="Rules allowing/blocking network traffic.">Firewalls</abbr>
 
-- NAT
+- <abbr title="Translate private IPs ⟶ public IP.">NAT</abbr>
   </div>
   <div class="hb-col" markdown="block">
 Cloud Networking Essentials
 
-- VPC
+- <abbr title="Isolated virtual network within a cloud provider.">VPC</abbr>
 
-- Internet Gateway
+- <abbr title="Connects a VPC ⟶ internet.">Internet Gateway</abbr>
 
-- NAT Gateway
+- <abbr title="Connects a private subnet ⟶ internet.">NAT Gateway</abbr>
 
-- Route Tables
+- <abbr title="Rules defining where network traffic is sent.">Route Tables</abbr>
   </div>
   <div class="hb-col" markdown="block">
 Container [[Networking-Docker]]
@@ -88,36 +86,42 @@ Container [[Networking-Docker]]
 </div>
 
 
-**Top 5 concepts**
+!!! sam
+    **Top 5 concepts**
 
-- *Addressing* (IP, DNS): How devices find each other
+    - *Addressing* (IP, DNS): How devices find each other
 
-- *Ports*: How multiple apps share one IP
+    - *Ports*: How multiple apps share one IP
 
-- *Segmentation* (Subnets, Routing): How we organize networks
+    - *Segmentation* (Subnets, Routing): How we organize networks
 
-- *Firewalls*: How we control traffic
+    - *Firewalls*: How we control traffic (between segments & ports)
 
-- *NAT*: How private addresses access the internet
+    - *NAT*: How private addresses access the internet
+
 
 ---
+
+## Networking Concepts
+
+[Every Networking Concept](https://www.youtube.com/watch?v=xj_GjnD4uyI)
 
 `TravelBuddy` | The **system**. Broken down:
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
 Frontend **application**
 
-- Web UI
+- Website UI
   </div>
   <div class="hb-col" markdown="block">
 Backend **application**
 
-- Business logic / APIs
+- Payment system
   </div>
   <div class="hb-col" markdown="block">
 Database **application**
 
-- Persistent storage
+- MySQL database
   </div>
 </div>
 
@@ -152,7 +156,7 @@ Database **application**
     - **payment service**: `port 9090`
 
     **Q3**: When a client request arrives, where should the **server** direct it?
-    **A3**: The website *port* (`port 80`)
+    **A3**: To the appropriate *port* (in this case, the **website** on `port 80`)
 
 
 ### 3: Security and Segmentation (Subnets, Routing, Firewall)
@@ -199,46 +203,50 @@ Database **application**
 
 ### 5: Cloud Networking (VPC, Subnets, Gateways)
 
-- **Problem**: Maintaining **physical servers** is getting expensive and slow.
+!!! sam
 
-- **Solution**: Move to the **cloud**, where served are provided as *managed services*.
+    - **Problem**: Maintaining **physical servers** is getting expensive and slow.
 
-Concepts remain, but tools change:
+    - **Solution**: Move to the **cloud**, where served are provided as *managed services*.
 
-- Physical *routers* ⟶ *VPCs*
+    Concepts remain, but tools change:
 
-- Physical *firewalls* ⟶ *Security Groups*
+    - Physical *routers* ⟶ *VPCs*
 
-- Bare *metal* ⟶ *Containers* ⟶ *Kubernetes*
+    - Physical *firewalls* ⟶ *Security Groups*
 
-**In the cloud**
+    - Bare *metal* ⟶ *Containers* ⟶ *Kubernetes*
 
-1. create a *VPC* (private IP space).
 
-2. create *subnets* (public/private).
+!!! sam
+    **In the cloud**
 
-3. attach *route tables* (where traffic can go).
+    1. create a *VPC* (private IP space).
 
-4. attach an *Internet Gateway* (public internet path).
+    2. create *subnets* (public/private).
 
-5. attach a *NAT Gateway* (private subnet outbound internet).
+    3. attach *route tables* (where traffic can go).
 
-6. lock it down with *Security Groups / NACLs* (ports + allowed sources).
-[Image](https://i.imgur.com/vrjgAu6.png)
+    4. attach an *Internet Gateway* (public internet path).
+
+    5. attach a *NAT Gateway* (private subnet outbound internet).
+
+    6. lock it down with *Security Groups / NACLs* (ports + allowed sources).
+    [Image](https://i.imgur.com/vrjgAu6.png)
 
 ### 6: Container Networking
+!!! sam
+    **Problem**: We move to microservices for scalability, but deployment becomes harder ("it works on my machine").
+    **Solution**: A *container* packages **everything an application needs** into 1 portable unit.
 
-**Problem**: We move to microservices for scalability, but deployment becomes harder ("it works on my machine").
+    - code
 
-**Solution**: A *container* packages **everything an application needs** into 1 portable unit.
+    - runtime
 
-- code
+    - libraries
 
-- runtime
+    - settings
 
-- libraries
-
-- settings
 
 !!! sam
     Let's say our *server* has 2 ***containers*** (`TravelBuddy` & Payment system).
@@ -264,27 +272,9 @@ Concepts remain, but tools change:
     - Apartment phone \# = *container ports*
 
 
+
+**NEXT**
 As we grow further, we run *containers* on multiple *servers*.
 Microservices need to communicate across servers, not just within 1 machine.
 
 Docker’s *overlay network* creates a virtual network spanning multiple hosts, making containers on different servers appear to be on the same network.
-
-
-
-
-
-### Recap
-
-Foundational networking concepts:
-
-1. **IP addresses** identify devices so they can be found and contacted.
-
-2. **DNS** translates human-friendly names into IP addresses.
-
-3. **Ports** let multiple apps on the same server receive the right traffic.
-
-4. **Subnets + routing** divide networks into sections and connect them.
-
-5. **Firewalls** control which traffic is allowed between segments and ports.
-
-6. **NAT** lets private systems reach the internet using a shared public IP.

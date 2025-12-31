@@ -47,33 +47,46 @@ title: Networking Servers
 word_count: 342
 ---
 
-A **server** is a software program that waits for requests ⟶ does work when asked ⟶ sends results back.
+!!! sam
+    *Server* has **two valid meanings**, depending on context:
 
-Everything *else* exists to make that exchange reliable/scalable/reachable.
+    1. In **software** ⟶ its what *does the work*
 
-- networking, ports, APIs, containers, cloud 
+    2. In **hardware / infrastructure** ⟶ its where the work *runs*. (A machine, physical or virtual, that runs server software & provides resources to clients.)
+
+
+!!! sam
+    A *server* is a software program that waits for requests ⟶ does work when asked ⟶ sends results back.
+
+    Everything *else* exists to make that exchange reliable/scalable/reachable.
+
+    - networking, ports, APIs, containers, cloud
+
+
 
 ### 2. What a server _does_
 
-Chronological flow:
+!!! sam
+    Chronological flow:
 
-1. A client sends a request.
+    1. A client sends a request.
 
-2. The request reaches an IP address + port.
+    2. The request reaches an IP address + port.
 
-3. A server process is listening on that port.    
+    3. A server process is listening on that port.    
 
-4. The server runs some logic (code).
+    4. The server runs some logic (code).
 
-5. The server returns a response (HTML, JSON, text, etc.).
+    5. The server returns a response (HTML, JSON, text, etc.).
 
-Example:
+    Example:
 
-- Browser ⟶ asks for `/docs`
+    - Browser ⟶ asks for `/docs`
 
-- Server ⟶ runs Python code
+    - Server ⟶ runs Python code
 
-- Server ⟶ returns JSON or HTML
+    - Server ⟶ returns JSON or HTML
+
 
 ### 3. What makes something a “server”
 

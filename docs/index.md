@@ -10,15 +10,14 @@
 
 **BigData/**
 
-  - [API-1-Overview](BigData/API-1-Overview/) — 1.2 min
-  - [API-2-Paradigms](BigData/API-2-Paradigms/) — 0.8 min
-  - [API-3-Security](BigData/API-3-Security/) — 1.2 min
+  - [API-1-Overview](BigData/APIs/) — 1.2 min
   - [Database-History](BigData/Database-History/) — 0.9 min
   - [Hadoop-Full](BigData/Hadoop-Full/) — 5 min
   - [Hadoop](BigData/Hadoop/) — 1.6 min
   - [Networking-Docker](BigData/Networking-Docker/) — 0.7 min
   - [Networking-Servers](BigData/Networking-Servers/) — 1.7 min
   - [Networking](BigData/Networking/) — 3.5 min
+  - [Oreilly](BigData/Oreilly/)
   - [Snowflake](BigData/Snowflake/) — 2.5 min
 
 **BigData-AWS/**
