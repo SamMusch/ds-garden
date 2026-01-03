@@ -168,7 +168,15 @@ Web
 I want a single container with one build step ⟶ **templates** (FastAPI + Jinja2 + a little JS for streaming).
 
 
+==HERE==
 
+Next logical steps (pick one):
+
+1. Wire /chat/stream to your real llm_code Bedrock streaming call
+
+2. Add DynamoDB table for chat/session state (no auth yet)
+
+3. Add HTTPS + domain (ACM + ALB)
 
 
 ---
