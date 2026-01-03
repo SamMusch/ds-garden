@@ -1,7 +1,10 @@
 
 <!-- toc:start -->
 
+- [NEXT](JAN1/)
+- [MCP](MCP/)
 - [projects](projects/) — 2 min
+- [Untitled 1](Untitled 1/)
 
 **_Conceptual/**
 
@@ -28,6 +31,7 @@
   - [DB-Aurora](BigData-AWS/DB-Aurora/) — 1.4 min
   - [DB-DynamoDB](BigData-AWS/DB-DynamoDB/) — 1.8 min
   - [DB](BigData-AWS/DB/) — 0.1 min
+  - [MLAI](BigData-AWS/MLAI/)
 
 **LLM-RAG/**
 

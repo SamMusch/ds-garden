@@ -228,7 +228,6 @@ Images from textbook:
     - **RAGOps infrastructure / `layers`** (*electricity in factory*)
 
 
-
 !!! sam
     Ch 9 - dev framework
 

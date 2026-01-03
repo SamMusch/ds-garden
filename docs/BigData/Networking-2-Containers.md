@@ -53,8 +53,8 @@ Resources
 
 - [Docker Cheatsheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
 
-### Glossary
-[Figure 1.12 Diagram](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure1-12.png)
+- [Docker Hub Container Image Library \| App Containerization](https://hub.docker.com/)
+
 !!! sam
     **Problem**: We move to microservices for scalability, but deployment becomes harder.
     **Solution**: A *container* packages **everything an application needs** into 1 portable unit.
@@ -67,6 +67,10 @@ Resources
 
     - settings
 
+
+### Glossary
+[Figure 1.12 Diagram](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781837022878/files/images/figure1-12.png)
+!!! sam
     *Images*: a read-only template containing everything needed to run a container
 
     *Container*: a running, isolated instance of an image

@@ -103,6 +103,9 @@ word_count: 437
     - *permissions*: IAM for secure access from your local app to Bedrock, Aurora, and S3
 
 
+
+
+
 # llm_code - 12-13
 
 ### init

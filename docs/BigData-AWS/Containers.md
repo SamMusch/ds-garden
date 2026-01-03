@@ -74,7 +74,6 @@ word_count: 198
         1. **Fargate** → *Compute* engine that executes containers
 
 
-
 ---
 
 ### ECR & ECS

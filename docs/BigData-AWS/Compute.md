@@ -83,8 +83,6 @@ AWS
 </div>
 
 
-
-
 ### Fargate
 !!! sam
     **Process**

@@ -70,42 +70,6 @@ Services
 
 ---
 
-### Background
-
-AWS offers cloud-based products that can be provisioned quickly without the upfront fixed expense.
-
-!!! sam
-    *Cloud computing*: the on-demand delivery of resources through a cloud services platform with pay-as-you-go pricing.
-
-    Advantages of cloud:
-
-    - Pay as you go
-
-    - Cheaper due to economies of scale
-
-    - Scale capacity quickly
-
-    - Multiple regions
-
-    Types of cloud computing
-
-    1. **Cloud**: app deployed in cloud + all parts of the app run in the cloud
-
-    2. **Private cloud (on-prem)**: deploy resources on-premises (using virtualization and resource management tools)
-
-    3. **Hybrid**
-
-
-!!! sam
-    Access services via
-
-    - Mgmt Console
-
-    - CLI
-
-    - SDKs
-
-
 
 ## AWS Services
 ### DS side
@@ -172,3 +136,43 @@ AWS offers cloud-based products that can be provisioned quickly without the upfr
 - Cloud Financial Management
   </div>
 </div>
+
+
+
+
+
+
+### Background
+
+AWS offers cloud-based products that can be provisioned quickly without the upfront fixed expense.
+
+!!! sam
+    *Cloud computing*: the on-demand delivery of resources through a cloud services platform with pay-as-you-go pricing.
+
+    Advantages of cloud:
+
+    - Pay as you go
+
+    - Cheaper due to economies of scale
+
+    - Scale capacity quickly
+
+    - Multiple regions
+
+    Types of cloud computing
+
+    1. **Cloud**: app deployed in cloud + all parts of the app run in the cloud
+
+    2. **Private cloud (on-prem)**: deploy resources on-premises (using virtualization and resource management tools)
+
+    3. **Hybrid**
+
+
+!!! sam
+    Access services via
+
+    - Mgmt Console
+
+    - CLI
+
+    - SDKs

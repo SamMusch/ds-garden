@@ -100,23 +100,40 @@ Container [[Networking-Docker]]
     - *NAT*: How private addresses access the internet
 
 
----
+####  PreReq-Clients-Servers
+```
+┌──────────────┐          request           ┌──────────────┐
+│    Client    │    ───────────────────▶    │    Server    │
+│  (library)   │    ◀───────────────────    │  (runtime)   │
+└──────────────┘          response          └──────────────┘
+```
 
-####  PreReq-Servers
-!!! sam
-    **Client vs Server** (roles, not machines)
+<div class="hb-row" markdown="block">
+  <div class="hb-col" markdown="block">
+**Client** examples:
 
-    - _Client_: initiates requests
+- AWS ⟶ boto3
 
-    - _Server_: waits and responds  
+- Postgres ⟶ psycopg2
 
-    **Mental model:**  `Client ⟶ Network (IP + Port) ⟶ Server ⟶ Code ⟶ Response`
+- HTTP APIs ⟶ requests
 
-    *Frameworks* (FastAPI, Flask, etc.) 
+- LLMs ⟶ LangChain
+  </div>
+  <div class="hb-col" markdown="block">
+**Server** examples:
 
-    - sit **inside** the server.  
+- FastAPI app
 
-    - handle routing/parsing/responses
+- Database engine
+
+- Model runtime (Ollama, Bedrock)
+
+- Managed service endpoint (AWS APIs)
+  </div>
+</div>
+
+
 
 
 ## Networking Concepts
