@@ -180,25 +180,3 @@ Next logical steps (pick one):
 
 
 ---
-
-
-
-Considerations for both my personal use & work use:
-
-- I don't want to spend too much money.
-
-- I don't want to get too complex.
-
-- I want this to be recognized as something that's "mine", not just something I'm "buying".
-
-Considerations for my personal use:
-
-- I want my notes to stay mine and not go to the internet (but with the ability to pull info from the internet).
-
-- I want to be able to connect to my Obsidian notes / vscode scripts (and probably others).
-
-Considerations for my work use:
-
-- I want this to be either better (or at least different) than what my company already uses (openai + sharepoint)
-
-- It'd need to be able to work "within" a website, meaning a chatbot or some way to create summaries based on user input.
