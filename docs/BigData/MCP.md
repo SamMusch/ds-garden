@@ -74,10 +74,6 @@ MCP’s power means giving AI access to tools/data. Security issues and misconfi
 ---
 
 
-
-==add my stuff as a chatbot to my notes online?==
-
-
 ### TL;DR
 
 `llm_code`: a RAG system that 

@@ -1,10 +1,7 @@
 
 <!-- toc:start -->
 
-- [NEXT](JAN1/)
-- [MCP](MCP/)
 - [projects](projects/) — 2 min
-- [Untitled 1](Untitled 1/)
 
 **_Conceptual/**
 
@@ -17,6 +14,7 @@
   - [Database-History](BigData/Database-History/) — 0.9 min
   - [Hadoop-Full](BigData/Hadoop-Full/) — 5 min
   - [Hadoop](BigData/Hadoop/) — 1.6 min
+  - [MCP](BigData/MCP/)
   - [Networking](BigData/Networking-1/) — 3.5 min
   - [Networking-Docker](BigData/Networking-2-Containers/) — 0.7 min
   - [Oreilly](BigData/Oreilly/)
