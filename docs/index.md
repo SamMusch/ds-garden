@@ -45,7 +45,6 @@
   - [09-Current](LLM-RAG/09-Current/) — 0.8 min
   - [RAG-agent-LangChain](LLM-RAG/RAG-agent-LangChain/) — 2.3 min
   - [RAG-agent-LangGraph](LLM-RAG/RAG-agent-LangGraph/) — 5.5 min
-  - [RAG-Architecture](LLM-RAG/RAG-Architecture/) — 2.2 min
 
 **ML/**
 
