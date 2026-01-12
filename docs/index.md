@@ -22,6 +22,7 @@
 
 **BigData-AWS/**
 
+  - [Analytics-OpenSearch](BigData-AWS/Analytics-OpenSearch/)
   - [Analytics](BigData-AWS/Analytics/) — 0.2 min
   - [_AWS-MOC](BigData-AWS/AWS-MOC/) — 1.2 min
   - [Compute](BigData-AWS/Compute/) — 0.5 min

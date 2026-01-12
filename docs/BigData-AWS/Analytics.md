@@ -69,9 +69,11 @@ Amazon
 
 - Kinesis Video Streams 
 
-- OpenSearch Service 
+- [[Analytics-OpenSearch]]
 
-- OpenSearch Serverless 
+    - Service
+
+    - Serverless
 
 - Redshift 
 
