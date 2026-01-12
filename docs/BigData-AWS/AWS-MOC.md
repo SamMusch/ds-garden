@@ -49,16 +49,6 @@ word_count: 235
 
 [AWS Whitepaper](https://docs.aws.amazon.com/pdfs/whitepapers/latest/aws-overview/aws-overview.pdf#introduction) | [AWS Glossary](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html)
 
-my docker app
-
-- [[Compute]]
-
-- [[DB-Aurora]] or [[DB-DynamoDB]]
-
-Terms
-
-- *serverless*: pay as you go
-
 Services
 
 - *RDS*: Relational Database Service
