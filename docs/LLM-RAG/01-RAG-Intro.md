@@ -18,16 +18,16 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2025-12-30'
+created: '2026-01-14'
 cssclasses: null
 grandchildren: 0
-kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
+kMDItemContentCreationDate: 2026-01-06 18:13:12 +0000
 kMDItemContentCreationDate*Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2025-12-30 21:14:32 +0000
+kMDItemContentCreationDate_Ranking: 2026-01-06 00:00:00 +0000
+kMDItemContentModificationDate: 2026-01-14 15:05:58 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-10-07 22:23:24 +0000
+kMDItemDateAdded: 2026-01-06 18:13:12 +0000
 kMDItemDisplayNameWithExtensions: 00-RAG-Ontology.md
 kMDItemDocumentIdentifier: '222794'
 kMDItemFSCreatorCode: ''
@@ -42,8 +42,8 @@ kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
 kMDItemInterestingDate*Ranking: 2025-10-11 00:00:00 +0000
-kMDItemInterestingDate_Ranking: 2025-12-30 00:00:00 +0000
-modified: '2025-12-30'
+kMDItemInterestingDate_Ranking: 2026-01-14 00:00:00 +0000
+modified: '2026-01-14'
 published: true
 reading*time: 1.1
 reading_time: 2.2

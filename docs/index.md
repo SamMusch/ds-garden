@@ -2,6 +2,7 @@
 <!-- toc:start -->
 
 - [projects](projects/) — 2 min
+- [TEMP](TEMP/) — 20.6 min
 
 **_Conceptual/**
 
@@ -10,27 +11,27 @@
 
 **BigData/**
 
-  - [API-1-Overview](BigData/APIs/) — 1.2 min
+  - [APIs](BigData/APIs/) — 2.1 min
   - [Database-History](BigData/Database-History/) — 0.9 min
   - [Hadoop-Full](BigData/Hadoop-Full/) — 5 min
   - [Hadoop](BigData/Hadoop/) — 1.6 min
-  - [MCP](BigData/MCP/)
-  - [Networking](BigData/Networking-1/) — 3.5 min
-  - [Networking-Docker](BigData/Networking-2-Containers/) — 0.7 min
-  - [Oreilly](BigData/Oreilly/)
+  - [MCP](BigData/MCP/) — 3.7 min
+  - [Networking-1](BigData/Networking-1/) — 3.4 min
+  - [Networking-2-Containers](BigData/Networking-2-Containers/) — 2.9 min
+  - [Oreilly](BigData/Oreilly/) — 2.7 min
   - [Snowflake](BigData/Snowflake/) — 2.5 min
 
 **BigData-AWS/**
 
-  - [Analytics-OpenSearch](BigData-AWS/Analytics-OpenSearch/)
+  - [Analytics-OpenSearch](BigData-AWS/Analytics-OpenSearch/) — 0.4 min
   - [Analytics](BigData-AWS/Analytics/) — 0.2 min
-  - [_AWS-MOC](BigData-AWS/AWS-MOC/) — 1.2 min
+  - [_AWS-MOC](BigData-AWS/AWS-MOC/) — 1.1 min
   - [Compute](BigData-AWS/Compute/) — 0.5 min
   - [Containers](BigData-AWS/Containers/) — 1 min
   - [DB-Aurora](BigData-AWS/DB-Aurora/) — 1.4 min
   - [DB-DynamoDB](BigData-AWS/DB-DynamoDB/) — 1.8 min
   - [DB](BigData-AWS/DB/) — 0.1 min
-  - [MLAI](BigData-AWS/MLAI/)
+  - [MLAI](BigData-AWS/MLAI/) — 0.5 min
 
 **LLM-RAG/**
 

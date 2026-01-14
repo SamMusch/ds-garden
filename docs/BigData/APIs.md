@@ -11,7 +11,7 @@ QualityComment: null
 ReviewFreq: null
 TimeSpent: null
 TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: API-1-Overview.md
+_kMDItemDisplayNameWithExtensions: APIs.md
 ai_abstract: null
 ai_key_terms: []
 aliases: null
@@ -23,18 +23,18 @@ author:
 
 - '[[Amir Shevat]]'
 children: 0
-created: '2025-12-30'
+created: '2026-01-14'
 cssclasses: null
 description: Chapter 1. What’s an API? “What’s an API?” When a new programmer asks
   this question, they typically get the answer, “an application programming interface.”
   But APIs are so much more than their...
 grandchildren: 0
-kMDItemContentCreationDate: 2025-12-30 21:11:39 +0000
-kMDItemContentCreationDate_Ranking: 2025-12-30 00:00:00 +0000
-kMDItemContentModificationDate: 2025-12-30 21:14:32 +0000
+kMDItemContentCreationDate: 2026-01-06 18:13:12 +0000
+kMDItemContentCreationDate_Ranking: 2026-01-06 00:00:00 +0000
+kMDItemContentModificationDate: 2026-01-14 15:05:59 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-12-30 21:11:39 +0000
+kMDItemDateAdded: 2026-01-06 18:13:12 +0000
 kMDItemDocumentIdentifier: '0'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
@@ -47,15 +47,15 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-12-30 00:00:00 +0000
-modified: '2025-12-30'
+kMDItemInterestingDate_Ranking: 2026-01-14 00:00:00 +0000
+modified: '2026-01-14'
 published: true
-reading_time: 1.2
+reading_time: 2.1
 source: https://learning.oreilly.com/library/view/designing-web-apis/9781492026914/ch01.html#why_do_we_need_apisquestion_mark
-source_file: API-1-Overview.md
+source_file: APIs.md
 tags: null
-title: API 1 Overview
-word_count: 246
+title: APIs
+word_count: 421
 ---
 
 ## OVERVIEW
