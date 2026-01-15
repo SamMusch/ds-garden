@@ -48,17 +48,6 @@
   - [RAG-agent-LangChain](LLM-RAG/RAG-agent-LangChain/) — 2.3 min
   - [RAG-agent-LangGraph](LLM-RAG/RAG-agent-LangGraph/) — 5.5 min
 
-**LLM-RAG-2/**
-
-  - [IP-1-Load](LLM-RAG-2/IP-1-Load/)
-  - [MAPPING](LLM-RAG-2/MAPPING/)
-  - [presenting](LLM-RAG-2/presenting/)
-  - [XMAS HTTPS + Domain Name](LLM-RAG-2/XMAS HTTPS + Domain Name/) — 1.4 min
-  - [XMAS-Guide](LLM-RAG-2/XMAS-Guide/) — 3 min
-  - [XMAS-Orchestration](LLM-RAG-2/XMAS-Orchestration/) — 0.5 min
-  - [XMAS-UI](LLM-RAG-2/XMAS-UI/) — 2.9 min
-  - [XMAS2-After](LLM-RAG-2/XMAS2-After/)
-
 **ML/**
 
   - [Meridian-Demo](ML/Meridian-Demo/) — 1.4 min
