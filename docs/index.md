@@ -2,7 +2,6 @@
 <!-- toc:start -->
 
 - [projects](projects/) — 2 min
-- [TEMP](TEMP/) — 20.6 min
 
 **_Conceptual/**
 
@@ -30,6 +29,7 @@
   - [Containers](BigData-AWS/Containers/) — 1 min
   - [DB-Aurora](BigData-AWS/DB-Aurora/) — 1.4 min
   - [DB-DynamoDB](BigData-AWS/DB-DynamoDB/) — 1.8 min
+  - [DB-RDS](BigData-AWS/DB-RDS/)
   - [DB](BigData-AWS/DB/) — 0.1 min
   - [MLAI](BigData-AWS/MLAI/) — 0.5 min
 
@@ -52,6 +52,12 @@
 
   - [IP-1-Load](LLM-RAG-2/IP-1-Load/)
   - [MAPPING](LLM-RAG-2/MAPPING/)
+  - [presenting](LLM-RAG-2/presenting/)
+  - [XMAS HTTPS + Domain Name](LLM-RAG-2/XMAS HTTPS + Domain Name/) — 1.4 min
+  - [XMAS-Guide](LLM-RAG-2/XMAS-Guide/) — 3 min
+  - [XMAS-Orchestration](LLM-RAG-2/XMAS-Orchestration/) — 0.5 min
+  - [XMAS-UI](LLM-RAG-2/XMAS-UI/) — 2.9 min
+  - [XMAS2-After](LLM-RAG-2/XMAS2-After/)
 
 **ML/**
 

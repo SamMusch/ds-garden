@@ -127,7 +127,7 @@ LangChain has abstracted these algorithms ⟶ retrievers.
 
 
 ## 2. Augmentation
-Apply **prompt engineering**. Goal is to best augment Q with retrieved info.
+Apply **prompt engineering**. Goal is to best augment the **LLM** with the **Q** & **retrieved info**.
 
 | Prompting Technique      | Description                                                          |
 | ------------------------ | -------------------------------------------------------------------- |

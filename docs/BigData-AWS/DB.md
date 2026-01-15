@@ -61,9 +61,11 @@ word_count: 28
 
 - Relational Database Service 
 
-- RDS for Db 
+- [[DB-RDS]]
 
-- RDS on VMware 
+    - Db 
+
+    - VMware 
 
 - Timestream 
 
