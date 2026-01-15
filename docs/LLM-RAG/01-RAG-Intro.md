@@ -24,7 +24,7 @@ grandchildren: 0
 kMDItemContentCreationDate: 2026-01-06 18:13:12 +0000
 kMDItemContentCreationDate*Ranking: 2025-10-07 00:00:00 +0000
 kMDItemContentCreationDate_Ranking: 2026-01-06 00:00:00 +0000
-kMDItemContentModificationDate: 2026-01-14 15:05:58 +0000
+kMDItemContentModificationDate: 2026-01-14 15:06:18 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2026-01-06 18:13:12 +0000

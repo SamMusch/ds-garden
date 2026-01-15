@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-11-26 18:28:26 +0000
 kMDItemContentCreationDate_Ranking: 2025-11-26 00:00:00 +0000
-kMDItemContentModificationDate: 2026-01-14 15:05:58 +0000
+kMDItemContentModificationDate: 2026-01-14 15:06:18 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-11-26 18:28:48 +0000

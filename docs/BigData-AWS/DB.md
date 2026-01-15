@@ -19,12 +19,12 @@ children: 0
 created: '2026-01-14'
 cssclasses: null
 grandchildren: 0
-kMDItemContentCreationDate: 2025-12-22 21:00:02 +0000
-kMDItemContentCreationDate_Ranking: 2025-12-22 00:00:00 +0000
-kMDItemContentModificationDate: 2026-01-14 15:05:59 +0000
+kMDItemContentCreationDate: 2026-01-15 02:16:22 +0000
+kMDItemContentCreationDate_Ranking: 2026-01-15 00:00:00 +0000
+kMDItemContentModificationDate: 2026-01-15 02:16:22 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
-kMDItemDateAdded: 2025-12-22 21:00:10 +0000
+kMDItemDateAdded: 2026-01-15 02:16:22 +0000
 kMDItemDocumentIdentifier: '0'
 kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
@@ -37,14 +37,14 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2026-01-14 00:00:00 +0000
+kMDItemInterestingDate_Ranking: 2026-01-15 00:00:00 +0000
 modified: '2026-01-14'
 published: true
 reading_time: 0.1
 source_file: DB.md
 tags: null
 title: DB
-word_count: 28
+word_count: 26
 ---
 
 - [[DB-Aurora]] 

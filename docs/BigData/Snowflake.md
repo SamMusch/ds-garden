@@ -21,7 +21,7 @@ cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-15 16:38:16 +0000
 kMDItemContentCreationDate_Ranking: 2025-10-15 00:00:00 +0000
-kMDItemContentModificationDate: 2026-01-14 15:05:59 +0000
+kMDItemContentModificationDate: 2026-01-14 15:06:19 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-10-15 17:13:58 +0000
@@ -40,7 +40,7 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-10-15 00:00:00 +0000
 kMDItemLastUsedDate: 2025-10-15 21:12:58 +0000
 kMDItemLastUsedDate_Ranking: 2025-10-15 00:00:00 +0000
-kMDItemUseCount: '2'
+kMDItemUseCount: '3'
 kMDItemUsedDates: (
 modified: '2026-01-14'
 published: true

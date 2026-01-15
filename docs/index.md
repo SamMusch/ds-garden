@@ -29,7 +29,7 @@
   - [Containers](BigData-AWS/Containers/) — 1 min
   - [DB-Aurora](BigData-AWS/DB-Aurora/) — 1.4 min
   - [DB-DynamoDB](BigData-AWS/DB-DynamoDB/) — 1.8 min
-  - [DB-RDS](BigData-AWS/DB-RDS/)
+  - [DB-RDS](BigData-AWS/DB-RDS/) — 0.3 min
   - [DB](BigData-AWS/DB/) — 0.1 min
   - [MLAI](BigData-AWS/MLAI/) — 0.5 min
 
