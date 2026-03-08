@@ -19,6 +19,7 @@
   - [Networking-2-Containers](BigData/Networking-2-Containers/) — 2.9 min
   - [Oreilly](BigData/Oreilly/) — 2.7 min
   - [Snowflake](BigData/Snowflake/) — 2.5 min
+  - [Manual schema](BigData/Spark/)
 
 **BigData-AWS/**
 
