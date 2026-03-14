@@ -49,18 +49,6 @@ word_count: 218
 
 [AWS Whitepaper](https://docs.aws.amazon.com/pdfs/whitepapers/latest/aws-overview/aws-overview.pdf#introduction) | [AWS Glossary](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html)
 
-Services
-
-- *RDS*: Relational Database Service
-
-- *IAM*: Identity and Access Management
-
-- *KMS*: Key Management Service
-
-
----
-
-
 ## AWS Services
 ### DS side
 <div class="hb-row" markdown="block">
@@ -92,9 +80,7 @@ Services
 </div>
 
 
-[Analytics](https://i.imgur.com/7lJ5Xoi.png)
-
-
+[Analytics-Services](https://i.imgur.com/7lJ5Xoi.png)
 
 ### Dev side
 <div class="hb-row" markdown="block">
@@ -128,12 +114,7 @@ Services
 </div>
 
 
-
-
-
-
 ### Background
-
 AWS offers cloud-based products that can be provisioned quickly without the upfront fixed expense.
 
 !!! sam
@@ -166,3 +147,6 @@ AWS offers cloud-based products that can be provisioned quickly without the upfr
     - CLI
 
     - SDKs
+
+
+[[AWS-VPC.png]]

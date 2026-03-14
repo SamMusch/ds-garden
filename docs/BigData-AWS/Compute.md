@@ -83,6 +83,7 @@ AWS
 </div>
 
 
+![[AWS-Compute-Services.png]]
 ### Fargate
 !!! sam
     **Process**

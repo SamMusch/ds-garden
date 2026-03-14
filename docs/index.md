@@ -46,6 +46,7 @@
   - [07-RAG-Ops](LLM-RAG/07-RAG-Ops/) — 2.2 min
   - [08-RAG-Variants](LLM-RAG/08-RAG-Variants/) — 3.3 min
   - [09-Current](LLM-RAG/09-Current/) — 0.8 min
+  - [OpenTelemetry-Observability](LLM-RAG/OpenTelemetry-Observability/)
 
 **ML/**
 
