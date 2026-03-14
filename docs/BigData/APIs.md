@@ -58,162 +58,79 @@ title: APIs
 word_count: 421
 ---
 
-## OVERVIEW
+Resources
 
-An API is a contract that lets software systems talk to each other in a predictable way.
-It defines _what you can ask for_, _how you ask_, and _what you get back_.
+- [O'Reilly - Designing Web APIs](https://www.oreilly.com/library/view/designing-web-apis/9781492026914/ch01.html)
 
+An API: a **contract** that lets systems talk to each other (w/o learning each other's inner working)
+It defines 
 
-### What an API is
-!!! sam
-    An API is a **structured interface** between 2 systems.  
-    One system asks for something. The other responds in a defined format.
+- *what you can ask for*
 
-    Think:
+- *how you ask*
 
-    - You ask a question ⟶ request
-
-    - The system answers ⟶ response
-
-    The API defines **how that conversation must happen**.
-
-
-### Why APIs exist
-!!! sam
-    APIs exist to:
-
-    - Hide internal complexity
-
-    - Allow systems to change internally without breaking users
-
-    - Enable reuse across teams/products/companies
-
-    Without APIs, every system would need to know how every other system works internally.
-
-
-### Web APIs
-!!! sam
-    Most modern APIs use:
-
-    - HTTP (the web protocol)
-
-    - URLs to identify resources
-
-    - JSON for data
-
-    Example mental model:
-
-    - Client ⟶ HTTP request ⟶ Server ⟶ HTTP response
-
-    This is exactly how:
-
-    - Browsers talk to websites
-
-    - ChatGPT calls tools
-
-    - Your RAG system receives questions
-
-
+- *what you get back*
 
 ## PARADIGMS
+An API *paradigm*: 
 
-APIs are about *how* clients talk to servers.
+- defines the interface exposing backend data of a service to other applications.
 
-An API “*paradigm*”: a pattern for how requests & responses are shaped.
+- a pattern for how requests & responses are shaped.
 
-### REST model
+Standards
+
+- **Request-Response APIs** (popular *paradigms* are ==REST== / RPC / GraphQL)
+
+- **Event-Driven** (popular *paradigms* are WebHooks / WebSockets)
+
+### Request-Response APIs
+These expose an interface through an HTTP-based web server. 
+APIs define a set of endpoints. 
+Clients make HTTP requests to those endpoints ⟶ server responds as JSON
+
+#### REST
+REST APIs exposes data as <abbr title="entities that can be identified / named / addressed / handled on the web">resources</abbr>. You interact using CRUD verbs.
+
+REST API rules:
 <div class="hb-row" markdown="block">
   <div class="hb-col" markdown="block">
-**How REST works:**
+2 URLs per resource:
 
-1. Client sends a request
+- `/users`: the collection
 
-2. Server processes it
-
-3. Server sends a response
-
-4. Connection ends
+- `/users/U123`: the specific element
   </div>
   <div class="hb-col" markdown="block">
-**Key properties:**
+_CRUD_ methods
 
-- *Stateless* (each request stands alone)
+- _Create_: `POST`
 
-- Simple
+- _Read_: `GET`
 
-- Scales well
+- _Update_: `PUT` (replace), `PATCH` (edit)
+
+- _Delete_: `DELETE`
+  </div>
+  <div class="hb-col" markdown="block">
+Errors
+
+- 2XX: success
+
+- 3XX: resource has moved
+
+- 4XX: client-side error
+
+- 5XX: server-side errors
   </div>
 </div>
 
-
-```bash
-# Request
-POST /ask
-{ "question": "What is X?" }
-
-# Response
-{ "answer": "..." }
-```
-
-### Resource-based thinking
-Instead of “doing actions”, APIs expose *resources*. Why?
-
-- Keeps APIs predictable
-
-- Simplifies integration with tools (eg ChatGPT)
-
-<div class="hb-row" markdown="block">
-  <div class="hb-col" markdown="block">
-Example **resources**
-
-- `/documents`
-
-- `/users`
-
-- `/queries`
-  </div>
-  <div class="hb-col" markdown="block">
-You interact with **resources** using **verbs**:
-
-- `GET` ⟶ read
-
-- `POST` ⟶ create
-
-- `PUT`/`PATCH` ⟶ update
-
-- `DELETE` ⟶ remove
-  </div>
-</div>
-
-
-### Synchronous vs asynchronous APIs
-<div class="hb-row" markdown="block">
-  <div class="hb-col" markdown="block">
-**Synchronous**
-
-- Client waits for the response
-
-- Simple, common, easy
-
-- Most LLM APIs work this way
-  </div>
-  <div class="hb-col" markdown="block">
-**Asynchronous**
-
-- Client starts a job
-
-- Server finishes later
-
-- Client checks back or receives a callback
-  </div>
-</div>
 
 
 
 ## SECURITY
 
 Since APIs are exposed to the internet, anyone can **try** to call them.
-
 Security questions to answer:
 
 - _Who is calling me?_
@@ -272,4 +189,4 @@ That’s why:
 
 - Server-to-server calls work
 
-- **Browsers** sometimes fail
+- Browsers sometimes fail
