@@ -53,16 +53,7 @@ title: Statistics Taxonomy
 word_count: 820
 ---
 
-```
-After breaking out SW vault, could integrate back into here.
-```
-
-
-[[Stats-Glossary]]
-
 # Taxonomy
-
-## Putting It All Together
 
 | Core 4                                                        | Topic/Doc                               | Contains                                                                                                                                                              |
 | ------------------------------------------------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
