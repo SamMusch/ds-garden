@@ -59,5 +59,39 @@
   - [_ML-MOC](ML/ML-MOC/) — 0.3 min
   - [ML-TS](ML/ML-TS/) — 15.7 min
 
+**Statistics/**
+
+  - [Taxonomy](Statistics/Statistics-Taxonomy/)
+  - [Stats-Glossary](Statistics/Stats-Glossary/)
+  - **Assets-Stats-Taxonomy/**
+    - **1-Foundations/**
+      - [Hadamard product](Statistics/Assets-Stats-Taxonomy/1-Foundations/Linear-Algebra/)
+      - [Probability-MOC](Statistics/Assets-Stats-Taxonomy/1-Foundations/Probability-MOC/)
+    - **2-Descriptive/**
+      - [AutoEncoding](Statistics/Assets-Stats-Taxonomy/2-Descriptive/AutoEncoding/)
+      - [Clustering](Statistics/Assets-Stats-Taxonomy/2-Descriptive/Clustering/)
+      - [Dimensionality-Reduction](Statistics/Assets-Stats-Taxonomy/2-Descriptive/Dimensionality-Reduction/)
+      - [EDA](Statistics/Assets-Stats-Taxonomy/2-Descriptive/EDA/)
+      - [RelativePosition-EmpiricalRule-Chebyshev](Statistics/Assets-Stats-Taxonomy/2-Descriptive/RelativePosition-EmpiricalRule-Chebyshev/)
+      - [Similarity](Statistics/Assets-Stats-Taxonomy/2-Descriptive/Similarity/)
+      - [Topic-Modeling](Statistics/Assets-Stats-Taxonomy/2-Descriptive/Topic-Modeling/)
+      - [Univariate-Descriptive-Statistics](Statistics/Assets-Stats-Taxonomy/2-Descriptive/Univariate-Descriptive-Statistics/)
+    - **4-Extensions/**
+      - [Anomaly-Detection](Statistics/Assets-Stats-Taxonomy/4-Extensions/Anomaly-Detection/)
+      - [Association-Rules](Statistics/Assets-Stats-Taxonomy/4-Extensions/Association-Rules/)
+      - [Plausibilities, probabilities, p](Statistics/Assets-Stats-Taxonomy/4-Extensions/Bayes-MCMC/)
+      - [Bayesian-Networks](Statistics/Assets-Stats-Taxonomy/4-Extensions/Bayesian-Networks/)
+      - **Stats-AB/**
+        - [AB-Testing](Statistics/Assets-Stats-Taxonomy/4-Extensions/Stats-AB/AB-Testing/)
+        - [In R](Statistics/Assets-Stats-Taxonomy/4-Extensions/Stats-AB/Google-AB-Course/)
+  - **Cards/**
+    - [Data-Types-Analysis-Choice](Statistics/Cards/Data-Types-Analysis-Choice/)
+    - [OLS-Assumptions-BLUE](Statistics/Cards/OLS-Assumptions-BLUE/)
+    - [Means](Statistics/Cards/Power/)
+    - [Quantile-plots](Statistics/Cards/Quantile-plots/)
+    - [R-functions-p-q-d-r](Statistics/Cards/R-functions-p-q-d-r/)
+    - [Example R code for exploring multicollinearity](Statistics/Cards/Regression/)
+    - [Symbols](Statistics/Cards/Symbols/)
+
 
 <!-- toc:end -->
