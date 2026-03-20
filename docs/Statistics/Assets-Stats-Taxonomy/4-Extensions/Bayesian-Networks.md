@@ -1,8 +1,57 @@
 ---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: Bayesian-Networks.md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
+children: 0
+created: '2026-03-20'
+cssclasses: null
+grandchildren: 0
+kMDItemContentCreationDate: 2025-01-20 18:42:56 +0000
+kMDItemContentCreationDate_Ranking: 2025-01-20 00:00:00 +0000
+kMDItemContentModificationDate: 2026-03-20 22:10:04 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-05-19 18:46:54 +0000
+kMDItemDocumentIdentifier: '627698'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2026-03-20 00:00:00 +0000
+kMDItemLastUsedDate: 2026-03-20 22:09:45 +0000
+kMDItemLastUsedDate_Ranking: 2026-03-20 00:00:00 +0000
+kMDItemUseCount: '8'
+kMDItemUsedDates: (
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+modified: '2026-03-20'
 published: true
+reading_time: 1.6
+source_file: Bayesian-Networks.md
+tags: null
+title: Bayesian Networks
+word_count: 314
 ---
-
-[ChatGPT](https://chatgpt.com/share/683b1bf8-347c-8000-9c61-72607596e761)
 
 #### Pre-Notes
 
@@ -49,7 +98,7 @@ published: true
 
 - **Efficient inference:** Once built, algorithms can answer “what‑if?” questions faster than brute‑force enumeration.
 
-| 👍 Strength | 😬 Weakness / Pitfall |
+| Strength | Weakness / Pitfall |
 |-------------|----------------------|
 | Encodes *why* not just *what*. | Building a reliable structure can be hard without expert input. |
 | Handles missing data gracefully. | Parameter explosion if many parents per node. |

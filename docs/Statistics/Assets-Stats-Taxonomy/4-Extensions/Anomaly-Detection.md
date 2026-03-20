@@ -1,5 +1,56 @@
 ---
+CoverImage: null
+Covers: null
+Due: null
+Function: null
+HoursDone: null
+HoursRemain: null
+Objective: null
+Quality: null
+QualityComment: null
+ReviewFreq: null
+TimeSpent: null
+TimeSpent2: null
+_kMDItemDisplayNameWithExtensions: Anomaly-Detection.md
+ai_abstract: null
+ai_key_terms: []
+aliases: null
+children: 0
+created: '2026-03-20'
+cssclasses: null
+grandchildren: 0
+kMDItemContentCreationDate: 2025-01-20 18:20:21 +0000
+kMDItemContentCreationDate_Ranking: 2025-01-20 00:00:00 +0000
+kMDItemContentModificationDate: 2026-03-20 22:10:59 +0000
+kMDItemContentType: net.daringfireball.markdown
+kMDItemContentTypeTree: (
+kMDItemDateAdded: 2025-05-19 18:46:54 +0000
+kMDItemDocumentIdentifier: '627707'
+kMDItemFSCreatorCode: ''
+kMDItemFSFinderFlags: '0'
+kMDItemFSHasCustomIcon: (null)
+kMDItemFSInvisible: '0'
+kMDItemFSIsExtensionHidden: '0'
+kMDItemFSIsStationery: (null)
+kMDItemFSLabel: '0'
+kMDItemFSNodeCount: (null)
+kMDItemFSOwnerGroupID: '20'
+kMDItemFSOwnerUserID: '502'
+kMDItemFSTypeCode: ''
+kMDItemInterestingDate_Ranking: 2026-03-20 00:00:00 +0000
+kMDItemLastUsedDate: 2026-03-20 22:10:48 +0000
+kMDItemLastUsedDate_Ranking: 2026-03-20 00:00:00 +0000
+kMDItemUseCount: '5'
+kMDItemUsedDates: (
+kMDItemUserModifiedDate: (
+kMDItemUserModifiedUserHandle: (
+modified: '2026-03-20'
 published: true
+reading_time: 7.4
+source_file: Anomaly-Detection.md
+tags: null
+title: Anomaly Detection
+word_count: 1488
 ---
 
 Anomaly vs Outlier
@@ -9,9 +60,6 @@ Anomaly vs Outlier
 - **Outlier**: same generating process (get rid of for modeling)
 
 ## ChatGPT's Taxonomy
-
-[ChatGPT Taxonomy](https://chatgpt.com/share/678e9cde-b66c-8000-971e-12698e0ff116) - 2025-01-20
-[ChatGPT Integrating my old notes](https://chatgpt.com/share/678eaf64-2e20-8000-bd48-9bfaf6eb75b3) - 2025-01-20
 
 !!! sam
     Anomaly Detection can be categorized using various criteria based on data characteristics, methods used, or application domains. 

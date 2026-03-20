@@ -17,12 +17,12 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2026-01-14'
+created: '2026-03-20'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-13 17:58:20 +0000
 kMDItemContentCreationDate_Ranking: 2025-12-23 00:00:00 +0000
-kMDItemContentModificationDate: 2026-01-14 15:06:19 +0000
+kMDItemContentModificationDate: 2026-03-20 21:56:12 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2025-12-23 20:20:53 +0000
@@ -41,10 +41,10 @@ kMDItemFSTypeCode: ''
 kMDItemInterestingDate_Ranking: 2025-12-23 00:00:00 +0000
 kMDItemLastUsedDate: 2025-12-23 19:11:19 +0000
 kMDItemLastUsedDate_Ranking: 2025-12-23 00:00:00 +0000
-kMDItemUseCount: '3'
+kMDItemUseCount: '2'
 kMDItemUsedDates: (
 kMDItemWhereFroms: (
-modified: '2026-01-14'
+modified: '2026-03-20'
 published: true
 reading_time: 1.6
 source_file: Hadoop.md

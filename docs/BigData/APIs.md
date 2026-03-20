@@ -23,7 +23,7 @@ author:
 
 - '[[Amir Shevat]]'
 children: 0
-created: '2026-01-14'
+created: '2026-03-20'
 cssclasses: null
 description: Chapter 1. What’s an API? “What’s an API?” When a new programmer asks
   this question, they typically get the answer, “an application programming interface.”
@@ -31,7 +31,7 @@ description: Chapter 1. What’s an API? “What’s an API?” When a new progr
 grandchildren: 0
 kMDItemContentCreationDate: 2026-01-06 18:13:12 +0000
 kMDItemContentCreationDate_Ranking: 2026-01-06 00:00:00 +0000
-kMDItemContentModificationDate: 2026-01-14 15:06:19 +0000
+kMDItemContentModificationDate: 2026-03-20 21:56:12 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2026-01-06 18:13:12 +0000
@@ -47,15 +47,15 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2026-01-14 00:00:00 +0000
-modified: '2026-01-14'
+kMDItemInterestingDate_Ranking: 2026-03-20 00:00:00 +0000
+modified: '2026-03-20'
 published: true
-reading_time: 2.1
+reading_time: 1.6
 source: https://learning.oreilly.com/library/view/designing-web-apis/9781492026914/ch01.html#why_do_we_need_apisquestion_mark
 source_file: APIs.md
 tags: null
 title: APIs
-word_count: 421
+word_count: 313
 ---
 
 Resources

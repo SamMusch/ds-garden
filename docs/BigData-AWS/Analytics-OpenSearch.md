@@ -16,12 +16,12 @@ ai_abstract: null
 ai_key_terms: []
 aliases: null
 children: 0
-created: '2026-01-14'
+created: '2026-03-20'
 cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2026-01-12 16:14:29 +0000
 kMDItemContentCreationDate_Ranking: 2026-01-12 00:00:00 +0000
-kMDItemContentModificationDate: 2026-01-14 15:06:19 +0000
+kMDItemContentModificationDate: 2026-03-20 21:56:12 +0000
 kMDItemContentType: net.daringfireball.markdown
 kMDItemContentTypeTree: (
 kMDItemDateAdded: 2026-01-12 16:14:55 +0000
@@ -37,8 +37,8 @@ kMDItemFSNodeCount: (null)
 kMDItemFSOwnerGroupID: '20'
 kMDItemFSOwnerUserID: '502'
 kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2026-01-14 00:00:00 +0000
-modified: '2026-01-14'
+kMDItemInterestingDate_Ranking: 2026-03-20 00:00:00 +0000
+modified: '2026-03-20'
 published: true
 reading_time: 0.4
 source_file: Analytics-OpenSearch.md
