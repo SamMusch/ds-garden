@@ -55,7 +55,7 @@ Resources:
 
 - [Textbook | Oreilly](https://learning.oreilly.com/library/view/hands-on-artificial-intelligence/9781788991063/ec33ab68-7334-4c45-acb6-31953e0bba40.xhtml) - Notes are below
 
-- [Ageron Github Guide](https://github.com/ageron/handson-ml/blob/ac1310a3cc1567ecfb4b798715c804627076775f//math_linear_algebra.ipynb) - Kind of complex, might want to find something simpler.
+- [Ageron Github Guide](https://github.com/ageron/handson-ml/blob/ac1310a3cc1567ecfb4b798715c804627076775f//math_linear_algebra.ipynb)
 
 
 ## Oreilly Text
