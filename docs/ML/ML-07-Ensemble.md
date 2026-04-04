@@ -50,7 +50,7 @@ Quick Review
 
         - _Bagging_: with replacement (Bootstrapped aggregating)
 
-        - _Pasting_: without replacement
+        - _Pasting_: w/o replacement
 
         - _Random Subspaces/Patches_: randomize features and/or instances
 
@@ -73,9 +73,11 @@ Quick Review
 
     - Use the same algorithm, but train on different subsets of the training data (at the same time).
 
-    - Typically helps reduce variance without adding much bias
+    - Helps reduce variance w/o adding much bias
 
-    - Works well when each run is making mistakes on **different observations**
+    - Works well when each run makes mistakes on different observations
+
+    - **Out-of-bag error**: The error calculated on unused training instances.
 
 
 !!! sam
