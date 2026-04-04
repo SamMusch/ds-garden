@@ -1,55 +1,23 @@
 ---
-CoverImage: null
-Covers: null
-Due: null
 Function: null
-HoursDone: null
-HoursRemain: null
 Objective: null
 Quality: null
 QualityComment: null
 ReviewFreq: null
-TimeSpent: null
-TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: ML-07-Ensemble.md
 ai_abstract: null
 ai_key_terms: []
-aliases: null
 children: 0
-created: '2026-03-20'
-cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-07 22:23:24 +0000
-kMDItemContentCreationDate_Ranking: 2025-10-07 00:00:00 +0000
-kMDItemContentModificationDate: 2026-03-20 21:56:11 +0000
-kMDItemContentType: net.daringfireball.markdown
-kMDItemContentTypeTree: (
+kMDItemContentModificationDate: 2026-04-04 18:16:24 +0000
 kMDItemDateAdded: 2025-10-07 22:23:24 +0000
-kMDItemDocumentIdentifier: '222820'
-kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
-kMDItemFSHasCustomIcon: (null)
-kMDItemFSInvisible: '0'
-kMDItemFSIsExtensionHidden: '0'
-kMDItemFSIsStationery: (null)
-kMDItemFSLabel: '0'
-kMDItemFSNodeCount: (null)
-kMDItemFSOwnerGroupID: '20'
-kMDItemFSOwnerUserID: '502'
-kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2026-03-20 00:00:00 +0000
-kMDItemLastUsedDate: 2025-09-29 14:53:00 +0000
-kMDItemLastUsedDate_Ranking: 2025-09-29 00:00:00 +0000
-kMDItemUseCount: '218'
-kMDItemUsedDates: (
 kMDItemUserModifiedDate: (
 kMDItemUserModifiedUserHandle: (
-modified: '2026-03-20'
 published: true
 reading_time: 3.1
 source_file: ML-07-Ensemble.md
 tags: null
-title: ML 07 Ensemble
 word_count: 614
 ---
 
@@ -66,9 +34,9 @@ Quick Review
 !!! sam
     A model’s **generalization error** is the sum of 3 different errors:
 
-    1. **Bias**: Error due to wrong assumptions, eg functional form. High bias ---> underfit.
+    1. **Bias**: Error due to wrong assumptions, eg functional form. High bias ⟶ underfit.
 
-    2. **Variance**: Error due to model’s sensitivity to small variations in the training data. High variance ---> overfit.
+    2. **Variance**: Error due to model’s sensitivity to small variations in the training data. High variance ⟶ overfit.
 
     3. **Irreducible error**: Error due to data noise.
 
@@ -202,9 +170,9 @@ Pg 205 for hyperparameters
 
     **Components**:
 
-    - Training data ---> 1st subset (for training each base predictor)
+    - Training data ⟶ 1st subset (for training each base predictor)
 
-    - Training data ---> 2nd subset (*hold-out* set for training the blender)
+    - Training data ⟶ 2nd subset (*hold-out* set for training the blender)
 
     **Process**: [Image](https://i.imgur.com/BrYlLUb.png)
 
@@ -214,7 +182,7 @@ Pg 205 for hyperparameters
 
     3. **Predict**: Make predictions on the *holdout* set. 
 
-    4. **Assemble new training set**: Take predicted values ---> use as input features in new training set (3D).
+    4. **Assemble new training set**: Take predicted values ⟶ use as input features in new training set (3D).
 
     5. **Train/Blend**: Train new model based on only these 3 features. (Called a "meta-model" or *blender*.)
 

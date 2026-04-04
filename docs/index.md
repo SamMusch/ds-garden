@@ -61,11 +61,11 @@
 
 **Statistics/**
 
-  - [Statistics-Taxonomy](Statistics/Statistics-Taxonomy/) — 4.1 min
+  - [Statistics-Taxonomy](Statistics/Statistics-Taxonomy/) — 4 min
   - [Stats-Glossary](Statistics/Stats-Glossary/) — 23.1 min
   - **Assets-Stats-Taxonomy/**
     - **1-Foundations/**
-      - [Linear-Algebra](Statistics/Assets-Stats-Taxonomy/1-Foundations/Linear-Algebra/) — 4 min
+      - [Linear-Algebra](Statistics/Assets-Stats-Taxonomy/1-Foundations/Linear-Algebra/) — 0.9 min
       - [Probability-MOC](Statistics/Assets-Stats-Taxonomy/1-Foundations/Probability-MOC/) — 2.9 min
     - **2-Descriptive/**
       - [AutoEncoding](Statistics/Assets-Stats-Taxonomy/2-Descriptive/AutoEncoding/) — 0.9 min

@@ -1,55 +1,23 @@
 ---
 '"https://chatgpt.com/backend-api/estuary/content?id': file_000000006a9061f5a489358a52fcac8e&ts=488993&p=fs&cid=1&sig=d158c19abebd21b1f6867752c913d4a83db2e97d968e7b3816b682a758f3f72d&v=0",
-CoverImage: null
-Covers: null
-Due: null
 Function: null
-HoursDone: null
-HoursRemain: null
 Objective: null
 Quality: null
 QualityComment: null
 ReviewFreq: null
-TimeSpent: null
-TimeSpent2: null
-_kMDItemDisplayNameWithExtensions: Hadoop.md
 ai_abstract: null
 ai_key_terms: []
-aliases: null
 children: 0
-created: '2026-03-20'
-cssclasses: null
 grandchildren: 0
 kMDItemContentCreationDate: 2025-10-13 17:58:20 +0000
-kMDItemContentCreationDate_Ranking: 2025-12-23 00:00:00 +0000
-kMDItemContentModificationDate: 2026-03-20 21:56:12 +0000
-kMDItemContentType: net.daringfireball.markdown
-kMDItemContentTypeTree: (
+kMDItemContentModificationDate: 2026-04-04 18:16:25 +0000
 kMDItemDateAdded: 2025-12-23 20:20:53 +0000
-kMDItemDocumentIdentifier: '223490'
-kMDItemFSCreatorCode: ''
 kMDItemFSFinderFlags: '0'
-kMDItemFSHasCustomIcon: (null)
-kMDItemFSInvisible: '0'
-kMDItemFSIsExtensionHidden: '0'
-kMDItemFSIsStationery: (null)
-kMDItemFSLabel: '0'
-kMDItemFSNodeCount: (null)
-kMDItemFSOwnerGroupID: '20'
-kMDItemFSOwnerUserID: '502'
-kMDItemFSTypeCode: ''
-kMDItemInterestingDate_Ranking: 2025-12-23 00:00:00 +0000
-kMDItemLastUsedDate: 2025-12-23 19:11:19 +0000
-kMDItemLastUsedDate_Ranking: 2025-12-23 00:00:00 +0000
-kMDItemUseCount: '2'
-kMDItemUsedDates: (
 kMDItemWhereFroms: (
-modified: '2026-03-20'
 published: true
 reading_time: 1.6
 source_file: Hadoop.md
 tags: null
-title: Hadoop
 word_count: 323
 ---
 
