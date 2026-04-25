@@ -71,132 +71,133 @@ Quick Review
 
 ### Bagging and Pasting
 
-Bagging = row sampling **with replacement**; Pasting = **without replacement**. 
+Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
 - These are *sampling strategies*, not actual algorithms.
 
+
 === "What it does"
 
-- Train multiple copies of the same model on different random subsets of the training data, then aggregate predictions.
+    - Train multiple copies of the same model on different random subsets of the training data, then aggregate predictions.
 
-- **Goal**: reduce variance
+    - **Goal**: reduce variance
 
 === "How it works"
 
-1. Sample training data multiple times ⟶ create different subsets
+    1. Sample training data multiple times ⟶ create different subsets
 
-2. Train 1 predictor per subset (same algorithm each time)
+    2. Train 1 predictor per subset (same algorithm each time)
 
-3. Repeat to build many predictors
+    3. Repeat to build many predictors
 
-4. Aggregate predictions:
+    4. Aggregate predictions:
 
-   - Classification ⟶ majority vote
+       - Classification ⟶ majority vote
 
-   - Regression ⟶ average
+       - Regression ⟶ average
 
-5. Feature sampling extensions:
+    5. Feature sampling extensions:
 
-   - **Random Subspaces**: sample *features* only
+       - **Random Subspaces**: sample *features* only
 
-   - **Random Patches**: sample *features* AND *rows*
+       - **Random Patches**: sample *features* AND *rows*
 
 === "Tradeoffs"
 
-- Bagging vs Pasting:
+    - Bagging vs Pasting:
 
-  - Bagging ⟶ more diversity (bootstrap), slightly higher bias, lower variance ⟶ usually better
+      - Bagging ⟶ more diversity (bootstrap), slightly higher bias, lower variance ⟶ usually better
 
-  - Pasting ⟶ less diversity
+      - Pasting ⟶ less diversity
 
-  - Feature sampling (subspaces/patches) ⟶ even more diversity ⟶ further ↓ variance, slight ↑ bias
+      - Feature sampling (subspaces/patches) ⟶ even more diversity ⟶ further ↓ variance, slight ↑ bias
 
-- Feature sampling variants:
+    - Feature sampling variants:
 
-  - Random Subspaces ⟶ sample features only
+      - Random Subspaces ⟶ sample features only
 
-  - Random Patches ⟶ sample rows + features (useful for high-dimensional data)
+      - Random Patches ⟶ sample rows + features (useful for high-dimensional data)
 
-- Extra:
+    - Extra:
 
-  - When row sampling with replacement ⟶ Out-of-bag (OOB) samples (~37%) can be used for validation without a separate dataset
+      - When row sampling with replacement ⟶ Out-of-bag (OOB) samples (~37%) can be used for validation without a separate dataset
 
 === "Hyperparameters"
 
-- `n_estimators`: more models ⟶ lower variance
+    - `n_estimators`: more models ⟶ lower variance
 
-- features
+    - features
 
-    - `max_features`: controls feature sampling
+        - `max_features`: controls feature sampling
 
-    - `bootstrap_features`: whether to sample features with replacement
+        - `bootstrap_features`: whether to sample features with replacement
 
-- instances
+    - instances
 
-    - `max_samples`: controls row sampling (normally set to size of training set)
+        - `max_samples`: controls row sampling (normally set to size of training set)
 
-    - `bootstrap`: True (bagging) vs False (pasting)
+        - `bootstrap`: True (bagging) vs False (pasting)
 
 
 ### Random Forest
 
 === "What it does"
 
-- Ensemble of DTs trained with **bagging** (sometimes pasting).
+    - Ensemble of DTs trained with **bagging** (sometimes pasting).
 
-- **Goal**: reduce variance vs a single tree while maintaining similar bias.
+    - **Goal**: reduce variance vs a single tree while maintaining similar bias.
 
-- Adds feature randomness at each split to increase diversity.
+    - Adds feature randomness at each split to increase diversity.
 
 === "How it works"
 
-1. Sample training data (typically with replacement)
+    1. Sample training data (typically with replacement)
 
-2. Train many DTs in parallel
+    2. Train many DTs in parallel
 
-3. At each split, only shown a random subset of features
+    3. At each split, only shown a random subset of features
 
-4. Aggregate predictions:
+    4. Aggregate predictions:
 
-   - Classification ⟶ majority vote
+       - Classification ⟶ majority vote
 
-   - Regression ⟶ average
+       - Regression ⟶ average
 
 === "Tradeoffs"
 
-- Diversity:
+    - Diversity:
 
-  - Comes from row sampling (bagging) & feature sampling
+      - Comes from row sampling (bagging) & feature sampling
 
-- Extra Trees variant:
+    - Extra Trees variant:
 
-  - Uses **random thresholds** instead of best split
+      - Uses **random thresholds** instead of best split
 
-- Pros:
+    - Pros:
 
-  - Handles nonlinear patterns well
+      - Handles nonlinear patterns well
 
-  - Robust to overfitting vs single trees
+      - Robust to overfitting vs single trees
 
-- Cons:
+    - Cons:
 
-  - Less interpretable than a single tree
+      - Less interpretable than a single tree
 
-  - Can still overfit if trees too deep / too many
+      - Can still overfit if trees too deep / too many
 
 === "Hyperparameters"
 
-- `n_estimators`: number of trees
+    - `n_estimators`: number of trees
 
-- `max_features`: number of features considered at each split (controls randomness)
+    - `max_features`: number of features considered at each split (controls randomness)
 
-- `max_leaf_nodes` / `max_depth`: tree size (controls overfitting)
+    - `max_leaf_nodes` / `max_depth`: tree size (controls overfitting)
 
-- `bootstrap`: True (bagging) vs False (pasting)
+    - `bootstrap`: True (bagging) vs False (pasting)
 
-- `n_jobs`: parallelization
+    - `n_jobs`: parallelization
 
-- (Extra Trees): `splitter="random"`
+    - (Extra Trees): `splitter="random"`
 
 
 !!! sam
@@ -228,155 +229,155 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 ### AdaBoost
 === "What it does"
 
-- Sequential ensemble; focuses on hard (misclassified) instances
+    - Sequential ensemble; focuses on hard (misclassified) instances
 
-- **Goal**: reduce bias
+    - **Goal**: reduce bias
 
 === "How it works"
 
-Start with equal weights for all training instances
+    Start with equal weights for all training instances
 
-1. Train model (weak learner)
+    1. Train model (weak learner)
 
-2. Get residuals
+    2. Get residuals
 
-3. Train next model (with increases weight of misclassified *instances*.)
+    3. Train next model (with increases weight of misclassified *instances*.)
 
-4. Repeat
+    4. Repeat
 
-5. Final prediction = **weighted vote** on models (based on accuracy)
+    5. Final prediction = **weighted vote** on models (based on accuracy)
 
 === "Tradeoffs"
 
-- Pros:
+    - Pros:
 
-  - Strong performance with weak learners
+      - Strong performance with weak learners
 
-  - Focuses on difficult observations
+      - Focuses on difficult observations
 
-- Cons:
+    - Cons:
 
-  - Sensitive to noise/outliers (they get high weight)
+      - Sensitive to noise/outliers (they get high weight)
 
-  - Cannot parallelize (sequential dependency)
+      - Cannot parallelize (sequential dependency)
 
-- Behavior:
+    - Behavior:
 
-  - Similar to gradient descent but adds models instead of updating parameters 
+      - Similar to gradient descent but adds models instead of updating parameters 
 
 === "Hyperparameters"
 
-- `n_estimators`: number of learners
+    - `n_estimators`: number of learners
 
-- `learning_rate`: controls influence of each model
+    - `learning_rate`: controls influence of each model
 
-- `base_estimator`: typically shallow trees (stumps)
+    - `base_estimator`: typically shallow trees (stumps)
 
 
 ### Gradient Boosting
 === "What it does"
 
-- Sequential ensemble that fits models to **residual errors**
+    - Sequential ensemble that fits models to **residual errors**
 
-- **Goal**: reduce bias via additive error correction
+    - **Goal**: reduce bias via additive error correction
 
 === "How it works"
 
-1. Train model (weak learner)
+    1. Train model (weak learner)
 
-2. Get residuals
+    2. Get residuals
 
-3. Train next model (on predecessor's *residuals*.)
+    3. Train next model (on predecessor's *residuals*.)
 
-4. Repeat
+    4. Repeat
 
-5. Final prediction = **sum of all model outputs**
+    5. Final prediction = **sum of all model outputs**
 
 === "Tradeoffs"
 
-- Pros:
+    - Pros:
 
-  - Very flexible (can optimize different loss functions)
+      - Very flexible (can optimize different loss functions)
 
-  - Strong predictive performance
+      - Strong predictive performance
 
-- Cons:
+    - Cons:
 
-  - Prone to overfitting if too many trees
+      - Prone to overfitting if too many trees
 
-  - Slower (sequential)
+      - Slower (sequential)
 
-- Key ideas:
+    - Key ideas:
 
-  - Shrinkage: small learning rate ⟶ better generalization
+      - Shrinkage: small learning rate ⟶ better generalization
 
-  - Early stopping prevents overfitting 
+      - Early stopping prevents overfitting 
 
-  - Subsampling ⟶ stochastic gradient boosting (↓ variance, ↑ bias)
+      - Subsampling ⟶ stochastic gradient boosting (↓ variance, ↑ bias)
 
 === "Hyperparameters"
 
-- `n_estimators`: number of trees
+    - `n_estimators`: number of trees
 
-- `learning_rate`: shrinkage factor
+    - `learning_rate`: shrinkage factor
 
-- `max_depth`: tree complexity
+    - `max_depth`: tree complexity
 
-- `subsample`: fraction of data per tree
+    - `subsample`: fraction of data per tree
 
-- `loss`: objective function
+    - `loss`: objective function
 
 
 ### XGBoost
 === "What it does"
 
-- Optimized implementation of Gradient Boosting
+    - Optimized implementation of Gradient Boosting
 
-- **Goal**: faster, scalable, regularized boosting
+    - **Goal**: faster, scalable, regularized boosting
 
 === "How it works"
 
-Same core idea as Gradient Boosting.
+    Same core idea as Gradient Boosting.
 
-Differences:
+    Differences:
 
-- Uses optimized tree-building + system-level improvements
+    - Uses optimized tree-building + system-level improvements
 
-- Supports early stopping using validation set
+    - Supports early stopping using validation set
 
-- Regularization applied to control complexity
+    - Regularization applied to control complexity
 
 === "Tradeoffs"
 
-- Pros:
+    - Pros:
 
-  - Very fast and scalable
+      - Very fast and scalable
 
-  - Built-in regularization ⟶ reduces overfitting
+      - Built-in regularization ⟶ reduces overfitting
 
-  - Strong performance in practice (common in competitions)
+      - Strong performance in practice (common in competitions)
 
-- Cons:
+    - Cons:
 
-  - More complex tuning
+      - More complex tuning
 
-  - Less interpretable
+      - Less interpretable
 
 === "Hyperparameters"
 
-- `n_estimators`
+    - `n_estimators`
 
-- `learning_rate`
+    - `learning_rate`
 
-- `max_depth`
+    - `max_depth`
 
-- `subsample`
+    - `subsample`
 
-- `colsample_bytree`: feature sampling
+    - `colsample_bytree`: feature sampling
 
-- `reg_lambda` / `reg_alpha`: regularization
+    - `reg_lambda` / `reg_alpha`: regularization
 
-- `early_stopping_rounds`
+    - `early_stopping_rounds`
 
 
 ## Stacking
