@@ -73,8 +73,7 @@ Quick Review
 
 Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
-- These are *sampling strategies*, not actual algorithms. 
-
+- These are *sampling strategies*, not actual algorithms.
 
 === "What it does"
 
@@ -92,15 +91,15 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
     4. Aggregate predictions:
 
-          - Classification ⟶ majority vote
+        - Classification ⟶ majority vote
 
-          - Regression ⟶ average
+        - Regression ⟶ average
 
     5. Feature sampling extensions:
 
-          - **Random Subspaces**: sample *features* only
+        - **Random Subspaces**: sample *features* only
 
-          - **Random Patches**: sample *features* AND *rows*
+        - **Random Patches**: sample *features* AND *rows*
 
 === "Tradeoffs"
 
@@ -128,15 +127,15 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
     - features
 
-            - `max_features`: controls feature sampling
+        - `max_features`: controls feature sampling
 
-            - `bootstrap_features`: whether to sample features with replacement
+        - `bootstrap_features`: whether to sample features with replacement
 
     - instances
 
-            - `max_samples`: controls row sampling (normally set to size of training set)
+        - `max_samples`: controls row sampling (normally set to size of training set)
 
-            - `bootstrap`: True (bagging) vs False (pasting)
+        - `bootstrap`: True (bagging) vs False (pasting)
 
 
 ### Random Forest
@@ -159,9 +158,9 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
     4. Aggregate predictions:
 
-          - Classification ⟶ majority vote
+        - Classification ⟶ majority vote
 
-          - Regression ⟶ average
+        - Regression ⟶ average
 
 === "Tradeoffs"
 
