@@ -73,7 +73,7 @@ Quick Review
 
 Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
-- These are *sampling strategies*, not actual algorithms.
+- These are *sampling strategies*, not actual algorithms. 
 
 
 === "What it does"
@@ -92,35 +92,35 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
     4. Aggregate predictions:
 
-       - Classification ⟶ majority vote
+          - Classification ⟶ majority vote
 
-       - Regression ⟶ average
+          - Regression ⟶ average
 
     5. Feature sampling extensions:
 
-       - **Random Subspaces**: sample *features* only
+          - **Random Subspaces**: sample *features* only
 
-       - **Random Patches**: sample *features* AND *rows*
+          - **Random Patches**: sample *features* AND *rows*
 
 === "Tradeoffs"
 
     - Bagging vs Pasting:
 
-      - Bagging ⟶ more diversity (bootstrap), slightly higher bias, lower variance ⟶ usually better
+        - Bagging ⟶ more diversity (bootstrap), slightly higher bias, lower variance ⟶ usually better
 
-      - Pasting ⟶ less diversity
+        - Pasting ⟶ less diversity
 
-      - Feature sampling (subspaces/patches) ⟶ even more diversity ⟶ further ↓ variance, slight ↑ bias
+        - Feature sampling (subspaces/patches) ⟶ even more diversity ⟶ further ↓ variance, slight ↑ bias
 
     - Feature sampling variants:
 
-      - Random Subspaces ⟶ sample features only
+        - Random Subspaces ⟶ sample features only
 
-      - Random Patches ⟶ sample rows + features (useful for high-dimensional data)
+        - Random Patches ⟶ sample rows + features (useful for high-dimensional data)
 
     - Extra:
 
-      - When row sampling with replacement ⟶ Out-of-bag (OOB) samples (~37%) can be used for validation without a separate dataset
+        - When row sampling with replacement ⟶ Out-of-bag (OOB) samples (~37%) can be used for validation without a separate dataset
 
 === "Hyperparameters"
 
@@ -128,15 +128,15 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
     - features
 
-        - `max_features`: controls feature sampling
+            - `max_features`: controls feature sampling
 
-        - `bootstrap_features`: whether to sample features with replacement
+            - `bootstrap_features`: whether to sample features with replacement
 
     - instances
 
-        - `max_samples`: controls row sampling (normally set to size of training set)
+            - `max_samples`: controls row sampling (normally set to size of training set)
 
-        - `bootstrap`: True (bagging) vs False (pasting)
+            - `bootstrap`: True (bagging) vs False (pasting)
 
 
 ### Random Forest
@@ -159,31 +159,31 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
     4. Aggregate predictions:
 
-       - Classification ⟶ majority vote
+          - Classification ⟶ majority vote
 
-       - Regression ⟶ average
+          - Regression ⟶ average
 
 === "Tradeoffs"
 
     - Diversity:
 
-      - Comes from row sampling (bagging) & feature sampling
+        - Comes from row sampling (bagging) & feature sampling
 
     - Extra Trees variant:
 
-      - Uses **random thresholds** instead of best split
+        - Uses **random thresholds** instead of best split
 
     - Pros:
 
-      - Handles nonlinear patterns well
+        - Handles nonlinear patterns well
 
-      - Robust to overfitting vs single trees
+        - Robust to overfitting vs single trees
 
     - Cons:
 
-      - Less interpretable than a single tree
+        - Less interpretable than a single tree
 
-      - Can still overfit if trees too deep / too many
+        - Can still overfit if trees too deep / too many
 
 === "Hyperparameters"
 
@@ -251,19 +251,19 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
     - Pros:
 
-      - Strong performance with weak learners
+        - Strong performance with weak learners
 
-      - Focuses on difficult observations
+        - Focuses on difficult observations
 
     - Cons:
 
-      - Sensitive to noise/outliers (they get high weight)
+        - Sensitive to noise/outliers (they get high weight)
 
-      - Cannot parallelize (sequential dependency)
+        - Cannot parallelize (sequential dependency)
 
     - Behavior:
 
-      - Similar to gradient descent but adds models instead of updating parameters 
+        - Similar to gradient descent but adds models instead of updating parameters 
 
 === "Hyperparameters"
 
@@ -297,23 +297,23 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
     - Pros:
 
-      - Very flexible (can optimize different loss functions)
+        - Very flexible (can optimize different loss functions)
 
-      - Strong predictive performance
+        - Strong predictive performance
 
     - Cons:
 
-      - Prone to overfitting if too many trees
+        - Prone to overfitting if too many trees
 
-      - Slower (sequential)
+        - Slower (sequential)
 
     - Key ideas:
 
-      - Shrinkage: small learning rate ⟶ better generalization
+        - Shrinkage: small learning rate ⟶ better generalization
 
-      - Early stopping prevents overfitting 
+        - Early stopping prevents overfitting 
 
-      - Subsampling ⟶ stochastic gradient boosting (↓ variance, ↑ bias)
+        - Subsampling ⟶ stochastic gradient boosting (↓ variance, ↑ bias)
 
 === "Hyperparameters"
 
@@ -351,17 +351,17 @@ Bagging = row sampling **with replacement**; Pasting = **without replacement**.
 
     - Pros:
 
-      - Very fast and scalable
+        - Very fast and scalable
 
-      - Built-in regularization ⟶ reduces overfitting
+        - Built-in regularization ⟶ reduces overfitting
 
-      - Strong performance in practice (common in competitions)
+        - Strong performance in practice (common in competitions)
 
     - Cons:
 
-      - More complex tuning
+        - More complex tuning
 
-      - Less interpretable
+        - Less interpretable
 
 === "Hyperparameters"
 
