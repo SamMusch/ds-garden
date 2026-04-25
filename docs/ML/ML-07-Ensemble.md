@@ -71,18 +71,17 @@ Quick Review
 
 ### Bagging and Pasting
 
-Bagging = row sampling **with replacement**; Pasting = **without replacement**.
+Bagging = row sampling **with replacement**; Pasting = **without replacement**. 
 
 - These are *sampling strategies*, not actual algorithms.
 
-```tabs
-tab: What it does
+=== "What it does"
 
 - Train multiple copies of the same model on different random subsets of the training data, then aggregate predictions.
 
 - **Goal**: reduce variance
 
-tab: How it works
+=== "How it works"
 
 1. Sample training data multiple times ⟶ create different subsets
 
@@ -102,7 +101,7 @@ tab: How it works
 
    - **Random Patches**: sample *features* AND *rows*
 
-tab: Tradeoffs
+=== "Tradeoffs"
 
 - Bagging vs Pasting:
 
@@ -122,8 +121,7 @@ tab: Tradeoffs
 
   - When row sampling with replacement ⟶ Out-of-bag (OOB) samples (~37%) can be used for validation without a separate dataset
 
-
-tab: Hyperparameters
+=== "Hyperparameters"
 
 - `n_estimators`: more models ⟶ lower variance
 
@@ -139,12 +137,10 @@ tab: Hyperparameters
 
     - `bootstrap`: True (bagging) vs False (pasting)
 
-```
 
 ### Random Forest
 
-```tabs
-tab: What it does
+=== "What it does"
 
 - Ensemble of DTs trained with **bagging** (sometimes pasting).
 
@@ -152,7 +148,7 @@ tab: What it does
 
 - Adds feature randomness at each split to increase diversity.
 
-tab: How it works
+=== "How it works"
 
 1. Sample training data (typically with replacement)
 
@@ -166,7 +162,7 @@ tab: How it works
 
    - Regression ⟶ average
 
-tab: Tradeoffs
+=== "Tradeoffs"
 
 - Diversity:
 
@@ -188,7 +184,7 @@ tab: Tradeoffs
 
   - Can still overfit if trees too deep / too many
 
-tab: Hyperparameters
+=== "Hyperparameters"
 
 - `n_estimators`: number of trees
 
@@ -202,7 +198,6 @@ tab: Hyperparameters
 
 - (Extra Trees): `splitter="random"`
 
-```
 
 !!! sam
     **Randomness**: We are able to keep the full tree, not pruned
@@ -231,14 +226,14 @@ tab: Hyperparameters
 
 
 ### AdaBoost
-```tabs
-tab: What it does
+=== "What it does"
 
 - Sequential ensemble; focuses on hard (misclassified) instances
 
 - **Goal**: reduce bias
 
-tab: How it works
+=== "How it works"
+
 Start with equal weights for all training instances
 
 1. Train model (weak learner)
@@ -251,7 +246,7 @@ Start with equal weights for all training instances
 
 5. Final prediction = **weighted vote** on models (based on accuracy)
 
-tab: Tradeoffs
+=== "Tradeoffs"
 
 - Pros:
 
@@ -269,7 +264,7 @@ tab: Tradeoffs
 
   - Similar to gradient descent but adds models instead of updating parameters 
 
-tab: Hyperparameters
+=== "Hyperparameters"
 
 - `n_estimators`: number of learners
 
@@ -277,17 +272,15 @@ tab: Hyperparameters
 
 - `base_estimator`: typically shallow trees (stumps)
 
-```
 
 ### Gradient Boosting
-```tabs
-tab: What it does
+=== "What it does"
 
 - Sequential ensemble that fits models to **residual errors**
 
 - **Goal**: reduce bias via additive error correction
 
-tab: How it works
+=== "How it works"
 
 1. Train model (weak learner)
 
@@ -299,7 +292,7 @@ tab: How it works
 
 5. Final prediction = **sum of all model outputs**
 
-tab: Tradeoffs
+=== "Tradeoffs"
 
 - Pros:
 
@@ -321,7 +314,7 @@ tab: Tradeoffs
 
   - Subsampling ⟶ stochastic gradient boosting (↓ variance, ↑ bias)
 
-tab: Hyperparameters
+=== "Hyperparameters"
 
 - `n_estimators`: number of trees
 
@@ -333,17 +326,16 @@ tab: Hyperparameters
 
 - `loss`: objective function
 
-```
 
 ### XGBoost
-```tabs
-tab: What it does
+=== "What it does"
 
 - Optimized implementation of Gradient Boosting
 
 - **Goal**: faster, scalable, regularized boosting
 
-tab: How it works
+=== "How it works"
+
 Same core idea as Gradient Boosting.
 
 Differences:
@@ -354,7 +346,7 @@ Differences:
 
 - Regularization applied to control complexity
 
-tab: Tradeoffs
+=== "Tradeoffs"
 
 - Pros:
 
@@ -370,7 +362,7 @@ tab: Tradeoffs
 
   - Less interpretable
 
-tab: Hyperparameters
+=== "Hyperparameters"
 
 - `n_estimators`
 
@@ -386,7 +378,6 @@ tab: Hyperparameters
 
 - `early_stopping_rounds`
 
-```
 
 ## Stacking
 !!! sam
