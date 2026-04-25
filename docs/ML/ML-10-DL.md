@@ -19,22 +19,35 @@ tags: null
 word_count: 1149
 ---
 
-## GENERAL NEURAL NETWORKS
-
-[tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
-
 Links
 
-- [Ch 13 Code](https://github.com/ageron/handson-ml/blob/637bc1c298a593e02b439ce54aa5de9f8e7f71b4/13_convolutional_neural_networks.ipynb): CNNs
+- **Code Ageron**: [Ch 13 CNNs](https://github.com/ageron/handson-ml/blob/637bc1c298a593e02b439ce54aa5de9f8e7f71b4/13_convolutional_neural_networks.ipynb), [Ch 14 RNNs](https://github.com/ageron/handson-ml/blob/2adec01b34cbfe05866fca6bc724d093c8352e20/14_recurrent_neural_networks.ipynb)
 
-- [Ch 14 Code](https://github.com/ageron/handson-ml/blob/2adec01b34cbfe05866fca6bc724d093c8352e20/14_recurrent_neural_networks.ipynb): RNNs
+- **Code Ng**: [Multi-Class & Neural Nets](https://github.com/dibgerge/ml-coursera-python-assignments/blob/master/Exercise3/exercise3.ipynb), [Neural Nets](https://github.com/dibgerge/ml-coursera-python-assignments/blob/master/Exercise4/exercise4.ipynb)
 
-- [Andrew Ng Code](https://github.com/dibgerge/ml-coursera-python-assignments/blob/master/Exercise3/exercise3.ipynb): Multi-Class & Neural Nets
+- [tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
 
-- [Andrew Ng Code](https://github.com/dibgerge/ml-coursera-python-assignments/blob/master/Exercise4/exercise4.ipynb): Neural Nets
+- [DL Cheatsheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-deep-learning/#nn)
 
-The activation function is a hyperparameter, the weights & biases are parameters.
+Key concepts:
 
+- The activation function is a hyperparameter, the weights & biases are parameters.
+
+Key terms:
+
+- *TLUs (threshold logic units)*: calculate a weighted sum of inputs ⟶ apply a threshold to produce a binary output
+
+- _FNN (feedforward neural network)_: The architecture that the signal flows only in one direction from the inputs to the outputs
+
+- _DNN (deep neural network)_: when an ANN contains a deep stack of hidden layers
+
+Steps:
+
+1. TLU computes **weighted sum** of inputs (IN & input weight). (Becomes `x-axis` value)  
+    $z = w_1 x_1 + w_n x_n = X^T w$
+    
+2. TLU applies a **step function** to this sum. (Becomes `y-axis` value.)  
+    $h_w(x) = step(z), where z=X^T w$
 
 ### ANNs
 !!! sam
@@ -51,20 +64,7 @@ The activation function is a hyperparameter, the weights & biases are parameters
     We can build a *network* of artificial neurons that computes any logical proposition you want.
 
 
-
-### ANNs | Perceptron
-
-Pg 293: Typical Regression MLP Architecture
-
-| hyperparameter              | Typical value                                           |
-| --------------------------- | ------------------------------------------------------- |
-| \# input neurons            | 1 per input feature                                     |
-| \# hidden layers            | 1-5                                                     |
-| \# neurons per hidden layer | 10-100                                                  |
-| \# output neurons           | 1 per prediction dim (1 for regress, 2 for binary, etc) |
-| Hidden activation           | ReLu or SELU                                            |
-| Output activation           | None for regression. ReLu/softplus                      |
-| Loss function               | MSE or MAE/Huber (if outliers)                          |
+### MLP
 
 An MLP is composed of:
 
@@ -77,29 +77,6 @@ An MLP is composed of:
 Notes
 
 - Every layer except the output layer includes a bias neuron and is fully connected to the next layer. 
-
-- *FNN (feedforward neural network)*: The architecture that the signal flows only in one direction from the inputs to the outputs
-
-- *DNN (deep neural network)*: when an ANN contains a deep stack of hidden layers
-
-
-!!! sam
-    Pg 284: **Perceptron** (figure on pg 286)
-
-    **Perceptrons** are based on a slightly different type of artificial neuron called a *threshold logical unit* (TLU). Instead of using binary "off/on", the inputs & outputs are **numbers**.
-
-    Steps:
-
-    1. TLU computes **weighted sum** of inputs (IN & input weight).
-       $z = w_1 x_1 + w_n x_n = X^T w$
-
-    2. TLU applies a **step function** (sigmoid, tangent, or ReLu) to this sum.
-       $h_w(x) = step(z)$,     where     $z=X^T w$
-
-    1 single TLU **layer** is called a **Perceptron**.
-
-
-
 
 #### Equation
 
@@ -124,23 +101,6 @@ Notes
     - 1 bias term per AN
 
     $\Theta$ = activation function
-
-
-
-#### MLP Backpropagation
-
-> An MLP is composed of one (passthrough) input layer, one or more layers of TLUs, called hidden layers, and one final layer of TLUs called the output layer.
-
-!!! sam
-    *Note*: The Perceptron learning algorithm is the same thing as Stochastic Gradient Descent assuming the following parameters:
-
-    - `loss` = 'perceptron'
-
-    - `learning_rate` = 'constant'
-
-    - `eta0` = 1 (the learning rate)
-
-    - `penalty` = None (no regularization)
 
 
 
@@ -170,9 +130,6 @@ Notes
 
 
 
-### Code explanation
-Pg 299-316
-
 ### Hyperparameters
 Pg 323 | [Paper by Leslie Smith](https://arxiv.org/abs/1803.09820)
 
@@ -195,36 +152,33 @@ Pg 323 | [Paper by Leslie Smith](https://arxiv.org/abs/1803.09820)
 
 ### Tips for training NN
 
-!!! sam
-    **Scaling input data**
+=== "Overfitting"
 
-    - Standardscaler for numeric
+    - *Regularization*: apply penalty in the loss function (when weight & bias are too high from layer to layer)
 
-    - [Categorial/Ordinal Guide](https://towardsdatascience.com/an-overview-of-categorical-input-handling-for-neural-networks-c172ba552dee)
+        - L1 (absolute/lasso): takes irrelevant features ⟶ sets weights to 0
 
-    **If bad on training**:
+        - L2 (squares/ridge): takes irrelevant features ⟶ shrinks weights smoothly
+
+    - *Early stopping*: limit number of epochs when validation error stops improving
+
+    - *Drop out*: 
+
+        - Use separate mini batches ⟶ remove a certain percent from each training batch for each layer (Need to multiply all weights by `1 - drop %`)
+
+        - During training we drop out some neurons; during testing we bring them back but discount their weights
+
+=== "Underfitting"
 
     - Use different activation function (try maxout)
 
     - Use different learning rate optimizer
 
-    **If good on train but bad on test (overfitting)**:
+=== "Scaling input data"
 
-    - Regularization - apply penalty in the loss function if weight and bias is too high from layer to layer
+    - Standardscaler for numeric
 
-        - L1 subtracts which is why we are able to get rid of irrelevant features
-
-        - L2 discounts, which is why the features don't reach 0
-
-    - Early stop - makes regularization not that important - limits epoch - need to be run on validation set
-
-        - When we increase epoch, we will repeat GD many times. This will decrease error for training data, but we are looking for the min testing error.
-
-    - Drop out
-
-        - Use separate mini batches - remove a certain percent from each training batch for each layer (Need to multiply all weights by `1 - drop %`)
-
-        - Training we drop out some neurons, in testing we bring them back and discount their weights
+    - [Categorial/Ordinal Guide](https://towardsdatascience.com/an-overview-of-categorical-input-handling-for-neural-networks-c172ba552dee)
 
 
 ### Why not just add more layers?

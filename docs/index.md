@@ -3,11 +3,6 @@
 
 - [projects](projects/) — 2 min
 
-**_Conceptual/**
-
-  - [Lang](_Conceptual/Lang/) — 1.6 min
-  - [Systems-Thinking](_Conceptual/Systems-Thinking/) — 0.3 min
-
 **BigData/**
 
   - [APIs](BigData/APIs/) — 1.6 min
