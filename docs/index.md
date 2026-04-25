@@ -45,7 +45,6 @@
 
 **ML/**
 
-  - [Meridian-Demo](ML/Meridian-Demo/) — 1.4 min
   - [ML-01](ML/ML-01/) — 4.2 min
   - [ML-03-Classification](ML/ML-03-Classification/) — 8.3 min
   - [ML-04-Regression](ML/ML-04-Regression/) — 1.2 min

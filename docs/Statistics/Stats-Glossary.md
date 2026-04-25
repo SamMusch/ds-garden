@@ -39,13 +39,6 @@ word_count: 4618
 
 ## Textbook
 
-### Ch 1
-
-
-### Uncategorized
-
-`Stock Watson Textbook`:
-
 - `ADF`: See augmented Dickey–Fuller (ADF) test.
 
 - `Adjusted R² (1R²)`: A modified version of R² that does not necessarily increase when a new regressor is added to the regression.
