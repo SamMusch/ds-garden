@@ -21,7 +21,7 @@ word_count: 1149
 
 ## GENERAL NEURAL NETWORKS
 
-https://www.tensorflow.org/tutorials
+[tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
 
 Links
 
@@ -33,41 +33,54 @@ Links
 
 - [Andrew Ng Code](https://github.com/dibgerge/ml-coursera-python-assignments/blob/master/Exercise4/exercise4.ipynb): Neural Nets
 
-The activation function is a hyperparameter, the weights and biases are parameters.
+The activation function is a hyperparameter, the weights & biases are parameters.
 
 
 ### ANNs
-> Warren McCulloch and Walter Pitts proposed a very simple model of the biological neuron, which later became known as an artificial neuron: it has one or more binary (on/off) inputs and one binary output. The artificial neuron simply activates its output when more than a certain number of its inputs are active. McCulloch and Pitts showed that even with such a simplified model it is possible to build a network of artificial neurons that computes any logical proposition you want.
-
 !!! sam
-    Artificial neuron contains:
+    The ANN is a simple model of the biological neuron.
 
-    - 1+ binary input neurons (IN)
+    An *artificial neuron* contains:
 
-    - Input **connections** between IN & ON
+    - 1+ input neurons
 
-    - 1 binary output neuron (ON)
+    - 1 output neuron
 
-    - If a threshold number of **connections** are reached, the ON is activated
+    - Connections between these. If a threshold number of **connections** are reached, the ON is activated.
+
+    We can build a *network* of artificial neurons that computes any logical proposition you want.
 
 
 
 ### ANNs | Perceptron
-> The Perceptron is one of the simplest ANN architectures, invented in 1957 by Frank Rosenblatt.
 
 Pg 293: Typical Regression MLP Architecture
 
 | hyperparameter              | Typical value                                           |
 | --------------------------- | ------------------------------------------------------- |
-| \# input neurons            | One per input feature                                   |
-| \# hidden layers            | Typically 1-5                                           |
-| \# neurons per hidden layer | Typically 10-100                                        |
+| \# input neurons            | 1 per input feature                                     |
+| \# hidden layers            | 1-5                                                     |
+| \# neurons per hidden layer | 10-100                                                  |
 | \# output neurons           | 1 per prediction dim (1 for regress, 2 for binary, etc) |
 | Hidden activation           | ReLu or SELU                                            |
 | Output activation           | None for regression. ReLu/softplus                      |
 | Loss function               | MSE or MAE/Huber (if outliers)                          |
-> An MLP is composed of one passthrough input layer, one or more layers of TLUs (threshold logic units), called hidden layers, and one final layer of TLUs called the output layer. The layers close to the input layer are usually called the lower layers, and the ones close to the outputs are usually called the upper layers. Every layer except the output layer includes a bias neuron and is fully connected to the next layer. The architecture that the signal flows only in one direction from the inputs to the outputs is called feedforward neural network (FNN). When an ANN (artificial neural network) contains a deep stack of hidden layers, it is called a deep neural network (DNN). - pg 287
 
+An MLP is composed of:
+
+- 1 input layer (passthrough)
+
+- 1+ hidden layers of TLUs (threshold logic units)
+
+- 1 output layer of TLUs
+
+Notes
+
+- Every layer except the output layer includes a bias neuron and is fully connected to the next layer. 
+
+- *FNN (feedforward neural network)*: The architecture that the signal flows only in one direction from the inputs to the outputs
+
+- *DNN (deep neural network)*: when an ANN contains a deep stack of hidden layers
 
 
 !!! sam
