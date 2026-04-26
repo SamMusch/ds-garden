@@ -29,6 +29,8 @@ Links
 
 - [DL Cheatsheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-deep-learning/#nn)
 
+[Forward Pass](https://i.imgur.com/WmSn5ZH.jpeg)
+
 Key concepts:
 
 - The activation function is a hyperparameter, the weights & biases are parameters.
